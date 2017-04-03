@@ -1,0 +1,14 @@
+@function em($px, $parent: $font-size-base) {
+    $px: $px / $parent * $font-size-base;
+    @return scut-em($px);
+}
+
+
+@function rem($px) {
+    @return scut-rem($px);
+}
+
+
+@function colsize($cols, $grid: 19) {
+    @return percentage($cols / $grid);
+}

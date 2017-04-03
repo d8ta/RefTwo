@@ -1,0 +1,56 @@
+.misc-pub-section.misc-yoast {
+	display: none;
+}
+
+select[name="seo_filter"], select[name="cat"] {
+	display: none;
+}
+
+#select-post-language, #filter-by-date, #post-query-submit {
+	display: none;
+}
+
+
+.login h1 a {
+	width: 100%;
+	background-size: 90%;
+}
+
+#minor-publishing-actions, .misc-pub-curtime, .misc-yoast, .misc-pub-visibility {
+	display: none;
+}
+
+#major-publishing-actions #duplicate-action {
+	display: none;
+}
+
+#major-publishing-actions #delete-action {
+	display: none;
+}
+
+.row-actions .inline {
+	display: none;
+}
+
+#ml_box {
+	display: none !important;
+}
+
+#backtoblog {
+  display: none;
+}
+
+#gadwp-container-1 > div:last-child {
+	display: none;
+}
+
+#wpadminbar #wp-admin-bar-a365 .ab-icon:before {
+	content: "\f541";
+    top: 3px;
+}
+
+.acf-field[data-name="acf_sync_id"] {
+	position: absolute !important;
+	left: -9999px;
+	top: -9999px;
+}

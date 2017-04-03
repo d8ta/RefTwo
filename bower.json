@@ -1,0 +1,23 @@
+{
+  "name": "siconnex",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "A365"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "^3.3.7",
+    "jquery": "^3.2.1",
+    "Scut": "scut#^1.4.0",
+    "sass-mq": "^3.3.2"
+  }
+}

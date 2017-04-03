@@ -1,0 +1,23 @@
+{
+    "autoload": {
+        "psr-4": {
+        	"Project\\": "app/classes/Project/"
+        }
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git@bitbucket.org:a365/wordpress.git"
+        },
+        {
+            "type": "vcs",
+            "url": "git@bitbucket.org:a365/core.git"
+        }
+    ],
+    "require": {
+        "a365/core": "dev-release",
+        "a365/wordpress": "dev-release",
+        "afragen/github-updater": "^6.0",
+        "geoip/geoip": "^1.17"
+    }
+}

@@ -1,0 +1,110 @@
+a {
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+        text-decoration: none;
+        color: inherit;
+    }
+}
+
+.form-control:focus {
+    border-color: inherit;
+}
+
+a,
+.form-control,
+.btn,
+input,
+textarea,
+select {
+    box-shadow: none !important;
+    outline: 0 !important;
+    &:focus {
+        //color: inherit;
+    }
+}
+
+button {
+    border: 0;
+    padding: 0;
+}
+
+textarea,
+input,
+button {
+    &:focus {
+        outline: none;
+    }
+}
+
+input,
+button,
+textarea {
+    border-radius: 0;
+    -webkit-appearance: none;
+    border: none;
+}
+
+input[type=submit],
+button {
+    background: none;
+    border: 0;
+    cursor: pointer;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+    display: none;
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+textarea {
+    resize: none;
+    overflow: hidden;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+label {
+    font-weight: normal;
+    margin: 0;
+}
+
+i,
+cite,
+em,
+var,
+address,
+dfn {
+    font-style: normal;
+}
+
+address {
+    margin: 0;
+}

@@ -1,0 +1,196 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2017-01-12 18:28+0100\n"
+"PO-Revision-Date: 2017-01-12 18:28+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.11\n"
+"X-Poedit-Basepath: ../..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __\n"
+"X-Poedit-SearchPath-0: app\n"
+"X-Poedit-SearchPath-1: wp-content/themes/rieder\n"
+
+#: app/classes/Project/Ajax/Actions/ContactForm.php:32
+msgid "Your Request"
+msgstr "Ihre Kontaktanfrage"
+
+#: app/classes/Project/Ajax/Actions/LocationNearest.php:40
+#: app/views/components/location/maps-infobox.blade.php:27
+msgid "Infrastructure"
+msgstr "Infrastruktur"
+
+#: app/classes/Project/Helpers/FormHelper.php:38
+msgid "Text"
+msgstr "Text"
+
+#: app/sections/contact-form.blade.php:25
+msgid "Salutation"
+msgstr "Anrede"
+
+#: app/sections/contact-form.blade.php:31
+msgid "First Name"
+msgstr "Vorname"
+
+#: app/sections/contact-form.blade.php:32
+msgid "Last Name"
+msgstr "Nachname"
+
+#: app/sections/contact-form.blade.php:33
+msgid "Company"
+msgstr "Unternehmen"
+
+#: app/sections/contact-form.blade.php:34
+msgid "E-Mail"
+msgstr "E-Mail"
+
+#: app/sections/contact-form.blade.php:35
+msgid "Street"
+msgstr "Straße"
+
+#: app/sections/contact-form.blade.php:36
+msgid "ZIP"
+msgstr "PLZ"
+
+#: app/sections/contact-form.blade.php:37
+msgid "City"
+msgstr "Stadt"
+
+#: app/sections/contact-form.blade.php:38
+msgid "Country"
+msgstr "Land"
+
+#: app/sections/contact-form.blade.php:39
+msgid "Message"
+msgstr "Nachricht"
+
+#: app/sections/contact-form.blade.php:47
+msgid "Send Form"
+msgstr "Formular absenden"
+
+#: app/sections/contact-form.blade.php:52
+msgid "Thank you for your message."
+msgstr "Danke für Ihre Nachricht."
+
+#: app/views/components/alerts/browser-incompatible.blade.php:5
+msgid "You are using an incompatible browser."
+msgstr "Sie benutzen einen veralteten Browser."
+
+#: app/views/components/alerts/browser-incompatible.blade.php:6
+msgid "Modern Browsers are"
+msgstr "Moderne Browser sind"
+
+#: app/views/components/alerts/browser-outdated.blade.php:5
+msgid "You are using an outdated browser."
+msgstr "Sie benutzen einen veralteten Browser."
+
+#: app/views/components/alerts/cookie.blade.php:5
+msgid ""
+"This website uses cookies to ensure you get the best experience on our "
+"website. If you continue to use this site we will assume that you are happy "
+"with it."
+msgstr ""
+"Diese Website verwendet Cookies. Wenn Sie weiter auf dieser Website surfen, "
+"stimmen Sie der Verwendung von Cookies zu."
+
+#: app/views/components/alerts/no-js.blade.php:2
+msgid "JavaScript inactive"
+msgstr "JavaScript ist deaktiviert"
+
+#: app/views/components/alerts/no-js.blade.php:3
+msgid "Please activate JavaScript."
+msgstr "Bitte aktivieren Sie JavaScript."
+
+#: app/views/components/alerts/no-js.blade.php:4
+msgid "I understand"
+msgstr "Ich bin einverstanden"
+
+#: app/views/components/footer.blade.php:19
+msgid "The Rieder Newsletter - 4x per year!"
+msgstr "Der Rieder Newsletter - 4x pro Jahr!"
+
+#: app/views/components/footer.blade.php:20
+msgid "Subscribe now."
+msgstr "Jetzt anmelden"
+
+#: app/views/components/footer.blade.php:21
+msgid "Your E-Mail Address"
+msgstr "Ihre E-Mail-Adresse"
+
+#: app/views/components/footer.blade.php:75
+msgid "Back to top"
+msgstr "Nach oben"
+
+#: app/views/components/location/maps-infobox.blade.php:17
+msgid "Architecture"
+msgstr "Architektur"
+
+#: app/views/components/project/grid.blade.php:5
+#: app/views/components/project/infobox.blade.php:5
+msgid "To this project"
+msgstr "Projekt ansehen"
+
+#: app/views/project/mysections/main.blade.php:28
+msgid "Product"
+msgstr "Produkt"
+
+#: app/views/project/mysections/main.blade.php:35
+msgid "Scope"
+msgstr "Umfang"
+
+#: app/views/project/mysections/main.blade.php:42
+msgid "Color"
+msgstr "Farbe"
+
+#: app/views/project/mysections/main.blade.php:49
+msgid "Surface"
+msgstr "Oberfläche"
+
+#: app/views/project/mysections/main.blade.php:56
+msgid "Fixation"
+msgstr "Befestigung"
+
+#: app/views/project/mysections/main.blade.php:68
+msgid "Architect"
+msgstr "Architekt"
+
+#: app/views/project/mysections/main.blade.php:75
+msgid "Builder"
+msgstr "Bauherr"
+
+#: app/views/project/mysections/main.blade.php:82
+msgid "Client"
+msgstr "Auftraggeber"
+
+#: app/views/project/mysections/main.blade.php:89
+msgid "Host"
+msgstr "Verarbeiter"
+
+#: app/views/project/mysections/main.blade.php:96
+msgid "Year"
+msgstr "Jahr"
+
+#: app/views/project/mysections/main.blade.php:102
+msgid "Location"
+msgstr "Standort"
+
+#: app/views/project/mysections/main.blade.php:103
+msgid "show"
+msgstr "anzeigen"
+
+#: app/views/project/mysections/top.blade.php:18
+msgid "Back to Overview"
+msgstr "Zurück zur Übersicht"
+
+#: app/views/project/mysections/top.blade.php:21
+msgid "Next Project"
+msgstr "Nächstes Projekt"
+
+#: wp-content/themes/rieder/searchform.php:2
+msgid "Search ..."
+msgstr "Suche …"
