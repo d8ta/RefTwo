@@ -1,0 +1,25 @@
+$block: '.btn';
+#{$block} {
+	&--icon-text {
+		#{$block} {
+			&__icon {
+				vertical-align: middle;
+				padding-right: em(8);
+				margin-top: em(5);
+				
+				@include icon(arrowright);
+
+				// font-size: em(60);
+				// color: red;
+
+				&:before {
+					@extend %icon;
+					margin-top: em(5);
+				}
+			}
+			&__text {
+				vertical-align: middle;
+			}
+		}
+	}
+}

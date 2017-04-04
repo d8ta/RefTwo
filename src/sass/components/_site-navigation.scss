@@ -3,9 +3,22 @@ $block: ".site-navigation";
     &__list {
         &__item {
             float: right;
-            display: inline;
             padding: 5px 20px 5px 20px;
             font-size: em(22);
+        }
+    }
+    @include mq($until: screen-sm) {
+        &__list {
+            &__item {
+                font-size: 0.9em;
+            }
+        }
+    }
+    @include mq($until: screen-xs) {
+        &__list {
+            &__item {
+                clear: both;
+            }
         }
     }
 }

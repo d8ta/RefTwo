@@ -2,7 +2,7 @@
 @import "common/functions";
 @import "common/variables";
 @import "common/mixins";
-//@import "common/iconfont";
+@import "common/iconfont";
 @import "common/webfonts";
 @import "common/reset";
 
@@ -39,6 +39,7 @@
 @import "components/section";
 @import "components/bg-image";
 @import "components/site-navigation";
+@import "components/btn";
 
 @import "sections/welcome-slider";
 

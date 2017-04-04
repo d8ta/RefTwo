@@ -23,7 +23,11 @@
 							<br>
 							<h2 class="h2">Lorem ipsum dolor sit amet, consectetur adipisicing elit Hic.</h2>
 							<br>
-							<button class="welcome-slider__slide__text__inner__button" type="button">Lernen Sie uns kennen!</button>
+							<button class="welcome-slider__slide__text__table__td__button btn btn--icon-text" type="button">
+								{{-- <i class="icon icon-arrowdown btn__icon"></i> --}}
+								<i class="btn__icon"></i>
+								<span class="btn__text">Lernen Sie uns kennen!</span>
+							</button>
 						</div>
 					</div>
 				</div>

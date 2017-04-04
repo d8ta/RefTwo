@@ -210,7 +210,7 @@ gulp.task("images::watch", function(callback) {
 // Iconfont
 gulp.task('iconfont', function() {
 
-  var fontName = 'iconfont_v3';
+  var fontName = 'iconfont_v1';
 
   return gulp.src(paths.src.iconfont + '*.svg')
     .pipe(iconfontCss({
