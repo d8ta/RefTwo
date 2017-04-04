@@ -1,0 +1,11 @@
+$block: ".site-navigation";
+#{$block} {
+    &__list {
+        &__item {
+            float: right;
+            display: inline;
+            padding: 5px 20px 5px 20px;
+            font-size: em(22);
+        }
+    }
+}

@@ -19,15 +19,16 @@ h6,
 
 
 %h1 {
-    
+    font-size: em(50);
+    font-weight: bold;
+    line-height: 0.85;
 }
 
 %h2 {
-    
+    font-size: em(20);
 }
 
 %h3 {
-    
 }
 
 %h4 {
@@ -46,4 +47,14 @@ h6,
     font-family: $font-normal;
     line-height: 1.65;
     font-size: em(18);
+}
+
+
+%section-content {
+	margin: 0 auto;
+    padding-left: $side-padding;
+    padding-right: $side-padding;
+    box-sizing: content-box;
+    max-width: $width-max-container;
+    @include clearfix;
 }

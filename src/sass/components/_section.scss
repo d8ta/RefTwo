@@ -14,26 +14,11 @@ $block: ".section";
         margin: rem(60) 0;
     }
     &__content {
-        margin: 0 auto;
-        padding-left: $side-padding;
-        padding-right: $side-padding;
-        box-sizing: content-box;
-        max-width: $width-max-container;
-        @include clearfix;
-        &--inner {
-            max-width: em($width-max-container-text);
-        }
+        @extend %section-content;
+        
     }
-    &__content-inner {
-        max-width: em($width-max-container-text);
-        margin-left: auto;
-        margin-right: auto;
-        display: block;
-    }
-    /* &--bg-grey {
-        background: $color-bg-grey;
-    }*/
 }
+
 
 #{$block}-container {
     position: relative;
