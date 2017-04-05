@@ -9,6 +9,9 @@ $block: ".section";
             padding-right: 0;
         }
     }
+    &--action-box {
+        padding: em(50) 0 em(100);
+    }
     
     &--margin {
         margin: rem(60) 0;

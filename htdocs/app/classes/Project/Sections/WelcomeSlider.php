@@ -14,7 +14,7 @@ class WelcomeSlider extends \A365\Wordpress\Block\AcfBlock {
 	public static function getAcfSubfields()
 	{
 		return [
-			FieldHelper::createRepeater('slides', 'Slides', ["min" => 1])
+			FieldHelper::createRepeater('slides', 'Slides', ["min" => 1, "max" => 6])
 				->addSubfields([
 					FieldHelper::createImageCrop('background', 'Hintergrund', ["crop_type" => "hard", 'target_size' => 'custom', 'force_crop' => 'yes', 'save_format' => 'url', "width" => 1600, "height" => 760])->setRequired(),
 					FieldHelper::createText('pretitle', 'Überschrift klein'),

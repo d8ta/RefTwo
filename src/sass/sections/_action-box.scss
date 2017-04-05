@@ -1,0 +1,53 @@
+$block: '.action-box';
+#{$block} {
+    &__box {
+        h1 {
+            font-size: em(30);
+        }
+        h2 {
+            font-size: em(20);
+        }
+        background: $brand-primary;
+        width: 33.33%;
+        float: left;
+        // padding-left: 20px;
+        padding: 20px;
+        &__image {
+            // height: 100%;
+            // width: 70%;
+            // position: absolute;
+            // right: 0;
+            // z-index: 1;
+        }
+        &__text {
+            @extend %section-content;
+            height: 100%;
+            position: relative;
+            z-index: 2;
+            &__table {
+                background: $brand-primary;
+                color: white;
+                width: em(420);
+                display: table;
+                height: 100%;
+                padding-right: em(50);
+                &__td {
+                    display: table-cell;
+                    vertical-align: middle;
+                    &__button {
+                        background-color: $color-light-grey;
+                        color: $color-text;
+                        border-radius: 0;
+                        padding: 10px 20px;
+                    }
+                }
+            }
+        }
+    }
+    @include mq($until: screen-sm) {
+        &__box {
+            clear: both;
+            margin-bottom: 20px;
+        }
+    }
+}
