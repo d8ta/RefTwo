@@ -2,40 +2,32 @@ $block: '.action-box';
 #{$block} {
     &__box {
         h1 {
-            font-size: em(30);
+            font-size: em(25);
+            color: $brand-primary;
         }
         h2 {
-            font-size: em(20);
+            font-size: em(17);
         }
-        background: $brand-primary;
-        width: 33.33%;
+        background: $action-box-bg;
+        color: $color-text;
+        margin-right: 15px;
+        width: 30%;
         float: left;
-        // padding-left: 20px;
         padding: 20px;
-        &__image {
-            // height: 100%;
-            // width: 70%;
-            // position: absolute;
-            // right: 0;
-            // z-index: 1;
-        }
+        &__image {}
         &__text {
             @extend %section-content;
             height: 100%;
             position: relative;
             z-index: 2;
             &__table {
-                background: $brand-primary;
-                color: white;
-                width: em(420);
-                display: table;
-                height: 100%;
-                padding-right: em(50);
+                background: $action-box-bg;
+                color: $color-text;
                 &__td {
                     display: table-cell;
                     vertical-align: middle;
                     &__button {
-                        background-color: $color-light-grey;
+                        background-color: $action-box-bg;
                         color: $color-text;
                         border-radius: 0;
                         padding: 10px 20px;
@@ -44,10 +36,14 @@ $block: '.action-box';
             }
         }
     }
+    .primary-color {
+        color: $brand-primary;
+    }
     @include mq($until: screen-sm) {
         &__box {
             clear: both;
             margin-bottom: 20px;
+            width: 100%;
         }
     }
 }

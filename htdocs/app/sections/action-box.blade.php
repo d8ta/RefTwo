@@ -24,7 +24,7 @@ $boxes = $block->getBox();
 								<h2 class="h2">{{$description}}</h2>
 								<br>
 								<button class="action-box__box__text__table__td__button btn btn--icon-text" type="button">
-								<i class="btn__icon__primary"></i>
+								<i class="btn__icon primary-color"></i>
 								<span class="btn__text">{{$buttontext}}</span>
 								</button>
 							</div>
