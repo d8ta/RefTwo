@@ -1,24 +1,23 @@
-<?php 
-$teaser = $block->getTeaser();
-?>
 <div class="section section--product-teaser">
 	<div class="section__content">
 		<div class="product-teaser">
 			<?php
- 			$title = $teaser['title'];
-			$description = $teaser['description'];
-			$buttontext = $teaser['button_text'];
+			$title = $block->getTitle();
+			$subtitle = $block->getSubtitle();
+			$description = $block->getDescription();
+			$button_text = $block->getButtonText();
+			$button_url = $block->getButtonUrl();
 			?>
 			<div class="product-teaser__inner">
-				<h1 class="h1">Titel</h1>
+				<h1 class="h1">{{$title}}</h1>
 				<br>
-				<h2 class="h2">Subtitle</h2>
+				<h2 class="h2">{{$subtitle}}</h2>
 				<br>
-				<h3 class="h3">Description</h3>
+				<h3 class="h3">{{$description}}</h3>
 				<br>
 				<button class="product-teaser btn btn--icon-text" type="button">
 				<i class="btn__icon"></i>
-				<span class="btn__text">Buttontext</span>
+				<span class="btn__text">{{$button_text}}</span>
 				</button>
 			</div>
 		</div>

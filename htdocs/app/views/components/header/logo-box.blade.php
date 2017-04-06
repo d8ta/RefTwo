@@ -1,4 +1,3 @@
 <a href="{{home_url()}}" class="logo-box" title="{{get_bloginfo()}}">
-    <img>
-    <img src="http://siconnex.com.dev/wp-content/uploads/2017/04/siconnex_logo.png" alt="siconnex_logo.png">
+    <img src="assets/images/layout/siconnex_logo.png" alt="Siconnex Logo" />
 </a>
