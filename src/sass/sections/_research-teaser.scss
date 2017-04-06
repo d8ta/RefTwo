@@ -1,0 +1,8 @@
+$block: '.research-teaser';
+#{$block} {
+    background: $brand-primary;
+    .bg-image {
+        width: 200px;
+        height: 200px;
+    }
+}

@@ -1,32 +1,43 @@
 $block: '.action-box';
+$image-width: 40%;
+$box-margin: 2em;
 #{$block} {
+    &__inner {}
     &__box {
         border-top-left-radius: 5px;
         border-bottom-left-radius: 5px;
         background: $action-box-bg;
         color: $color-text;
-        float: left;
-        margin-right: 16em;
-        width: 250px;
-        padding: 20px;
+
+        padding: em(20);
+        position: relative;
+        margin-bottom: em(20);
         &__image {
             border-top-right-radius: 5px;
             border-bottom-right-radius: 5px;
-            width: 200px;
-            height: 200px;
-            float: right;
-            margin: -20px -220px;
+            width: $image-width;
+            max-width: em(230);
+            //height: 200px;
+            //float: right;
+            //margin: -20px -220px;
+            height: 100%;
+            position: absolute;
+            right: 0;
+            top: 0;
         }
         &__text {
-            @extend %section-content;
+            width: 100% - $image-width - 15%;
             height: 100%;
             position: relative;
             z-index: 2;
+            //margin-right: $image-width;
             &__table {
+                // display: table;
                 background: $action-box-bg;
                 color: $color-text;
+                width: 100%;
                 &__td {
-                    display: table-cell;
+                    // display: table-cell;
                     vertical-align: middle;
                     &__button {
                         background-color: $action-box-bg;
@@ -39,7 +50,6 @@ $block: '.action-box';
             &__headline {
                 @extend %h2;
                 color: $brand-primary;
-                white-space: nowrap;
             }
             &__description {
                 overflow: hidden;
@@ -52,11 +62,27 @@ $block: '.action-box';
             }
         }
     }
+    @include mq($from: screen-lg) {
+        &__inner {
+            display: table;
+            border-collapse: separate;
+            border-spacing: $box-margin 0;
+            margin-left: -$box-margin;
+            margin-right: -$box-margin;
+        }
+        &__box {
+            display: table-cell;
+            width: 33.3333%;
+            margin-bottom: 0;
+        }
+    }
     @include mq($until: screen-sm) {
         &__box {
-            clear: both;
             margin-bottom: 20px;
             width: 100%;
         }
+    }
+    .btn {
+        white-space: nowrap;
     }
 }

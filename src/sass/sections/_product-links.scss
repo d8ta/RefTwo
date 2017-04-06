@@ -1,4 +1,16 @@
 $block: '.product-links';
 #{$block} {
-    background: $brand-primary;
+    &__content {
+        float: left;
+        width: 33%;
+        margin-top: 100px;
+        &__image {
+            height: 200px;
+            width: 200px;
+            float: left;
+            &__text {
+            	color: green;
+            }
+        }
+    }
 }
