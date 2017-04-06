@@ -2,19 +2,21 @@ $block: '.action-box';
 #{$block} {
     &__box {
         h1 {
-            font-size: em(25);
+            font-size: em(20);
             color: $brand-primary;
         }
         h2 {
-            font-size: em(17);
+            font-size: em(15);
         }
+        border-radius: 5px;
         background: $action-box-bg;
         color: $color-text;
-        margin-right: 15px;
-        width: 30%;
+        // display: inline-flex;
         float: left;
+        margin-right: 20px;
+        width: 30%;
+        height: 200px;
         padding: 20px;
-        &__image {}
         &__text {
             @extend %section-content;
             height: 100%;
@@ -27,6 +29,8 @@ $block: '.action-box';
                     display: table-cell;
                     vertical-align: middle;
                     &__button {
+                        position: absolute;
+                        left: 0;
                         background-color: $action-box-bg;
                         color: $color-text;
                         border-radius: 0;
