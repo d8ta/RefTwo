@@ -1,16 +1,41 @@
-$block: '.product-links';
-#{$block} {
-    &__content {
-        float: left;
-        width: 33%;
-        margin-top: 100px;
-        &__image {
-            height: 200px;
-            width: 200px;
+    $block: '.product-links';
+    #{$block} {
+        &__content {
             float: left;
-            &__text {
-            	color: green;
+            width: 33%;
+            margin-top: 100px;
+            margin-bottom: 200px;
+            &__image {
+                &--batch {
+                    background: orange;
+                    float: left;
+                }
+                &--logo {
+                    background: green;
+                }
+                height: 500px;
+                width: 200px;
+                float: left;
+                &__text {
+                    overflow: hidden;
+                    height: 8.5em;
+                    &__clamp {
+                        display: -webkit-box;
+                        -webkit-line-clamp: 5;
+                        -webkit-box-orient: vertical;
+                    }
+                }
             }
         }
+        @include mq($until: screen-lg) {
+            &__content {
+                clear: both;
+                margin-top: 40px;
+                margin-bottom: 40px;
+                width: 80%;
+                margin-left: 10%;
+                margin-right: 10%;
+            }
+ 
+        }
     }
-}

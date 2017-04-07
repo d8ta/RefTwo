@@ -8,11 +8,15 @@
 				@foreach ($links as $link)
 				<?php 
 				$description = $link['description'];
-				$background = $link['background'];
+				// $batchimage = $link['batchimage'];
+				// $logo = $link['logo'];
 				?>
 				<div class="product-links__content">
-					<div class="product-links__content__image bg-image" style="background-image: url({{$background}})"></div>
-						<h2 class="product-links__content__image_text h2">{{$description}}</h2>
+					<img src="/assets/images/layout/Batch_acid.png" alt="Produkt Link" class="product-links__content__image--batch">
+					<img src="/assets/images/layout/Batch_acid_logo.png" alt="Batchspray Logo" class="product-links__content__image--logo">
+					<h2 class="product-links__content__image__text h2">
+						<div class="product-links__content__image__text__clamp">{{$description}}</div>
+					</h2>
 				</div>
 				@endforeach
 			</div>

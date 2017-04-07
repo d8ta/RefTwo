@@ -16,7 +16,7 @@
 					<div class="technology-techboxes__techboxes__text">
 						<div class="technology-techboxes__techboxes__text__table">
 							<div class="technology-techboxes__techboxes__text__table__td">
-								<h1 class="h1">{{$title}}</h1>
+								<h1 class="h1">{{$title}}TEST</h1>
 								<h2 class="h2">{{$description}}</h2>
 								<button class="technology-techboxes__techboxes__text__table__td__button btn btn--icon-text" type="button">
 									<i class="btn__icon"></i>
