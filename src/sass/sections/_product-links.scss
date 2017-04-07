@@ -7,12 +7,9 @@
             margin-bottom: 200px;
             &__image {
                 &--batch {
-                    background: orange;
                     float: left;
                 }
-                &--logo {
-                    background: green;
-                }
+                &--logo {}
                 height: 500px;
                 width: 200px;
                 float: left;
@@ -36,6 +33,5 @@
                 margin-left: 10%;
                 margin-right: 10%;
             }
- 
         }
     }
