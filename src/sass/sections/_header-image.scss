@@ -1,0 +1,7 @@
+$block: '.header-image';
+#{$block} {
+    &__image {
+        height: 100%;
+        padding-bottom: 21%;
+    }
+}
