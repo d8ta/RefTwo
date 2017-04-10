@@ -1,8 +1,5 @@
 <?php 
 $boxes = $block->getBox();
-	// $title = $block->getTitle();
-	// $description = $block->getDescription();
-	// $links = $block->getImages();
 ?>
 <div class="section section--action-box">
 	<div class="section__content">
@@ -13,7 +10,6 @@ $boxes = $block->getBox();
 				$title = $box['title'];
 				$description = $box['description'];
 				$buttontext = $box['button_text'];
-				// $icon = $box['icon'];
 				?>
 				<div class="action-box__box">
 					<div class="action-box__box__image bg-image" style="background-image: url({{$box['background']}})"></div>

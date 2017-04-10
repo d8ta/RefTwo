@@ -1,0 +1,22 @@
+$block: '.core-values';
+#{$block} {
+    margin-top: 340px;
+    margin-bottom: 280px;
+    &__info {
+        margin-top: 65px;
+        width: 33%;
+        display: inline-block;
+        &__image {
+        }
+        &__text {
+            margin-top: 70px;
+            &__headline {
+                color: $brand-primary;
+                font-size: em(25);
+            }
+            &__description {
+                max-width: 380px;
+            }
+        }
+    }
+}
