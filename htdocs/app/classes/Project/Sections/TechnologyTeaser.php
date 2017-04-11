@@ -6,7 +6,7 @@ use A365\Wordpress\Helpers\Acf\FieldHelper;
 class TechnologyTeaser extends \A365\Wordpress\Block\AcfBlock {
 
 	protected $_template = 'technology-teaser';
-	protected static $_label = 'Technology Teaser';
+	protected static $_label = 'Technologie Ankündigung';
 
 	/**
 	 * @inheritdoc
