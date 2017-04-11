@@ -1,0 +1,52 @@
+    $block: '.environment';
+    #{$block} {
+        margin-bottom: 215px;
+        &__image {
+            height: 100%;
+            padding-bottom: 40%;
+        }
+        &__box {
+            // #######
+            position: absolute;
+            border-radius: 5px;
+            top: 85px;
+            right: 115px;
+            background: $color-white;
+            // width: 590px;
+            // height: 590px;
+            &__text {
+                padding: 70px;
+                .h1 {
+                    color: $brand-primary;
+                    padding-bottom: 10px;
+                }
+                .h2 {
+                    color: $color-text-grey;
+                    padding-bottom: 10px;
+                }
+            }
+        }
+        @include mq($until: screen-sm) {
+            margin-bottom: 20px;
+            &__image {}
+            &__box {
+                right: 0;
+                top: 0;
+                position: relative;
+                width: 100%;
+                margin: 0 auto;
+                text-align: center;
+                &__text {
+                    padding: 70px;
+                    .h1 {
+                        color: $brand-primary;
+                        padding-bottom: 10px;
+                    }
+                    .h2 {
+                        color: $color-text-grey;
+                        padding-bottom: 10px;
+                    }
+                }
+            }
+        }
+    }
