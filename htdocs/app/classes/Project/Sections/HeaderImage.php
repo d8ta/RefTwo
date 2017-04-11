@@ -6,7 +6,7 @@ use A365\Wordpress\Helpers\Acf\FieldHelper;
 class HeaderImage extends \A365\Wordpress\Block\AcfBlock {
 
 	protected $_template = 'header-image';
-	protected static $_label = 'Header Image';
+	protected static $_label = 'Kopfzeilen Bild';
 
 	/**
 	 * @inheritdoc

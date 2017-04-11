@@ -6,7 +6,7 @@ use A365\Wordpress\Helpers\Acf\FieldHelper;
 class WelcomeSlider extends \A365\Wordpress\Block\AcfBlock {
 
 	protected $_template = 'welcome-slider';
-	protected static $_label = 'Welcome Slider';
+	protected static $_label = 'Startseiten Slider';
 
 	/**
 	 * @inheritdocIR

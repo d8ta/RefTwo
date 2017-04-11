@@ -6,14 +6,11 @@
             padding-bottom: 40%;
         }
         &__box {
-            // #######
             position: absolute;
             border-radius: 5px;
             top: 85px;
             right: 115px;
             background: $color-white;
-            // width: 590px;
-            // height: 590px;
             &__text {
                 padding: 70px;
                 .h1 {

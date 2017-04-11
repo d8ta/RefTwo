@@ -6,7 +6,7 @@ use A365\Wordpress\Helpers\Acf\FieldHelper;
 class TechnologyBoxes extends \A365\Wordpress\Block\AcfBlock {
 
 	protected $_template = 'technology-boxes';
-	protected static $_label = 'Technology Boxes';
+	protected static $_label = 'Technologie Boxen';
 
 	/**
 	 * @inheritdocIR

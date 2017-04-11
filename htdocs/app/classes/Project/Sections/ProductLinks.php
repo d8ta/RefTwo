@@ -6,7 +6,7 @@ use A365\Wordpress\Helpers\Acf\FieldHelper;
 class ProductLinks extends \A365\Wordpress\Block\AcfBlock {
 
 	protected $_template = 'product-links';
-	protected static $_label = 'Product Links';
+	protected static $_label = 'Produkt Links';
 
 	/**
 	 * @inheritdoc

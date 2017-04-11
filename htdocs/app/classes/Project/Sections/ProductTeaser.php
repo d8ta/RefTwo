@@ -6,7 +6,7 @@ use A365\Wordpress\Helpers\Acf\FieldHelper;
 class ProductTeaser extends \A365\Wordpress\Block\AcfBlock {
 
 	protected $_template = 'product-teaser';
-	protected static $_label = 'Product Teaser';
+	protected static $_label = 'Produkt Einführung';
 
 	/**
 	 * @inheritdoc
