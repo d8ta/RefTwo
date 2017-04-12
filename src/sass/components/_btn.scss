@@ -1,6 +1,11 @@
 $block: '.btn';
 #{$block} {
     &--icon-text {
+        border-radius: 5px;
+        font-weight: bold;
+        background-color: $color-light-grey;
+        color: $color-text;
+        padding: 10px 20px;
         #{$block} {
             &__icon {
                 vertical-align: middle;
@@ -10,12 +15,12 @@ $block: '.btn';
                     @extend %icon;
                     margin-top: em(5);
                     &__primary {
-                    	color: orange;
+                        color: $brand-primary;
                     }
                 }
             }
             &__text {
-                vertical-align: middle;
+                margin-top: 10px;
             }
         }
     }

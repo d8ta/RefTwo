@@ -41,7 +41,7 @@ $box-margin: 2em;
                 }
             }
             &__headline {
-                @extend %h2;
+                // @extend %h2;
                 color: $brand-primary;
             }
             &__description {

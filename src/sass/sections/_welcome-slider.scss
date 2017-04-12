@@ -28,7 +28,7 @@ $block: '.welcome-slider';
             z-index: 2;
             &__table {
                 background: $brand-primary;
-                color: white;
+                color: $color-white;
                 width: em(420);
                 display: table;
                 height: 100%;
@@ -36,11 +36,17 @@ $block: '.welcome-slider';
                 &__td {
                     display: table-cell;
                     vertical-align: middle;
+                    h5 {
+                        margin-bottom: 20px;
+                    }
+                    h1 {
+                        margin-bottom: 20px;
+                    }
+                    h2 {
+                        margin-bottom: 30px;
+                        width: 285px;
+                    }
                     &__button {
-                        background-color: $color-light-grey;
-                        color: $color-text;
-                        border-radius: 0;
-                        padding: 10px 20px;
                     }
                 }
             }
@@ -50,13 +56,11 @@ $block: '.welcome-slider';
         &__slide {
             font-size: 0.75em;
             min-height: 160px;
-            &__image {
-            }
+            &__image {}
             &__text {
                 &__table {
                     &__td {
-                        &__button {
-                        }
+                        &__button {}
                     }
                 }
             }
@@ -73,12 +77,7 @@ $block: '.welcome-slider';
                 &__table {
                     &__td {
                         &__button {
-                            background-color: $color-light-grey;
-                            color: $color-text;
-                            border-radius: 0;
                             padding: 5px 10px;
-                            // position: absolute;
-                            // bottom: 70px;
                             left: 25px
                         }
                     }

@@ -32,8 +32,9 @@ $mq-breakpoints: ( screen-xs: $screen-xs, screen-sm: $screen-sm, screen-md: $scr
 /* ======== SCUT ======== */
 
 $scut-rem-base: $font-size-base / 1px; // strip units
-$font-normal: "Tahoma",
-Arial;
+$font-headline: "Tahoma", sans-serif;
+$font-normal: "univia-pro", sans-serif;
+
 
 /* ======== Easing Functions ======== */
 

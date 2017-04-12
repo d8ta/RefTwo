@@ -18,12 +18,9 @@
 						<div class="welcome-slider__slide__text__table">
 							<div class="welcome-slider__slide__text__table__td">
 								<h5 class="h5">{{$pretitle}}</h5>
-								<br>
 								<h1 class="h1">{{$title}}</h1>
-								<br>
 								<h2 class="h2">{{$description}}</h2>
-								<br>
-								<button class="welcome-slider__slide__text__table__td__button btn btn--icon-text" type="button">
+								<button class="welcome-slider__slide__text__table__td btn--icon-text" type="button">
 									<i class="btn__icon primary-color"></i>
 									<span class="btn__text">{{$buttontext}}</span>
 								</button>
