@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "Siconnex"
+AuthUserFile /www/htdocs/w012368d/test.a365.at/siconnex/.htpasswd 
+Require valid-user
