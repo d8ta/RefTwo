@@ -8,8 +8,8 @@
 			$description_right = $block->getDescriptionRight();
 			?>
 			<div class="customers-teaser__inner">
-				<h1 class="h1">{{$title}}</h1>
-				<h2 class="h2">{{$subtitle}}</h2>
+				<h2 class="h1">{{$title}}</h2>
+				<h3 class="h2">{{$subtitle}}</h3>
 				<div class="customers-teaser__inner__textboxes">
 					<div class="customers-teaser__inner__textboxes__box--left">
 						<h3 class="h3">{!!$description_left!!}</h3>

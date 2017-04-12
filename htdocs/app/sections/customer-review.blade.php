@@ -12,9 +12,9 @@
 				$signature = $block->getSignature();
 				?>
 				<div class="customer-review__content__text">
-					<h1 class="h1">{{$title}}</h1>
-					<h2 class="h2">{{$description}}</h2>
-					<h2 class="h2">{{$signature}}</h2>
+					<h2 class="h1">{{$title}}</h2>
+					<h3 class="h2">{{$description}}</h3>
+					<h3 class="h2">{{$signature}}</h3>
 				</div>
 				<div class="customer-review__content__images">
 					<div class="customer-review__content__images--big">

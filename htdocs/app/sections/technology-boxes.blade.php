@@ -11,7 +11,7 @@
 		<div class="techboxes">
 			<div class="techboxes__image bg-image" style="background-image: url({{$techbox['background']}})"></div>
 			<div class="techboxes__text">
-				<h1 class="h1">{{$title}}</h1>
+				<h2 class="h1">{{$title}}</h2>
 				<br>
 					<div class="techboxes__text--description">
 						<h2 class="h2">{{$description}}</h2>

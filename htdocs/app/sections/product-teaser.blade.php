@@ -9,7 +9,7 @@
 			$button_url = $block->getButtonUrl();
 			?>
 			<div class="product-teaser__inner">
-				<h1 class="h1">{{$title}}</h1>
+				<h2 class="h1">{{$title}}</h2>
 				<br>
 				<h2 class="h2">{{$subtitle}}</h2>
 				<br>

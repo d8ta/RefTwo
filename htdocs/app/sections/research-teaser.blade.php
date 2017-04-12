@@ -16,7 +16,7 @@
 					</div>
 					<div class="research-teaser__content__text">
 						<div class="research-teaser__content__text__table">
-							<h1 class="h1">{{$title}}</h1>
+							<h2 class="h1">{{$title}}</h2>
 							<br>
 							<h2 class="h2">{{$description}}</h2>
 							<br>

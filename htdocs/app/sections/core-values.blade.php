@@ -13,7 +13,7 @@ $corevalues = $block->getCorevalues();
 			<div class="core-values__info">
 				<img src="{{$image}}" alt="Section Image" class="core-values__info__image" />
 				<div class="core-values__info__text">
-					<h1 class="core-values__info__text__headline">{{$title}}</h1>
+					<h2 class="core-values__info__text__headline h1">{{$title}}</h2>
 					<h3 class="core-values__info__text__description">{!!$description!!}</h3>
 				</div>
 			</div>
