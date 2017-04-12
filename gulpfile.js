@@ -1,24 +1,23 @@
 /**
  * Require plugins
  */
-var autoprefixer  = require('gulp-autoprefixer');
-var del           = require('del');
-var gulp          = require('gulp');
-var iconfont      = require('gulp-iconfont');
-var iconfontCss   = require('gulp-iconfont-css');
-var imagemin      = require('gulp-imagemin');
-var include       = require('gulp-include');
-var livereload    = require('gulp-livereload');
-var notify        = require("gulp-notify");
-var plumber       = require('gulp-plumber');
-var rename        = require('gulp-rename');
-var runSequence   = require('run-sequence');
-var sass          = require('gulp-sass');
-var sourcemaps    = require('gulp-sourcemaps');
-var uglify        = require('gulp-uglify');
-var jshint        = require('gulp-jshint');
-var scsslint      = require('gulp-scsslint');
-var yargs         = require('yargs').argv;
+var autoprefixer   = require('gulp-autoprefixer');
+var del            = require('del');
+var gulp           = require('gulp');
+var iconfont       = require('gulp-iconfont');
+var iconfontCss    = require('gulp-iconfont-css');
+var imagemin       = require('gulp-imagemin');
+var include        = require('gulp-include');
+var livereload     = require('gulp-livereload');
+var mainBowerFiles = require('gulp-main-bower-files');
+var notify         = require("gulp-notify");
+var plumber        = require('gulp-plumber');
+var rename         = require('gulp-rename');
+var runSequence    = require('run-sequence');
+var sass           = require('gulp-sass');
+var sourcemaps     = require('gulp-sourcemaps');
+var uglify         = require('gulp-uglify');
+var filter         = require('gulp-filter');
 
 /* ======== Variables ======== */
 var paths = {
@@ -29,23 +28,30 @@ var paths = {
 
 paths.src = {
   bower: 'src/bower_components/',
+  fonts: "src/fonts/", 
   iconfont: 'src/iconfont/',
   images: 'src/images/',
+  misc: 'src/misc/',
   sass: 'src/sass/',
   scripts: 'src/scripts/',
   scriptsVendor: 'src/scripts/vendor/',
-  fonts: "src/fonts/", 
+  sprites: 'src/sprites/',
+  templates: 'src/templates/',
 };
 
 paths.dist = {
+  css: paths.prefix.dist + 'css/',
+  bower: paths.prefix.dist + 'bower/',
+  fonts: paths.prefix.dist + "fonts/", 
+  htdocs: 'htdocs/',
   iconfont: paths.prefix.dist + 'fonts/iconfont/',
   images: paths.prefix.dist + 'images/',
   misc: paths.prefix.dist + '',
   root: paths.prefix.dist + '',
-  css: paths.prefix.dist + 'css/',
   scripts: paths.prefix.dist + 'js/',
   scriptsVendor: paths.prefix.dist + 'js/vendor/',
-  fonts: paths.prefix.dist + "fonts/", 
+  sprites: paths.prefix.dist + 'sprites/',
+  templates: paths.prefix.dist + 'templates/',
 };
 
 /* ======== TASK DEFINITIONS ======== */
@@ -70,24 +76,34 @@ gulp.task('clean::assets', function (callback) {
   });
 });
 
+gulp.task('bower', function(){
+    const f = filter(['**/*.js', '!**/*.css'], {restore: true});
+    var uglifyOptions = {
+      compress: {
+        drop_debugger: false
+      }
+    };
 
-gulp.task('sass::lint', function() {
-  gulp.src(paths.src.sass + "*.scss")
-    .pipe(scsslint())
-    .pipe(scsslint.reporter());
+    return gulp.src('./bower.json')
+        .pipe(mainBowerFiles())
+        .pipe(f)
+        .pipe(uglify())
+        .pipe(f.restore)
+        .pipe(gulp.dest(paths.dist.bower));
 });
 
 /**
  * sass task
  */
-gulp.task('sass::src', function(){
+gulp.task('sass', function(){
 
   var sassOptions = {
     outputStyle: 'compressed'
   };
 
   var autoprefixerOptions = {
-    cascade: false
+    cascade: false,
+    browsers: ['> 5%', 'ie 9'],
   };
 
   var renameOptions = {
@@ -102,24 +118,7 @@ gulp.task('sass::src', function(){
       .pipe( rename( renameOptions ) )
       .pipe( gulp.dest(paths.dist.css) )
       .pipe( livereload()) ;
-});
-
-
-gulp.task("sass", function(callback) {
-  runSequence(
-    ['sass::src'],
-    callback
-  );
-});
-
-gulp.task("sass::watch", function(callback) {
-  runSequence(
-    'sass',
-    callback
-  );
-});
-
-
+})
 
 // SCRIPTS
 gulp.task("scripts::src", function() {
@@ -145,19 +144,6 @@ gulp.task("scripts::src", function() {
     .pipe( gulp.dest(paths.dist.scripts) );
 });
 
-
-gulp.task('scripts::lint', function() {
-  
-  var files = [
-    paths.src.scripts + 'common/*.js',
-    paths.src.scripts + 'modules/*.js'
-  ];
-
-  return gulp.src(files)
-    .pipe(jshint())
-    .pipe(jshint.reporter('jshint-stylish'));
-});
-
 /**
  * Copy all defined vendor scripts from the bower directory
  * and all scripts from src/scripts/vendor with a .min.js file extension
@@ -166,8 +152,6 @@ gulp.task("scripts::vendor", function() {
 
   var files = [
     paths.src.scripts + 'vendor/*.min.js',
-    paths.src.bower + 'jquery/dist/jquery.min.js',
-    paths.src.bower + 'angular/angular.min.js'
   ];
 
   return gulp.src( files )
@@ -176,7 +160,7 @@ gulp.task("scripts::vendor", function() {
 
 gulp.task("scripts", function(callback) {
   runSequence(
-    ['scripts::src', 'scripts::vendor', 'scripts::lint'],
+    ['scripts::src', 'scripts::vendor'],
     callback
   );
 });
@@ -188,6 +172,7 @@ gulp.task("scripts::watch", function(callback) {
     callback
   );
 });
+
 
 // Images
 gulp.task('images', function()
@@ -210,7 +195,7 @@ gulp.task("images::watch", function(callback) {
 // Iconfont
 gulp.task('iconfont', function() {
 
-  var fontName = 'iconfont_v1';
+  var fontName = 'iconfont';
 
   return gulp.src(paths.src.iconfont + '*.svg')
     .pipe(iconfontCss({
@@ -229,6 +214,26 @@ gulp.task('iconfont', function() {
 gulp.task('fonts', function() {
   return gulp.src( paths.src.fonts + '**/*')
     .pipe(gulp.dest(paths.dist.fonts));
+});
+
+// Misc
+gulp.task('misc', function() {
+  return gulp.src( paths.src.misc + '**/*')
+    .pipe(gulp.dest(paths.dist.htdocs));
+});
+
+// Templates
+gulp.task('templates', function() {
+  return gulp.src( paths.src.templates + '**/*')
+    .pipe(gulp.dest(paths.dist.templates));
+});
+
+gulp.task("templates::watch", function(callback) {
+  runSequence(
+    'templates',
+    'livereload',
+    callback
+  );
 });
 
 // simple page reload
@@ -253,10 +258,13 @@ gulp.task('build',  function(callback){
   runSequence(
     'clean::assets',
     [
+      'bower',
       'fonts',
       'iconfont',
       'images',
-      'scripts'
+      'misc',
+      'scripts',
+      'templates',
     ],
     'sass',
     callback
@@ -270,6 +278,7 @@ gulp.task('watch', function()
 
   gulp.watch([ paths.src.iconfont + '*'], ['iconfont']);
   gulp.watch([ paths.src.images + '**/*'], ['images::watch']);
-  gulp.watch([ paths.src.sass + '**/*.scss'], ['sass::watch']);
+  gulp.watch([ paths.src.templates + '**/*'], ['templates::watch']);
+  gulp.watch([ paths.src.sass + '**/*.scss'], ['sass']);
   gulp.watch([ paths.src.scripts + '**/*.js'], ['scripts::watch']);
 });
