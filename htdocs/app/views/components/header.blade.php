@@ -3,8 +3,6 @@
  * @var \A365\Wordpress\Models\Page $page
  */
 ?>
-
-
 <header class="section site-header">
     <div class="section__content">
         
