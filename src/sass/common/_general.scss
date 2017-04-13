@@ -23,3 +23,12 @@ p {
 .primary-color {
     color: $brand-primary;
 }
+
+.subtitle-color {
+    color: $color-grey;
+}
+
+.primary-brand-btn {
+	background: $brand-primary !important;
+	color: $color-white !important;
+}

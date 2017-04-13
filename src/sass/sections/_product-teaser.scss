@@ -1,22 +1,20 @@
 $block: '.product-teaser';
 #{$block} {
-    // margin-top: 200px;
+    margin-top: 130px;
     &__inner {
-        width: 66%;
-        margin: 0 auto;
         text-align: center;
-        h1 {
-            color: $brand-primary;
+        &--title {
         }
-        h2 {
-            color: $color-text-grey;
+        &--subtitle {
         }
-        .btn {
-            background: $brand-primary;
-            color: $color_white;
-            width: 275px;
-            padding: 10px 10px;
-            border-radius: 5px;
+        &--description {
         }
+        // .btn {
+        //     background: $brand-primary;
+        //     color: $color_white;
+        //     width: 275px;
+        //     padding: 10px 10px;
+        //     border-radius: 5px;
+        // }
     }
 }

@@ -13,10 +13,9 @@
 			</div>
 			@endforeach
 				<div class="corp-info__info__text">
-					<h1 class="corp-info__info__text__headline">{{$title}}</h1>
-					<h2 class="corp-info__info__text__subheadline">{{$subtitle}}</h2>
-					<br>
-					<h3 class="corp-info__info__text__description">{!!$description!!}</h3>
+					<h2 class="corp-info__info__text__headline h1">{{$title}}</h2>
+					<h3 class="corp-info__info__text__subheadline">{{$subtitle}}</h3>
+					<h4 class="corp-info__info__text__description">{!!$description!!}</h4>
 				</div>
 		</div>
 	</div>
