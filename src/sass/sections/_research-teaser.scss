@@ -4,24 +4,19 @@ $block: '.research-teaser';
     &__content {
         background: $brand-primary;
         height: em(590);
-        &__text {
             @extend %section-content;
+        &__text {
             color: $color-white;
             position: absolute;
-            top: 160px;
-            h1 {
-                margin-bottom: 65px;
-            }
-            h2 {
-                margin-bottom: 30px;
-            }
+            top: em(160);
+            width: 25%;
         }
         &__images {
             position: relative;
             &--big {
                 position: absolute;
                 border-radius: 15px;
-                right: 25%;
+                right: 14.5%;
                 top: 0;
                 &__inner {
                     border-radius: 15px;
@@ -32,7 +27,7 @@ $block: '.research-teaser';
                 border-radius: 10px;
                 position: absolute;
                 width: 13.333%;
-                right: 9%;
+                right: 0%;
                 top: -11px;
                 display: block;
                 &__inner {
