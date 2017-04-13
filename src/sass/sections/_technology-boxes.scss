@@ -1,33 +1,37 @@
     $block: '.technology-boxes';
     #{$block} {
-        width: 280px;
-    }
-    
-    .techboxes {
-        margin-left: 80px;
-        width: 280px;
-        margin-top: 80px;
-        margin-bottom: 20px;
+        margin-top: em(70);
+        margin-bottom: em(200);
+        // @extend %section-content;
         float: left;
-        background: $action-box-bg;
-        height: 450px;
-        .bg-image {
-            width: 200px;
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center center;
-            height: 220px;
-            width: 280px;
-            margin: 0 auto;
-            margin-bottom: 20px;
-            border-radius: 5px;
-        }
-        &__text {
-            color: $brand-primary;
-            font-size: em(10);
-            text-align: center;
-            &--description {
-                color: $color-text;
+        width: 20%;
+        padding: 0 em(30);
+        &__inner {
+            &__image {
+                border-top-right-radius: 5px;
+                border-top-left-radius: 5px;
+                height: 0;
+                padding-bottom: 100%;
+            }
+            &__text {
+                border-bottom-right-radius: 5px;
+                border-bottom-left-radius: 5px;
+                text-align: center;
+                background: $color-light-grey;
+                padding-top: em(30);
+                height: em(250);
+                &--description {
+                    h3 {
+                        width: 80%;
+                        overflow: hidden;
+                        height: 7.3em;
+                        &__clamp {
+                            display: -webkit-box;
+                            -webkit-line-clamp: 5;
+                            -webkit-box-orient: vertical;
+                        }
+                    }
+                }
             }
         }
     }

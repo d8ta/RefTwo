@@ -38,7 +38,13 @@ h6,
     margin: 0 auto 20px auto;
 }
 
-%h4 {}
+%h4 {
+    font-family: $font-normal;
+    font-size: em(24);
+    font-weight: bold;
+    line-height: 1em;
+    margin: 25px auto 20px auto;
+}
 
 %h5 {
     font-family: $font-normal;
