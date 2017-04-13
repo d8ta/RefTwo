@@ -4,8 +4,8 @@ $block: '.customer-review';
     &__content {
         background: $brand-primary;
         height: 590px;
+        @extend %section-content;
         &__text {
-            @extend %section-content;
             color: $color-white;
             position: absolute;
             top: 160px;
