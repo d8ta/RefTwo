@@ -3,18 +3,8 @@ $block: '.product-teaser';
     margin-top: 130px;
     &__inner {
         text-align: center;
-        &--title {
-        }
-        &--subtitle {
-        }
-        &--description {
-        }
-        // .btn {
-        //     background: $brand-primary;
-        //     color: $color_white;
-        //     width: 275px;
-        //     padding: 10px 10px;
-        //     border-radius: 5px;
-        // }
+        &--title {}
+        &--subtitle {}
+        &--description {}
     }
 }

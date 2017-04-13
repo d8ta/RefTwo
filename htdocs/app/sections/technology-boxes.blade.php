@@ -8,15 +8,19 @@
 		$title = $techbox['title'];
 		$description = $techbox['description'];
 		?>
-		<div class="techboxes">
-			<div class="techboxes__image bg-image" style="background-image: url({{$techbox['background']}})"></div>
-			<div class="techboxes__text">
-				<h2 class="h1">{{$title}}</h2>
-				<br>
-					<div class="techboxes__text--description">
-						<h2 class="h2">{{$description}}</h2>
-					</div>
+		<div class="technology-boxes">
+		<a href="" class="technology-boxes__inner">
+			<div class="technology-boxes__inner__image bg-image" style="background-image: url({{$techbox['background']}})">
 			</div>
+			<div class="technology-boxes__inner__text">
+				<h2 class="h4 primary-color">{{$title}}</h2>
+				<div class="technology-boxes__inner__text--description">
+					<h3 class="h3">
+						<div class="technology-boxes__inner__text--description__clamp">{{$description}}</div>
+					</h3>
+				</div>
+			</div>
+		</a>
 		</div>
 		@endforeach
 	</div>

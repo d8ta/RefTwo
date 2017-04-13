@@ -1,5 +1,5 @@
 <?php 
-	$links = $block->getLinks();
+	$customerimg = $block->getCustomerImg();
 ?>
 <div class="section section--fullwidth">
 	<div class="section__content">
@@ -21,11 +21,11 @@
 						<img src="{{$bigimage}}" alt="Forschungsbild groß" class="customer-review__content__images--big__inner" />
 					</div>
 					<div class="customer-review__content__images--small">
-					@foreach ($links as $link)
+					@foreach ($customerimg as $img)
 					<?php 
-					$featuredimage = $link['image'];
+					$smallimg = $img['image'];
 					?>
-					<img src="{{$featuredimage}}" alt="Forschungsbild klein" class="customer-review__content__images--small__inner" />
+					<img src="{{$smallimg}}" alt="Forschungsbild klein" class="customer-review__content__images--small__inner" />
 					@endforeach
 					</div>
 				</div>

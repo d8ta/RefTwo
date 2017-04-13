@@ -15,9 +15,9 @@
 				<a class="product-links__content" href="{{$link}}">
 					<img src="{{$batchimage}}" alt="Produkt Link" class="product-links__content__image--batch" />
 					<img src="{{$logo}}" alt="Batchspray Logo" class="product-links__content__image--logo" />
-					<h2 class="product-links__content__image__text h2">
+					<h3 class="product-links__content__image__text h3>">
 						<div class="product-links__content__image__text__clamp">{{$description}}</div>
-					</h2>
+					</h3>
 				</a>
 				@endforeach
 			</div>
