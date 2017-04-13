@@ -9,14 +9,17 @@
 			$button_url = $block->getButtonUrl();
 			?>
 			<div class="product-teaser__inner">
-				<h2 class="h1">{{$title}}</h2>
-				<br>
-				<h2 class="h2">{{$subtitle}}</h2>
-				<br>
+			<div class="product-teaser__inner--title">
+				<h2 class="h1 primary-color">{{$title}}</h2>
+			</div>
+			<div class="product-teaser__inner--subtitle">
+				<h2 class="h2 subtitle-color">{{$subtitle}}</h2>
+			</div>
+			<div class="product-teaser__inner--description">
 				<h3 class="h3">{{$description}}</h3>
-				<br>
-				<button class="product-teaser btn btn--icon-text" type="button">
-				<i class="btn__icon"></i>
+			</div>			
+				<button class="btn--icon-text primary-brand-btn" type="button">
+				<i class="btn__icon white-icon"></i>
 				<span class="btn__text">{{$button_text}}</span>
 				</button>
 			</div>
