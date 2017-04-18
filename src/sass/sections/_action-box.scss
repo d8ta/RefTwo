@@ -19,6 +19,12 @@ $box-margin: 2em;
             position: absolute;
             right: 0;
             top: 0;
+            &--icon {
+                width: 50px;
+                position: absolute;
+                top: 20px;
+                left: -25px;
+            }
         }
         &__text {
             width: 100% - $image-width - 15%;
@@ -31,11 +37,7 @@ $box-margin: 2em;
                 width: 100%;
                 &__td {
                     vertical-align: middle;
-                    &__icons {
-                        width: 50px;
-                        position: absolute;
-                        left: 16.25em;
-                    }
+                    left: 16.25em;
                     &__button {
                         background-color: $color-light-grey;
                         color: $color-text;
@@ -61,6 +63,15 @@ $box-margin: 2em;
                     display: -webkit-box;
                     -webkit-line-clamp: 3;
                     -webkit-box-orient: vertical;
+                }
+            }
+        }
+    }
+    @include mq($until: screen-xl) {
+        &__box {
+            &__text {
+                &__headline {
+                    white-space: normal;
                 }
             }
         }
