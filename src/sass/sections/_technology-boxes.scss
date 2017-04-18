@@ -5,11 +5,18 @@
         float: left;
         width: 20%;
         padding: 0 em(30);
+        -webkit-transition: height 4s;
+        transition: height 4s;
+        :hover {
+            height: 200px;
+            color: white;
+            background: $color-text;
+        }
         &__inner {
             &__image {
                 border-top-right-radius: 5px;
                 border-top-left-radius: 5px;
-                height: 0;
+                height: 0px;
                 padding-bottom: 100%;
             }
             &__text {
@@ -19,8 +26,7 @@
                 background: $color-light-grey;
                 padding-top: em(30);
                 height: em(250);
-                h2 {
-                }
+                h2 {}
                 &--description {
                     h3 {
                         width: 80%;
