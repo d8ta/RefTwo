@@ -1,7 +1,7 @@
 <?php 
 	$techboxes = $block->getBox();
 ?>
-<div class="section section--fullwidth">
+<div class="section section">
 	<div class="section__content">
 		@foreach ($techboxes as $techbox)
 		<?php 

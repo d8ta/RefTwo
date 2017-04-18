@@ -1,10 +1,11 @@
 $block: '.research-teaser';
 #{$block} {
     margin-bottom: em(350);
+    background: $brand-primary;
     &__content {
         background: $brand-primary;
         height: em(590);
-            @extend %section-content;
+        @extend %section-content;
         &__text {
             color: $color-white;
             position: absolute;
@@ -12,6 +13,7 @@ $block: '.research-teaser';
             width: 25%;
         }
         &__images {
+            @extend %section-content;
             position: relative;
             &--big {
                 position: absolute;
