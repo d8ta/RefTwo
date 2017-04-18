@@ -13,13 +13,13 @@ $boxes = $block->getBox();
 				$icon = $box['icon'];
 				?>
 				<div class="action-box__box">
-					<div class="action-box__box__image bg-image" style="background-image: url({{$box['background']}})"></div>
+					<div class="action-box__box__image bg-image" style="background-image: url({{$box['background']}})">
+						<img src="assets/images/icons/{{$icon}}.svg" class="action-box__box__image--icon" alt="Icon" />
+
+					</div>
 						<div class="action-box__box__text">
 							<div class="action-box__box__text__table">
 							<div class="action-box__box__text__table__td">
-								<div class="action-box__box__text__table__td__icons">
-									<img src="assets/images/icons/{{$icon}}.svg" class="action-box__box__text__table__td__icon--iconimages" alt="Icon" />
-								</div>
 								<h2 class="action-box__box__text__headline">{{$title}}</h2>
 								<div class="action-box__box__text__description">
 									<div class="action-box__box__text__description__clamp">{{$description}}</div>
