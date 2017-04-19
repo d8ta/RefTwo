@@ -13,8 +13,6 @@
                 padding-bottom: 100%;
             }
             &__text {
-                border-bottom-right-radius: 5px;
-                border-bottom-left-radius: 5px;
                 text-align: center;
                 background: $color-light-grey;
                 padding-top: em(30);
@@ -80,10 +78,31 @@
         -moz-transition: height 0s ease-in-out;
         transition: height 0s;
         margin-bottom: em(500);
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+        .link {
+            display: none;
+            margin-top: 40px;
+            background: $brand-primary;
+            height: 50px;
+            padding-top: 10px;
+            border-top-left-radius: 0px;
+            border-top-left-radius: 0px;
+        }
     }
     
     .technology-boxes__inner__text:hover {
-        height: 300px;
+        height: 299px;
         color: white;
         background: $color-text;
+        .link {
+            display: block;
+            margin-top: 40px;
+            background: orange;
+            height: 50px;
+            border-bottom-right-radius: 5px;
+            border-bottom-left-radius: 5px;
+            border-top-left-radius: 0px;
+            border-top-right-radius: 0px;
+        }
     }
