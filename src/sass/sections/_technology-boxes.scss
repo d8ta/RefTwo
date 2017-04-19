@@ -1,7 +1,5 @@
     $block: '.technology-boxes';
     #{$block} {
-        margin-top: em(70);
-        margin-bottom: em(200);
         float: left;
         width: 20%;
         padding: 0 em(30);
@@ -33,8 +31,6 @@
             }
         }
         @include mq($until: screen-lg) {
-            margin-top: em(20);
-            margin-bottom: em(20);
             clear: both;
             width: 100%;
             padding: 0 em(30);
@@ -91,18 +87,21 @@
         }
     }
     
-    .technology-boxes__inner__text:hover {
-        height: 260px;
-        color: white;
-        background: $color-text;
-        .link {
-            display: block;
-            margin-top: 40px;
-            background: orange;
-            height: 50px;
-            border-bottom-right-radius: 5px;
-            border-bottom-left-radius: 5px;
-            border-top-left-radius: 0px;
-            border-top-right-radius: 0px;
+    html.no-touchevents & {
+        background: yellow;
+        .technology-boxes__inner__text:hover {
+            height: 260px;
+            color: white;
+            background: $color-text;
+            .link {
+                display: block;
+                margin-top: 40px;
+                background: orange;
+                height: 50px;
+                border-bottom-right-radius: 5px;
+                border-bottom-left-radius: 5px;
+                border-top-left-radius: 0px;
+                border-top-right-radius: 0px;
+            }
         }
     }

@@ -1,11 +1,9 @@
 $block: '.product-teaser';
 #{$block} {
-    margin-top: 130px;
     &__inner {
         text-align: center;
     }
     @include mq($until: screen-lg) {
-        margin-top: 0px;
         &__inner {
             &--description {
                 h3 {
@@ -13,9 +11,8 @@ $block: '.product-teaser';
                 }
             }
         }
-    } 
-       @include mq($until: screen-sm) {
-        margin-top: 0px;
+    }
+    @include mq($until: screen-sm) {
         &__inner {
             &--description {
                 h3 {

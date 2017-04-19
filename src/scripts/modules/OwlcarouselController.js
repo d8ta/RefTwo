@@ -2,6 +2,7 @@ function OwlcarouselController() {
 
 	this.initElements();
 	this.initOwl();
+
 }
 
 OwlcarouselController.prototype = new Module();

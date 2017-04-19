@@ -1,6 +1,7 @@
 function Owlcarousel($element) {
     this.elements.owl = $element;
     this.init();
+
     return {};
 }
 
@@ -8,7 +9,6 @@ Owlcarousel.prototype = new Module;
 Owlcarousel.prototype.constructor = Owlcarousel;
 
 Owlcarousel.prototype.variables = {
-    owlObject: undefined,
     responsivetypes: [{
         0: {
             items: 1
@@ -48,15 +48,14 @@ Owlcarousel.prototype.options = {
     animateOut: undefined,
     smartSpeed: 200,
     slideBy: 2,
-    navSpeed: 300,
-    dotsSpeed: 250,
+    navSpeed: 100,
+    dotsSpeed: 100,
     touchDrag: true,
     mouseDrag: false,
-    filter: false,
-    navText: [
-      "<div class='blue-circle'><i class='icon icon-arrow-left'></i></div>",
-      "<div class='blue-circle'><i class='icon icon-arrow-right'></i></div>"
-    ],
+    // navText: [
+    //   "<i class='icon icon-arrow-left'></i>",
+    //   "<i class='icon icon-arrow-right'></i>"
+    // ],
     scrollleft: false,
 };
 
@@ -69,6 +68,19 @@ Owlcarousel.prototype.init = function() {
         data.dotsData = data.dotsdata;
     }
 
+
+
+
+    if (!!data.icontop) {
+        data.onInitialized = function() {
+            self.elements.owl.find(".owl-stage-outer").before(self.elements.owl.find(".owl-dots"));
+            self.elements.owl.find(".owl-stage-outer").before(self.elements.owl.find(".owl-nav"));
+            self.elements.owl.find(".owl-dots").wrap('<div class="dots-wrapper"></div>');
+            self.elements.owl.find(".owl-dots").wrap('<div class="dots-overflow-wrapper"></div>');
+            jQuery( "<div class='before-dots'></div>").insertBefore(self.elements.owl.find(".owl-dots"));
+            jQuery( "<div class='after-dots'></div>").insertAfter(self.elements.owl.find(".owl-dots"));
+        };
+    }
 
     if (typeof data.lazyload !== "undefined") {
         data.lazyLoad = data.lazyload;
@@ -95,12 +107,28 @@ Owlcarousel.prototype.init = function() {
         options.touchDrag = data.touchdrag;
     }
 
-    if(options.filter) {
-        this.options.filter = options.filter;
-    }
-
     options.responsive = this.variables.responsivetypes[options.responsivetype];
 
-    this.variables.owlObject = this.elements.owl.owlCarousel(options);
+    if (options.randomslide) {
+        var slideCount = self.elements.owl.children().length;
+        var random = Math.floor(Math.random() * slideCount);
+        options.startPosition = random;
 
+    }
+
+    var owl = this.elements.owl.owlCarousel(options);
+
+    owl.on('changed.owl.carousel', function(e) {
+        if (options.scrollleft && Modernizr.touchevents) {
+            var offset = 5,
+                index = Math.max(e.item.index - offset, 0),
+                widthDot = self.elements.owl.find(".owl-dot").eq(0).width(),
+                widthDots = self.elements.owl.find(".dots-overflow-wrapper").eq(0).width(),
+                left = Math.max((index * widthDot) - (widthDots / 2) + (widthDot * 3 / 2), 0);
+        
+            self.elements.owl.find(".dots-overflow-wrapper").animate({scrollLeft:left}, 200);
+        }
+
+    });
 };
+

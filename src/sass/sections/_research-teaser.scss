@@ -1,6 +1,6 @@
 $block: '.research-teaser';
 #{$block} {
-    margin-bottom: em(350);
+    // margin-bottom: em(350);
     background: $brand-primary;
     &__content {
         background: $brand-primary;
@@ -10,7 +10,7 @@ $block: '.research-teaser';
         &__text {
             color: $color-white;
             position: absolute;
-            top: em(60);
+            top: em(120);
             width: 25%;
         }
         &__images {
@@ -108,7 +108,7 @@ $block: '.research-teaser';
         }
     }
     @include mq($until: screen-md) {
-        margin-bottom: 40px;
+        // margin-bottom: 40px;
         &__content {
             height: em(590);
             &__text {

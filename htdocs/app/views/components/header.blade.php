@@ -5,14 +5,11 @@
 ?>
 <header class="section site-header">
     <div class="section__content">
-        
         <div class="site-header__logo">
             @include('components.header.logo-box')
+			@include('components.header.menu-burger')
         </div>
-
         @include('components.header.navigation')
-
     </div>
-
 </header>
 
