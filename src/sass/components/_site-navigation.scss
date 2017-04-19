@@ -27,4 +27,7 @@ $block: ".site-navigation";
             }
         }
     }
+    @include mq($until: width-mobile-menu) {
+        display: none;
+    }
 }

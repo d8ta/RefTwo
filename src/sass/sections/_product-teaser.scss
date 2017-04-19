@@ -1,10 +1,24 @@
 $block: '.product-teaser';
 #{$block} {
-    margin-top: 130px;
     &__inner {
         text-align: center;
-        &--title {}
-        &--subtitle {}
-        &--description {}
+    }
+    @include mq($until: screen-lg) {
+        &__inner {
+            &--description {
+                h3 {
+                    width: 80%;
+                }
+            }
+        }
+    }
+    @include mq($until: screen-sm) {
+        &__inner {
+            &--description {
+                h3 {
+                    width: 100%;
+                }
+            }
+        }
     }
 }
