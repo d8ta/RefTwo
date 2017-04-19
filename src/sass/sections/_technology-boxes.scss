@@ -87,21 +87,18 @@
         }
     }
     
-    html.no-touchevents & {
-        background: yellow;
-        .technology-boxes__inner__text:hover {
-            height: 260px;
-            color: white;
-            background: $color-text;
-            .link {
-                display: block;
-                margin-top: 40px;
-                background: orange;
-                height: 50px;
-                border-bottom-right-radius: 5px;
-                border-bottom-left-radius: 5px;
-                border-top-left-radius: 0px;
-                border-top-right-radius: 0px;
-            }
+    .technology-boxes__inner__text:hover {
+        height: 260px;
+        color: white;
+        background: $color-text;
+        .link {
+            display: block;
+            margin-top: 40px;
+            background: orange;
+            height: 50px;
+            border-bottom-right-radius: 5px;
+            border-bottom-left-radius: 5px;
+            border-top-left-radius: 0px;
+            border-top-right-radius: 0px;
         }
     }

@@ -1,7 +1,10 @@
 $block: ".sidebar";
-$sidebar-bg: #fff;
-$sidebar-fg: $brand-primary;
+$sidebar-bg: $brand-primary;
+$sidebar-fg: #fff;
 #{$block} {
+    font-weight: bold;
+    text-align: center;
+    font-size: 2em;
     position: fixed;
     width: 100%;
     min-height: 100vh;
@@ -9,6 +12,7 @@ $sidebar-fg: $brand-primary;
     right: 0;
     z-index: 0;
     padding-left: 10%;
+    background: $brand-primary;
     @include mq($from: screen-xs) {
         padding-left: 40%;
     }
