@@ -108,6 +108,7 @@ $block: '.research-teaser';
         }
     }
     @include mq($until: screen-md) {
+        margin-bottom: 40px;
         &__content {
             height: em(590);
             &__text {

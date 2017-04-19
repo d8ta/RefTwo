@@ -27,11 +27,17 @@
         @include mq($until: screen-lg) {
             &__content {
                 clear: both;
-                margin-top: 40px;
-                margin-bottom: 40px;
+                margin-top: 0;
+                margin-bottom: 0;
                 width: 80%;
                 margin-left: 10%;
                 margin-right: 10%;
+            }
+            :first-child {
+                margin-top: 20px;
+            }
+            :last-child {
+                margin-bottom: 20px;
             }
         }
     }

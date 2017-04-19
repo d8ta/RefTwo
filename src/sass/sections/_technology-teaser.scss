@@ -3,4 +3,20 @@ $block: '.technology-teaser';
     &__inner {
         text-align: center;
     }
+    @include mq($until: screen-lg) {
+        margin-top: 0px;
+        &__inner {
+            h3 {
+                width: 80%;
+            }
+        }
+    }
+    @include mq($until: screen-sm) {
+        margin-top: 0px;
+        &__inner {
+            h3 {
+                width: 100%;
+            }
+        }
+    }
 }
