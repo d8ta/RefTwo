@@ -5,14 +5,6 @@
         float: left;
         width: 20%;
         padding: 0 em(30);
-        -webkit-transition: height 4s;
-        -moz-transition: height 4s ease-in-out;
-        transition: height 4s;
-        :hover {
-            height: 200px;
-            color: white;
-            background: $color-text;
-        }
         &__inner {
             &__image {
                 border-top-right-radius: 5px;
@@ -80,4 +72,18 @@
                 }
             }
         }
+    }
+    
+    .technology-boxes__inner__text {
+        height: 250px;
+        -webkit-transition: height 0s;
+        -moz-transition: height 0s ease-in-out;
+        transition: height 0s;
+        margin-bottom: em(500);
+    }
+    
+    .technology-boxes__inner__text:hover {
+        height: 300px;
+        color: white;
+        background: $color-text;
     }

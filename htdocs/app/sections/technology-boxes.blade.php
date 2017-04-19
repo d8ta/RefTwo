@@ -3,13 +3,14 @@
 ?>
 <div class="section section">
 	<div class="section__content">
+		<div class="test"></div>
 		@foreach ($techboxes as $techbox)
 		<?php 
 		$title = $techbox['title'];
 		$description = $techbox['description'];
 		?>
 		<div class="technology-boxes">
-		<a href="" class="technology-boxes__inner">
+		<div href="" class="technology-boxes__inner">
 			<div class="technology-boxes__inner__image bg-image" style="background-image: url({{$techbox['background']}})">
 			</div>
 			<div class="technology-boxes__inner__text">
@@ -20,11 +21,8 @@
 					</h3>
 				</div>
 			</div>
-		</a>
+		</div>
 		</div>
 		@endforeach
 	</div>
-
-
-
 </div>
