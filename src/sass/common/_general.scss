@@ -28,12 +28,21 @@ p {
     color: $color-grey;
 }
 
+.description-left {
+    margin: 0 !important;
+}
+
 .primary-brand-btn {
-	background: $brand-primary !important;
-	color: $color-white !important;
+    background: $brand-primary !important;
+    color: $color-white !important;
 }
 
 .margin {
-    margin-bottom: 4rem;
     margin-top: 2rem;
+    margin-bottom: 4rem;
+}
+
+.margin-more-top {
+    margin-top: 8rem;
+    margin-bottom: 4rem;
 }
