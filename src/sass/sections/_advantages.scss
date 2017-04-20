@@ -1,0 +1,39 @@
+$block: '.advantages';
+#{$block} {
+    &__content {
+        @extend %section-content;
+        display: table;
+        &__text {
+            padding-top: 8em;
+            display: table-cell;
+            h3 {
+                margin: 0;
+                width: 100%
+            }
+        }
+        &__images {
+            @extend %section-content;
+            display: table-cell;
+            &--big {
+                border-radius: 5px;
+                &__inner {
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+    @include mq($until: screen-lg) {
+        &__content {
+            text-align: center;
+            &__text {
+                display: inline-block;
+            }
+            &__images {
+                display: inline-block;
+                &--big {
+                    &__inner {}
+                }
+            }
+        }
+    }
+}
