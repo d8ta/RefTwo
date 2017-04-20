@@ -5,10 +5,13 @@
             text-align: center;
             &__textbox {}
         }
-        @include mq($until: screen-sm) {
-            margin-bottom: 60px;
+        @include mq($until: screen-md) {
             &__inner {
-                &__textbox {}
+                &__textbox {
+                    h3 {
+                        width: 100%;
+                    }
+                }
             }
         }
     }
