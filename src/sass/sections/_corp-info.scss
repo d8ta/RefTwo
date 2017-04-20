@@ -4,7 +4,6 @@ $block: '.corp-info';
         &__img {
             float: right;
             margin: rem(5) rem(5);
-            
         }
     }
     &__text {
@@ -13,15 +12,28 @@ $block: '.corp-info';
         }
     }
     @include mq($until: screen-lg) {
+        text-align: center;
         &__text {
             &--left {
                 margin: 0 auto 20px auto;
             }
         }
-        text-align: center;
         &__images {
             display: inline-block;
+            &__img {}
+        }
+    }
+    @include mq($until: screen-sm) {
+        &__text {
+            &--left {
+                width: 100%;
+            }
+        }
+        &__images {
             &__img {
+                float: none;
+                clear: both;
+                margin: rem(5) rem(5);
             }
         }
     }
