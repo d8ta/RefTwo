@@ -1,0 +1,18 @@
+    $block: '.evolution-teaser';
+    #{$block} {
+        &__inner {
+            margin: 0 auto;
+            text-align: center;
+            &__textbox {}
+        }
+        @include mq($until: screen-md) {
+            &__inner {
+                &__textbox {
+                    h3 {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum beatae sunt laboriosam architecto dolorum omnis quos maiores commodi, at ex cum harum adipisci, saepe qui, est minus iusto ullam labore.
