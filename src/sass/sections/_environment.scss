@@ -1,47 +1,66 @@
     $block: '.environment';
     #{$block} {
-        margin-bottom: 215px;
         &__image {
-            height: 100%;
             padding-bottom: 40%;
         }
         &__box {
-            position: absolute;
             border-radius: 5px;
-            top: 85px;
-            right: 115px;
+            width: 33%;
+            float: right;
+            margin-top: -28.5rem;
+            margin-right: 5rem;
             background: $color-white;
             &__text {
-                padding: 70px;
-                .h1 {
-                    color: $brand-primary;
-                    padding-bottom: 10px;
-                }
-                .h2 {
-                    color: $color-text-grey;
-                    padding-bottom: 10px;
+                padding: 2rem;
+                &__description {
+                    overflow: hidden;
+                    height: 15em / 4 * 3;
+                    margin-bottom: 30px;
+                    &__clamp {
+                        display: -webkit-box;
+                        -webkit-line-clamp: 5;
+                        -webkit-box-orient: vertical;
+                    }
                 }
             }
         }
-        @include mq($until: screen-sm) {
-            margin-bottom: 20px;
-            &__image {}
+        @include mq($until: screen-xl) {
             &__box {
-                right: 0;
-                top: 0;
-                position: relative;
-                width: 100%;
-                margin: 0 auto;
-                text-align: center;
+                width: 40%;
+                margin-top: -24rem;
+                margin-right: 5rem;
+                background: $color-white;
                 &__text {
-                    padding: 70px;
-                    .h1 {
-                        color: $brand-primary;
-                        padding-bottom: 10px;
+                    padding: 2rem;
+                    &__description {
+                        overflow: hidden;
+                        height: 15em / 4 * 3;
+                        margin-bottom: 30px;
+                        &__clamp {
+                            display: -webkit-box;
+                            -webkit-line-clamp: 5;
+                            -webkit-box-orient: vertical;
+                        }
                     }
-                    .h2 {
-                        color: $color-text-grey;
-                        padding-bottom: 10px;
+                }
+            }
+        }
+        @include mq($until: screen-lg) {
+            text-align: center;
+            &__box {
+                width: 100%;
+                margin-top: 0;
+                margin-right: 0;
+                &__text {
+                    &__description {
+                        overflow: hidden;
+                        height: 100%;
+                        margin-bottom: 30px;
+                        &__clamp {
+                            display: -webkit-box;
+                            -webkit-line-clamp: 100;
+                            -webkit-box-orient: vertical;
+                        }
                     }
                 }
             }
