@@ -1,54 +1,14 @@
     $block: '.customers-teaser';
     #{$block} {
-        margin-bottom: 220px;
         &__inner {
-            width: 90%;
             margin: 0 auto;
             text-align: center;
-            h1 {
-                color: $brand-primary;
-                padding-bottom: 10px;
-                padding-bottom: 20px;
-            }
-            h2 {
-                color: $color-text-grey;
-                padding-bottom: 10px;
-                font-weight: bold;
-                font-size: em(25);
-            }
-            &__textboxes {
-                display: table;
-                width: 100%;
-                margin: 0 auto;
-                &__box {
-                    &--left {
-                        display: table-cell;
-                        text-align: left;
-                        padding: 40px;
-                    }
-                    &--right {
-                        display: table-cell;
-                        text-align: left;
-                        padding: 40px;
-                    }
-                }
-            }
+            &__textbox {}
         }
         @include mq($until: screen-sm) {
             margin-bottom: 60px;
             &__inner {
-                &__textboxes {
-                    &__box {
-                        &--left {
-                            display: block;
-                            padding-bottom: 0;
-                        }
-                        &--right {
-                            display: block;
-                            padding-bottom: 0;
-                        }
-                    }
-                }
+                &__textbox {}
             }
         }
     }
