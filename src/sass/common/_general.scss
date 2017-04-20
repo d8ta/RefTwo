@@ -28,13 +28,9 @@ p {
     color: $color-grey;
 }
 
-.description-left {
-    margin: 0 !important;
-}
-
 .primary-brand-btn {
-    background: $brand-primary !important;
-    color: $color-white !important;
+    background: $brand-primary;
+    color: $color-white;
 }
 
 .margin {

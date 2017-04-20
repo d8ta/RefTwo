@@ -1,39 +1,28 @@
 $block: '.corp-info';
 #{$block} {
-    width: 100% &--text {
-        float: left;
+    &__images {
+        &__img {
+            float: right;
+            margin: rem(5) rem(5);
+            
+        }
     }
-    &--img {
-        float: right;
-        margin-left: 1.5em;
+    &__text {
+        &--left {
+            margin: 0;
+        }
     }
     @include mq($until: screen-lg) {
-        &--text {
-            width: 100%;
-            display: block;
-            float: none;
-            clear: both;
-            text-align: center;
+        &__text {
+            &--left {
+                margin: 0 auto 20px auto;
+            }
         }
-        &--img {
-            width: 100%;
-            display: inline;
-            float: none;
-            clear: both;
+        text-align: center;
+        &__images {
+            display: inline-block;
+            &__img {
+            }
         }
     }
-    // @include mq($until: screen-sm) {
-    //     &__info {
-    //         &__image {
-    //             width: 27%;
-    //             margin: 20 auto;
-    //             margin-bottom: 10px;
-    //         }
-    //         &__text {
-    //             &__headline {}
-    //             &__subheadline {}
-    //             &__description {}
-    //         }
-    //     }
-    // }
 }
