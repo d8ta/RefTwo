@@ -29,11 +29,16 @@ p {
 }
 
 .primary-brand-btn {
-	background: $brand-primary !important;
-	color: $color-white !important;
+    background: $brand-primary;
+    color: $color-white;
 }
 
 .margin {
-    margin-bottom: 4rem;
     margin-top: 2rem;
+    margin-bottom: 4rem;
+}
+
+.margin-more-top {
+    margin-top: 8rem;
+    margin-bottom: 4rem;
 }

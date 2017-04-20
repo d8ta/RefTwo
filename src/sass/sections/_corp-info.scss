@@ -1,63 +1,39 @@
 $block: '.corp-info';
 #{$block} {
-    margin-top: 110px;
-    &__info {
-        &__image {
+    &__images {
+        &__img {
             float: right;
-            margin-right: 20px;
-        }
-        &__text {
-            &__headline {
-                color: $brand-primary;
-                font-size: em(40);
-            }
-            &__subheadline {
-                color: $color-text-grey;
-                font-size: em(30);
-            }
-            &__description {
-                max-width: 650px;
-            }
+            margin: rem(5) rem(5);
         }
     }
-    @include mq($until: screen-xl) {
-        &__info {
-            &__image {
-                float: none;
-                margin-bottom: 20px;
-                float: left;
+    &__text {
+        &--left {
+            margin: 0;
+        }
+    }
+    @include mq($until: screen-lg) {
+        text-align: center;
+        &__text {
+            &--left {
+                margin: 0 auto 20px auto;
             }
-            &__text {
-                position: absolute;
-                top: 350px;
-                &__headline {}
-                &__subheadline {}
-                &__description {}
-            }
+        }
+        &__images {
+            display: inline-block;
+            &__img {}
         }
     }
     @include mq($until: screen-sm) {
-        &__info {
-            &__image {
-                width: 27%;
-                margin: 20 auto;
-                margin-bottom: 10px;
-            }
-            &__text {
-                &__headline {}
-                &__subheadline {}
-                &__description {}
+        &__text {
+            &--left {
+                width: 100%;
             }
         }
-    }
-    @include mq($until: screen-xl) {
-        margin-bottom: 10px;
-        &__info {
-            &__image {}
-            &__text {
-                &__headline {}
-                &__subheadline {}
-                &__description {}
+        &__images {
+            &__img {
+                float: none;
+                clear: both;
+                margin: rem(5) rem(5);
             }
         }
     }
