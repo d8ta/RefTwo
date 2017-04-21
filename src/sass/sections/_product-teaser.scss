@@ -2,6 +2,8 @@ $block: '.product-teaser';
 #{$block} {
     &__inner {
         text-align: center;
+        &--title {
+        }
     }
     @include mq($until: screen-lg) {
         &__inner {

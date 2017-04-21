@@ -3,7 +3,7 @@
 ?>
 <div class="section section--fullwidth">
 	<div class="section__content">
-		<div class="margin">
+		<div class="margin-research">
 			<div class="research-teaser">
 				<div class="research-teaser__content">
 					<?php 

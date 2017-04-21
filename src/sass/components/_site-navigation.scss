@@ -1,32 +1,34 @@
 $block: ".site-navigation";
 #{$block} {
+    margin-top: 40px;
     &__list {
         font-family: $font-normal;
         font-size: em(16);
         font-weight: bold;
-        margin-top: 30px;
+        // margin-top: 60px;
+        margin-top: em(60);
         &__item {
             @extend %section-content;
             float: right;
-            padding: 5px 20px 5px 20px;
-            font-size: em(22);
-            margin-bottom: 20px;
+            padding: 0 0 0 em(40);
+            // font-size: em(22);
+            // margin-bottom: 20px;
         }
     }
-    @include mq($until: screen-sm) {
-        &__list {
-            &__item {
-                font-size: 0.9em;
-            }
-        }
-    }
-    @include mq($until: screen-xs) {
-        &__list {
-            &__item {
-                clear: both;
-            }
-        }
-    }
+    // @include mq($until: screen-sm) {
+    //     &__list {
+    //         &__item {
+    //             // font-size: 0.9em;
+    //         }
+    //     }
+    // }
+    // @include mq($until: screen-xs) {
+    //     &__list {
+    //         &__item {
+    //             clear: both;
+    //         }
+    //     }
+    // }
     @include mq($until: width-mobile-menu) {
         display: none;
     }
