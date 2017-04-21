@@ -1,6 +1,6 @@
 <div class="section section--product-teaser">
 	<div class="section__content">
-		<div class="margin">
+		<div class="">
 			<div class="product-teaser">
 				<?php
 				$title = $block->getTitle();
