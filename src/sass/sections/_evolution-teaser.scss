@@ -1,8 +1,8 @@
     $block: '.evolution-teaser';
     #{$block} {
         &__inner {
-            margin: 0 auto;
             text-align: center;
+            margin: 0 auto;
             &__textbox {}
         }
         @include mq($until: screen-md) {
