@@ -3,6 +3,7 @@ $block: ".site-navigation";
     margin-top: 40px;
     &__list {
         font-family: $font-normal;
+        text-transform: uppercase;
         font-size: em(16);
         font-weight: bold;
         // margin-top: 60px;
