@@ -3,6 +3,6 @@ $items = $section->getItems();
 ?>
 <nav class="">
 	<ul class="">
-		@eaczh('components.footer.navigation.item', $items, 'item')
+		@each('components.footer.navigation.item', $items, 'item')
 	</ul>
 </nav>
