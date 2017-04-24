@@ -8,19 +8,12 @@
         
         <div class="site js-site">
             @include('components.header')
-            
-
             <main class="main js-main">
                 @yield('content')
             </main>
-             
-            
             @include('components.footer')
-
         </div>
-
             @include('components.sidebar.sidebar')
-
         @include('components.html.foot')
     </body>
 </html>
