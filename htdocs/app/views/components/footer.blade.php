@@ -5,7 +5,6 @@ $navigation = new Project\Sections\Footer\Navigation;
 	<div class="footer">
 		<div class="footer__inner">
 			{!!$navigation->toHtml()!!}
-			{{-- @include('components.footer.flex') --}}
 		</div>
 	</div>
 	<div class="footer footer">
