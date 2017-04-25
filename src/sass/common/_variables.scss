@@ -4,6 +4,7 @@ $color-text: #464A4D;
 $color-grey: #A8AFB3;
 $color-light-grey: #E9ECED;
 $color-white: #fff;
+$blue: blue;
 
 // $color-text-reverse: #fff;
 // $color-grey-line: #ededed;
@@ -20,6 +21,9 @@ $screen-sm: 768px;
 $screen-md: 992px;
 $screen-lg: 1200px;
 $screen-xl: 1500px;
+$screen-xxl: 1900px;
+$screen-xxxl: 2400px;
+
 $side-padding: 5%;
 $width-max-container: 1600px;
 $width-max-container-text: 1200px;
@@ -27,7 +31,7 @@ $width-max-container-text: 1200px;
 /* ======== SASS mq ======== */
 
 $mq-base-font-size: $font-size-base;
-$mq-breakpoints: ( screen-xs: $screen-xs, screen-sm: $screen-sm, screen-md: $screen-md, screen-lg: $screen-lg, screen-xl: $screen-xl, width-mobile-menu: 900px, );
+$mq-breakpoints: ( screen-xs: $screen-xs, screen-sm: $screen-sm, screen-md: $screen-md, screen-lg: $screen-lg, screen-xl: $screen-xl, screen-xxl: $screen-xxl, width-mobile-menu: 900px, );
 
 /* ======== SCUT ======== */
 

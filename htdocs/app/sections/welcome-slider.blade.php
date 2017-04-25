@@ -5,16 +5,16 @@
 	<div class="section--welcome">
 		<div class="section__content">
 			<div class="margin">
-				<div class="welcome-slider">
-					<div class="welcome-slider__inner js-owl-carousel">
-						@foreach ($slides as $slide)
-						<?php 
-						$title = $slide['title'];
-						$pretitle = $slide['pretitle'];
-						$description = $slide['description'];
-						$buttontext = $slide['button_text'];
-						?>
-						<div class="welcome-slider__slide">
+				<div class="welcome-slider js-owl-carousel owl-carousel">
+					@foreach ($slides as $slide)
+					<?php 
+					$title = $slide['title'];
+					$pretitle = $slide['pretitle'];
+					$description = $slide['description'];
+					$buttontext = $slide['button_text'];
+					?>
+					<div class="welcome-slider__slide">
+						<div class="welcome-slider__slide__inner">
 							<div class="welcome-slider__slide__image bg-image" style="background-image: url({{$slide['background']}})">
 							</div>
 							<div class="welcome-slider__slide__text">
@@ -30,9 +30,9 @@
 									</div>
 								</div>
 							</div>
-						</div>			
-						@endforeach
-					</div>
+						</div>
+					</div>							
+					@endforeach
 				</div>
 			</div>
 		</div>

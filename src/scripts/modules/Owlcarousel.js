@@ -39,7 +39,7 @@ Owlcarousel.prototype.options = {
     dots: true,
     dotsData: false,
     lazyLoad: true,
-    autoplay: true,
+    autoplay: false,
     autoplayHoverPause: true,
     responsiveClass: true,
     responsivetype: 0,
@@ -52,10 +52,10 @@ Owlcarousel.prototype.options = {
     dotsSpeed: 100,
     touchDrag: true,
     mouseDrag: false,
-    // navText: [
-    //   "<i class='icon icon-arrow-left'></i>",
-    //   "<i class='icon icon-arrow-right'></i>"
-    // ],
+    navText: [
+      "<i class='icon'></i>",
+      "<i class='icon'></i>"
+    ],
     scrollleft: false,
 };
 
