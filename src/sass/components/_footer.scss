@@ -1,0 +1,32 @@
+$block: ".footer";
+#{$block} {
+    &__inner {
+        &__address {
+            &__claim {
+                color: $brand-primary;
+                font-size: em(14);
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+$block: ".footer";
+#{$block} {
+    &__inner {
+        &__address {
+            &__list {
+                font-family: $font-normal;
+                font-size: em(12);
+                font-weight: book;
+                :nth-child(6) {
+                    height: em(20);
+                }
+            }
+        }
+    }
+}
+
+.section--footer {
+    margin: 6.25rem 0 1.25rem 0;
+}

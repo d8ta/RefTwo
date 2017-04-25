@@ -1,13 +1,8 @@
 <?php
-/**
- * @var \A365\Wordpress\Helpers\MenuHelper $menuHelper
- * @var array $items Menu Items
- */
-
-$menuHelper = \A365\Wordpress\Helpers\MenuHelper::getInstance();
-$items      = $menuHelper->getMenuItems('footer');
-
+$items = $section->getItems();
 ?>
-<nav class="navigation navigation--footer">
-	{!!$menuHelper->generateHtml('components.navigation.items', $items, 1)!!}
+<nav class="">
+	<ul class="">
+		@each('components.footer.navigation.item', $items, 'item')
+	</ul>
 </nav>

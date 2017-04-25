@@ -35,6 +35,7 @@
 @import "common/text-base";
 @import "common/text";
 
+/* ======== components ======== */
 @import "components/section";
 @import "components/bg-image";
 @import "components/site-navigation";
@@ -42,8 +43,10 @@
 @import "components/logo-box";
 @import "components/sidebar";
 @import "components/site";
+@import "components/footer";
 @import "components/menu-burger";
 
+/* ======== sections ======== */
 @import "sections/welcome-slider";
 @import "sections/action-box";
 @import "sections/product-teaser";

@@ -3,7 +3,7 @@ $boxes = $block->getBox();
 ?>
 <div class="section section--action-box">
 	<div class="section__content">
-		<div class="margin-boxes">
+		{{-- <div class="margin-boxes"> --}}
 			<div class="action-box">
 				<div class="action-box__inner">
 					@foreach ($boxes as $box)
@@ -35,6 +35,6 @@ $boxes = $block->getBox();
 					@endforeach
 				</div>
 			</div>
-		</div>
+		{{-- </div> --}}
 	</div>
 </div>

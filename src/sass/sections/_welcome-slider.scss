@@ -1,4 +1,5 @@
 $block: '.welcome-slider';
+$image-height: 300px;
 #{$block} {
     height: 0;
     padding-bottom: 34%;
@@ -55,16 +56,24 @@ $block: '.welcome-slider';
         }
     }
     @include mq($until: screen-sm) {
+        overflow: visible;
         height: 300px;
         &__slide {
             font-size: 0.65em;
             &__image {
-                display: none;
+                width: 100%;
             }
             &__text {
+                padding: 0;
+                text-align: center;
                 &__table {
+                    padding-top: 5rem;
+                    width: 100%;
+                    margin-top: $image-height;
                     &__td {
+                        display: inline;
                         &__button {
+                            text-align: center;
                             padding: 5px 10px;
                             left: 25px
                         }
