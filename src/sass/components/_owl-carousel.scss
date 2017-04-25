@@ -33,7 +33,7 @@
         background-color: $brand-primary;
     }
     &:hover {
-        background-color:  $brand-primary;
+        background-color: $brand-primary;
     }
 }
 
@@ -41,7 +41,7 @@
     position: absolute;
     width: 100%;
     top: 1.5rem;
-        padding-top: 45%;
+    padding-top: 45%;
     z-index: 1000;
     display: none;
     @include mq($from: screen-sm) {
@@ -87,8 +87,9 @@
     width: 3em;
     height: 3em;
     .icon {
+        color: $color-grey;
         @include icon(arrowleft);
-        left: em(2);
+        left: em(5);
         transition: left 0.2s;
         &:before {
             @extend %icon;
@@ -110,12 +111,17 @@
     width: 3em;
     height: 3em;
     .icon {
-        right: em(2);
-        transition: right 0.2s;
+        color: $color-grey;
+        @include icon(arrowright);
+        left: em(5);
+        transition: left 0.2s;
+        &:before {
+            @extend %icon;
+        }
     }
     &:hover {
         .icon {
-            right: 0;
+            left: 12px;
         }
     }
 }
