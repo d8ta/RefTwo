@@ -3,3 +3,11 @@ $block: ".logo-box";
     float: left;
     margin: 10px 0;
 }
+
+.site-header {
+    position: fixed;
+    z-index: 10;
+    background: #fff;
+    width: 100%;
+    top: 0;
+}
