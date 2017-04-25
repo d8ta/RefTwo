@@ -7,6 +7,8 @@
 	//= include ../bower_components/owl.carousel/dist/owl.carousel.min.js
 	//= include ../bower_components/velocity/velocity.min.js
 	//= include ../bower_components/js-cookie/src/js.cookie.js
+	//= include ../bower_components/matchHeight/dist/jquery.matchHeight-min.js
+	
 
 
 	//= include vendor/jquery.lazyloadxt.js
@@ -30,6 +32,9 @@
 	//= include modules/ScrollController.js
 	//= include modules/OwlcarouselController.js
 	//= include modules/Owlcarousel.js
+	//= include modules/MatchHeightController.js
+	//= include modules/InteractiveMap.js
+	//= include modules/InteractiveMapController.js
 	
 	
 
@@ -48,6 +53,9 @@
 		.addModule(new Scroll(), 'scroll')
 		.addModule(new ScrollController(), 'scrollcontroller')
 		.addModule(new OwlcarouselController(), 'owlcarouselcontroller')
+		.addModule(new MatchHeightController(), 'MatchHeightController')
+		.addModule(new InteractiveMapController(), 'interactiveMapController')
+
 		.run();
 
 

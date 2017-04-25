@@ -12,12 +12,18 @@
         {
             "type": "vcs",
             "url": "git@bitbucket.org:a365/core.git"
+        },
+        {
+            "type": "vcs",
+            "url": "git@bitbucket.org:a365/a365-customizr.git"
         }
     ],
     "require": {
-        "a365/core": "dev-release",
-        "a365/wordpress": "dev-release",
+        "a365/core": "0.4.x",
+        "a365/wordpress": "0.9.x",
+        "a365/customizr": "0.2.x",
         "afragen/github-updater": "^6.0",
         "geoip/geoip": "^1.17"
+        
     }
 }

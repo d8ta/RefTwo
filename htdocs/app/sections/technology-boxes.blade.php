@@ -1,5 +1,7 @@
 <?php 
 	$techboxes = $block->getBox();
+	$mh_group = "technology-boxes-" . rand();
+
 ?>
 <div class="section section--technology-boxes">
 	<div class="section__content">
@@ -13,7 +15,7 @@
 				<div class="technology-boxes__inner">
 					<div class="technology-boxes__inner__image bg-image" style="background-image: url({{$techbox['background']}})">
 					</div>
-					<div class="technology-boxes__inner__text">
+					<div class="technology-boxes__inner__text js-matchheight" data-mh="{{ $mh_group }}">
 						<h2 class="h4 primary-color">{{$title}}</h2>
 						<div class="technology-boxes__inner__text--description">
 							<h3 class="h3">

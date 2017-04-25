@@ -1,28 +1,29 @@
 {
-    "name": "siconnex",
-    "description": "",
-    "main": "index.js",
-    "authors": [
-        "A365"
-    ],
-    "license": "ISC",
-    "homepage": "",
-    "ignore": [
-        "**/.*",
-        "node_modules",
-        "bower_components",
-        "test",
-        "tests"
-    ],
-    "dependencies": {
-        "bootstrap-sass": "^3.3.7",
-        "jquery": "^3.2.1",
-        "Scut": "scut#^1.4.0",
-        "sass-mq": "^3.3.2",
-        "owl.carousel": "^2.2.1",
-        "lazyloadxt": "^1.0.5",
-        "velocity": "^1.2.3",
-        "parsleyjs": "^2.3.10",
-        "js-cookie": "^2.1.3"
-    }
+  "name": "siconnex",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "A365"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "^3.3.7",
+    "jquery": "^3.2.1",
+    "Scut": "scut#^1.4.0",
+    "sass-mq": "^3.3.2",
+    "owl.carousel": "^2.2.1",
+    "lazyloadxt": "^1.0.5",
+    "velocity": "^1.2.3",
+    "parsleyjs": "^2.3.10",
+    "js-cookie": "^2.1.3",
+    "matchHeight": "matchheight#^0.7.2"
+  }
 }
