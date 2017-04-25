@@ -1,9 +1,10 @@
 $block: '.welcome-slider';
+$image-height: 300px;
 #{$block} {
     height: 0;
     padding-bottom: 34%;
     position: relative;
-    overflow: hidden;
+    // overflow: hidden;
     &__inner {
         position: absolute;
         width: 100%;
@@ -59,12 +60,19 @@ $block: '.welcome-slider';
         &__slide {
             font-size: 0.65em;
             &__image {
-                display: none;
+                width: 100%;
             }
             &__text {
+                padding: 0;
+                text-align: center;
                 &__table {
+                    padding-top: 5rem;
+                    width: 100%;
+                    margin-top: $image-height;
                     &__td {
+                        display: inline;
                         &__button {
+                            text-align: center;
                             padding: 5px 10px;
                             left: 25px
                         }

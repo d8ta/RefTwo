@@ -91,6 +91,7 @@ $box-margin: 2em;
         }
     }
     @include mq($until: screen-sm) {
+        margin: 36.25rem 0 1.25rem 0;
         &__box {
             margin-bottom: 20px;
             width: 100%;

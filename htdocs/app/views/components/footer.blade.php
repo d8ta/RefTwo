@@ -6,7 +6,7 @@ $navigation = new Project\Sections\Footer\Navigation;
 	<div class="section__content">
 		<div class="footer">
 			<div class="footer__inner">
-				{{-- {!!$navigation->toHtml()!!} --}}
+				{!!$navigation->toHtml()!!}
 			</div>
 		</div>
 		<div class="footer footer">
@@ -16,6 +16,6 @@ $navigation = new Project\Sections\Footer\Navigation;
 		</div>
 	</div>
 	<div class="footer__inner--waveimage">	
-		<img src="/assets/images/layout/wave.png" width="100%" alt="wave">
+		<img src="/assets/images/layout/wave@2x.png" width="100%" alt="wave">
 	</div>
 </footer>
