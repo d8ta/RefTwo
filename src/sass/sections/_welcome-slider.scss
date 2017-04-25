@@ -4,7 +4,7 @@ $image-height: 300px;
     height: 0;
     padding-bottom: 34%;
     position: relative;
-    // overflow: hidden;
+    overflow: hidden;
     &__inner {
         position: absolute;
         width: 100%;
@@ -56,6 +56,7 @@ $image-height: 300px;
         }
     }
     @include mq($until: screen-sm) {
+        overflow: visible;
         height: 300px;
         &__slide {
             font-size: 0.65em;
