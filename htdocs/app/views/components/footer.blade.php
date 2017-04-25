@@ -6,7 +6,7 @@ $navigation = new Project\Sections\Footer\Navigation;
 	<div class="section__content">
 		<div class="footer">
 			<div class="footer__inner">
-				{!!$navigation->toHtml()!!}
+				{{-- {!!$navigation->toHtml()!!} --}}
 			</div>
 		</div>
 		<div class="footer footer">
