@@ -1,7 +1,7 @@
 <?php 
 	$techboxes = $block->getBox();
 ?>
-<div class="section section">
+<div class="section section--technology-boxes">
 	<div class="section__content">
 		<div class="margin">
 		@foreach ($techboxes as $techbox)
