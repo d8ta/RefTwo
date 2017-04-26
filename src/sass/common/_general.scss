@@ -36,3 +36,13 @@ p {
 .menu-burger {
     margin-top: em(30) !important;
 }
+
+.centertext {
+    text-align: center;
+}
+
+.lefttext {
+    h3 {
+        margin-left: 0;
+    }
+}
