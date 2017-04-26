@@ -33,6 +33,8 @@
 	//= include modules/OwlcarouselController.js
 	//= include modules/Owlcarousel.js
 	//= include modules/MatchHeightController.js
+	//= include modules/GoogleMap.js
+	//= include modules/GoogleMapsController.js
 	
 	
 
@@ -52,6 +54,8 @@
 		.addModule(new ScrollController(), 'scrollcontroller')
 		.addModule(new OwlcarouselController(), 'owlcarouselcontroller')
 		.addModule(new MatchHeightController(), 'MatchHeightController')
+		.addModule(new GoogleMapsController(), 'googleMapsController')
+
 
 		.run();
 

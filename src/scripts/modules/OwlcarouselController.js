@@ -25,7 +25,6 @@ OwlcarouselController.prototype.init = function() {
 
 OwlcarouselController.prototype.initElements = function() {
 	var $owl = jQuery(this.getSelector('owl'));
-
 	if (!$owl.length) {
 		return false;
 	};
