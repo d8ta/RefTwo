@@ -1,4 +1,4 @@
-<?php
+{{-- <?php
 $locations = \Project\Models\Location::allPublished();
 ?>
 
@@ -14,7 +14,7 @@ $locations = \Project\Models\Location::allPublished();
 		</select>
 
 		<div class="maps__infobox__locations-area">
-			<div class="maps__infobox__subline"><?php echo __('Architecture'); ?></div>
+			<div class="maps__infobox__title"><?php echo __('Title'); ?></div>
 			<div class="maps__infobox__locations">
 				@foreach($locations as $location)
 					<div class="maps__infobox__locations__location js-google-maps-locations-item" data-locationid="{{ $location->getId() }}">
@@ -32,4 +32,4 @@ $locations = \Project\Models\Location::allPublished();
 		</div>
 
 	</div>
-</div>
+</div> --}}
