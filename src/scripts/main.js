@@ -35,6 +35,7 @@
 	//= include modules/MatchHeightController.js
 	//= include modules/GoogleMap.js
 	//= include modules/GoogleMapsController.js
+	//= include modules/Location.js
 	
 	
 
@@ -55,6 +56,8 @@
 		.addModule(new OwlcarouselController(), 'owlcarouselcontroller')
 		.addModule(new MatchHeightController(), 'MatchHeightController')
 		.addModule(new GoogleMapsController(), 'googleMapsController')
+		.addModule(new Location(), 'Location')
+
 
 
 		.run();
