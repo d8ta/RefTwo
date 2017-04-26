@@ -40,9 +40,9 @@ class ContactMap extends \A365\Wordpress\Block\AcfBlock {
 					FieldHelper::createText('phone', 'Telefon')->setRequired(),
 					FieldHelper::createText('fax', 'Fax')->setRequired(),
 					FieldHelper::createText('country', 'Länderauswahl')->setRequired(),
-			]),
 					FieldHelper::createPageLink('button_url', 'Button Link'),
 					FieldHelper::createText('button_text', 'Button Text')->setRequired(),
+			]),
 		];
 	}
 }

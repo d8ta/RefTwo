@@ -5,8 +5,6 @@
 	$headline = $block->getHeadline();
 	$maps = $block->getMaps();
 	$branches = $block->getMaps();
-	$button_url = $block->getButtonUrl();
-	$button_text = $block->getButtonText();
 	// first marker
 	$markers = array();
 	$marker = new stdClass;
@@ -46,7 +44,7 @@
 				</div>
 				<div class="maps">
 					<div class='maps__map js-google-maps'
-						data-disable-default-ui="false"
+						data-disable-default-ui="true"
 						data-scrollwheel='false'
 						data-zoomcontrol="true"
 						{{-- 
@@ -69,6 +67,8 @@
 					$phone = $branch['phone'];
 					$fax = $branch['fax'];
 					$country = $branch['country'];
+					$button_url = $branch['button_url'];
+					$button_text = $branch['button_text'];
 					?>
 					<div class="maps__infobox">
 						<div class="maps__infobox__inner">
@@ -82,13 +82,13 @@
 								<h2 class="h3">{{$phone}}
 								{{$fax}}</h2>
 							</div>
-							@endforeach
 							<div class="maps__infobox__inner--btn">
 								<button class="btn--icon-text primary-brand-btn" type="button">
 									<i class="btn__icon white-icon"></i>
 									<span class="btn__text">{{$button_text}}</span>
 								</button>
 							</div>
+							@endforeach
 						</div>
 					</div>
 				</div>

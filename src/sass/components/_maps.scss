@@ -3,11 +3,12 @@ $block: ".maps";
     position: relative;
     &__map {
         height: em(500);
+        width: 66.6666%;
     }
     &__infobox {
         background: grey;
         color: white;
-        width: 33%;
+        width: 33.3333%;
         height: 31.25em;
         top: 0;
         right: 0;
@@ -31,9 +32,9 @@ $block: ".maps";
                 }
             }
             &--btn {
-                position: absolute;
-                bottom: 20px;
-                right: 250px;
+                // position: absolute;
+                // bottom: 9em;
+                // right: 25em;
             }
         }
         &__locations-area {}
