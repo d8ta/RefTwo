@@ -41,7 +41,7 @@ $block: ".maps";
                 color: #000;
             }
             &:before {
-                // @extend %icon;
+                @extend %icon;
                 position: absolute;
                 top: em(1);
                 left: em(0);
@@ -77,7 +77,7 @@ $block: ".maps";
             }
         }
         &__subline {
-            // @extend %h-normal-bold;
+            @extend %h-normal-bold;
         }
         &__locations-area {
             margin-top: em(30);

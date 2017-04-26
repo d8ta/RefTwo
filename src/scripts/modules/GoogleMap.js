@@ -63,9 +63,9 @@ GoogleMap.prototype.init = function() {
     if (this.vars.data.maptype == "locations") {
         this.elements.locations = this.elements.infobox.find(".js-google-maps-locations-item");
 
-        this.elements.locations_select = this.elements.infobox.find(".js-google-maps-locations-select").selectize({
-            create: false
-        });
+        // this.elements.locations_select = this.elements.infobox.find(".js-google-maps-locations-select").selectize({
+        //     create: false
+        // });
 
         this.vars.locations_select = this.elements.locations_select[0].selectize;
         this.vars.locations_select.on("change", function(location_id) {

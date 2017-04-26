@@ -73,3 +73,27 @@ h6,
     max-width: $width-max-container;
     @include clearfix;
 }
+
+// Maps
+%h-mini-bold {
+    font-size: em(20);
+    font-weight: bold;
+    line-height: 1.06;
+    margin-bottom: em(9);
+}
+
+%h-pre {
+    font-size: em(13);
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.2em;
+    margin-bottom: 0.8em;
+    letter-spacing: 0.1em;
+}
+
+%h-normal-bold {
+    font-size: 1em;
+    font-weight: bold;
+    line-height: 1.1;
+    margin-bottom: em(9);
+}

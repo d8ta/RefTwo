@@ -12,7 +12,7 @@
 
 			<h2 class="h-upper-bold center">{{$headline}}</h2>
 
-			<div class="project-overview__maps maps">
+			{{-- <div class="project-overview__maps maps">
 				<div class='js-google-maps maps__map'
 					data-disable-default-ui="true"
 					data-scrollwheel='false'
@@ -25,7 +25,7 @@
 				</div>
 				@include("components.location.maps-infobox")
 				
-			</div>
+			</div> --}}
 		</div>
 	</div>
 </div>

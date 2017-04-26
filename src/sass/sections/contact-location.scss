@@ -16,11 +16,11 @@ $block: '.contact-locations';
 
 	&__location {
 		&__headline {
-			// @extend %h-pre;
+			@extend %h-pre;
 
 		}
 		&__subline {
-			// @extend %h-mini-bold;
+			@extend %h-mini-bold;
 		}
 
 		&__text {
