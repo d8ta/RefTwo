@@ -1,6 +1,7 @@
 $block: '.welcome-slider';
 $image-height: 300px;
 #{$block} {
+    margin-top: 100px;
     &__slide {
         background: $brand-primary;
         padding-bottom: 34%;
@@ -80,4 +81,8 @@ $image-height: 300px;
             }
         }
     }
+}
+
+.site-header--imposter {
+    background: teal;
 }
