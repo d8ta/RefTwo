@@ -21,7 +21,7 @@
 }
 
 .owl-dot {
-    display: inline-block;
+    display: none;
     margin: 0 auto;
     margin: em(3);
     width: em(15);
@@ -39,17 +39,12 @@
 
 .owl-nav {
     position: absolute;
-    width: 100%;
-    top: 1.5rem;
-    padding-top: 45%;
-    z-index: 1000;
-    display: none;
-    @include mq($from: screen-sm) {
-        padding-top: 40%;
-    }
-    @include mq($from: screen-xs) {
-        display: block;
-    }
+    top: 0;
+    right: 0;
+    background: red;
+    opacity: 0.8;
+    height: 0;
+    padding-bottom: 34%; // variable for heigth of slider!
 }
 
 .owl-prev,
@@ -57,10 +52,12 @@
     display: block;
     height: em(40);
     width: em(40);
-    margin: 0 auto;
+    margin: auto 0;
     color: white;
-    background: teal;
-    position: relative;
+    position: absolute;
+    right: 1em;
+    top: 0;
+    bottom: 0;
     .blue-circle {
         width: 100%;
         height: 100%;
@@ -79,13 +76,11 @@
 }
 
 .owl-prev {
-    right: 0.75em;
-    position: absolute;
-    top: 19em;
     background: white;
     border-radius: 5px;
     width: 3em;
     height: 3em;
+
     .icon {
         color: $color-grey;
         @include icon(arrowleft);
@@ -103,13 +98,11 @@
 }
 
 .owl-next {
-    right: 0.75em;
-    position: absolute;
-    top: 23em;
     background: white;
     border-radius: 5px;
     width: 3em;
     height: 3em;
+    top: 7em;
     .icon {
         color: $color-grey;
         @include icon(arrowright);

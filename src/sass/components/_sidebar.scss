@@ -1,6 +1,6 @@
 $block: ".sidebar";
-$sidebar-bg: $brand-primary;
-$sidebar-fg: #fff;
+$sidebar-bg: $color-white;
+$sidebar-fg: $color-text;
 #{$block} {
     font-weight: bold;
     text-align: center;
@@ -78,6 +78,6 @@ $sidebar-fg: #fff;
         //display: none;
     }
     .menu-burger__bar {
-        background: $brand-primary;
+        background: $color-text;
     }
 }
