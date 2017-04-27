@@ -90,11 +90,26 @@ $box-margin: 2em;
             margin-bottom: 0;
         }
     }
-    @include mq($until: screen-sm) {
-        // margin: 36.25rem 0 1.25rem 0;
+    @include mq($until: screen-xs) {
         &__box {
-            margin-bottom: 20px;
+            margin-bottom: 3rem;
             width: 100%;
+            &__text {
+                &__description {
+                    display: none;
+                }
+                &__headline {
+                    color: #FABB00;
+                    white-space: nowrap !important;
+                    margin-bottom: 20px;
+                }
+            }
+            &__image {
+                width: 33%;
+                &--icon {
+                    display: none;
+                }
+            }
         }
     }
 }
