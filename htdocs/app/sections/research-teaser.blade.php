@@ -13,9 +13,13 @@
 					$buttontext = $block->getButtonText();
 					?>
 					<div class="research-teaser__content__text">
-						<h2 class="h1">{{$title}}</h2>
-						<h3 class="h2">{{$description}}</h3>
-	                    <button class="research-teaser__content__text__table__button btn btn--icon-text" type="button">
+						<div class="research-teaser__content__text__title">
+							<h2 class="h1">{{$title}}</h2>
+						</div>
+						<div class="research-teaser__content__text__description">
+							<h3 class="h2">{{$description}}</h3>
+						</div>
+	                    <button class="research-teaser__content__text__button btn btn--icon-text" type="button">
 	                        <i class="btn__icon primary-color"></i>
 	                        <span class="btn__text">{{$buttontext}}</span>
 	                    </button>

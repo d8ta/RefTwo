@@ -5,8 +5,6 @@ $image-height: 300px;
     &__slide {
         background: $brand-primary;
         padding-bottom: 34%;
-        // height: 0;
-        // position: relative;
         &__inner {
             position: absolute;
             width: 100%;
@@ -57,12 +55,10 @@ $image-height: 300px;
         }
     }
     @include mq($until: screen-sm) {
-        // overflow: visible;
         background: white;
-        // height: 300px;
         &__slide {
             font-size: 1em;
-            min-height: 38em;
+            min-height: 42em;
             &__inner {
                 position: relative;
                 &__image {
@@ -72,25 +68,16 @@ $image-height: 300px;
                     padding-bottom: 34%;
                 }
                 &__text {
-                    // padding: 0;
-                    // text-align: center;
                     width: 100%;
                     height: 0;
                     padding-bottom: 34%;
                     &__table {
-                        // width: 100%;
-                        // padding-top: 5rem;
-                        // width: 100%;
-                        // margin-top: $image-height;
-                        &__td {
-                            // display: inline;
-                            &__button {
-                                // text-align: center;
-                                // padding: 5px 10px;
-                                // left: 25px
-                            }
-                        }
+                        width: 28em;
                     }
+                    &__pretitle {
+                        font-size: em(24);
+                    }
+        
                 }
             }
         }

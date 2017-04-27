@@ -20,7 +20,7 @@
 							<div class="welcome-slider__slide__inner__text">
 								<div class="welcome-slider__slide__inner__text__table">
 									<div class="welcome-slider__slide__inner__text__table__td">
-										<h1 class="h5">{{$pretitle}}</h1>
+										<h1 class="h5 welcome-slider__slide__inner__text__pretitle">{{$pretitle}}</h1>
 										<h2 class="h1">{{$title}}</h2>
 										<h2 class="h2">{{$description}}</h2>
 										<button class="welcome-slider__slide__inner__text__table__td btn--icon-text" type="button">

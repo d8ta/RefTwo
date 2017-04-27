@@ -12,8 +12,21 @@ $block: '.technology-teaser';
     }
     @include mq($until: screen-sm) {
         &__inner {
-            h3 {
+            &__description {
                 width: 100%;
+            }
+        }
+    }
+    @include mq($until: screen-xs) {
+        &__inner {
+            &__subtitle {
+                font-size: 1.25em;
+            }
+          &__description {
+            h3 {
+                width: 17em;
+                font-size: 2em;
+            }
             }
         }
     }
@@ -22,4 +35,3 @@ $block: '.technology-teaser';
 .section--technology-teaser {
     margin: 15.75rem 0 4.375rem 0;
 }
-

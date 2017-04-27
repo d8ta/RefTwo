@@ -131,4 +131,23 @@ $block: '.research-teaser';
             }
         }
     }
+    @include mq($until: screen-xs) {
+        &__content {
+            height: 41.875em;
+            &__text {
+                &__description {
+                    font-size: 1.5em;
+                        width: 27em;
+                }
+                &__button {
+                    font-size: 1.5em;
+                    white-space: nowrap;
+                    &__text {
+                        font-size: em(22);
+                        margin-top: 20px;
+                    }
+                }
+            }
+        }
+    }
 }

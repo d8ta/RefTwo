@@ -116,9 +116,12 @@ $box-margin: 2em;
 
 .btn {
     white-space: nowrap;
+    &__text {
+        font-size: em(22);
+        margin-top: 20px;
+    }
 }
 
 .section--action-box {
     margin-top: 1.25rem;
-    margin-bottom: 5.69rem;
 }
