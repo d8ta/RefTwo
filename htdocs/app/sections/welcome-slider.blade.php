@@ -1,8 +1,8 @@
 <?php 
 	$slides = $block->getSlides();
 ?>
-<div class="section section--fullwidth">
-	<div class="section--welcome">
+<div class="section--welcome">
+	<div class="section section--fullwidth">
 		<div class="section__content">
 			<div class="margin">
 				<div class="welcome-slider js-owl-carousel owl-carousel">
