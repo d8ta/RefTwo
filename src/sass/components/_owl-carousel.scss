@@ -1,15 +1,14 @@
 .owl-dots {
-    display: block;
+    display: none;
     position: absolute;
     // top: em(650);
     padding-top: 32% !important;
     top: 0;
     text-align: center;
-    width: 100%;
+    width: 0;
     left: 0;
     right: 0;
     margin: 0 auto;
-    display: none;
     @include clearfix;
     @include mq($from: screen-sm) {
         padding-top: 74%;
