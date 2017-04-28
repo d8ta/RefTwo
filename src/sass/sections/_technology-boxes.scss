@@ -57,15 +57,6 @@
                 }
             }
         }
-        @include mq($until: screen-lg) {
-            &__inner {
-                &__text {
-                    description {
-                        display: none;
-                    }
-                }
-            }
-        }
         @include mq($until: screen-md) {
             float: none;
             width: 29%;
@@ -73,11 +64,41 @@
             margin-left: 1em;
             clear: both;
             &__inner {
+                &__text {
+                    height: 9em;
+                    &--description {
+                        display: none;
+                    }
+                }
                 &__text:hover {
                     background: $color-light-grey;
                     color: $color-text;
                     .link {
                         display: none;
+                    }
+                }
+            }
+        }
+        @include mq($until: screen-sm) {
+            &__inner {
+                &__text {
+                    &--description {
+                        display: none;
+                    }
+                }
+            }
+        }
+        @include mq($until: screen-xs) {
+            width: 11em;
+            margin-left: 0;
+            &__inner {
+                &__image {
+                    width: 9em;
+                }
+                &__text {
+                    width: 9em;
+                    h2 {
+                        
                     }
                 }
             }

@@ -25,14 +25,18 @@
                 }
             }
         }
+        @include mq($until: screen-lg) {
+            &--icon-text {
+                white-space: nowrap;
+                &__text {}
+            }
+        }
         @include mq($until: screen-xs) {
             &--icon-text {
-                white-space: none;
-                #{$block} {
-                    &__text {
-                        font-size: em(22);
-                        margin-top: 20px;
-                    }
+                white-space: nowrap;
+                &__text {
+                    font-size: em(22);
+                    margin-top: 20px;
                 }
             }
         }

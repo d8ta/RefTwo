@@ -1,3 +1,15 @@
+// $block: ".footer";
+// #{$block} {
+//     &__inner {
+//         &__address {
+//             &__claim {
+//                 color: $brand-primary;
+//                 font-size: em(14);
+//                 font-weight: bold;
+//             }
+//         }
+//     }
+// }
 $block: ".footer";
 #{$block} {
     &__inner {
@@ -7,14 +19,6 @@ $block: ".footer";
                 font-size: em(14);
                 font-weight: bold;
             }
-        }
-    }
-}
-
-$block: ".footer";
-#{$block} {
-    &__inner {
-        &__address {
             &__list {
                 font-family: $font-normal;
                 font-size: em(12);
@@ -25,8 +29,26 @@ $block: ".footer";
             }
         }
     }
+    @include mq($until: screen-sm) {
+        &__inner {
+            &__address {
+                &__claim {
+                    font-size: em(22);
+                    font-weight: bold;
+                }
+                &__list {
+                    font-family: $font-normal;
+                    font-size: em(20);
+                    font-weight: book;
+                    :nth-child(6) {
+                        height: em(20);
+                    }
+                }
+            }
+        }
+    }
 }
 
 .section--footer {
-    margin: 6.25rem 0 1.25rem 0;
+    margin: 13.25rem 0 15.25rem 0;
 }
