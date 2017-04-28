@@ -95,12 +95,19 @@ $box-margin: 2em;
             margin-bottom: 3rem;
             width: 100%;
             &__text {
+                &__table {
+                    &__td {
+                        &__button {
+                            white-space: nowrap;
+                        }
+                    }
+                }
                 &__description {
                     display: none;
                 }
                 &__headline {
                     color: #FABB00;
-                    white-space: nowrap !important;
+                    white-space: nowrap;
                     margin-bottom: 20px;
                 }
             }
@@ -111,14 +118,6 @@ $box-margin: 2em;
                 }
             }
         }
-    }
-}
-
-.btn {
-    white-space: nowrap;
-    &__text {
-        font-size: em(22);
-        margin-top: 20px;
     }
 }
 
