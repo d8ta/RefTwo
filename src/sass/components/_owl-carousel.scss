@@ -42,12 +42,12 @@
     right: 0;
     background: red;
     height: 0;
-    padding-bottom: 34%; // variable for heigth of slider!
+    padding-bottom: 50%; // variable for heigth of slider!
 }
 
 .owl-prev,
 .owl-next {
-    display: block;
+    display: none;
     height: em(40);
     width: em(40);
     margin: auto 0;
@@ -67,6 +67,9 @@
         position: absolute;
         padding: em(20);
         margin: auto auto;
+    }
+        @include mq($from: screen-md) {
+        display: block;
     }
 }
 
