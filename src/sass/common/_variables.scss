@@ -1,4 +1,5 @@
 /* ======== Design Colors ======== */
+
 $brand-primary: #FABB00;
 $color-text: #464A4D;
 $color-grey: #A8AFB3;
@@ -10,7 +11,7 @@ $blue: blue;
 $action-box-bg: #e6e6e6;
 $color-error: red;
 $color-text-grey: #8c8c8c;
- 
+
 /* ======== Bootstrap ======== */
 
 //$line-height-base:  1.6;
@@ -22,7 +23,6 @@ $screen-lg: 1200px;
 $screen-xl: 1500px;
 $screen-xxl: 1900px;
 $screen-xxxl: 2400px;
-
 $side-padding: 5%;
 $width-max-container: 1600px;
 $width-max-container-text: 1200px;
@@ -35,9 +35,10 @@ $mq-breakpoints: ( screen-xs: $screen-xs, screen-sm: $screen-sm, screen-md: $scr
 /* ======== SCUT ======== */
 
 $scut-rem-base: $font-size-base / 1px; // strip units
-$font-headline: "Tahoma", sans-serif;
-$font-normal: "univia-pro", sans-serif;
-
+$font-headline: "Tahoma",
+sans-serif;
+$font-normal: "univia-pro",
+sans-serif;
 
 /* ======== Easing Functions ======== */
 

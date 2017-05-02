@@ -1,7 +1,40 @@
 $block: '.action-box';
-$image-width: 40%;
+$image-width: 35%;
 $box-margin: 2em;
 #{$block} {
+    //     @include mq($until: screen-xs) {
+    //     &__box {
+    //         // margin-bottom: 3rem;
+    //         // width: 100%;
+    //         &__text {
+    //             &__table {
+    //                 &__td {
+    //                     height: 6em;
+    //                     &__button {
+    //                         white-space: nowrap;
+    //                         padding: 0 0 0 0;
+    //                     }
+    //                 }
+    //             }
+    //             &__description {
+    //                 display: none;
+    //             }
+    //             &__headline {
+    //                 color: #FABB00;
+    //                 white-space: nowrap;
+    //                 margin-bottom: 20px;
+    //             }
+    //         }
+    //         &__image {
+    //             width: 33%;
+    //             &--icon {
+    //                 display: none;
+    //             }
+    //         }
+    //     }
+    // }
+    margin: 0 auto;
+    max-width: 66.6666%;
     &__box {
         border-top-left-radius: 5px;
         border-bottom-left-radius: 5px;
@@ -9,7 +42,8 @@ $box-margin: 2em;
         color: $color-text;
         padding: em(20);
         position: relative;
-        margin-bottom: em(20);
+        margin-bottom: 3rem;
+        width: 100%;
         &__image {
             border-top-right-radius: 5px;
             border-bottom-right-radius: 5px;
@@ -24,6 +58,7 @@ $box-margin: 2em;
                 position: absolute;
                 top: 20px;
                 left: -25px;
+                display: none;
             }
         }
         &__text {
@@ -38,11 +73,12 @@ $box-margin: 2em;
                 &__td {
                     vertical-align: middle;
                     left: 16.25em;
+                    height: 6em;
                     &__button {
                         background-color: $color-light-grey;
                         color: $color-text;
                         border-radius: 0;
-                        padding: 10px 20px;
+                        padding: 0;
                     }
                 }
             }
@@ -56,6 +92,7 @@ $box-margin: 2em;
                 margin-bottom: 20px;
             }
             &__description {
+                display: none;
                 overflow: hidden;
                 height: 5.5em / 4 * 3;
                 margin-bottom: 30px;
@@ -67,58 +104,19 @@ $box-margin: 2em;
             }
         }
     }
-    @include mq($until: screen-xl) {
-        &__box {
-            &__text {
-                &__headline {
-                    white-space: normal;
-                }
-            }
-        }
-    }
-    @include mq($from: screen-lg) {
+    @include mq($from: screen-md) {
+        // margin: 0 auto;
+        max-width: 100%;
+        // width: 100%;
         &__inner {
             display: table;
-            border-collapse: separate;
-            border-spacing: $box-margin 0;
-            margin-left: -$box-margin;
-            margin-right: -$box-margin;
+            // width: 100%;
         }
         &__box {
             display: table-cell;
-            width: 33.3333%;
-            margin-bottom: 0;
-        }
-    }
-    @include mq($until: screen-xs) {
-        &__box {
-            margin-bottom: 3rem;
-            width: 100%;
-            &__text {
-                &__table {
-                    &__td {
-                        height: 6em;
-                        &__button {
-                            white-space: nowrap;
-                            padding: 0 0 0 0;
-                        }
-                    }
-                }
-                &__description {
-                    display: none;
-                }
-                &__headline {
-                    color: #FABB00;
-                    white-space: nowrap;
-                    margin-bottom: 20px;
-                }
-            }
-            &__image {
-                width: 33%;
-                &--icon {
-                    display: none;
-                }
-            }
+            width: 10%;
+            // width: 30%;
+            // margin-left: 20px;
         }
     }
 }
