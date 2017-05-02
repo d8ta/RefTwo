@@ -26,8 +26,6 @@
             &__content {
                 clear: both;
                 width: 100%;
-                // margin-left: 10%;
-                // margin-right: 10%;
             }
         }
         @include mq($until: screen-xs) {
