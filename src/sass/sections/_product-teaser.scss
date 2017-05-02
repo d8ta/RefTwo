@@ -1,39 +1,19 @@
 $block: '.product-teaser';
 #{$block} {
-    &__inner {
-        text-align: center;
-        &--title {}
-    }
-    @include mq($until: screen-lg) {
-        &__inner {
-            &--description {
-                h3 {
-                    width: 80%;
-                }
-            }
-        }
-    }
-    @include mq($until: screen-sm) {
-        &__inner {
-            &--description {
-                h3 {
-                    width: 100%;
-                }
-            }
-        }
-    }
-    @include mq($until: screen-xs) {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    @include mq($from: screen-sm) {
         &__inner {
             &--title {
-            }
-            &--subtitle {
-                font-size: em(20);
+                display: inline-block;
+                width: 40em;
             }
             &--description {
-                font-size: 2em;
-                margin-bottom: 8rem;
-                h3 {
-                    width: 95%;
+                .pagetext {
+                    font-size: 1em;
+                    width: 40em;
+                    margin: 0 auto 20px auto;
                 }
             }
         }
@@ -43,4 +23,3 @@ $block: '.product-teaser';
 .section--product-teaser {
     margin: 1.25rem 0 8.25rem 0;
 }
-
