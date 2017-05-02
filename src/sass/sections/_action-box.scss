@@ -97,8 +97,10 @@ $box-margin: 2em;
             &__text {
                 &__table {
                     &__td {
+                        height: 6em;
                         &__button {
                             white-space: nowrap;
+                            padding: 0 0 0 0;
                         }
                     }
                 }
