@@ -2,7 +2,7 @@ $block: ".sidebar";
 $sidebar-bg: $color-white;
 $sidebar-fg: $color-text;
 #{$block} {
-    ul li{
+    ul li {
         padding: 25px;
     }
     font-weight: bold;
@@ -78,7 +78,7 @@ $sidebar-fg: $color-text;
         display: none;
     }
     .menu-burger {
-        //display: none;
+        // display: none;
     }
     .menu-burger__bar {
         background: $color-text;

@@ -9,7 +9,7 @@
             padding: 10px 20px;
             #{$block} {
                 &__icon {
-                    vertical-align: middle;
+                    vertical-align: text-top;
                     padding-right: em(8);
                     margin-top: em(5);
                     @include icon(arrowright) &:before {
@@ -22,6 +22,7 @@
                 }
                 &__text {
                     margin-top: 10px;
+                    font-size: 1.5em;
                 }
             }
         }
