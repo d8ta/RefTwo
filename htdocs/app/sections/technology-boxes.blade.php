@@ -1,7 +1,6 @@
 <?php 
 	$techboxes = $block->getBox();
 	$mh_group = "technology-boxes-" . rand();
-
 ?>
 <div class="section section--technology-boxes">
 	<div class="section__content">
