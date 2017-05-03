@@ -30,7 +30,7 @@ p {
     font-size: 2.75em;
     font-weight: bold;
     line-height: 1em;
-    margin: 20px auto 25px auto;
+    margin: em(20) auto em(25) auto;
 }
 
 .pagesubtitle {
@@ -39,13 +39,13 @@ p {
     font-size: 1.75em;
     font-weight: bold;
     line-height: 1em;
-    margin: 20px auto 25px auto;
+    margin: em(20) auto em(25) auto;
 }
 
 .pagetext {
     font-size: 1.5em;
-    width: 17.5em;
-    margin: 0 auto 20px auto;
+    max-width: 17.5em;
+    margin: 0 auto em(20) auto;
     color: $color-text;
 }
 
