@@ -24,9 +24,8 @@
 							</p>
 						</div>
 						<div class="technology-boxes__box__text--link btn--icon-text primary-brand-btn">
-						<i class="btn__icon white-icon"></i>
-						<span class="btn__text">mehr erfahren</span>
-						</button>
+							<i class="btn__icon white-icon"></i>
+							<span class="btn__text">mehr erfahren</span>
 						</div>
 					</div>
 				</a>

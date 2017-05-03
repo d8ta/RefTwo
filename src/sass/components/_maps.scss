@@ -2,8 +2,9 @@ $block: ".maps";
 #{$block} {
     position: relative;
     &__map {
-        height: em(500);
+        height: 13.5em;
         width: 66.6666%;
+
     }
     &__infobox {
         background: grey;
@@ -44,6 +45,7 @@ $block: ".maps";
                 width: 45em;
                 &--headline {
                     font-size: 1.5em;
+                    margin-bottom: 1.875em
                 }
                 &--address {
                     h2 {
