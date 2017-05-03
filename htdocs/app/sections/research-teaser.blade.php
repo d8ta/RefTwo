@@ -28,6 +28,7 @@
 						<div class="research-teaser__content__images--big">
 							<img src="{{$bigimage}}" alt="Forschungsbild groß" class="research-teaser__content__images--big__inner" />
 							<img src="assets/images/icons/entwicklung.svg" class="research-teaser__content__images--big__icon" alt="Icon" />
+							<div class="research-teaser__whitebox"></div>
 						</div>
 						<div class="research-teaser__content__images--small">
 						@foreach ($researchimg as $img)

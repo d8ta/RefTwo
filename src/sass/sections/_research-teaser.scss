@@ -1,5 +1,15 @@
 $block: '.research-teaser';
 #{$block} {
+    &__whitebox {
+        background: #fff;
+        position: absolute;
+        z-index: -1;
+        bottom: -7em;
+        left: -400em;
+        width: 800em;
+        right: 0;
+        height: 8em;
+    }
     background: $brand-primary;
     &__content {
         background: $brand-primary;
@@ -15,6 +25,7 @@ $block: '.research-teaser';
         &__images {
             @extend %section-content;
             position: relative;
+            z-index: 100;
             &--big {
                 position: absolute;
                 border-radius: 15px;
@@ -47,9 +58,11 @@ $block: '.research-teaser';
     }
     @include mq($from: screen-xl) {
         &__content {
-            height: 590px;
+            height: em(590);
             padding-bottom: 0;
-            &__text {}
+            &__text {
+                width: 34%;
+            }
             &__images {
                 &--big {
                     &__inner {}
@@ -66,8 +79,8 @@ $block: '.research-teaser';
                 color: $color-white;
                 position: absolute;
                 top: em(50);
-                width: 25%;
-                font-size: 75%;
+                width: 34%;
+                font-size: 85%;
             }
             &__images {
                 &--big {
@@ -107,7 +120,6 @@ $block: '.research-teaser';
         }
     }
     @include mq($until: screen-md) {
-        // margin-bottom: 40px;
         &__content {
             height: em(590);
             &__text {
@@ -115,18 +127,7 @@ $block: '.research-teaser';
                 width: 100%;
             }
             &__images {
-                margin-top: 50px;
-            }
-        }
-    }
-    @include mq($until: screen-md) {
-        &__content {
-            &__text {
-                position: relative;
-                width: 100%;
-            }
-            &__images {
-                margin-top: 80px;
+                margin-top: -9em;
                 margin-left: -80%;
             }
         }
@@ -134,10 +135,15 @@ $block: '.research-teaser';
     @include mq($until: screen-xs) {
         &__content {
             height: 41.875em;
+            &__images {
+                margin-top: 9em;
+            }
             &__text {
+                width: 30em;
+                height: 62rem;
                 &__description {
                     font-size: 1.5em;
-                        width: 27em;
+                    width: 27em;
                 }
                 &__button {
                     font-size: 1.5em;
