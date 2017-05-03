@@ -2,10 +2,10 @@
     #{$block} {
         text-align: center;
         width: 100%;
-        &__inner {
+        &__box {
             width: 32%;
             display: inline-block;
-            margin: 0 auto;
+            vertical-align: top;
         }
     }
 
@@ -15,7 +15,7 @@
     //     float: left;
     //     width: 20%;
     //     padding: 0 em(30);
-    //     &__inner {
+    //     &__box {
     //         &__image {
     //             border-top-right-radius: 5px;
     //             border-top-left-radius: 5px;
@@ -76,7 +76,7 @@
     //         display: inline-block;
     //         margin-left: 1em;
     //         clear: both;
-    //         &__inner {
+    //         &__box {
     //             &__text {
     //                 height: 9em;
     //                 &--description {
@@ -93,7 +93,7 @@
     //         }
     //     }
     //     @include mq($until: screen-sm) {
-    //         &__inner {
+    //         &__box {
     //             &__text {
     //                 &--description {
     //                     display: none;
@@ -104,7 +104,7 @@
     //     @include mq($until: screen-xs) {
     //         width: 11em;
     //         margin-left: 0;
-    //         &__inner {
+    //         &__box {
     //             &__image {
     //                 width: 9em;
     //             }
