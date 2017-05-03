@@ -17,7 +17,7 @@
 							<h2 class="h1">{{$title}}</h2>
 						</div>
 						<div class="research-teaser__content__text__description">
-							<h3 class="h2">{{$description}}</h3>
+							<p class="h2">{{$description}}</p>
 						</div>
 	                    <button class="research-teaser__content__text__button btn btn--icon-text" type="button">
 	                        <i class="btn__icon primary-color"></i>

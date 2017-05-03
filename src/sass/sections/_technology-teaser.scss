@@ -3,33 +3,6 @@ $block: '.technology-teaser';
     &__inner {
         text-align: center;
     }
-    @include mq($until: screen-lg) {
-        &__inner {
-            h3 {
-                width: 80%;
-            }
-        }
-    }
-    @include mq($until: screen-sm) {
-        &__inner {
-            &__description {
-                width: 100%;
-            }
-        }
-    }
-    @include mq($until: screen-xs) {
-        &__inner {
-            &__subtitle {
-                font-size: 1.25em;
-            }
-          &__description {
-            h3 {
-                width: 17em;
-                font-size: 2em;
-            }
-            }
-        }
-    }
 }
 
 .section--technology-teaser {

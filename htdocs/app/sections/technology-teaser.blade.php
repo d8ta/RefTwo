@@ -9,13 +9,13 @@
 				?>
 				<div class="technology-teaser__inner">
 					<div class="technology-teaser__inner__title">
-						<h2 class="h1 primary-color">{{$title}}</h2>
+						<h2 class="pagetitle">{{$title}}</h2>
 					</div>	
 					<div class="technology-teaser__inner__subtitle">
-						<h2 class="h2 subtitle-color">{{$subtitle}}</h2>
+						<h2 class="pagesubtitle">{{$subtitle}}</h2>
 					</div>				
 					<div class="technology-teaser__inner__description">
-						<h3 class="h3">{{$description}}</h3>
+						<p class="pagetext">{{$description}}</p>
 					</div>
 				</div>
 			</div>
