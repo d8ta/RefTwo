@@ -73,7 +73,7 @@
 					<div class="maps__infobox">
 						<div class="maps__infobox__inner">
 							<div class="maps__infobox__inner--headline">
-								<h1 class="h2">{{$title}}</h1>
+								<h2 class="h2">{{$title}}</h2>
 							</div>					
 							<div class="maps__infobox__inner--address">
 								<h2 class="h3">{{$address}}</h2>
