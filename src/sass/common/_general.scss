@@ -24,6 +24,31 @@ p {
     color: $brand-primary;
 }
 
+.pagetitle {
+    color: $brand-primary;
+    font-family: $font-headline;
+    font-size: 2.75em;
+    font-weight: bold;
+    line-height: 1em;
+    margin: em(20) auto em(25) auto;
+}
+
+.pagesubtitle {
+    color: $color-grey;
+    font-family: $font-normal;
+    font-size: 1.75em;
+    font-weight: bold;
+    line-height: 1em;
+    margin: em(20) auto em(25) auto;
+}
+
+.pagetext {
+    font-size: 1.5em;
+    max-width: 17.5em;
+    margin: 0 auto em(20) auto;
+    color: $color-text;
+}
+
 .subtitle-color {
     color: $color-grey;
 }

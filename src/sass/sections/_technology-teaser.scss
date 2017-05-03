@@ -3,23 +3,8 @@ $block: '.technology-teaser';
     &__inner {
         text-align: center;
     }
-    @include mq($until: screen-lg) {
-        &__inner {
-            h3 {
-                width: 80%;
-            }
-        }
-    }
-    @include mq($until: screen-sm) {
-        &__inner {
-            h3 {
-                width: 100%;
-            }
-        }
-    }
 }
 
 .section--technology-teaser {
     margin: 15.75rem 0 4.375rem 0;
 }
-

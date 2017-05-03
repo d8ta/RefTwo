@@ -1,83 +1,89 @@
 $block: '.welcome-slider';
 $image-height: 300px;
 #{$block} {
+    margin-top: 6em;
     &__slide {
         background: $brand-primary;
-        padding-bottom: 34%;
-        height: 0;
-        position: relative;
+        padding-bottom: 2.8125em;
         &__inner {
-            position: absolute;
+            position: relative;
             width: 100%;
             height: 100%;
             top: 0;
             left: 0;
-        }
-        &__image {
-            height: 100%;
-            width: 70%;
-            position: absolute;
-            right: 0;
-            z-index: 1;
-        }
-        &__text {
-            @extend %section-content;
-            height: 100%;
-            position: relative;
-            z-index: 2;
-            &__table {
-                background: $brand-primary;
-                color: $color-white;
-                width: em(420);
-                display: table;
+            &__image {
+                width: 100%;
+                position: relative;
                 height: 100%;
-                padding-right: em(50);
-                &__td {
-                    display: table-cell;
-                    vertical-align: middle;
-                }
+                padding-bottom: 47%;
+                background-position: 0 -3.5em;
             }
-        }
-    }
-    @include mq($until: screen-md) {
-        &__slide {
-            font-size: 0.75em;
-            min-height: 160px;
-            &__image {}
             &__text {
+                @extend %section-content;
+                height: 100%;
+                position: relative;
+                z-index: 2;
                 &__table {
+                    background: $brand-primary;
+                    color: $color-white;
+                    width: 91%;
+                    display: table;
+                    height: 100%;
+                    padding: 2em 0 1em 0;
+                    text-align: left;
                     &__td {
-                        &__button {}
+                        display: table-cell;
+                        vertical-align: middle;
                     }
                 }
             }
         }
     }
-    @include mq($until: screen-sm) {
-        overflow: visible;
-        height: 300px;
+    @include mq($from: screen-md) {
         &__slide {
-            font-size: 0.65em;
-            &__image {
-                width: 100%;
-            }
-            &__text {
-                padding: 0;
-                text-align: center;
-                &__table {
-                    padding-top: 5rem;
-                    width: 100%;
-                    margin-top: $image-height;
-                    &__td {
-                        display: inline;
-                        &__button {
-                            text-align: center;
-                            padding: 5px 10px;
-                            left: 25px
+            padding-bottom: 34%;
+            &__inner {
+                position: absolute;
+                &__image {
+                    height: 100%;
+                    width: 70%;
+                    position: absolute;
+                    right: 0;
+                    z-index: 1;
+                    padding-bottom: 34%;
+                    background-position: center center;
+                }
+                &__text {
+                    float: left;
+                    z-index: 2;
+                    &__table {
+                        position: absolute;
+                        left: 0;
+                        width: em(420);
+                        padding: 2em 2em 0 em(50);
+                        text-align: left;
+                        padding-right: em(50);
+                        &__td {
+                            display: table-cell;
+                            vertical-align: middle;
+                            .h5 {
+                                font-size: 1em;
+                            }
                         }
                     }
                 }
             }
         }
     }
+    @include mq($from: screen-xxl) {
+        &__slide {
+            &__inner {
+                &__text {
+                    width: 25%;
+                }
+            }
+        }
+    }
 }
+
+.section--welcome {}

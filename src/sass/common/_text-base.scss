@@ -27,15 +27,14 @@ h6,
 %h2 {
     font-family: $font-normal;
     font-size: em(24);
-    font-weight: bold;
-    line-height: 1em;
-    margin: 20px auto 25px auto;
+    font-weight: normal;
+    line-height: 1.2em;
+    margin: em(20) 0 em(25) 0;
 }
 
 %h3 {
     font-size: em(15);
-    width: 40%;
-    margin: 0 auto 20px auto;
+    margin: 0 0 em(20) 0;
 }
 
 %h4 {
@@ -43,16 +42,16 @@ h6,
     font-size: em(24);
     font-weight: bold;
     line-height: 1em;
-    margin: 25px auto 20px auto;
+    margin: em(25) 0 em(20) 0;
 }
 
 %h5 {
     font-family: $font-normal;
-    font-size: em(14);
+    font-size: 1.5em;
     font-style: normal;
     font-weight: 400;
     line-height: 1em;
-    margin-bottom: 20px;
+    margin-bottom: em(20);
 }
 
 %h6 {

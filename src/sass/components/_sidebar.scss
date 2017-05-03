@@ -1,17 +1,20 @@
 $block: ".sidebar";
-$sidebar-bg: $brand-primary;
-$sidebar-fg: #fff;
+$sidebar-bg: $color-white;
+$sidebar-fg: $color-text;
 #{$block} {
+    ul li {
+        padding: 25px;
+    }
     font-weight: bold;
     text-align: center;
     font-size: 2em;
     position: fixed;
     width: 100%;
     min-height: 100vh;
-    top: 0;
+    top: 3em;
     right: 0;
     z-index: 0;
-    padding-left: 10%;
+    // padding-left: 10%;
     background: $brand-primary;
     @include mq($from: screen-xs) {
         padding-left: 40%;
@@ -75,9 +78,9 @@ $sidebar-fg: #fff;
         display: none;
     }
     .menu-burger {
-        //display: none;
+        // display: none;
     }
     .menu-burger__bar {
-        background: $brand-primary;
+        background: $color-text;
     }
 }

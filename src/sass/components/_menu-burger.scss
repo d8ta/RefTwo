@@ -2,7 +2,7 @@ $block: ".menu-burger";
 $padding: 16px;
 #{$block} {
     padding: $padding;
-    width: 35px + 2 * $padding;
+    width: 20px + 2 * $padding;
     margin: 0 0 0 auto;
     transition: all 0.3s ease;
     @include mq($from: screen-xs) {
@@ -13,10 +13,10 @@ $padding: 16px;
     cursor: pointer;
     &__bar {
         position: relative;
-        top: 0;
-        height: 4px;
-        margin-bottom: 5px;
-        background-color: $brand-primary;
+        top: -0.3em;
+        height: 3px;
+        margin-bottom: 3px;
+        background-color: $color-grey;
         transition: top 250ms 250ms, transform 150ms, opacity 200ms;
         &:last-child {
             margin-bottom: 0;
@@ -34,14 +34,14 @@ $padding: 16px;
         &__bar {
             transition: top 250ms, transform 250ms 200ms, opacity 200ms;
             &:first-child {
-                top: 9px;
+                top: 6px;
                 transform: rotate(45deg);
             }
             &:nth-child(2) {
                 opacity: 0;
             }
             &:last-child {
-                top: -9px;
+                top: -6px;
                 transform: rotate(-45deg);
             }
         }

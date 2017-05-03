@@ -1,28 +1,64 @@
-$block: '.btn';
-#{$block} {
-    &--icon-text {
-        // margin-top: 30px;
-        border-radius: 5px;
-        font-weight: bold;
-        background-color: $color-light-grey;
-        color: $color-text;
-        padding: 10px 20px;
+        $block: '.btn';
         #{$block} {
-            &__icon {
-                vertical-align: middle;
-                padding-right: em(8);
-                margin-top: em(5);
-                @include icon(arrowright) &:before {
-                    @extend %icon;
-                    margin-top: em(5);
-                    &__primary {
-                        color: $brand-primary;
+            margin-bottom: 200px;
+            &--icon-text {
+                // margin-top: 30px;
+                border-radius: 5px;
+                font-weight: bold;
+                background-color: $color-light-grey;
+                color: $color-text;
+                padding: 10px 20px;
+                #{$block} {
+                    &__icon {
+                        vertical-align: text-top;
+                        padding-right: em(8);
+                        margin-top: em(5);
+                        @include icon(arrowright) &:before {
+                            @extend %icon;
+                            margin-top: em(5);
+                            &__primary {
+                                color: $brand-primary;
+                            }
+                        }
+                    }
+                    &__text {
+                        font-size: 1.5em;
                     }
                 }
             }
-            &__text {
-                margin-top: 10px;
+            @include mq($from: screen-md) {
+                &--icon-text {
+                    #{$block} {
+                        &__icon {
+                            vertical-align: text-bottom;
+                            padding-right: em(8);
+                            margin-top: em(5);
+                            @include icon(arrowright) &:before {
+                                margin-top: em(5);
+                                &__primary {
+                                    color: $brand-primary;
+                                }
+                            }
+                        }
+                        &__text {
+                            font-size: 1em;
+                        }
+                    }
+                }
+            }
+            @include mq($until: screen-lg) {
+                &--icon-text {
+                    white-space: nowrap;
+                    &__text {}
+                }
+            }
+            @include mq($until: screen-xs) {
+                &--icon-text {
+                    white-space: nowrap;
+                    &__text {
+                        font-size: em(22);
+                        margin-top: 20px;
+                    }
+                }
             }
         }
-    }
-}

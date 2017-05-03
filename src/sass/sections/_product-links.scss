@@ -3,8 +3,6 @@
         &__content {
             float: left;
             width: 33%;
-            // margin-top: em(80);
-            // margin-bottom: em(200);
             &__image {
                 &--batch {
                     float: left;
@@ -27,15 +25,29 @@
         @include mq($until: screen-lg) {
             &__content {
                 clear: both;
-                // margin-top: 0;
-                // margin-bottom: 0;
-                width: 80%;
-                margin-left: 10%;
-                margin-right: 10%;
+                width: 100%;
+            }
+        }
+        @include mq($until: screen-xs) {
+            &__content {
+                &__image {
+                    &--batch {
+                        width: 50%;
+                    }
+                    &__text {
+                        &__clamp {
+                            display: none;
+                        }
+                    }
+                    &--logo {
+                        width: 50%;
+                        padding-top: 3em;
+                    }
+                }
             }
         }
     }
     
     .section--product-link {
-        margin: 2.25rem 0 15.75rem 0;
+        margin: 2.25rem 0 20.25rem 0;
     }

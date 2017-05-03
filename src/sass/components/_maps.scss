@@ -2,27 +2,36 @@ $block: ".maps";
 #{$block} {
     position: relative;
     &__map {
-        height: em(500);
+        padding-bottom: 50%;
+        height: 0;
         width: 66.6666%;
     }
     &__infobox {
+        padding-bottom: 50%;
+        height: 0;
         background: grey;
         color: white;
         width: 33.3333%;
-        height: 31.25em;
         top: 0;
         right: 0;
         position: absolute;
         &__inner {
             padding: em(90) 10% 0;
+            &--headline {
+                h2 {
+                    font-weight: bold;
+                }
+            }
             &--address {
                 h2 {
                     margin-left: 0;
+                    width: 9em;
                 }
             }
             &--phone {
                 h2 {
                     margin-left: 0;
+                    margin-bottom: 2em;
                     white-space: pre-line;
                 }
             }
@@ -31,141 +40,41 @@ $block: ".maps";
                     margin-left: 0;
                 }
             }
-            &--btn {
-                // position: absolute;
-                // bottom: 9em;
-                // right: 25em;
+        }
+    }
+    @include mq($until: screen-sm) {
+        &__map {
+            width: 100%;
+            height: 1.875em;
+        }
+        &__infobox {
+            height: 40em;
+            position: relative;
+            width: 100%;
+            &__inner {
+                width: 45em;
+                &--headline {
+                    font-size: 1.5em;
+                    margin-bottom: 1.875em
+                }
+                &--address {
+                    h2 {
+                        font-size: 1.5em;
+                    }
+                }
+                &--phone {
+                    h2 {
+                        font-size: 1.5em;
+                    }
+                }
+                &--mail {
+                    h2 {
+                        font-size: 1.5em;
+                    }
+                }
             }
         }
-        &__locations-area {}
-        &__title {}
     }
-    // &__infobox {
-    // position: absolute;
-    // width: em(390);
-    // height: em(470);
-    // &--locations {
-    //     width: em(430);
-    //     height: em(600);
-    // }
-    //     top: 0;
-    //     bottom: 0;
-    //     right: 2%;
-    //     margin: auto 0;
-    //     background: #fff;
-    //     visibility: hidden;
-    //     opacity: 0;
-    //     transition: visibility 0s 0.4s, opacity 0.3s;
-    //     box-shadow: 0px 0px 100px -15px rgba(0, 0, 0, 0.75);
-    //     &__inner {
-    //         padding: em(90) 10% 0;
-    //     }
-    //     &__close {
-    //         position: absolute;
-    //         top: 0;
-    //         left: 0;
-    //         width: em(63);
-    //         height: em(63);
-    //         line-height: 1;
-    //         background: $brand-primary;
-    //         transition: color 0.2s;
-    //         color: #fff;
-    //         @include icon(close);
-    //         cursor: pointer;
-    //         &:hover {
-    //             color: #000;
-    //         }
-    //         &:before {
-    //             @extend %icon;
-    //             position: absolute;
-    //             top: em(1);
-    //             left: em(0);
-    //             right: 0;
-    //             bottom: 0;
-    //             margin: auto;
-    //             line-height: 1;
-    //             height: 1em;
-    //             width: 1em;
-    //             font-size: em(30);
-    //         }
-    //     }
-    //     &__loader {
-    //         background: rgba(#ffffff, 0.7);
-    //         width: 100%;
-    //         height: 100%;
-    //         position: absolute;
-    //         top: 0;
-    //         left: 0;
-    //         z-index: 1;
-    //         opacity: 0;
-    //         visibility: hidden;
-    //         transition: opacity 0.3s, visibility 0s 0.3s;
-    //         &__icon {
-    //             position: absolute;
-    //             top: 0;
-    //             bottom: 0;
-    //             width: em(32);
-    //             height: em(32);
-    //             left: 0;
-    //             right: 0;
-    //             margin: auto;
-    //         }
-    //     }
-    //     &__subline {
-    //         @extend %h-normal-bold;
-    //     }
-    //     &__locations-area {
-    //         margin-top: em(30);
-    //         margin-bottom: em(30);
-    //     }
-    //     &__locations {
-    //         &__location {
-    //             display: none;
-    //             &.active {
-    //                 display: block;
-    //             }
-    //         }
-    //     }
-    //     &.loading {
-    //         #{$block}__infobox__loader {
-    //             opacity: 1;
-    //             visibility: visible;
-    //             transition: opacity 0.3s, visibility 0s;
-    //         }
-    //     }
-    //     &.show {
-    //         visibility: visible;
-    //         opacity: 1;
-    //         transition: visibility 0s, opacity 0.5s;
-    //     }
-    // }
-    // @include mq($until: screen-sm) {
-    //     &__map {
-    //         max-height: 45vh;
-    //     }
-    //     &__infobox {
-    //         position: static;
-    //         box-shadow: none;
-    //         margin: em(35) auto em(70);
-    //         border: 2px solid #f0f0f0;
-    //         &__close {
-    //             display: none;
-    //         }
-    //         &__inner {
-    //             padding-top: em(35);
-    //         }
-    //         &__content {}
-    //     }
-    // }
-    // @include mq($until: screen-xs) {
-    //     &__infobox {
-    //         width: 100%;
-    //         max-width: em(390);
-    //         border: 0;
-    //         padding: 2px;
-    //         margin: 0 auto;
-    //     }
-    // }
 }
 
 .selectbox {
