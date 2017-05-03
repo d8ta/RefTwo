@@ -24,6 +24,9 @@ $image-height: 300px;
                 position: relative;
                 z-index: 2;
                 &__table {
+                    left: 0;
+                    right: 0;
+                    margin: 0 auto;
                     background: $brand-primary;
                     color: $color-white;
                     width: 91%;
