@@ -15,6 +15,7 @@
                 margin-bottom: em(40);
                 border-bottom-right-radius: 5px;
                 border-bottom-left-radius: 5px;
+                transition: background 0.3s;
                 .link {
                     display: none;
                     margin-top: 40px;
@@ -97,9 +98,7 @@
                 }
                 &__text {
                     width: 9em;
-                    h2 {
-                        
-                    }
+                    h2 {}
                 }
             }
         }
