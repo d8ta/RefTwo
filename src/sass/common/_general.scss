@@ -24,15 +24,14 @@ p {
     color: $brand-primary;
 }
 
-// .pagetitle {
-//     color: $brand-primary;
-//     font-family: $font-headline;
-//     font-size: 2.75em;
-//     font-weight: bold;
-//     line-height: 1em;
-//     margin: 0 auto em(25) auto;
-// }
-
+.pagetitle {
+    color: $brand-primary;
+    font-family: $font-headline;
+    font-size: 2.75em;
+    font-weight: bold;
+    line-height: 1em;
+    margin: 0 auto em(25) auto;
+}
 // .pagesubtitle {
 //     color: $color-grey;
 //     font-family: $font-normal;
@@ -41,15 +40,15 @@ p {
 //     line-height: 1em;
 //     margin: 0 auto em(30) auto;
 // }
-
 // .pagetext {
 //     font-size: 1.25em;
 //     color: $color-text;
 //     margin: 0 auto em(30) auto;
 // }
-
-.subtitle-color {
+.subtitle {
     color: $color-grey;
+    font-weight: bold !important;
+    font-size: 1.5em !important;
 }
 
 .primary-brand-btn {

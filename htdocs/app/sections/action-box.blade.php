@@ -19,7 +19,7 @@ $boxes = $block->getBox();
 						<div class="action-box__box__text">
 							<div class="action-box__box__text__table">
 							<div class="action-box__box__text__table__td">
-								<h2 class="h1 action-box__box__text__headline js-matchheight">{{$title}}</h2>
+								<h2 class="action-box__box__text__headline js-matchheight">{{$title}}</h2>
 								<div class="action-box__box__text__description">
 									<div class="action-box__box__text__description__clamp">{{$description}}</div>
 								</div>
