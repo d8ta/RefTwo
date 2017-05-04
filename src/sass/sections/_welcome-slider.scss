@@ -43,7 +43,7 @@ $image-height: 300px;
     }
     @include mq($from: screen-md) {
         &__slide {
-            padding-bottom: 40%;
+            padding-bottom: 40% !important;
             &__inner {
                 position: absolute;
                 &__image {
@@ -79,7 +79,7 @@ $image-height: 300px;
     }
     @include mq($from: screen-lg) {
         &__slide {
-            padding-bottom: 34%;
+            padding-bottom: 34% !important;
             &__inner {
                 &__image {
                     padding-bottom: 34%;
