@@ -22,6 +22,12 @@ $image-height: 300px;
                 height: 100%;
                 position: relative;
                 z-index: 2;
+                &__title {
+                    max-width: 82%;
+                }
+                &__description {
+                    max-width: 65%;
+                }
                 &__table {
                     left: 0;
                     right: 0;
@@ -58,6 +64,12 @@ $image-height: 300px;
                 &__text {
                     float: left;
                     z-index: 2;
+                    &__title {
+                        // max-width: 82%;
+                    }
+                    &__description {
+                        max-width: 70%;
+                    }
                     &__table {
                         position: absolute;
                         left: 0;
@@ -84,6 +96,16 @@ $image-height: 300px;
                 &__image {
                     padding-bottom: 34%;
                 }
+                &__text {
+                    float: left;
+                    z-index: 2;
+                    &__title {
+                        // max-width: 82%;
+                    }
+                    &__description {
+                        max-width: 80%;
+                    }
+                }
             }
         }
     }
@@ -92,6 +114,13 @@ $image-height: 300px;
             &__inner {
                 &__text {
                     width: 25%;
+                    &__title {
+                        max-width: 100%;
+                        width: 7.5em;
+                    }
+                    &__description {
+                        max-width: 80%;
+                    }
                 }
             }
         }
