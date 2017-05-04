@@ -1,7 +1,6 @@
 $block: '.welcome-slider';
 $image-height: 300px;
 #{$block} {
-    margin-top: 6em;
     &__slide {
         background: $brand-primary;
         padding-bottom: 2.8125em;
@@ -44,7 +43,7 @@ $image-height: 300px;
     }
     @include mq($from: screen-md) {
         &__slide {
-            padding-bottom: 34%;
+            padding-bottom: 40%;
             &__inner {
                 position: absolute;
                 &__image {
@@ -53,7 +52,7 @@ $image-height: 300px;
                     position: absolute;
                     right: 0;
                     z-index: 1;
-                    padding-bottom: 34%;
+                    padding-bottom: 40%;
                     background-position: center center;
                 }
                 &__text {
@@ -78,6 +77,16 @@ $image-height: 300px;
             }
         }
     }
+    @include mq($from: screen-lg) {
+        &__slide {
+            padding-bottom: 34%;
+            &__inner {
+                &__image {
+                    padding-bottom: 34%;
+                }
+            }
+        }
+    }
     @include mq($from: screen-xxl) {
         &__slide {
             &__inner {
@@ -89,4 +98,6 @@ $image-height: 300px;
     }
 }
 
-.section--welcome {}
+.section--welcome {
+    margin-top: 6em;
+}
