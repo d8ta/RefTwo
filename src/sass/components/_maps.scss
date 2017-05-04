@@ -2,16 +2,16 @@ $block: ".maps";
 #{$block} {
     position: relative;
     &__map {
-        padding-bottom: 50%;
+        padding-bottom: 40%;
         height: 0;
-        width: 66.6666%;
+        width: 77.7%;
     }
     &__infobox {
-        padding-bottom: 50%;
+        padding-bottom: 40%;
         height: 0;
         background: grey;
         color: white;
-        width: 33.3333%;
+        width: 22.3%;
         top: 0;
         right: 0;
         position: absolute;
@@ -42,7 +42,18 @@ $block: ".maps";
             }
         }
     }
-    @include mq($until: screen-sm) {
+    @include mq($from: screen-sm) {
+        &__map {
+            padding-bottom: 28%;
+            height: 0;
+            width: 77.7%;
+        }
+        &__infobox {
+            padding-bottom: 28%;
+            width: 22.3%;
+        }
+    }
+    @include mq($until: $screen-lg + 100px) {
         &__map {
             width: 100%;
             height: 1.875em;

@@ -2,6 +2,17 @@ $block: '.technology-teaser';
 #{$block} {
     &__inner {
         text-align: center;
+        .pagetext {
+            max-width: 95%;
+        }
+    }
+    @include mq($from: screen-sm) {
+        &__inner {
+            .pagetext {
+                max-width: 40em;
+                font-size: 1em;
+            }
+        }
     }
 }
 

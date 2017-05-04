@@ -1,6 +1,6 @@
 $block: '.product-teaser';
 #{$block} {
-    width: 100%;
+    width: 95%;
     margin: 0 auto;
     text-align: center;
     @include mq($from: screen-sm) {
@@ -12,7 +12,7 @@ $block: '.product-teaser';
             &--description {
                 .pagetext {
                     font-size: 1em;
-                    width: 40em;
+                    max-width: 40em;
                     margin: 0 auto 20px auto;
                 }
             }
@@ -21,5 +21,5 @@ $block: '.product-teaser';
 }
 
 .section--product-teaser {
-    margin: 1.25rem 0 8.25rem 0;
+    margin: 1.25rem 0 2.5rem 0;
 }

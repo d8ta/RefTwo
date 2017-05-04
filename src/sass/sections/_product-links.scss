@@ -1,53 +1,53 @@
-    $block: '.product-links';
-    #{$block} {
-        &__content {
-            float: left;
-            width: 33%;
-            &__image {
-                &--batch {
-                    float: left;
-                }
-                &--logo {
-                    margin-top: em(40);
-                    margin-bottom: em(20);
-                }
-                &__text {
-                    overflow: hidden;
-                    height: 8.5em;
-                    &__clamp {
-                        display: -webkit-box;
-                        -webkit-line-clamp: 5;
-                        -webkit-box-orient: vertical;
-                    }
-                }
-            }
-        }
-        @include mq($until: screen-lg) {
+        $block: '.product-links';
+        #{$block} {
             &__content {
-                clear: both;
-                width: 100%;
-            }
-        }
-        @include mq($until: screen-xs) {
-            &__content {
+                float: left;
+                width: 33%;
                 &__image {
                     &--batch {
-                        width: 50%;
-                    }
-                    &__text {
-                        &__clamp {
-                            display: none;
-                        }
+                        float: left;
                     }
                     &--logo {
-                        width: 50%;
-                        padding-top: 3em;
+                        margin-top: em(40);
+                        margin-bottom: em(20);
+                    }
+                    &__text {
+                        overflow: hidden;
+                        height: 8.5em;
+                        &__clamp {
+                            display: -webkit-box;
+                            -webkit-line-clamp: 5;
+                            -webkit-box-orient: vertical;
+                        }
+                    }
+                }
+            }
+            @include mq($until: screen-lg) {
+                &__content {
+                    clear: both;
+                    width: 100%;
+                }
+            }
+            @include mq($until: screen-xs) {
+                &__content {
+                    &__image {
+                        &--batch {
+                            width: 50%;
+                        }
+                        &__text {
+                            &__clamp {
+                                display: none;
+                            }
+                        }
+                        &--logo {
+                            width: 50%;
+                            padding-top: 3em;
+                        }
                     }
                 }
             }
         }
-    }
-    
-    .section--product-link {
-        margin: 2.25rem 0 20.25rem 0;
-    }
+        
+        .section--product-link {
+            margin: 8.25rem 0 9.25rem 0;
+        }
