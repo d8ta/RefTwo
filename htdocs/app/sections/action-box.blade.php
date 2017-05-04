@@ -19,13 +19,13 @@ $boxes = $block->getBox();
 						<div class="action-box__box__text">
 							<div class="action-box__box__text__table">
 							<div class="action-box__box__text__table__td">
-								<h2 class="action-box__box__text__headline js-matchheight">{{$title}}</h2>
+								<h2 class="h1 action-box__box__text__headline js-matchheight">{{$title}}</h2>
 								<div class="action-box__box__text__description">
 									<div class="action-box__box__text__description__clamp">{{$description}}</div>
 								</div>
-								<button class="action-box__box__text__table__td__button btn btn--icon-text" type="button">
-								<i class="btn__icon primary-color icon icon-{{$icon}}"></i>
-								<span class="btn__text">{{$buttontext}}</span>
+								<button class="action-box__box__text__table__td__button btn--small btn--small--icon-text" type="button">
+								<i class="btn--small__icon primary-color icon icon-{{$icon}}"></i>
+								<span class="btn--small__text">{{$buttontext}}</span>
 								</button>
 							</div>
 						</div>

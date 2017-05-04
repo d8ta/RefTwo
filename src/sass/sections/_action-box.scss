@@ -3,10 +3,13 @@ $image-width: 35%;
 $box-margin: 2em;
 #{$block} {
     margin: 0 auto;
-    max-width: 40em;
+    max-width: em(520);
     &__box {
-        border-top-left-radius: 0.8em;
-        border-bottom-left-radius: 0.8em;
+        max-height: em(200);
+        border-top-left-radius: 0.5em;
+        border-bottom-left-radius: 0.5em;
+        border-top-right-radius: 0.5em;
+        border-bottom-right-radius: 0.5em;
         background: $color-light-grey;
         color: $color-text;
         padding: em(20);
@@ -42,7 +45,7 @@ $box-margin: 2em;
                 &__td {
                     vertical-align: middle;
                     left: 16.25em;
-                    height: 6em;
+                    // height: 6em;
                     &__button {
                         background-color: $color-light-grey;
                         color: $color-text;
@@ -52,19 +55,19 @@ $box-margin: 2em;
                 }
             }
             &__headline {
+                @extend %h1;
                 color: $brand-primary;
                 font-family: $font-normal;
-                font-size: em(24);
-                font-weight: bold;
-                line-height: 1em;
+                font-size: em(20);
                 white-space: nowrap;
-                margin-bottom: em(20);
+                margin-bottom: em(10);
+                margin-left: -0.5em;
             }
             &__description {
                 display: none;
                 overflow: hidden;
                 height: 5.5em / 4 * 3;
-                margin-bottom: em(30);
+                margin-bottom: em(20);
                 &__clamp {
                     display: -webkit-box;
                     -webkit-line-clamp: 3;
@@ -75,7 +78,7 @@ $box-margin: 2em;
     }
     @include mq($from: screen-sm) {
         &__box {
-            height: 15em;
+            // height: 15em;
             &__image {
                 &--icon {
                     display: block;
@@ -92,11 +95,12 @@ $box-margin: 2em;
                 }
                 &__headline {
                     white-space: normal;
+                    margin-left: 0;
                 }
             }
         }
     }
-    @include mq($from: screen-md) {
+    @include mq($from: screen-lg) {
         max-width: 100%;
         width: 100%;
         &__box {
