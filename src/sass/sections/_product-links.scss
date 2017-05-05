@@ -3,11 +3,14 @@
             &__content {
                 float: left;
                 width: 33%;
+                margin-bottom: -5em;
                 &__image {
                     &--batch {
+                        width: 55%;
                         float: left;
                     }
                     &--logo {
+                        width: 45%;
                         margin-top: em(40);
                         margin-bottom: em(20);
                     }
@@ -49,5 +52,5 @@
         }
         
         .section--product-link {
-            margin: 8.25rem 0 9.25rem 0;
+            margin: 8.25rem 0 14.25rem 0;
         }
