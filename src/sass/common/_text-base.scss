@@ -10,7 +10,8 @@ h6,
 .h3,
 .h4,
 .h5,
-.h6 {
+.h6,
+{
     margin-top: 0;
     margin-bottom: 0;
     font-size: 1em;
@@ -24,12 +25,61 @@ h6,
     line-height: 1em;
 }
 
+%h1-inner {
+    font-family: $font-headline;
+    font-size: em(33);
+    font-weight: bold;
+    line-height: 1em;
+    margin: 0 auto;
+    @include mq($from: screen-sm) {
+        font-size: em(36);
+    }
+    @include mq($from: screen-md) {
+        font-size: em(39);
+        width: 14em;
+    }
+    @include mq($from: screen-lg) {
+        font-size: em(42);
+    }
+    @include mq($from: screen-xl) {
+        font-size: em(46);
+    }
+    @include mq($from: screen-xxl) {
+        font-size: em(48);
+    }
+}
+
 %h2 {
     font-family: $font-normal;
-    font-size: em(24);
+    font-size: em(22);
     font-weight: normal;
     line-height: 1.2em;
     margin: em(20) 0 em(25) 0;
+}
+
+%h2-inner {
+    font-family: $font-normal;
+    font-size: em(21);
+    font-weight: normal;
+    line-height: 1.2em;
+    text-align: center;
+    margin: em(20) 0 em(25) 0;
+    @include mq($from: screen-sm) {
+        font-size: em(20);
+    }
+    @include mq($from: screen-md) {
+        font-size: em(19);
+        max-width: 40em;
+    }
+    @include mq($from: screen-lg) {
+        font-size: em(18);
+    }
+    @include mq($from: screen-xl) {
+        font-size: em(17);
+    }
+    @include mq($from: screen-xxl) {
+        font-size: em(16);
+    }
 }
 
 %h3 {
@@ -174,5 +224,3 @@ h6,
 %lefttext {
     margin-left: 0;
 }
-
-

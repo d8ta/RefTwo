@@ -1,22 +1,19 @@
-    $block: '.product-teaser';
-    #{$block} {
-        width: 95%;
-        margin: 0 auto;
+$block: '.product-teaser';
+#{$block} {
+    width: 95%;
+    margin: 0 auto;
+    text-align: center;
+    &__inner {
         text-align: center;
-        &__inner {
-            text-align: center;
-            &--title {
-                @extend %h1;
-                font-size: em(10.4);
-                display: inline-block;
-            }
-            // &--description {
-            //     @extend %h2;
-            //     font-size: em(15);
-            // }
+        &--title {
+            @extend %h1-inner;
+        } 
+        &--description {
+            @extend %h2-inner;
         }
     }
-    
-    .section--product-teaser {
-        margin: 1.25rem 0 2.5rem 0;
-    }
+}
+
+.section--product-teaser {
+    margin: 1.25rem 0 2.5rem 0;
+}
