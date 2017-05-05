@@ -14,7 +14,7 @@
 					?>
 					<div class="research-teaser__content__text">
 						<div class="research-teaser__content__text__title">
-							<h2 class="research-teaser__content__text__title h1-inner">{{$title}}</h2>
+							<h2 class="h1">{{$title}}</h2>
 						</div>
 						<div class="research-teaser__content__text__description">
 							<p class="h2">{{$description}}</p>
