@@ -27,41 +27,41 @@
                     }
                 }
             }
-            // @include mq($from: screen-md) {
-            //     &--icon-text {
-            //         #{$block} {
-            //             &__icon {
-            //                 vertical-align: text-bottom;
-            //                 padding-right: em(8);
-            //                 margin-top: em(5);
-            //                 @include icon(arrowright) &:before {
-            //                     margin-top: em(5);
-            //                     &__primary {
-            //                         color: $brand-primary;
-            //                     }
-            //                 }
-            //             }
-            //             &__text {
-            //                 font-size: 1em;
-            //             }
-            //         }
-            //     }
-            // }
-            // @include mq($until: screen-lg) {
-            //     &--icon-text {
-            //         white-space: nowrap;
-            //         &__text {}
-            //     }
-            // }
-            // @include mq($until: screen-xs) {
-            //     &--icon-text {
-            //         white-space: nowrap;
-            //         &__text {
-            //             font-size: em(22);
-            //             margin-top: 20px;
-            //         }
-            //     }
-            // }
+            @include mq($from: screen-md) {
+                &--icon-text {
+                    #{$block} {
+                        &__icon {
+                            vertical-align: text-bottom;
+                            padding-right: em(8);
+                            margin-top: em(5);
+                            @include icon(arrowright) &:before {
+                                margin-top: em(5);
+                                &__primary {
+                                    color: $brand-primary;
+                                }
+                            }
+                        }
+                        &__text {
+                            font-size: 1.2em;
+                        }
+                    }
+                }
+            }
+            @include mq($until: screen-lg) {
+                &--icon-text {
+                    white-space: nowrap;
+                    &__text {}
+                }
+            }
+            @include mq($until: screen-xs) {
+                &--icon-text {
+                    white-space: nowrap;
+                    &__text {
+                        font-size: em(22);
+                        margin-top: 20px;
+                    }
+                }
+            }
         }
         
         $block: '.btn--small';
@@ -93,39 +93,39 @@
                     }
                 }
             }
-            // @include mq($from: screen-md) {
-            //     &--icon-text {
-            //         #{$block} {
-            //             &__icon {
-            //                 vertical-align: text-bottom;
-            //                 padding-right: em(8);
-            //                 margin-top: em(5);
-            //                 @include icon(arrowright) &:before {
-            //                     margin-top: em(5);
-            //                     &__primary {
-            //                         color: $brand-primary;
-            //                     }
-            //                 }
-            //             }
-            //             &__text {
-            //                 font-size: 1em;
-            //             }
-            //         }
-            //     }
-            // }
-            // @include mq($until: screen-lg) {
-            //     &--icon-text {
-            //         white-space: nowrap;
-            //         &__text {}
-            //     }
-            // }
-            // @include mq($until: screen-xs) {
-            //     &--icon-text {
-            //         white-space: nowrap;
-            //         &__text {
-            //             font-size: em(22);
-            //             margin-top: 20px;
-            //         }
-            //     }
-            // }
+            @include mq($from: screen-md) {
+                &--icon-text {
+                    #{$block} {
+                        &__icon {
+                            vertical-align: text-bottom;
+                            padding-right: em(8);
+                            margin-top: em(5);
+                            @include icon(arrowright) &:before {
+                                margin-top: em(5);
+                                &__primary {
+                                    color: $brand-primary;
+                                }
+                            }
+                        }
+                        &__text {
+                            font-size: 1.2em;
+                        }
+                    }
+                }
+            }
+            @include mq($until: screen-lg) {
+                &--icon-text {
+                    white-space: nowrap;
+                    &__text {}
+                }
+            }
+            @include mq($until: screen-xs) {
+                &--icon-text {
+                    white-space: nowrap;
+                    &__text {
+                        font-size: em(22);
+                        margin-top: 20px;
+                    }
+                }
+            }
         }
