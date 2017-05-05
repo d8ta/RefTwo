@@ -2,7 +2,7 @@
             #{$block} {
                 text-align: center;
                 &__content {
-                margin: 0 auto;
+                    margin: 0 auto;
                     display: table;
                     &__image {
                         display: table-cell;
@@ -10,8 +10,7 @@
                         &--batch {
                             width: 50%;
                         }
-                        &--logo {
-                        }
+                        &--logo {}
                         &__text {
                             @extend %h2-inner;
                             overflow: hidden;
@@ -58,17 +57,16 @@
                 // }
                 // @include mq($from: screen-md) {
                 //     &__content {
-                //         &__image {
-                //             &--batch {
-                //                 width: 25em;
-                //             }
-                //             &--logo {
-                //                 width: 25em;
-                //                 float: none;
-                //             }
-                //             &__text {
-                //                 height: 8em;
-                //                 margin-bottom: 8em;
+                //         display: inline-block;
+                //         width: 33%;
+                //         &__text {
+                //             overflow: hidden;
+                //             height: 8.5em;
+                //             display: inline-block;
+                //             &__clamp {
+                //                 display: -webkit-box;
+                //                 -webkit-line-clamp: 5;
+                //                 -webkit-box-orient: vertical;
                 //             }
                 //         }
                 //     }
