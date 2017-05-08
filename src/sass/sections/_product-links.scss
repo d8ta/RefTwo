@@ -55,28 +55,45 @@
                 //         }
                 //     }
                 // }
-                // @include mq($from: screen-md) {
-                //     &__content {
-                //         display: inline-block;
-                //         width: 33%;
-                //         &__text {
-                //             overflow: hidden;
-                //             height: 8.5em;
-                //             display: inline-block;
-                //             &__clamp {
-                //                 display: -webkit-box;
-                //                 -webkit-line-clamp: 5;
-                //                 -webkit-box-orient: vertical;
-                //             }
-                //         }
-                //     }
-                // }
-                // @include mq($from: screen-lg) {
-                //     &__content {
-                //         clear: both;
-                //         width: 100%;
-                //     }
-                // }
+                @include mq($from: screen-sm) {
+                    &__content {
+                        width: 100%;
+                        &__image {
+                            &--logo {
+                                display: block;
+                                text-align: center;
+                                margin: 0 auto;
+                                width: 30%;
+                            }
+                            &__text {
+                                overflow: hidden;
+                                height: 6em;
+                                display: inline-block;
+                                width: 80%;
+                                &__clamp {
+                                    display: -webkit-box;
+                                    -webkit-line-clamp: 5;
+                                    -webkit-box-orient: vertical;
+                                }
+                            }
+                        }
+                    }
+                }
+                @include mq($from: screen-lg) {
+                    &__content {
+                        &__image {
+                            &--batch {
+                                width: 33.75em;
+                            }
+                            &--logo {
+                                width: 22.125em;
+                            }
+                            &__text {
+                                &__clamp {}
+                            }
+                        }
+                    }
+                }
                 // @include mq($until: screen-xs) {
                 //     &__content {
                 //         &__image {

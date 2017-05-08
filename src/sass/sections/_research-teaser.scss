@@ -28,30 +28,30 @@ $block: '.research-teaser';
             z-index: 100;
             &--big {
                 position: absolute;
-                border-radius: 15px;
+                border-radius: em(15);
                 right: 14.5%;
                 top: 0;
                 &__icon {
                     width: 15%;
                     position: absolute;
-                    left: 20px;
-                    top: 10px;
+                    left: em(20);
+                    top: em(10);
                 }
                 &__inner {
-                    border-radius: 15px;
-                    margin-top: -10px;
+                    border-radius: em(15);
+                    margin-top: em(-10);
                 }
             }
             &--small {
-                border-radius: 10px;
+                border-radius: em(10);
                 position: absolute;
                 width: 13.333%;
                 right: 0%;
-                top: -11px;
+                top: em(-11);
                 display: block;
                 &__inner {
-                    border-radius: 10px;
-                    margin-bottom: 10px;
+                    border-radius: em(10);
+                    margin-bottom: em(10);
                 }
             }
         }
@@ -89,8 +89,8 @@ $block: '.research-teaser';
                     top: 0;
                     &__inner {
                         width: 100%;
-                        border-radius: 15px;
-                        margin-top: -10px;
+                        border-radius: em(15);
+                        margin-top: em(-10);
                     }
                 }
                 &--small {
@@ -100,7 +100,7 @@ $block: '.research-teaser';
                     display: block;
                     &__inner {
                         width: 100%;
-                        border-radius: 10px;
+                        border-radius: em(10);
                         margin-bottom: 5%;
                     }
                 }
@@ -139,18 +139,19 @@ $block: '.research-teaser';
                 margin-top: 9em;
             }
             &__text {
-                width: 30em;
+                max-width: 30em;
                 height: 62rem;
+                &__title {}
                 &__description {
                     font-size: 1.5em;
-                    width: 27em;
+                    max-width: 22em;
                 }
                 &__button {
-                    font-size: 1.5em;
+                    font-size: 1.3em;
                     white-space: nowrap;
                     &__text {
-                        font-size: em(22);
-                        margin-top: 20px;
+                        // font-size: em(22);
+                        // margin-top: 20px;
                     }
                 }
             }
