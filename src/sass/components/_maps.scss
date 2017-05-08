@@ -9,7 +9,7 @@ $block: ".maps";
     &__infobox {
         @extend %section-content;
         height: 0;
-        // padding-bottom: 100%;
+        padding-bottom: 60%;
         background: $color-text;
         color: white;
         width: 22.3%;
@@ -51,7 +51,7 @@ $block: ".maps";
             height: 1.875em;
         }
         &__infobox {
-            height: 28em;
+            height: 13em;
             position: relative;
             width: 100%;
             &__inner {
@@ -62,6 +62,23 @@ $block: ".maps";
             }
         }
     }
+    // @include mq($from: screen-lg) {
+    //     &__map {
+    //         width: 100%;
+    //         height: 1.875em;
+    //     }
+    //     &__infobox {
+    //         height: 13em;
+    //         position: relative;
+    //         width: 100%;
+    //         &__inner {
+    //             max-width: 45em;
+    //             &--headline {
+    //                 font-size: .5em;
+    //             }
+    //         }
+    //     }
+    // }
 }
 
 .selectbox {
