@@ -10,6 +10,7 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+
 strong,
 .strong,
 b {
@@ -19,6 +20,11 @@ b {
 p {
     margin-bottom: 0.8em;
 }
+
+.main {
+    margin-top: $height-header;
+}
+
 
 .primary-color {
     color: $brand-primary;

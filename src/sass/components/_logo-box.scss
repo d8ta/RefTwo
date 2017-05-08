@@ -1,7 +1,7 @@
 $block: ".logo-box";
 #{$block} {
-    float: left;
-    margin: 10px 0;
+    margin: em(10) 0;
+    display: block;
     img {
         width: 13em;
     }
