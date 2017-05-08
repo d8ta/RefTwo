@@ -36,7 +36,7 @@ MatchHeightController.prototype.parse = function(context) {
 
 MatchHeightController.prototype.initMatchHeight = function() {
     var $matchHeight = jQuery(this.getSelector('matchHeight'));
-    console.log($matchHeight);
+
     if (!$matchHeight.length) {
         return false;
     }

@@ -30,7 +30,7 @@ require_once ABSPATH . 'vendor/autoload.php';
 
 define( 'WP_AUTO_UPDATE_CORE', 'minor' );
 
-//include_once("geoip.php");
+include_once("geoip.php");
 
 A365\Wordpress\Environment::getInstance();
 A365\Wordpress\Cache\Fpc::output();
