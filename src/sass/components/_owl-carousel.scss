@@ -43,10 +43,10 @@
     background: red;
     height: 0;
     padding-bottom: 34%; // variable for heigth of slider!
-    @include mq($from: screen-md) {
+    @include mq($from: screen-lg) {
         padding-bottom: 40%;
     }
-    @include mq($from: screen-lg) {
+    @include mq($from: screen-xl) {
         padding-bottom: 34%;
     }
 }
@@ -74,7 +74,7 @@
         padding: em(20);
         margin: auto auto;
     }
-    @include mq($from: screen-md) {
+    @include mq($from: screen-lg) {
         display: block;
     }
 }
@@ -118,7 +118,7 @@
     }
     &:hover {
         .icon {
-            left: 12px;
+            left: 0.5em;
         }
     }
 }

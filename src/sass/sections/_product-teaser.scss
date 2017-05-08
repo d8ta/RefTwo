@@ -3,23 +3,17 @@ $block: '.product-teaser';
     width: 95%;
     margin: 0 auto;
     text-align: center;
-    @include mq($from: screen-sm) {
-        &__inner {
-            &--title {
-                display: inline-block;
-                width: 40em;
-            }
-            &--description {
-                .pagetext {
-                    font-size: 1em;
-                    max-width: 40em;
-                    margin: 0 auto 20px auto;
-                }
-            }
+    &__inner {
+        text-align: center;
+        &--title {
+            @extend %h1-inner;
+        }
+        &--description {
+            @extend %h2-inner;
         }
     }
 }
 
 .section--product-teaser {
-    margin: 1.25rem 0 2.5rem 0;
+    margin: 1.25rem 0 9.5rem 0;
 }

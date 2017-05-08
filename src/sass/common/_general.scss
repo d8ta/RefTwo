@@ -24,32 +24,10 @@ p {
     color: $brand-primary;
 }
 
-.pagetitle {
-    color: $brand-primary;
-    font-family: $font-headline;
-    font-size: 2.75em;
-    font-weight: bold;
-    line-height: 1em;
-    margin: 0 auto 25px auto;
-}
-
-.pagesubtitle {
+.subtitle {
     color: $color-grey;
-    font-family: $font-normal;
-    font-size: 1.75em;
-    font-weight: bold;
-    line-height: 1em;
-    margin: 0 auto 30px auto;
-}
-
-.pagetext {
-    font-size: 1.5em;
-    color: $color-text;
-    margin: 0 auto 30px auto;
-}
-
-.subtitle-color {
-    color: $color-grey;
+    font-weight: bold !important;
+    // font-size: 1.5em !important;
 }
 
 .primary-brand-btn {

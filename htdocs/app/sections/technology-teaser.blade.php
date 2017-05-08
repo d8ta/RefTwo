@@ -8,15 +8,9 @@
 				$description = $block->getDescription();
 				?>
 				<div class="technology-teaser__inner">
-					<div class="technology-teaser__inner__title">
-						<h2 class="pagetitle">{{$title}}</h2>
-					</div>	
-					<div class="technology-teaser__inner__subtitle">
-						<h2 class="pagesubtitle">{{$subtitle}}</h2>
-					</div>				
-					<div class="technology-teaser__inner__description">
-						<p class="pagetext">{{$description}}</p>
-					</div>
+					<h2 class="technology-teaser__inner__title h1-inner primary-color">{{$title}}</h2>
+					<h2 class="technology-teaser__inner__subtitle h2 subtitle">{{$subtitle}}</h2>
+					<p class="technology-teaser__inner__description h2-inner">{{$description}}</p>
 				</div>
 			</div>
 		</div>

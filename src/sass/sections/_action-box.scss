@@ -3,10 +3,13 @@ $image-width: 35%;
 $box-margin: 2em;
 #{$block} {
     margin: 0 auto;
-    max-width: 40em;
+    max-width: em(520);
     &__box {
-        border-top-left-radius: 5px;
-        border-bottom-left-radius: 5px;
+        max-height: em(200);
+        border-top-left-radius: 0.5em;
+        border-bottom-left-radius: 0.5em;
+        border-top-right-radius: 0.5em;
+        border-bottom-right-radius: 0.5em;
         background: $color-light-grey;
         color: $color-text;
         padding: em(20);
@@ -14,8 +17,8 @@ $box-margin: 2em;
         margin-bottom: 3rem;
         width: 100%;
         &__image {
-            border-top-right-radius: 5px;
-            border-bottom-right-radius: 5px;
+            border-top-right-radius: 0.8em;
+            border-bottom-right-radius: 0.8em;
             width: $image-width;
             max-width: em(230);
             height: 100%;
@@ -23,10 +26,10 @@ $box-margin: 2em;
             right: 0;
             top: 0;
             &--icon {
-                width: 50px;
+                width: 3.125em; //50px
                 position: absolute;
-                top: 20px;
-                left: -25px;
+                top: 1.25em; //20px;
+                left: -1.5625em; //-25px;
                 display: none;
             }
         }
@@ -42,7 +45,7 @@ $box-margin: 2em;
                 &__td {
                     vertical-align: middle;
                     left: 16.25em;
-                    height: 6em;
+                    // height: 6em;
                     &__button {
                         background-color: $color-light-grey;
                         color: $color-text;
@@ -52,19 +55,19 @@ $box-margin: 2em;
                 }
             }
             &__headline {
+                @extend %h1;
                 color: $brand-primary;
                 font-family: $font-normal;
-                font-size: em(24);
-                font-weight: bold;
-                line-height: 1em;
+                font-size: em(20);
                 white-space: nowrap;
-                margin-bottom: 20px;
+                margin-bottom: em(10);
+                margin-left: -0.5em;
             }
             &__description {
                 display: none;
                 overflow: hidden;
                 height: 5.5em / 4 * 3;
-                margin-bottom: 30px;
+                margin-bottom: em(20);
                 &__clamp {
                     display: -webkit-box;
                     -webkit-line-clamp: 3;
@@ -75,7 +78,7 @@ $box-margin: 2em;
     }
     @include mq($from: screen-sm) {
         &__box {
-            height: 15em;
+            // height: 15em;
             &__image {
                 &--icon {
                     display: block;
@@ -86,17 +89,18 @@ $box-margin: 2em;
                     display: block;
                     &__table {
                         &__td {
-                            height: 4em;
+                            // height: 4em;
                         }
                     }
                 }
                 &__headline {
                     white-space: normal;
+                    margin-left: 0;
                 }
             }
         }
     }
-    @include mq($from: screen-md) {
+    @include mq($from: screen-lg) {
         max-width: 100%;
         width: 100%;
         &__box {
@@ -133,5 +137,5 @@ $box-margin: 2em;
 
 .section--action-box {
     margin-top: 1.25rem;
-    margin-bottom: 4.25rem;
+    margin-bottom: 1.25rem;
 }

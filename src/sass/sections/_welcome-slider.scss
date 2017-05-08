@@ -23,10 +23,11 @@ $image-height: 300px;
                 position: relative;
                 z-index: 2;
                 &__title {
-                    max-width: 82%;
+                    @extend %h1;
+                    width: 92%;
                 }
                 &__description {
-                    max-width: 65%;
+                    max-width: 73%;
                 }
                 &__table {
                     left: 0;
@@ -47,9 +48,9 @@ $image-height: 300px;
             }
         }
     }
-    @include mq($from: screen-md) {
+    @include mq($from: screen-lg) {
         &__slide {
-            padding-bottom: 40% !important;
+            padding-bottom: 40%;
             &__inner {
                 position: absolute;
                 &__image {
@@ -89,24 +90,9 @@ $image-height: 300px;
             }
         }
     }
-    @include mq($from: screen-lg) {
+    @include mq($from: screen-xl) {
         &__slide {
-            padding-bottom: 34% !important;
-            &__inner {
-                &__image {
-                    padding-bottom: 34%;
-                }
-                &__text {
-                    float: left;
-                    z-index: 2;
-                    &__title {
-                        // max-width: 82%;
-                    }
-                    &__description {
-                        max-width: 80%;
-                    }
-                }
-            }
+            padding-bottom: 34%;
         }
     }
     @include mq($from: screen-xxl) {
@@ -128,5 +114,8 @@ $image-height: 300px;
 }
 
 .section--welcome {
-    margin-top: 6em;
+    margin-top: 9em;
+    @include mq($from: screen-sm) {
+        margin-top: 6em;
+    }
 }

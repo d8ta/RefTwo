@@ -11,14 +11,15 @@ html {
 
 body {
 
-	font-size: $font-size-base * .7;
+	font-size: $font-size-base * .875;
 
-	@include mq($from: screen-xs){font-size: $font-size-base * 0.75;}
-	@include mq($from: screen-sm){font-size: $font-size-base * 0.8;}
-	@include mq($from: screen-md){font-size: $font-size-base * 0.85;}
-	@include mq($from: screen-lg){font-size: $font-size-base * 0.9;}
+	@include mq($from: screen-xs){font-size: $font-size-base * 0.9;}
+	@include mq($from: screen-sm){font-size: $font-size-base * 0.925;}
+	@include mq($from: screen-md){font-size: $font-size-base * 0.95;}
+	@include mq($from: screen-lg){font-size: $font-size-base * 0.975;}
 	@include mq($from: screen-xl){font-size: $font-size-base * 1;}
-	//@include mq($from: screen-xxl){font-size: $font-size-base * 1.05;} 
+	// @include mq($from: screen-xxl){font-size: $font-size-base * 1.25;}
+	// @include mq($from: screen-xxl){font-size: $font-size-base * 1.05;} 
 	//@include mq($from: screen-xxxl){font-size: $font-size-base * 1.1;}
 	//@include mq($from: 185em){font-size: $font-size-base * 1.2;}
 	//@include mq($from: 200em){font-size: $font-size-base * 1.3;}

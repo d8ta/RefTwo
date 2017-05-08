@@ -2,43 +2,35 @@ $block: ".maps";
 #{$block} {
     position: relative;
     &__map {
-        padding-bottom: 40%;
         height: 0;
+        padding-bottom: 50%;
         width: 77.7%;
     }
     &__infobox {
-        padding-bottom: 40%;
+        @extend %section-content;
         height: 0;
-        background: grey;
+        padding-bottom: 60%;
+        background: $color-text;
         color: white;
         width: 22.3%;
         top: 0;
         right: 0;
         position: absolute;
         &__inner {
-            padding: em(90) 10% 0;
+            padding-top: em(40);
             &--headline {
-                h2 {
-                    font-weight: bold;
-                }
+                @extend %h1-inner;
+                margin: 0;
             }
             &--address {
-                h2 {
-                    margin-left: 0;
-                    width: 9em;
-                }
+                @extend %h2-inner;
+                max-width: 4em;
+                margin-left: 0;
+                margin-right: 0;
             }
             &--phone {
-                h2 {
-                    margin-left: 0;
-                    margin-bottom: 2em;
-                    white-space: pre-line;
-                }
-            }
-            &--mail {
-                h2 {
-                    margin-left: 0;
-                }
+                @extend %h2-inner;
+                white-space: pre-line;
             }
         }
     }
@@ -59,43 +51,46 @@ $block: ".maps";
             height: 1.875em;
         }
         &__infobox {
-            height: 40em;
+            height: 13em;
             position: relative;
             width: 100%;
             &__inner {
-                width: 45em;
+                max-width: 45em;
                 &--headline {
                     font-size: 1.5em;
-                    margin-bottom: 1.875em
-                }
-                &--address {
-                    h2 {
-                        font-size: 1.5em;
-                    }
-                }
-                &--phone {
-                    h2 {
-                        font-size: 1.5em;
-                    }
-                }
-                &--mail {
-                    h2 {
-                        font-size: 1.5em;
-                    }
                 }
             }
         }
     }
+    // @include mq($from: screen-lg) {
+    //     &__map {
+    //         width: 100%;
+    //         height: 1.875em;
+    //     }
+    //     &__infobox {
+    //         height: 13em;
+    //         position: relative;
+    //         width: 100%;
+    //         &__inner {
+    //             max-width: 45em;
+    //             &--headline {
+    //                 font-size: .5em;
+    //             }
+    //         }
+    //     }
+    // }
 }
 
 .selectbox {
-    width: 200px;
-    height: 50px;
-    margin-bottom: 3.5em;
+    // width: 200px;
+    // height: 50px;
+    // margin-bottom: 3.5em;
 }
 
 .section__content--headline {
-    padding-bottom: 3.5rem;
+    @extend %h1-inner;
+    text-align: center;
+    margin-bottom: 1em;
 }
 
 .section--maps {

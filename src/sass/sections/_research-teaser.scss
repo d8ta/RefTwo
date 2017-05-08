@@ -9,6 +9,7 @@ $block: '.research-teaser';
         width: 800em;
         right: 0;
         height: 8em;
+        // display: none;
     }
     background: $brand-primary;
     &__content {
@@ -28,30 +29,30 @@ $block: '.research-teaser';
             z-index: 100;
             &--big {
                 position: absolute;
-                border-radius: 15px;
+                border-radius: em(15);
                 right: 14.5%;
                 top: 0;
                 &__icon {
                     width: 15%;
                     position: absolute;
-                    left: 20px;
-                    top: 10px;
+                    left: em(20);
+                    top: em(10);
                 }
                 &__inner {
-                    border-radius: 15px;
-                    margin-top: -10px;
+                    border-radius: em(15);
+                    margin-top: em(-10);
                 }
             }
             &--small {
-                border-radius: 10px;
+                border-radius: em(10);
                 position: absolute;
                 width: 13.333%;
                 right: 0%;
-                top: -11px;
+                top: em(-11);
                 display: block;
                 &__inner {
-                    border-radius: 10px;
-                    margin-bottom: 10px;
+                    border-radius: em(10);
+                    margin-bottom: em(10);
                 }
             }
         }
@@ -62,14 +63,6 @@ $block: '.research-teaser';
             padding-bottom: 0;
             &__text {
                 width: 30%;
-            }
-            &__images {
-                &--big {
-                    &__inner {}
-                }
-                &--small {
-                    &__inner {}
-                }
             }
         }
     }
@@ -89,8 +82,8 @@ $block: '.research-teaser';
                     top: 0;
                     &__inner {
                         width: 100%;
-                        border-radius: 15px;
-                        margin-top: -10px;
+                        border-radius: em(15);
+                        margin-top: em(-10);
                     }
                 }
                 &--small {
@@ -100,7 +93,7 @@ $block: '.research-teaser';
                     display: block;
                     &__inner {
                         width: 100%;
-                        border-radius: 10px;
+                        border-radius: em(10);
                         margin-bottom: 5%;
                     }
                 }
@@ -115,9 +108,14 @@ $block: '.research-teaser';
                 position: absolute;
                 top: em(50);
                 width: 30%;
-                font-size: 75%;
             }
         }
+    }
+    @include mq($from: screen-lg) {
+        &__whitebox {
+            display: none;
+        }
+
     }
     @include mq($until: screen-md) {
         &__content {
@@ -127,30 +125,35 @@ $block: '.research-teaser';
                 width: 100%;
             }
             &__images {
-                margin-top: -9em;
+                margin-top: 6em;
                 margin-left: -80%;
             }
         }
     }
     @include mq($until: screen-xs) {
         &__content {
-            height: 41.875em;
+            height: 50em;
             &__images {
-                margin-top: 9em;
+                margin-top: 14em;
             }
             &__text {
-                width: 30em;
+                max-width: 30em;
                 height: 62rem;
+                &__title {
+                    font-size: 0.8em;
+                    margin-bottom: 3em;
+                }
                 &__description {
-                    font-size: 1.5em;
-                    width: 27em;
+                    font-size: 1.3em;
+                    max-width: 22em;
+                    margin-bottom: 1em;
                 }
                 &__button {
-                    font-size: 1.5em;
+                    // font-size: 1.2em;
                     white-space: nowrap;
                     &__text {
-                        font-size: em(22);
-                        margin-top: 20px;
+                        // font-size: em(22);
+                        // margin-top: 20px;
                     }
                 }
             }
