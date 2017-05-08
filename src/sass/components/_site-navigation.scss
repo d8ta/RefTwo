@@ -10,7 +10,7 @@ $block: ".site-navigation";
         @include clearfix;
         &__item {
             float: right;
-            padding: 0 0 0 em(40);
+            padding-left: em(40);
             
         }
     }

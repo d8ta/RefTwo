@@ -2,16 +2,20 @@ $block: ".sidebar";
 $sidebar-bg: $color-white;
 $sidebar-fg: $color-text;
 #{$block} {
-    ul li {
+    nav {
+        margin-top: 3em;
+        font-size: 2em;
+    }
+    nav ul li {
         padding: 25px;
     }
+
     font-weight: bold;
     text-align: center;
-    font-size: 2em;
     position: fixed;
     width: 100%;
     min-height: 100vh;
-    top: 3em;
+    
     right: 0;
     z-index: 0;
     // padding-left: 10%;
@@ -40,8 +44,9 @@ $sidebar-fg: $color-text;
             padding-right: 0;
         }
     }
-    &__lang {
+    &__lang-switch {
         margin-top: em(40);
+        font-size: em(16);
     }
     &__page-overlay {
         position: absolute;

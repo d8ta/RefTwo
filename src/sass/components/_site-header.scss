@@ -19,4 +19,16 @@ $block: ".site-header";
     &__right {
     	float: right;
     }
+
+    &__lang-switch {
+        position: absolute;
+        right: 0;
+        top: em(10);
+        display: none;
+        font-size: 12px;
+
+        @include mq($from: width-mobile-menu) {
+            display: block;
+        }
+    }
 }
