@@ -40,8 +40,8 @@ GoogleMap.prototype.init = function() {
     var defaultIcon = {
         url: "/assets/images/layout/maps-marker.png",
         size: new google.maps.Size(32, 40),
-        //scaledSize: new google.maps.Size(10, 10),
-        anchor: new google.maps.Point(16, 40),
+        scaledSize: new google.maps.Size(16, 20),
+        anchor: new google.maps.Point(8, 20),
     };
 
     var activeIcon = {

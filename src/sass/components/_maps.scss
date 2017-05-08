@@ -1,19 +1,29 @@
 $block: ".maps";
 #{$block} {
-    display: table;
-    height: em(500);
-    max-height: 90vh;
-    width: 100%;
-
     &__td {
-        display: table-cell;
         position: relative;
-
         &--map {
-            width: 75%;
+            padding-bottom: 50%;
+            height: 0;
         }
-        &--box {
-            width: 25%;
+        &--box {}
+    }
+    @include mq($from: width-break-maps) {
+        display: table;
+        height: em(500);
+        max-height: 90vh;
+        width: 100%;
+        &__td {
+            display: table-cell;
+            &--map {
+                width: 75%;
+                padding: 0;
+                height: auto;
+            }
+            &--box {
+                width: 25%;
+                min-width: em(330);
+            }
         }
     }
     &__map {
@@ -24,22 +34,21 @@ $block: ".maps";
     &__infobox {
         background: $color-text;
         color: #fff;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-
-        top: 0;
-        bottom: 0;
-        right: 0;
         margin: auto 0;
-        &__inner {
-            padding: em(90) 10% 0;
+        @include mq($from: width-break-maps) {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            bottom: 0;
+            right: 0;
         }
-
-
-        
         &__inner {
-            padding-top: em(40);
+            padding: em(40) $side-padding;
+            @include mq($from: width-break-maps) {
+                padding-left: 10%;
+                padding-right: 10%;
+            }
             &--headline {
                 @extend %h1-inner;
                 margin: 0;
@@ -84,6 +93,12 @@ $block: ".maps";
                     display: block;
                 }
             }
+            &-area {
+                margin-bottom: em(30);
+            }
+        }
+        &__select {
+            margin-bottom: em(30);
         }
         &.loading {
             #{$block}__infobox__loader {
@@ -98,28 +113,7 @@ $block: ".maps";
             transition: visibility 0s, opacity 0.5s;
         }
     }
-    /*
-    @include mq($from: screen-sm) {
-        &__infobox {
-            padding-bottom: 28%;
-            width: 22.3%;
-        }
-    }
-    @include mq($until: $screen-lg + 100px) {
-        &__infobox {
-            height: 13em;
-            position: relative;
-            width: 100%;
-            &__inner {
-                max-width: 45em;
-                &--headline {
-                    font-size: 1.5em;
-                }
-            }
-        }
-    }*/
 }
-
 
 .section--maps {
     margin-top: 18.88rem;

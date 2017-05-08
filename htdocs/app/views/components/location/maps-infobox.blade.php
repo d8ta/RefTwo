@@ -4,7 +4,7 @@ $locations = \Project\Models\Location::allPublished();
 
 <div class="maps__infobox js-google-maps-infobox maps__infobox--locations">
 	<div class="maps__infobox__inner">
-		<select class="selectbox js-google-maps-locations-select">
+		<select class="selectbox js-google-maps-locations-select maps__infobox__select">
 			@foreach($locations as $location)
 				<option value="{{ $location->getId() }}">{{ get_field('country_select', $location->getId()) }}</option>
 			@endforeach
@@ -18,6 +18,13 @@ $locations = \Project\Models\Location::allPublished();
 					</div>
 				@endforeach
 			</div>
+		</div>
+
+		<div class="maps__infobox__button">
+			<a class="btn btn--icon-text primary-brand-btn">
+				<i class="btn__icon white-icon"></i>
+				<span class="btn__text">Kontaktformular</span>
+			</a>
 		</div>
 
 	</div>
