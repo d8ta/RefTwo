@@ -5,7 +5,7 @@ $navigation = new Project\Sections\Footer\Navigation;
 <footer>
 	<div class="section__content">
 		<div class="footer">
-			<div class="footer__inner">
+			<div class="footer__inner h1">
 				{{-- {!!$navigation->toHtml()!!} --}}
 			</div>
 		</div>

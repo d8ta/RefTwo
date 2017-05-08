@@ -3,9 +3,9 @@
 		<address class="footer__inner__address">
 			<div class="footer__inner__address__wrapper">
 				<a href='' class="footer__inner__address__claim" target="_blank">
-					<p class="footer__inner__flex__claim">SICONNEX Österreich</p>
+					<p class="footer__inner__flex__claim h1-inner">SICONNEX Österreich</p>
 				</a>
-				<ul class="footer__inner__address__list">
+				<ul class="footer__inner__address__list h2-inner">
 					<li>Gewerbestrasse 2</li>
 					<li>5322 Hof bei Salzburg</li>
 					<li>Tel: +43 6229 36646-0</li>
