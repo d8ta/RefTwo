@@ -2,7 +2,7 @@
 $config = [
     "google" => [
         'api' => [
-            'key' => ''
+            'key' => 'AIzaSyBbmPybvMqrhd6jDQMnWGnZkH8mlkuc680'
         ]
     ]
 ];

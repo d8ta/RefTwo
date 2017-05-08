@@ -30,15 +30,15 @@ h6,
     font-family: $font-headline;
     font-size: em(33);
     font-weight: bold;
-    line-height: 1em;
-    margin: em(0) auto em(10) auto;
+    line-height: 1.2em;
+    margin-bottom: em(10);
+    text-align: center;
+
     @include mq($from: screen-sm) {
         font-size: em(36);
     }
     @include mq($from: screen-md) {
         font-size: em(39);
-        width: 14em;
-        margin: em(20) auto em(3) auto;
     }
     @include mq($from: screen-lg) {
         font-size: em(42);

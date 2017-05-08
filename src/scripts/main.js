@@ -8,6 +8,7 @@
 	//= include ../bower_components/velocity/velocity.min.js
 	//= include ../bower_components/js-cookie/src/js.cookie.js
 	//= include ../bower_components/matchHeight/dist/jquery.matchHeight-min.js
+	//= include ../bower_components/selectize/dist/js/standalone/selectize.js
 	
 
 

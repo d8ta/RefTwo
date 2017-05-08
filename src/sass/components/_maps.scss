@@ -1,23 +1,54 @@
 $block: ".maps";
 #{$block} {
-    position: relative;
+    &__td {
+        position: relative;
+        &--map {
+            padding-bottom: 50%;
+            height: 0;
+        }
+        &--box {}
+    }
+    @include mq($from: width-break-maps) {
+        display: table;
+        height: em(500);
+        max-height: 90vh;
+        width: 100%;
+        &__td {
+            display: table-cell;
+            &--map {
+                width: 75%;
+                padding: 0;
+                height: auto;
+            }
+            &--box {
+                width: 25%;
+                min-width: em(330);
+            }
+        }
+    }
     &__map {
-        height: 0;
-        padding-bottom: 50%;
-        width: 77.7%;
+        position: absolute;
+        width: 100%;
+        height: 100%;
     }
     &__infobox {
-        @extend %section-content;
-        height: 0;
-        padding-bottom: 60%;
         background: $color-text;
-        color: white;
-        width: 22.3%;
-        top: 0;
-        right: 0;
-        position: absolute;
+        color: #fff;
+        margin: auto 0;
+        @include mq($from: width-break-maps) {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            bottom: 0;
+            right: 0;
+        }
         &__inner {
-            padding-top: em(40);
+            padding: em(40) $side-padding;
+            @include mq($from: width-break-maps) {
+                padding-left: 10%;
+                padding-right: 10%;
+            }
             &--headline {
                 @extend %h1-inner;
                 margin: 0;
@@ -33,64 +64,55 @@ $block: ".maps";
                 white-space: pre-line;
             }
         }
-    }
-    @include mq($from: screen-sm) {
-        &__map {
-            padding-bottom: 28%;
-            height: 0;
-            width: 77.7%;
-        }
-        &__infobox {
-            padding-bottom: 28%;
-            width: 22.3%;
-        }
-    }
-    @include mq($until: $screen-lg + 100px) {
-        &__map {
+        &__loader {
+            background: rgba(#ffffff, 0.7);
             width: 100%;
-            height: 1.875em;
-        }
-        &__infobox {
-            height: 13em;
-            position: relative;
-            width: 100%;
-            &__inner {
-                max-width: 45em;
-                &--headline {
-                    font-size: 1.5em;
-                }
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s, visibility 0s 0.3s;
+            &__icon {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                width: em(32);
+                height: em(32);
+                left: 0;
+                right: 0;
+                margin: auto;
             }
         }
+        &__locations {
+            &__location {
+                display: none;
+                &.active {
+                    display: block;
+                }
+            }
+            &-area {
+                margin-bottom: em(30);
+            }
+        }
+        &__select {
+            margin-bottom: em(30);
+        }
+        &.loading {
+            #{$block}__infobox__loader {
+                opacity: 1;
+                visibility: visible;
+                transition: opacity 0.3s, visibility 0s;
+            }
+        }
+        &.show {
+            visibility: visible;
+            opacity: 1;
+            transition: visibility 0s, opacity 0.5s;
+        }
     }
-    // @include mq($from: screen-lg) {
-    //     &__map {
-    //         width: 100%;
-    //         height: 1.875em;
-    //     }
-    //     &__infobox {
-    //         height: 13em;
-    //         position: relative;
-    //         width: 100%;
-    //         &__inner {
-    //             max-width: 45em;
-    //             &--headline {
-    //                 font-size: .5em;
-    //             }
-    //         }
-    //     }
-    // }
-}
-
-.selectbox {
-    // width: 200px;
-    // height: 50px;
-    // margin-bottom: 3.5em;
-}
-
-.section__content--headline {
-    @extend %h1-inner;
-    text-align: center;
-    margin-bottom: 1em;
 }
 
 .section--maps {
