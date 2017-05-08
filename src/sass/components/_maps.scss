@@ -62,23 +62,23 @@ $block: ".maps";
             }
         }
     }
-    // @include mq($from: screen-lg) {
-    //     &__map {
-    //         width: 100%;
-    //         height: 1.875em;
-    //     }
-    //     &__infobox {
-    //         height: 13em;
-    //         position: relative;
-    //         width: 100%;
-    //         &__inner {
-    //             max-width: 45em;
-    //             &--headline {
-    //                 font-size: .5em;
-    //             }
-    //         }
-    //     }
-    // }
+    @include mq($from: screen-lg) {
+        &__map {
+            // width: 100%;
+            // height: 1.875em;
+        }
+        &__infobox {
+            // height: 13em;
+            // position: relative;
+            // width: 100%;
+            &__inner {
+                // max-width: 45em;
+                &--headline {
+                    font-size: 1.5em;
+                }
+            }
+        }
+    }
 }
 
 .selectbox {
