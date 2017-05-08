@@ -7,8 +7,9 @@ $block: ".maps";
         width: 77.7%;
     }
     &__infobox {
+        @extend %section-content;
         height: 0;
-        padding-bottom: 100%;
+        // padding-bottom: 100%;
         background: $color-text;
         color: white;
         width: 22.3%;
@@ -16,13 +17,16 @@ $block: ".maps";
         right: 0;
         position: absolute;
         &__inner {
-            padding: em(90) 10% 0;
+            padding-top: em(40);
             &--headline {
                 @extend %h1-inner;
                 margin: 0;
             }
             &--address {
                 @extend %h2-inner;
+                max-width: 4em;
+                margin-left: 0;
+                margin-right: 0;
             }
             &--phone {
                 @extend %h2-inner;
