@@ -11,6 +11,7 @@ $padding-selectize: em(20);
     }
     .selectize-input {
         position: relative;
+        border-radius: em(5);
     }
     .option {
         cursor: pointer;
@@ -31,7 +32,6 @@ $padding-selectize: em(20);
         padding-bottom: em(16);
         @extend %h-normal-bold;
         margin: 0;
-        border-radius: 0;
         cursor: pointer;
     }
     .selectize-dropdown {
@@ -41,4 +41,6 @@ $padding-selectize: em(20);
 
 .selectize-control.single .selectize-input.input-active {
     cursor: default;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
 }
