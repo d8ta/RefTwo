@@ -2,14 +2,14 @@ $block: ".maps";
 #{$block} {
     position: relative;
     &__map {
-        padding-bottom: 40%;
         height: 0;
+        padding-bottom: 50%;
         width: 77.7%;
     }
     &__infobox {
-        padding-bottom: 40%;
         height: 0;
-        background: grey;
+        padding-bottom: 100%;
+        background: $color-text;
         color: white;
         width: 22.3%;
         top: 0;
@@ -18,27 +18,15 @@ $block: ".maps";
         &__inner {
             padding: em(90) 10% 0;
             &--headline {
-                h2 {
-                    font-weight: bold;
-                }
+                @extend %h1-inner;
+                margin: 0;
             }
             &--address {
-                h2 {
-                    margin-left: 0;
-                    width: 9em;
-                }
+                @extend %h2-inner;
             }
             &--phone {
-                h2 {
-                    margin-left: 0;
-                    margin-bottom: 2em;
-                    white-space: pre-line;
-                }
-            }
-            &--mail {
-                h2 {
-                    margin-left: 0;
-                }
+                @extend %h2-inner;
+                white-space: pre-line;
             }
         }
     }
@@ -59,29 +47,13 @@ $block: ".maps";
             height: 1.875em;
         }
         &__infobox {
-            height: 40em;
+            height: 28em;
             position: relative;
             width: 100%;
             &__inner {
-                width: 45em;
+                max-width: 45em;
                 &--headline {
                     font-size: 1.5em;
-                    margin-bottom: 1.875em
-                }
-                &--address {
-                    h2 {
-                        font-size: 1.5em;
-                    }
-                }
-                &--phone {
-                    h2 {
-                        font-size: 1.5em;
-                    }
-                }
-                &--mail {
-                    h2 {
-                        font-size: 1.5em;
-                    }
                 }
             }
         }
@@ -89,13 +61,15 @@ $block: ".maps";
 }
 
 .selectbox {
-    width: 200px;
-    height: 50px;
-    margin-bottom: 3.5em;
+    // width: 200px;
+    // height: 50px;
+    // margin-bottom: 3.5em;
 }
 
 .section__content--headline {
-    padding-bottom: 3.5rem;
+    @extend %h1-inner;
+    text-align: center;
+    margin-bottom: 1em;
 }
 
 .section--maps {

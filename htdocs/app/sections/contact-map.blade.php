@@ -39,9 +39,7 @@
 	<div class="section section--fullwidth">
 		<div class="section--maps">
 			<div class="section__content">
-				<div class="section__content--headline">		
-					<h2 class="h1 primary-color centertext">{{$headline}}</h2>
-				</div>
+					<h2 class="section__content--headline primary-color h1-inner">{{$headline}}</h2>
 				<div class="maps">
 					<div class='maps__map js-google-maps'
 						data-disable-default-ui="true"
@@ -229,23 +227,16 @@
 					$button_url = $branch['button_url'];
 					$button_text = $branch['button_text'];
 					?>
-					<div class="maps__infobox">
-						<div class="maps__infobox__inner">
-							<div class="maps__infobox__inner--headline">
-								<h2 class="h2">{{$title}}</h2>
-							</div>					
-							<div class="maps__infobox__inner--address">
-								<h2 class="h3">{{$address}}</h2>
-							</div>	
-							<div class="maps__infobox__inner--phone">
-								<h2 class="h3">{{$phone}}
-								{{$fax}}</h2>
-							</div>
-							<div class="maps__infobox__inner--btn">
-								<button class="btn--icon-text primary-brand-btn" type="button">
-									<i class="btn__icon white-icon"></i>
-									<span class="btn__text">{{$button_text}}</span>
-								</button>
+						<div class="maps__infobox">
+							<div class="maps__infobox__inner">
+								<h2 class="maps__infobox__inner--headline h2-inner">{{$title}}</h2>
+								<h3 class="maps__infobox__inner--address h2-inner">{{$address}}</h3>
+								<h4 class="maps__infobox__inner--phone h2-inner">{{$phone}}
+								{{$fax}}</h4>
+							<button class="maps__infobox__inner--btn btn--icon-text primary-brand-btn" type="button">
+								<i class="btn__icon white-icon"></i>
+								<span class="btn__text">{{$button_text}}</span>
+							</button>
 							</div>
 							@endforeach
 						</div>
