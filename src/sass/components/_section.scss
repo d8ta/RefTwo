@@ -16,6 +16,10 @@ $block: ".section";
     &--margin {
         margin: rem(60) 0;
     }
+
+    &--yellow {
+        background-color: $brand-primary;
+    }
     &__content {
         @extend %section-content;
         

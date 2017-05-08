@@ -2,7 +2,7 @@
 	$researchimg = $block->getResearchImg();
 ?>
 <div class="section-research">
-	<div class="section section--fullwidth">
+	<div class="section section--yellow">
 		<div class="section__content">
 			<div class="research-teaser">
 					<div class="research-teaser__content">
@@ -24,7 +24,10 @@
 		                        <span class="btn__text">{{$buttontext}}</span>
 		                    </button>
 						</div>
+
+
 						<div class="research-teaser__content__images">
+
 							<div class="research-teaser__content__images--big">
 								<img src="{{$bigimage}}" alt="Forschungsbild groß" class="research-teaser__content__images--big__inner" />
 								<img src="assets/images/icons/entwicklung.svg" class="research-teaser__content__images--big__icon" alt="Icon" />
@@ -39,6 +42,8 @@
 							@endforeach
 							</div>
 						</div>
+
+
 					</div>
 				</div>
 			</div>

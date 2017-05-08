@@ -1,5 +1,6 @@
 $block: '.research-teaser';
 #{$block} {
+    background: $brand-primary;
     &__whitebox {
         background: #fff;
         position: absolute;
@@ -8,15 +9,13 @@ $block: '.research-teaser';
         left: -400em;
         width: 800em;
         right: 0;
-        height: 8em;
+        height: 10em;
         // display: none;
     }
-    background: $brand-primary;
     &__content {
         background: $brand-primary;
         height: 0;
         padding-bottom: 35%;
-        @extend %section-content;
         &__text {
             color: $color-white;
             position: absolute;
@@ -24,7 +23,7 @@ $block: '.research-teaser';
             width: 25%;
         }
         &__images {
-            @extend %section-content;
+
             position: relative;
             z-index: 100;
             &--big {

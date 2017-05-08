@@ -1,0 +1,24 @@
+$block: ".table";
+#{$block} {
+    display: table;
+    width: 100%;
+    &--fullheight {
+        height: 100%;
+    }
+    &__tr {
+        display: table-row;
+    }
+    &__td {
+        display: table-cell;
+        vertical-align: middle;
+        &--center {
+            text-align: center;
+        }
+        &--right {
+            text-align: right;
+        }
+        &--top {
+            vertical-align: top;
+        }
+    }
+}
