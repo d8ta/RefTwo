@@ -1,21 +1,40 @@
-        $block: '.btn';
-        #{$block} {
-            // margin-bottom: 200px;
+    $block: '.btn';
+    #{$block} {
+        // margin-bottom: 200px;
+        &--icon-text {
+            margin-top: em(30);
+            font-size: em(14);
+            border-radius: em(5);
+            font-weight: bold;
+            background-color: $color-light-grey;
+            color: $color-text;
+            padding: em(15) em(25);
+            #{$block} {
+                &__icon {
+                    vertical-align: text-top;
+                    padding-right: em(8);
+                    margin-top: em(5);
+                    @include icon(arrowright) &:before {
+                        @extend %icon;
+                        margin-top: em(5);
+                        &__primary {
+                            color: $brand-primary;
+                        }
+                    }
+                }
+                &__text {
+                    font-size: 1.5em;
+                }
+            }
+        }
+        @include mq($from: screen-md) {
             &--icon-text {
-                margin-top: em(30);
-                font-size: em(14);
-                border-radius: em(5);
-                font-weight: bold;
-                background-color: $color-light-grey;
-                color: $color-text;
-                padding: em(15) em(25);
                 #{$block} {
                     &__icon {
-                        vertical-align: text-top;
+                        vertical-align: text-bottom;
                         padding-right: em(8);
                         margin-top: em(5);
                         @include icon(arrowright) &:before {
-                            @extend %icon;
                             margin-top: em(5);
                             &__primary {
                                 color: $brand-primary;
@@ -23,65 +42,75 @@
                         }
                     }
                     &__text {
-                        font-size: 1.5em;
-                    }
-                }
-            }
-            @include mq($from: screen-md) {
-                &--icon-text {
-                    #{$block} {
-                        &__icon {
-                            vertical-align: text-bottom;
-                            padding-right: em(8);
-                            margin-top: em(5);
-                            @include icon(arrowright) &:before {
-                                margin-top: em(5);
-                                &__primary {
-                                    color: $brand-primary;
-                                }
-                            }
-                        }
-                        &__text {
-                            font-size: 1.2em;
-                        }
-                    }
-                }
-            }
-            @include mq($until: screen-lg) {
-                &--icon-text {
-                    white-space: nowrap;
-                    &__text {}
-                }
-            }
-            @include mq($until: screen-xs) {
-                &--icon-text {
-                    white-space: nowrap;
-                    &__text {
-                        font-size: em(22);
-                        margin-top: 20px;
+                        font-size: 1.2em;
                     }
                 }
             }
         }
-        
-        $block: '.btn--small';
-        #{$block} {
+        @include mq($until: screen-lg) {
             &--icon-text {
                 white-space: nowrap;
-                font-size: em(12);
-                border-radius: em(5);
-                font-weight: bold;
-                background-color: $color-light-grey;
-                color: $color-text;
-                padding: em(15) em(25);
-                margin-left: -0.5em;
+                &__text {}
+            }
+        }
+        @include mq($until: screen-xs) {
+            &--icon-text {
+                white-space: nowrap;
+                &__text {
+                    font-size: em(22);
+                    margin-top: 20px;
+                }
+            }
+        }
+        @include mq($until: $screen-xs - 160) {
+            &--icon-text {
+                font-size: 0.8em;
+                white-space: nowrap;
+                &__text {
+                    font-size: em(22);
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+    
+    $block: '.btn--small';
+    #{$block} {
+        &--icon-text {
+            white-space: nowrap;
+            font-size: em(12);
+            border-radius: em(5);
+            font-weight: bold;
+            background-color: $color-light-grey;
+            color: $color-text;
+            padding: em(15) em(25);
+            margin-left: -0.5em;
+            #{$block} {
+                &__icon {
+                    vertical-align: text-top;
+                    padding-right: em(8);
+                    margin-top: em(5);
+                    @include icon(arrowright) &:before {
+                        @extend %icon;
+                        margin-top: em(5);
+                        &__primary {
+                            color: $brand-primary;
+                        }
+                    }
+                }
+                &__text {
+                    font-size: 1.5em;
+                }
+            }
+        }
+        @include mq($from: screen-md) {
+            &--icon-text {
                 #{$block} {
                     &__icon {
-                        vertical-align: text-top;
+                        vertical-align: text-bottom;
                         padding-right: em(8);
                         margin-top: em(5);
                         @include icon(arrowright) &:before {
-                            @extend %icon;
                             margin-top: em(5);
                             &__primary {
                                 color: $brand-primary;
@@ -89,43 +118,24 @@
                         }
                     }
                     &__text {
-                        font-size: 1.5em;
-                    }
-                }
-            }
-            @include mq($from: screen-md) {
-                &--icon-text {
-                    #{$block} {
-                        &__icon {
-                            vertical-align: text-bottom;
-                            padding-right: em(8);
-                            margin-top: em(5);
-                            @include icon(arrowright) &:before {
-                                margin-top: em(5);
-                                &__primary {
-                                    color: $brand-primary;
-                                }
-                            }
-                        }
-                        &__text {
-                            font-size: 1.2em;
-                        }
-                    }
-                }
-            }
-            @include mq($until: screen-lg) {
-                &--icon-text {
-                    white-space: nowrap;
-                    &__text {}
-                }
-            }
-            @include mq($until: screen-xs) {
-                &--icon-text {
-                    white-space: nowrap;
-                    &__text {
-                        font-size: em(22);
-                        margin-top: 20px;
+                        font-size: 1.2em;
                     }
                 }
             }
         }
+        @include mq($until: screen-lg) {
+            &--icon-text {
+                white-space: nowrap;
+                &__text {}
+            }
+        }
+        @include mq($until: screen-xs) {
+            &--icon-text {
+                white-space: nowrap;
+                &__text {
+                    font-size: em(22);
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
