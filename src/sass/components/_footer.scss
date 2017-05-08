@@ -1,73 +1,27 @@
-        // $block: ".footer";
-        // #{$block} {
-        //     &__inner {
-        //         &__address {
-        //             &__claim {
-        //                 color: $brand-primary;
-        //                 font-size: em(14);
-        //                 font-weight: bold;
-        //             }
-        //         }
-        //     }
-        // }
-        $block: ".footer";
-        #{$block} {
-            &__inner {
-                &--waveimage {
-                    z-index: 100;
-                    position: absolute;
-                    left: 0;
-                }
-                &__address {
-                    &__claim {
-                        color: $brand-primary;
-                        font-size: 1.3em;
-                        // font-weight: bold;
-                        @extend %h1-inner;
-                    }
-                    &__list {
-                        @extend %h2-inner;
-                        font-size: 1.1em;
-                        font-weight: book;
-                        margin: 0;
-                        :nth-child(6) {
-                            height: em(20);
-                        }
-                    }
+$block: ".footer";
+#{$block} {
+    &__inner {
+        &--waveimage {
+            z-index: 100;
+            position: absolute;
+            left: 0;
+        }
+        &__address {
+            &__claim {
+                color: $brand-primary;
+                font-size: 1.3em;
+                @extend %h1-inner;
+            }
+            &__list {
+                @extend %h6-inner;
+                :nth-child(6) {
+                    height: em(20);
                 }
             }
-            @include mq($from: screen-sm) {
-                &__inner {
-                    &__address {
-                        &__claim {
-                            font-size: 1em;
-                        }
-                        &__list {
-                            font-size: em(14.25);
-;
-                        }
-                    }
-                }
-                // @include mq($until: screen-sm) {
-                //     &__inner {
-                //         &__address {
-                //             &__claim {
-                //                 font-size: em(22);
-                //                 font-weight: bold;
-                //             }
-                //             &__list {
-                //                 font-family: $font-normal;
-                //                 font-size: em(20);
-                //                 font-weight: book;
-                //                 :nth-child(6) {
-                //                     height: em(20);
-                //                 }
-                //             }
-                //         }
-                //     }
-            }
         }
-        
-        .section--footer {
-            margin: 15rem 0 10em 0;
-        }
+    }
+}
+
+.section--footer {
+    margin: 15rem 0 10em 0;
+}

@@ -4,6 +4,9 @@ $box-margin: 2em;
 #{$block} {
     margin: 0 auto;
     max-width: em(520);
+    &__inner {
+        margin-right: -3.7%;
+    }
     &__box {
         max-height: em(200);
         border-top-left-radius: 0.5em;
@@ -15,10 +18,9 @@ $box-margin: 2em;
         padding: em(20);
         position: relative;
         margin-bottom: 3rem;
-        width: 100%;
         &__image {
-            border-top-right-radius: 0.8em;
-            border-bottom-right-radius: 0.8em;
+            border-top-right-radius: 0.5em;
+            border-bottom-right-radius: 0.5em;
             width: $image-width;
             max-width: em(230);
             height: 100%;
