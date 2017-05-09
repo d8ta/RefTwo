@@ -12,22 +12,17 @@ $block: ".section";
     &--action-box {
         padding: em(50) 0 em(100);
     }
-    
     &--margin {
         margin: rem(60) 0;
     }
-
     &--yellow {
         background-color: $brand-primary;
     }
     &__content {
         @extend %section-content;
-        
     }
 }
 
-
 #{$block}-container {
     position: relative;
-    
 }
