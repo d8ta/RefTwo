@@ -1,25 +1,79 @@
 $block: ".header-navigation";
+$submenu: ".nav-submenu";
 #{$block} {
     margin-top: em(60);
     a {
         display: block;
     }
-    
+    ul {
+        display: none;
+        &.level-1,
+        &.level-2 {
+            display: block;
+        }
+    }
     ul.level-1 {
         @include clearfix;
+        position: relative;
         > li {
             float: left;
             padding-left: em(40);
+            &:first-child {
+                padding-left: 0;
+            }
             > a {
                 font-size: em(14);
                 font-weight: bold;
                 text-transform: uppercase;
             }
-            
+            &:hover {
+                > #{$submenu} {
+                    display: block;
+                }
+            }
+        }
+    }
+    ul.level-2 {
+        padding: em(20) 0;
+        > li {
+            padding: em(10) 0;
         }
     }
 
     @include mq($until: width-mobile-menu) {
         display: none;
+    }
+}
+
+#{$submenu} {
+    display: none;
+    position: absolute;
+    width: 110%;
+    margin-left: -5%;
+    margin-right: -5%;
+    &__table {
+        display: table;
+        background: #fff;
+        width: 100%;
+        padding-left: 5%;
+        padding-right: 5%;
+        min-height: em(200);
+    }
+    &__nav {
+        display: table-cell;
+        width: 25%;
+        min-width: em(250);
+    }
+    &__content {
+        display: table-cell;
+        vertical-align: top;
+        width: 75%;
+        padding: em(30) 0 em(20);
+    }
+
+    &__box {
+        background: $brand-primary;
+        width: 100%;
+        padding-bottom: 35%;
     }
 }
