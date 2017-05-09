@@ -1,19 +1,16 @@
-<div class="section section--footer">
-	<address class="footer__inner__address">
-		<div class="footer__inner__address__wrapper">
-			<a href='' class="footer__inner__address__claim" target="_blank">
-				<p class="footer__inner__flex__claim h1-inner">SICONNEX Österreich</p>
-			</a>
-			<ul class="footer__inner__address__list h6-inner">
-				<li>Gewerbestrasse 2</li>
-				<li>5322 Hof bei Salzburg</li>
-				<li>Tel: +43 6229 36646-0</li>
-				<li>Fax: +43 6229 36646-146</li>
-				<li>E-Mail: <a href="mailto:offiece@siconnex.com" target="_blank">office@siconnex.com</a></li>
-				<li></li>
-				<li>&copy; 2017 Siconnex GmbH</li>
+<?php
+use A365\Wordpress\Helpers\Acf\OptionsHelper;
+$optionsHelper = OptionsHelper::getInstance();
+?>
 
-			</ul>
-		</div>
-	</address>
-</div>
+<address class="address">
+    <div class="address__headline">{{ $optionsHelper->getOption("company_name") }}</div>
+    <div class="address__text">
+	    <span>{{ $optionsHelper->getOption("company_street") }}</span><br>
+	    <span>{{ $optionsHelper->getOption("company_postal_code") }}</span> <span>{{ $optionsHelper->getOption("company_city") }}</span><br>
+	    Tel: <span>{{ $optionsHelper->getOption("company_phone") }}</span><br>
+	    Fax: <span>{{ $optionsHelper->getOption("company_fax") }}</span><br>
+	    E-Mail: <span><a href="mailto:{{ $optionsHelper->getOption("company_email") }}">{{ $optionsHelper->getOption("company_email") }}</a></span>
+    </div>
+    
+</address>

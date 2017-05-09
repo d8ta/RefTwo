@@ -1,8 +1,8 @@
 <?php
-$items = $section->getItems();
+$menuHelper = \A365\Wordpress\Helpers\MenuHelper::getInstance();
+$items      = $menuHelper->getMenuItems('footer');
 ?>
-<nav class="">
-	<ul class="">
-		@each('components.footer.navigation.item', $items, 'item')
-	</ul>
+{{-- Navigation --}}
+<nav class="footer-navigation">
+    @include("components.footer.navigation-inner")
 </nav>

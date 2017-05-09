@@ -2,15 +2,17 @@ $block: ".site-navigation";
 #{$block} {
     margin-top: 40px;
     &__list {
-        font-family: $font-normal;
-        text-transform: uppercase;
-        font-size: em(14);
-        font-weight: bold;
+        
         margin-top: em(60);
         @include clearfix;
         &__item {
             float: right;
             padding-left: em(40);
+            a {
+                font-size: em(14);
+                font-weight: bold;
+                text-transform: uppercase;
+            }
             
         }
     }

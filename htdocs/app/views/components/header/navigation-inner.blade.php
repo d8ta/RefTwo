@@ -1,6 +1,6 @@
 
 	<nav class="site-navigation site-navigation--main">
-		<ul class="site-navigation__list site-navigation__list--level-{!!$level!!}">
+		<ul class="site-navigation__list">
 		    @foreach($items as $item)
 		        <?php
 		        	$class = (isset($page) && 
