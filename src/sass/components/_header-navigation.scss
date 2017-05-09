@@ -15,12 +15,15 @@ $submenu: ".nav-submenu";
     ul.level-1 {
         @include clearfix;
         position: relative;
+        margin-right: em(-25);
         > li {
             float: left;
-            padding-left: em(40);
-            &:first-child {
-                padding-left: 0;
+            > a {
+                padding-left: em(20, 14);
+                padding-right: em(20, 14);
             }
+            
+            
             > a {
                 font-size: em(14);
                 font-weight: bold;
@@ -30,6 +33,19 @@ $submenu: ".nav-submenu";
                 > #{$submenu} {
                     display: block;
                 }
+                &:after {
+                    display: block;
+                }
+            }
+            &:after {
+                content: '';
+                background: $brand-primary;
+                height: em(4);
+                position: relative;
+                z-index: 10;
+                margin-left: em(20);
+                margin-right: em(20);
+                margin-top: em(13);
             }
         }
     }
