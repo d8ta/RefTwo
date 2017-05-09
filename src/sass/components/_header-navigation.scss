@@ -21,6 +21,7 @@ $submenu: ".nav-submenu";
             > a {
                 padding-left: em(20, 14);
                 padding-right: em(20, 14);
+                padding-bottom: em(18);
             }
             
             
@@ -38,6 +39,7 @@ $submenu: ".nav-submenu";
                 }
             }
             &:after {
+                display: none;
                 content: '';
                 background: $brand-primary;
                 height: em(4);
@@ -45,7 +47,7 @@ $submenu: ".nav-submenu";
                 z-index: 10;
                 margin-left: em(20);
                 margin-right: em(20);
-                margin-top: em(13);
+                margin-top: em(-4);
             }
         }
     }
