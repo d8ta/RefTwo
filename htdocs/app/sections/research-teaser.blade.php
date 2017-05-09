@@ -1,8 +1,49 @@
 <?php 
-	$researchimg = $block->getResearchImg();
+$researchimg = $block->getResearchImg();
 ?>
-<div class="section-research">
-	<div class="section section--fullwidth">
+
+<?php 
+$bigimage = $block->getBigImage();
+$title = $block->getTitle();
+$description = $block->getDescription();
+$buttontext = $block->getButtonText();
+?>
+
+<div class="section-research section--yellow">
+	<div class="section section__content">
+		<div class="section__inner">
+			<div class="research-teaser">
+
+				<div class="research-teaser__content research-teaser__content--left" js-match-height>
+					<h2 class="h1">{{$title}}</h2>
+					<p class="h2">{{$description}}</p>
+             		<button class="btn btn--icon-text" type="button">
+                        <i class="btn__icon primary-color"></i>
+                        <span class="btn__text">{{$buttontext}}</span>
+                    </button>
+				</div>
+				
+				<div class="research-teaser__content research-teaser__content--right" js-match-height>
+					<div class="research-teaser__content research-teaser__content--right__images" js-match-height>
+						<img alt="{{$title}}" src="{{$bigimage}}" class="research-teaser__content--right__images__image">
+						<img src="assets/images/icons/entwicklung.svg" class="research-teaser__content--right__images__icon" alt="{{$title}} icon" />
+						@foreach ($researchimg as $img)
+						<?php 
+						$smallimg = $img['image'];
+						?>
+						<img src="{{$smallimg}}" alt="Forschungsbild klein" class="research-teaser__content--right__images__smallimg" />
+						@endforeach
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<div class="section-research" style="display: none;">
+	<div class="section section--yellow">
 		<div class="section__content">
 			<div class="research-teaser">
 					<div class="research-teaser__content">
@@ -44,4 +85,10 @@
 			</div>
 		</div>
 </div>
+
+
+
+
+
+
 				

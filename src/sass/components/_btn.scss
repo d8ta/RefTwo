@@ -2,7 +2,6 @@ $block: '.btn';
 #{$block} {
     cursor: pointer;
     display: inline-block;
-    // margin-bottom: 200px;
     &--icon-text {
         margin-top: em(30);
         font-size: em(14);
@@ -57,6 +56,16 @@ $block: '.btn';
     }
     @include mq($until: screen-xs) {
         &--icon-text {
+            white-space: nowrap;
+            &__text {
+                font-size: em(22);
+                margin-top: 20px;
+            }
+        }
+    }
+    @include mq($until: $screen-xs - 160) {
+        &--icon-text {
+            font-size: 0.8em;
             white-space: nowrap;
             &__text {
                 font-size: em(22);

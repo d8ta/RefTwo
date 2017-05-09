@@ -12,6 +12,11 @@ $block: '.product-teaser';
             @extend %h2-inner;
         }
     }
+    @include mq($until: $screen-xs - 100) {
+        &--button {
+            font-size: 1.3em;
+        }
+    }
 }
 
 .section--product-teaser {

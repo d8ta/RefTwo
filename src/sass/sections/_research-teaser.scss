@@ -1,160 +1,71 @@
-$block: '.research-teaser';
+$block: ".research-teaser";
 #{$block} {
-    &__whitebox {
-        background: #fff;
-        position: absolute;
-        z-index: -1;
-        bottom: -7em;
-        left: -400em;
-        width: 800em;
-        right: 0;
-        height: 8em;
-        // display: none;
-    }
-    background: $brand-primary;
+    position: relative;
+    width: 100%;
+    height: 100%;
     &__content {
-        background: $brand-primary;
-        height: 0;
-        padding-bottom: 35%;
-        @extend %section-content;
-        &__text {
+        width: 100%;
+        height: auto;
+        position: relative;
+        &--left {
+            // background: red;
             color: $color-white;
-            position: absolute;
-            top: em(120);
-            width: 25%;
         }
-        &__images {
-            @extend %section-content;
-            position: relative;
-            z-index: 100;
-            &--big {
-                position: absolute;
-                border-radius: em(15);
-                right: 14.5%;
-                top: 0;
+        &--right {
+            // background: green;
+            &__images {
+                display: inline-block;
+                float: left;
+                &__image {
+                    margin-top: scut-em(15);
+                    width: 70%;
+                    height: auto;
+                    border-radius: 0.5em;
+                }
                 &__icon {
-                    width: 15%;
+                    margin-top: scut-em(15);
+                    width: 10%;
+                    height: auto;
+                    border-radius: 0.5em;
                     position: absolute;
-                    left: em(20);
-                    top: em(10);
+                    left: 0.5em;
+                    top: 0.5em;
                 }
-                &__inner {
-                    border-radius: em(15);
-                    margin-top: em(-10);
-                }
-            }
-            &--small {
-                border-radius: em(10);
-                position: absolute;
-                width: 13.333%;
-                right: 0%;
-                top: em(-11);
-                display: block;
-                &__inner {
-                    border-radius: em(10);
-                    margin-bottom: em(10);
-                }
-            }
-        }
-    }
-    @include mq($from: screen-xl) {
-        &__content {
-            height: em(590);
-            padding-bottom: 0;
-            &__text {
-                width: 30%;
-            }
-        }
-    }
-    @include mq($until: screen-xl) {
-        &__content {
-            &__text {
-                color: $color-white;
-                position: absolute;
-                top: em(50);
-                width: 34%;
-                font-size: 85%;
-            }
-            &__images {
-                &--big {
-                    width: 41.25%;
-                    right: 14.5%;
-                    top: 0;
-                    &__inner {
-                        width: 100%;
-                        border-radius: em(15);
-                        margin-top: em(-10);
-                    }
-                }
-                &--small {
-                    width: 13.333%;
-                    right: 0%;
-                    top: -11px;
+                &__smallimg {
+                    background: blue;
                     display: block;
-                    &__inner {
-                        width: 100%;
-                        border-radius: em(10);
-                        margin-bottom: 5%;
-                    }
+                    margin-top: scut-em(15);
+                    width: 20%;
+                    height: auto;
+                    border-radius: 0.5em;
                 }
             }
         }
     }
-    @include mq($until: screen-lg) {
+    @include clearfix;
+    @include mq($from: screen-sm) {
         &__content {
-            height: auto;
-            &__text {
-                color: $color-white;
-                position: absolute;
-                top: em(50);
-                width: 30%;
+            width: 50%;
+            float: left;
+            p {
+                width: 85%;
             }
-        }
-    }
-    @include mq($from: screen-lg) {
-        &__whitebox {
-            display: none;
-        }
-
-    }
-    @include mq($until: screen-md) {
-        &__content {
-            height: em(590);
-            &__text {
-                position: relative;
+            &__image {
+                height: 144%;
                 width: 100%;
+                position: absolute;
+                right: 0;
+                top: -22%;
+                max-width: 100%;
             }
-            &__images {
-                margin-top: 6em;
-                margin-left: -80%;
-            }
-        }
-    }
-    @include mq($until: screen-xs) {
-        &__content {
-            height: 50em;
-            &__images {
-                margin-top: 14em;
-            }
-            &__text {
-                max-width: 30em;
-                height: 62rem;
-                &__title {
-                    font-size: 0.8em;
-                    margin-bottom: 3em;
-                }
-                &__description {
-                    font-size: 1.3em;
-                    max-width: 22em;
-                    margin-bottom: 1em;
-                }
-                &__button {
-                    // font-size: 1.2em;
-                    white-space: nowrap;
-                    &__text {
-                        // font-size: em(22);
-                        // margin-top: 20px;
-                    }
+            &--right {
+                float: right;
+                images {
+                    position: absolute;
+                    max-width: 100%;
+                    bottom: 0;
+                    top: 0;
+                    margin: auto 0;
                 }
             }
         }

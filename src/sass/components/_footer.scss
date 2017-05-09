@@ -1,48 +1,21 @@
-// $block: ".footer";
-// #{$block} {
-//     &__inner {
-//         &__address {
-//             &__claim {
-//                 color: $brand-primary;
-//                 font-size: em(14);
-//                 font-weight: bold;
-//             }
-//         }
-//     }
-// }
 $block: ".footer";
 #{$block} {
     &__inner {
+        &--waveimage {
+            z-index: 100;
+            position: absolute;
+            left: 0;
+        }
         &__address {
             &__claim {
                 color: $brand-primary;
-                font-size: em(14);
-                font-weight: bold;
+                font-size: 1.3em;
+                @extend %h1-inner;
             }
             &__list {
-                font-family: $font-normal;
-                font-size: em(12);
-                font-weight: book;
+                @extend %h6-inner;
                 :nth-child(6) {
                     height: em(20);
-                }
-            }
-        }
-    }
-    @include mq($until: screen-sm) {
-        &__inner {
-            &__address {
-                &__claim {
-                    font-size: em(22);
-                    font-weight: bold;
-                }
-                &__list {
-                    font-family: $font-normal;
-                    font-size: em(20);
-                    font-weight: book;
-                    :nth-child(6) {
-                        height: em(20);
-                    }
                 }
             }
         }
@@ -50,5 +23,5 @@ $block: ".footer";
 }
 
 .section--footer {
-    margin: 6.25rem 0 7.25rem 0;
+    margin: 15rem 0 10em 0;
 }

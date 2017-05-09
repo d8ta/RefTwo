@@ -8,7 +8,7 @@
         
         <div class="site js-site">
             @include('components.header')
-            <main class="main js-main">
+            <main class="main main--margin js-main">
                 @yield('content')
             </main>
             @include('components.footer')

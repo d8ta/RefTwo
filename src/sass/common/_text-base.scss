@@ -104,8 +104,15 @@ h6,
     margin-bottom: em(20);
 }
 
-%h6 {
-    // font-size: 1;
+%h6-inner {
+    font-family: $font-normal;
+    font-size: 1em;
+    font-weight: normal;
+    line-height: 1.2em;
+    @include mq($from: screen-sm) {
+        font-size: em(14.25);
+    }
+    
 }
 
 %text-base {
