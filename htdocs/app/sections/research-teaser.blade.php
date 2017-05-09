@@ -31,7 +31,7 @@ $buttontext = $block->getButtonText();
 						<?php 
 						$smallimg = $img['image'];
 						?>
-				{{-- 		<img src="{{$smallimg}}" alt="Forschungsbild klein" class="research-teaser__content--right__images__smallimg" /> --}}
+						<img src="{{$smallimg}}" alt="Forschungsbild klein" class="research-teaser__content--right__images__smallimg" />
 						@endforeach
 					</div>
 				</div>
