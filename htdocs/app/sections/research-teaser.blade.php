@@ -10,7 +10,7 @@ $buttontext = $block->getButtonText();
 ?>
 
 <div class="section-research section--yellow">
-	{{-- <div class="research-teaser__content research-teaser__content--bluebox"></div> --}}
+	<div class="research-teaser__content research-teaser__content--whitebox-top"></div>
 		<div class="section section__content">
 			<div class="section__inner">
 				<div class="research-teaser">
@@ -46,8 +46,8 @@ $buttontext = $block->getButtonText();
 				</div>
 			</div>
 		</div>
+		<div class="research-teaser__content research-teaser__content--whitebox-bottom"></div>
 	</div>
-	{{-- <div class="research-teaser__content research-teaser__content--redbox"></div> --}}
 </div>
 
 

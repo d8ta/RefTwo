@@ -4,20 +4,19 @@ $block: ".research-teaser";
     width: 100%;
     height: auto;
     &__content {
-        // &--bluebox {
-        //     background: blue;
-        //     height: 8em;
-        //     width: 100% !important;
-        //     margin-bottom: -6em;
-        //     z-index: 1;
-        // }
-        // &--redbox {
-        //     background: red;
-        //     height: 8em;
-        //     width: 100% !important;
-        //     margin-top: -2em;
-        //     z-index: 1;
-        // }
+        &--whitebox-top {
+            background: white;
+            height: 5em;
+            width: 100% !important;
+            margin-bottom: -6em;
+            z-index: 1;
+        }
+        &--whitebox-bottom {
+            background: white;
+            height: 8em;
+            width: 100% !important;
+            margin-top: -2em;
+        }
         width: 100%;
         height: auto;
         position: relative;
@@ -43,7 +42,6 @@ $block: ".research-teaser";
             &--big {}
             &__image {
                 float: left;
-                // margin-top: scut-em(15);
                 width: 72%;
                 height: auto;
                 border-radius: 0.5em;
@@ -60,12 +58,10 @@ $block: ".research-teaser";
             }
             &__smallimg {
                 display: block;
-                // margin-top: scut-em(15);
                 width: 23.2%;
                 height: auto;
                 border-radius: 0.5em;
-                // margin-top: -1em;
-                margin-bottom: 1%;
+                margin-bottom: 1.2%;
             }
         }
     }
