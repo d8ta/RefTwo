@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "e833b2c42c98020ca198cc26fb92819e",
-    "content-hash": "c9c00acc0ef989d710aa301e7b3408b6",
+    "hash": "158eeef089e24b830dcb609110390c46",
+    "content-hash": "08f0cd4715bc1d2463470f5bef4c6d44",
     "packages": [
         {
             "name": "a365/core",
@@ -38,11 +38,11 @@
         },
         {
             "name": "a365/customizr",
-            "version": "v0.2.3",
+            "version": "v0.2.4",
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:a365/a365-customizr.git",
-                "reference": "7f2bfa59a07cfd8751495bb660aa4daf829e0647"
+                "reference": "038a99c5910beed7a48c3e39676a9105b183b84f"
             },
             "require": {
                 "composer/installers": "^1.0",
@@ -59,7 +59,7 @@
                 "plugin",
                 "wordpress"
             ],
-            "time": "2017-04-25 13:57:08"
+            "time": "2017-04-26 14:33:29"
         },
         {
             "name": "a365/wordpress",
@@ -85,54 +85,6 @@
                 }
             ],
             "time": "2017-04-20 13:04:26"
-        },
-        {
-            "name": "afragen/github-updater",
-            "version": "6.2.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/afragen/github-updater.git",
-                "reference": "3a5b48e853e05d578d4ca791ce3de4871664e6a0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/afragen/github-updater/zipball/3a5b48e853e05d578d4ca791ce3de4871664e6a0",
-                "reference": "3a5b48e853e05d578d4ca791ce3de4871664e6a0",
-                "shasum": ""
-            },
-            "require": {
-                "composer/installers": "^1.0",
-                "php": ">=5.3"
-            },
-            "type": "wordpress-plugin",
-            "autoload": {
-                "psr-4": {
-                    "Fragen\\GitHub_Updater\\": "src/GitHub_Updater/"
-                },
-                "classmap": [
-                    "vendor/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPLv2"
-            ],
-            "authors": [
-                {
-                    "name": "Andy Fragen",
-                    "email": "andy@thefragens.com",
-                    "homepage": "https://thefragens.com",
-                    "role": "Developer"
-                }
-            ],
-            "keywords": [
-                "install",
-                "plugin",
-                "theme",
-                "updater",
-                "wordpress"
-            ],
-            "time": "2017-02-09 22:07:10"
         },
         {
             "name": "caseyamcl/configula",
@@ -1022,16 +974,16 @@
         },
         {
             "name": "symfony/debug",
-            "version": "v3.2.7",
+            "version": "v3.2.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/debug.git",
-                "reference": "56f613406446a4a0a031475cfd0a01751de22659"
+                "reference": "fd6eeee656a5a7b384d56f1072243fe1c0e81686"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/debug/zipball/56f613406446a4a0a031475cfd0a01751de22659",
-                "reference": "56f613406446a4a0a031475cfd0a01751de22659",
+                "url": "https://api.github.com/repos/symfony/debug/zipball/fd6eeee656a5a7b384d56f1072243fe1c0e81686",
+                "reference": "fd6eeee656a5a7b384d56f1072243fe1c0e81686",
                 "shasum": ""
             },
             "require": {
@@ -1075,20 +1027,20 @@
             ],
             "description": "Symfony Debug Component",
             "homepage": "https://symfony.com",
-            "time": "2017-03-28 21:38:24"
+            "time": "2017-04-19 20:17:50"
         },
         {
             "name": "symfony/finder",
-            "version": "v3.2.7",
+            "version": "v3.2.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
-                "reference": "b20900ce5ea164cd9314af52725b0bb5a758217a"
+                "reference": "9cf076f8f492f4b1ffac40aae9c2d287b4ca6930"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/finder/zipball/b20900ce5ea164cd9314af52725b0bb5a758217a",
-                "reference": "b20900ce5ea164cd9314af52725b0bb5a758217a",
+                "url": "https://api.github.com/repos/symfony/finder/zipball/9cf076f8f492f4b1ffac40aae9c2d287b4ca6930",
+                "reference": "9cf076f8f492f4b1ffac40aae9c2d287b4ca6930",
                 "shasum": ""
             },
             "require": {
@@ -1124,20 +1076,20 @@
             ],
             "description": "Symfony Finder Component",
             "homepage": "https://symfony.com",
-            "time": "2017-03-20 09:32:19"
+            "time": "2017-04-12 14:13:17"
         },
         {
             "name": "symfony/yaml",
-            "version": "v2.8.19",
+            "version": "v2.8.20",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "286d84891690b0e2515874717e49360d1c98a703"
+                "reference": "93ccdde79f4b079c7558da4656a3cb1c50c68e02"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/286d84891690b0e2515874717e49360d1c98a703",
-                "reference": "286d84891690b0e2515874717e49360d1c98a703",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/93ccdde79f4b079c7558da4656a3cb1c50c68e02",
+                "reference": "93ccdde79f4b079c7558da4656a3cb1c50c68e02",
                 "shasum": ""
             },
             "require": {
@@ -1173,7 +1125,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2017-03-20 09:41:44"
+            "time": "2017-05-01 14:31:55"
         },
         {
             "name": "vlucas/phpdotenv",

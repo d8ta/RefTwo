@@ -27,8 +27,6 @@ class Application extends BaseApplication
 
 		add_filter('acf/settings/google_api_key', [$this, 'googleApiKey']);
 		add_filter('acf/fields/google_map/api', [$this, 'googleApiKey']);
-		add_filter('acf/load_value/name=shortlink', [$this, 'acf_generate_shortlink'], 10, 3);
-		add_filter('acf/validate_value/name=shortlink', [$this, 'require_unique'], 10, 4);
 
 
 	}

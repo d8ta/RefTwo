@@ -1,65 +1,64 @@
-function GoogleMapsController () {
-	return {
-		parse: this.parse.bind(this)
-	}
+function GoogleMapsController() {
+    return {
+        parse: this.parse.bind(this)
+    };
 }
 
 GoogleMapsController.prototype = new Module();
 GoogleMapsController.prototype.constructor = GoogleMapsController;
 
-GoogleMapsController.prototype.classes = {
-};
+GoogleMapsController.prototype.classes = {};
 
 GoogleMapsController.prototype.selectors = {
-	maps: 'js-google-maps'
+    maps: 'js-google-maps'
 };
 
 GoogleMapsController.prototype.elements = {
-	maps: undefined 
+    maps: undefined
 };
-
 
 GoogleMapsController.prototype.parse = function($context) {
 
+    if (!this.initElements($context)) {
+        return;
+    }
 
-	if (!this.initElements($context)) {return};
-
-	this.loadLibrary();
+    this.loadLibrary();
 
 };
 
 GoogleMapsController.prototype.initElements = function($context) {
-	var $maps = $context.find(this.getSelector('maps'));
+    var $maps = $context.find(this.getSelector('maps'));
 
-	if (!$maps.length) {return false;};
+    if (!$maps.length) {
+        return false;
+    }
 
-	this.elements.maps = $maps;
+    this.elements.maps = $maps;
 
-	return true;
+    return true;
 };
 
 GoogleMapsController.prototype.loadLibrary = function() {
 
-	window.libraryCallback = this.libraryCallback.bind(this);
+    window.libraryCallback = this.libraryCallback.bind(this);
 
-	
-	var script = document.createElement('script');
-	script.type = 'text/javascript';
-	script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp&language=de&callback=libraryCallback&key=AIzaSyBkKl8VsPSJFcfqLGHm_pLCMmtVV5QB5lc';
-	//script.src= "https://maps.googleapis.com/maps/api/js?key=AIzaSyBkKl8VsPSJFcfqLGHm_pLCMmtVV5QB5lc&callback=initMap"
+    var script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp&language=de&callback=libraryCallback&key=AIzaSyBkKl8VsPSJFcfqLGHm_pLCMmtVV5QB5lc';
 
-	document.body.appendChild(script);
+    document.body.appendChild(script);
 };
 
 GoogleMapsController.prototype.libraryCallback = function() {
-	this.initMaps();
+    this.initMaps();
 };
 
 GoogleMapsController.prototype.initMaps = function() {
-	var $maps = this.getElement('maps');
+    var $maps = this.getElement('maps');
 
-	for (var i = $maps.length - 1; i >= 0; i--) {
-		new GoogleMap($maps.eq(i));
-	};
+    for (var i = $maps.length - 1; i >= 0; i--) {
+        new GoogleMap($maps.eq(i));
+    }
 
 };

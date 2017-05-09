@@ -1,274 +1,294 @@
-function GoogleMap ($element) {
-	this.$element = $element;
-	this.init();
+function GoogleMap($element) {
+    this.$element = $element;
+    this.init();
 
-	return {};
+
+    return {};
 }
 
 GoogleMap.prototype = new Module();
 GoogleMap.prototype.constructor = GoogleMap;
 
 GoogleMap.prototype.vars = {
-	data: undefined,
-	infobox: undefined, 
-	map: undefined,
-	markers: []
+    map: undefined,
+    data: undefined,
+    markers: [],
+    markers_data: [],
+    locations_select: undefined
 };
 
-GoogleMap.prototype.classes = {
-};
+GoogleMap.prototype.classes = {};
 
 GoogleMap.prototype.selectors = {
 
 };
 
 GoogleMap.prototype.elements = {
+    infobox: undefined,
+    icons: undefined,
+    locations: undefined,
+    locations_select: undefined,
 };
 
 GoogleMap.prototype.init = function() {
-	
-	this.vars.data = this.$element.data();
 
-	this.initMap();
+    var self = this;
 
-};
+    this.vars.data = this.$element.data();
+    this.elements.infobox = jQuery(".js-google-maps-infobox");
 
-GoogleMap.prototype.setPublicFunctions = function() {
-	this.$element.data('googleMap', {
-		triggerClick: this.triggerClick.bind(this),
-		zoomToMarker: this.zoomToMarker.bind(this)
-	});
+    var defaultIcon = {
+        url: "/assets/images/layout/maps-marker.png",
+        size: new google.maps.Size(32, 40),
+        scaledSize: new google.maps.Size(16, 20),
+        anchor: new google.maps.Point(8, 20),
+    };
+
+    var activeIcon = {
+        url: "/assets/images/layout/maps-marker.png",
+        size: new google.maps.Size(32, 40),
+        //scaledSize: new google.maps.Size(20, 20),
+        anchor: new google.maps.Point(16, 40),
+    };
+
+    this.elements.icon = { default: defaultIcon, active: activeIcon };
+
+
+    if (this.vars.data.maptype == "locations") {
+        this.elements.locations = this.elements.infobox.find(".js-google-maps-locations-item");
+
+        this.elements.locations_select = this.elements.infobox.find(".js-google-maps-locations-select").selectize({
+            create: false
+        });
+
+        this.vars.locations_select = this.elements.locations_select[0].selectize;
+        this.vars.locations_select.on("change", function(location_id) {
+            self.activateLocation(location_id);
+
+            for (var marker_k in self.vars.markers) {
+
+                if (self.vars.markers[marker_k].marker_id == location_id) {
+                    self.vars.map.setCenter(self.vars.markers[marker_k].position);
+                }
+            }
+            
+        });
+
+    }
+
+    this.initMap();
+
+    
 };
 
 GoogleMap.prototype.initMap = function() {
 
-	var data = this.vars.data;
-	var options = this.getMapOptions();
+    var self = this;
+    var data = this.vars.data;
+    var options = this.getMapOptions();
+
+    var myPosition = application.getModule("Location").getLatLng();
+    if (myPosition) {
+        options.center = new google.maps.LatLng(myPosition.lat, myPosition.lng);
+    }
+    options.zoom = 9;
+
+    options.styles = [{"elementType":"geometry","stylers":[{"color":"#f5f5f5"}]},{"elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"elementType":"labels.text.fill","stylers":[{"color":"#616161"}]},{"elementType":"labels.text.stroke","stylers":[{"color":"#f5f5f5"}]},{"featureType":"administrative.land_parcel","elementType":"labels.text.fill","stylers":[{"color":"#bdbdbd"}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#eeeeee"}]},{"featureType":"poi","elementType":"labels.text.fill","stylers":[{"color":"#757575"}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#e5e5e5"}]},{"featureType":"poi.park","elementType":"labels.text.fill","stylers":[{"color":"#9e9e9e"}]},{"featureType":"road","elementType":"geometry","stylers":[{"color":"#ffffff"}]},{"featureType":"road.arterial","elementType":"labels.text.fill","stylers":[{"color":"#757575"}]},{"featureType":"road.highway","elementType":"geometry","stylers":[{"color":"#dadada"}]},{"featureType":"road.highway","elementType":"labels.text.fill","stylers":[{"color":"#616161"}]},{"featureType":"road.local","elementType":"labels.text.fill","stylers":[{"color":"#9e9e9e"}]},{"featureType":"transit.line","elementType":"geometry","stylers":[{"color":"#e5e5e5"}]},{"featureType":"transit.station","elementType":"geometry","stylers":[{"color":"#eeeeee"}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#c9c9c9"}]},{"featureType":"water","elementType":"labels.text.fill","stylers":[{"color":"#9e9e9e"}]}];
+
+    this.vars.map = new google.maps.Map(this.$element[0], options);
 
 
+    this.updateMarkers();
 
-	this.vars.map = new google.maps.Map(this.$element[0], options);
-
- //console.log(data.markers);
-	if (data.markers) {
-		this.setMarkers();
-
-		if (data.markers.length > 1) {
-			this.centerMapToMarkers();
-		} else {
-			this.centerMapToMarker();
-		}
-	};
-
-	this.setPublicFunctions();
 };
+
 
 GoogleMap.prototype.getMapOptions = function() {
 
-	var options = {};
-	var data = this.vars.data;
-	var value;
-	for(var key in data){
-		value = data[key];
+    var options = {};
+    var data = this.vars.data;
+    var value;
+    var allowedOptions = ['disableDefaultUI'];
 
-		key = key.replace('Ui', 'UI');
+    for (var key in data) {
+        value = data[key];
 
-		options[key] = value;
-	}
+        key = key.replace('Ui', 'UI');
+        key = key.replace('control', 'Control');
+        key = key.replace('view', 'View');
+        key = key.replace('type', 'Type');
 
-	if (Modernizr.touchevents) {
-		options.draggable = false;
-	}
-	
-	return options;
+        options[key] = value;
+    }
+
+    return options;
 
 };
+
+GoogleMap.prototype.activateLocation = function(location_id) {
+
+    this.elements.locations
+        .removeClass("active")
+        .filter(function() {
+            return jQuery(this).data("locationid") == location_id;
+        })
+        .eq(0)
+        .addClass("active");
+
+
+    this.vars.locations_select.setValue(location_id, true);
+    this.activateMarker(location_id);
+};
+
+GoogleMap.prototype.updateMarkers = function() {
+    var self = this;
+    this.fetchMarkers().then(function(markers) {
+
+        self.refreshMarkers(markers);
+
+        if (self.vars.data.maptype == "locations") {
+            var location_id = Cookies.get("nearestLocationID_geo");
+            if (!location_id) {
+                location_id = Cookies.get("nearestLocationID_ip");
+            }
+            if (location_id) {
+                self.activateLocation(location_id);
+            }
+        }
+    });
+};
+
+GoogleMap.prototype.fetchMarkers = function() {
+
+    var myPosition = application.getModule("Location").getLatLng();
+
+    return jQuery.ajax({
+        url: this.vars.data.ajaxpins
+    });
+
+};
+
+GoogleMap.prototype.refreshMarkers = function(markers) {
+
+
+
+    this.vars.markers_data = markers;
+
+    if (this.vars.markers_data) {
+        this.setMarkers();
+
+        if (this.vars.markers.length > 1) {
+            this.centerMapToMarkers();
+        } else if (this.vars.markers.length > 0) {
+            this.centerMapToMarker();
+        }
+    }
+};
+
 
 GoogleMap.prototype.setMarkers = function() {
+    var self = this;
+    var map = this.vars.map;
+    var markers = this.vars.markers_data;
+    var markerData;
 
-	var loadInfoboxJs = false;
-	var map = this.vars.map;
-	var markers = this.vars.data.markers;
-	var markerData;
+    //var infowindow = new google.maps.InfoWindow();
 
+    for (var i = 0, len = markers.length; i < len; i++) {
 
-	for(var i = 0, len = markers.length; i < len; i++){
+        markerData = markers[i].location;
 
+        var options = {
+            position: new google.maps.LatLng(markerData.lat, markerData.lng),
+            map: map,
+            icon: self.elements.icon.default,
+            marker_id: markers[i].id
+        };
 
-		markerData = markers[i];
-		var options = {
-			clickable: false,
-			position: new google.maps.LatLng(markerData.lat,markerData.long),
-			origin: new google.maps.LatLng(markerData.origin.x,markerData.origin.y),
-		  	map: map
-		};
+        var marker = new google.maps.Marker(options);
 
-		if (markerData.infobox) {
-			loadInfoboxJs = true;
-			options.clickable = true;
-		};
+        google.maps.event.addListener(marker, 'click', (function(marker, i) {
+            return function() {
+                if (self.vars.data.maptype != "locations") { // locations markers will be activated in activateLocation
+                    self.activateMarker(marker.marker_id);
+                }
 
-		if (markerData.image) {
-			options.icon = {
-				url: markerData.image
-			};
-		};
+                self.updateInfobox(self.vars.markers_data[i]);
+            };
+        })(marker, i));
 
-		if (markerData.scaledSize) {
-			options.icon.scaledSize = new google.maps.Size(markerData.scaledSize.width, markerData.scaledSize.height);
-		};
+        this.vars.markers.push(marker);
+    }
 
-
-		var marker = new google.maps.Marker(options);
-
-		if (markerData.id) {
-			marker.set('id', markerData.id);
-		};
-
-		if (markerData.infobox) {
-			marker.set('infobox', markerData.infobox);
-		};
-
-
-		// Add click event
-		if (options.clickable) {
-			marker.set('self', this);
-			google.maps.event.addListener(marker, "click", this.markerClicked);
-		};
-
-		this.vars.markers.push(marker);
-	}
-
-
-	if (loadInfoboxJs) {
-		this.loadDependency('/assets/js/vendor/infobox.min.js');
-	};
 
 };
 
-/**
- * Trigger click on a marker
- * this is a public function
- * @param  {int} id
- * @return {void}
- */
-GoogleMap.prototype.triggerClick = function(id) {
+GoogleMap.prototype.activateMarker = function(marker_id) {
 
-	var marker = this.findMarker(id);
+    for (var j = 0; j < this.vars.markers.length; j++) {
+        if (marker_id == this.vars.markers[j].marker_id) {
+            this.vars.markers[j].setIcon(this.elements.icon.active);
+        } else {
+            this.vars.markers[j].setIcon(this.elements.icon.default);
+        }
+    }
+};
 
-	if (!marker) {return;};
 
-	new google.maps.event.trigger( marker, 'click' );
+/*
+GoogleMap.prototype.clickMarker = function(marker, i) {
 
 };
 
-GoogleMap.prototype.zoomToMarker = function(id) {
-	var marker = this.findMarker(id);
-	if (!marker) {return;};
+*/
 
-	var markers = [marker];
 
-	this.centerMapToMarkers(markers);
-};
 
-GoogleMap.prototype.findMarker = function(id) {
-	var markers = this.vars.markers;
-	var marker;
+GoogleMap.prototype.updateInfobox = function(marker) {
+    var self = this;
 
-	for(var i = 0, len = markers.length; i < len; i++){
-		marker = markers[i];
-
-		if (marker.id == id) {return marker};
-	}
-
-	console.error('Could not find marker');
-	return false;
-};
-
-GoogleMap.prototype.markerClicked = function(event) {
-
-	var self = this.self;
-
-	if (this.infobox.url) {
-
-		var data = {
-			locationId: this.id, 
-		};
-
-		jQuery.ajax({
-			context: {self: self, marker: this},
-			url: this.infobox.url,
-			type: "GET",
-			data: data
-		})
-		.done(self.infoboxContentLoaded);
-		return;
-	};
+    if (this.vars.data.maptype == "projects") {
+        this.elements.infobox.addClass("loading");
+        this.fetchInfobox(marker.id).then(function(infobox) {
+            self.refreshInfobox(infobox);
+        });
+    } else if (this.vars.data.maptype == "locations") {
+        this.activateLocation(marker.id);
+    }
 
 };
 
-GoogleMap.prototype.infoboxContentLoaded = function(response) {
+GoogleMap.prototype.fetchInfobox = function(marker_id) {
 
-
-	if (response.code != 1) {
-		console.error('Error');
-		return;
-	};
-
-	var self = this.self;
-	var marker = this.marker;
-	var ib = self.getInfobox();
-
-	if (application.getModule('mediaQuery').test('sm', false)) {
-		ib.close();
-		application.getModule('overlayController').openContent( response.html );
-		return;
-	};
-
-	ib.setContent(response.html);
-	
-	ib.open(self.vars.map, marker);
+    return jQuery.ajax({
+        url: this.vars.data.ajaxinfobox,
+        data: {
+            id: marker_id,
+            view: this.vars.data.ajaxinfoboxview
+        }
+    });
 };
 
-GoogleMap.prototype.getInfobox = function() {
-	if (!this.vars.infobox) {
-
-		var options = {
-			pixelOffset: new google.maps.Size(35, -60),
-			closeBoxURL: "/assets/images/map/infobox/close.gif"
-		};
-
-		this.vars.infobox = new InfoBox( options );
-	};
-
-	return this.vars.infobox;
+GoogleMap.prototype.refreshInfobox = function(infobox_html) {
+    this.elements.infobox.find(".js-google-maps-infobox-content").html(infobox_html);
+    this.elements.infobox.removeClass("loading");
 };
 
-GoogleMap.prototype.centerMapToMarkers = function(markers) {
-	var map = this.vars.map;
-	var bounds = new google.maps.LatLngBounds();
-	var markers = markers || this.vars.markers;
+GoogleMap.prototype.centerMapToMarkers = function() {
+    var map = this.vars.map;
+    var bounds = new google.maps.LatLngBounds();
+    var markers = this.vars.markers;
 
-	for(var i = 0, len = markers.length; i < len; i++){
-		bounds.extend(markers[i].position);
-	}
-
-	map.fitBounds(bounds);
-
-	// zoom out when centering to only one marker
-	if (markers.length == 1) {
-		this.setZoom(14);
-	};
+    for (var i = 0, len = markers.length; i < len; i++) {
+        bounds.extend(markers[i].position);
+    }
+    map.fitBounds(bounds);
 
 };
+
 
 GoogleMap.prototype.centerMapToMarker = function() {
-	//console.log('Im a marker');
-	var map = this.vars.map;
-	var markers = this.vars.markers;
-	map.setCenter(markers[0].position);
-};
-
-GoogleMap.prototype.setZoom = function(zoom) {
-	this.vars.map.setZoom(zoom);
+    var map = this.vars.map;
+    var markers = this.vars.markers;
+    map.setCenter(markers[0].position);
 };

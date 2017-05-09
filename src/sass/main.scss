@@ -12,6 +12,8 @@
 //scut
 @import "../bower_components/scut/dist/scut";
 
+@import "../bower_components/selectize/dist/css/selectize.default";
+
 // Owl Carousel
 @import "../bower_components/owl.carousel/dist/assets/owl.carousel.min";
 @import "../bower_components/owl.carousel/dist/assets/owl.theme.default.min";
@@ -48,7 +50,10 @@
 @import "components/owl-carousel";
 @import "components/maps";
 @import "components/infobox";
-@import "components/header";
+@import "components/site-header";
+@import "components/address";
+@import "components/selectize";
+@import "components/language-switch";
 
 /* ======== sections ======== */
 @import "sections/welcome-slider";
@@ -69,7 +74,6 @@
 @import "sections/sicozone";
 @import "sections/evolution-teaser";
 @import "sections/advantages";
-@import "sections/contact-location";
 
 
 

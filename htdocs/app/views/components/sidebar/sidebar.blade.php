@@ -12,5 +12,8 @@ $options = array(
 		<nav class="navigation navigation--sidebar js-nested-navigation">
 			<?php wp_nav_menu( $options ); ?>
 		</nav>
+		<div class="sidebar__lang-switch">
+    		@include('components.header.language-switch')
+    	</div>
 	</div>
 </aside>

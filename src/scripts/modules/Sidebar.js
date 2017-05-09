@@ -151,7 +151,6 @@ Sidebar.prototype.isSidebarOpened = function() {
 };
 
 Sidebar.prototype.eventHandler = function(event) {
-	console.log("hallo");
 
 	event.preventDefault();
 	event.stopImmediatePropagation();

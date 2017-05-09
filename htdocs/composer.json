@@ -22,7 +22,6 @@
         "a365/core": "0.4.x",
         "a365/wordpress": "0.9.x",
         "a365/customizr": "0.2.x",
-        "afragen/github-updater": "^6.0",
         "geoip/geoip": "^1.17"
         
     }

@@ -54,7 +54,7 @@ LanguageSwitch.prototype.prepare = function() {
 };
 
 LanguageSwitch.prototype.toggle = function(e) {
-	var self = e.data.self;
+    var self = e.data.self;
     self.elements.wrap.toggleClass("opened");
     self.elements.ul.slideToggle();
 };

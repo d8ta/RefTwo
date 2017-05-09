@@ -4,13 +4,13 @@ $block: ".site-navigation";
     &__list {
         font-family: $font-normal;
         text-transform: uppercase;
-        font-size: em(16);
+        font-size: em(14);
         font-weight: bold;
         margin-top: em(60);
+        @include clearfix;
         &__item {
-            @extend %section-content;
             float: right;
-            padding: 0 0 0 em(40);
+            padding-left: em(40);
             
         }
     }
