@@ -52,7 +52,9 @@ $submenu: ".nav-submenu";
     ul.level-2 {
         padding: em(20) 0;
         > li {
-            padding: em(10) 0;
+            > a {
+                padding: em(10) 0;
+            }
         }
     }
 
@@ -64,16 +66,15 @@ $submenu: ".nav-submenu";
 #{$submenu} {
     display: none;
     position: absolute;
-    width: 110%;
-    margin-left: -5%;
-    margin-right: -5%;
+    width: 100%;
+    background: #fff;
     &__table {
         display: table;
-        background: #fff;
         width: 100%;
-        padding-left: 5%;
-        padding-right: 5%;
+        padding-left: em(20);
+        padding-right: em(20);
         min-height: em(200);
+        padding-top: em(20);
     }
     &__nav {
         display: table-cell;
