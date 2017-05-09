@@ -14,11 +14,11 @@
                             padding: 0.5em;
                             @extend %h2-inner;
                             overflow: hidden;
-                            height: 8.5em;
+                            height: 12em;
                             display: none;
                             &__clamp {
                                 display: -webkit-box;
-                                -webkit-line-clamp: 5;
+                                -webkit-line-clamp: 100;
                                 -webkit-box-orient: vertical;
                             }
                         }
@@ -28,17 +28,21 @@
                     &__content {
                         width: 100%;
                         &__image {
+                            &--logogroup {
+                                margin: 0 auto;
+                                width: 60%;
+                            }
+                            &__text {
+                                text-align: left;
+                            }
                             &--logo {
                                 display: block;
                                 text-align: center;
                                 margin: 0 auto;
-                                width: 30%;
                             }
                             &__text {
                                 overflow: hidden;
-                                height: 6.5em;
                                 display: inline-block;
-                                width: 60%;
                                 &__clamp {
                                     display: -webkit-box;
                                     -webkit-line-clamp: 5;
@@ -53,20 +57,22 @@
                         width: 30%;
                         display: inline-block;
                         &__image {
+                            &--logogroup {}
                             &--batch {
-                                width: 100%;
+                                width: 90%;
                             }
                             &--logo {
                                 display: block;
                                 text-align: center;
-                                margin: 0 auto;
-                                width: 70%;
+                                margin: 0;
                             }
                             &__text {
-                                width: 80%;
+                                verflow: hidden;
+                                display: inline-block;
+                                padding: 0;
                                 &__clamp {
                                     display: -webkit-box;
-                                    -webkit-line-clamp: 5;
+                                    -webkit-line-clamp: 10;
                                     -webkit-box-orient: vertical;
                                 }
                             }
