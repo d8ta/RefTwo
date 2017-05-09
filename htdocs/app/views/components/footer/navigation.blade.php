@@ -1,8 +1,10 @@
 <?php
-$items = $section->getItems();
+$menuHelper = \Project\Helpers\MenuHelper::getInstance();
+$nav_items      = $menuHelper->getMenuItems('footer');
 ?>
-<nav class="">
-	<ul class="">
-		@each('components.footer.navigation.item', $items, 'item')
+{{-- Navigation --}}
+<nav class="footer-navigation">
+    <ul class="level-1">
+	    @each("components.navigation.item", $nav_items, 'nav_item')
 	</ul>
 </nav>

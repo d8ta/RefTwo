@@ -1,0 +1,25 @@
+$block: ".header-navigation";
+#{$block} {
+    margin-top: em(60);
+    a {
+        display: block;
+    }
+    
+    ul.level-1 {
+        @include clearfix;
+        > li {
+            float: left;
+            padding-left: em(40);
+            > a {
+                font-size: em(14);
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+            
+        }
+    }
+
+    @include mq($until: width-mobile-menu) {
+        display: none;
+    }
+}

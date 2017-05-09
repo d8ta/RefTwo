@@ -1,21 +1,18 @@
-<?php
-$navigation = new Project\Sections\Footer\Navigation;
-?>
-	
-<footer>
+<footer class="section site-footer">
 	<div class="section__content">
-		<div class="footer">
-			<div class="footer__inner h1">
-				{{-- {!!$navigation->toHtml()!!} --}}
+		<div class="site-footer__table">
+			<div class="site-footer__table__col site-footer__table__col--address">
+				<div class="site-footer__address">
+					@include('components.footer.address')
+				</div>
+				<div class="site-footer__copy">
+					&copy; {{date("Y")}} Siconnex GmbH
+				</div>
 			</div>
-		</div>
-		<div class="footer footer">
-			<div class="footer__inner footer__inner--address">
-				@include('components.footer.address')
+			<div class="site-footer__table__col">
+				@include('components.footer.navigation')
 			</div>
 		</div>
 	</div>
-	<div class="footer__inner--waveimage">	
-		<img src="/assets/images/layout/wave@2x.png" width="100%" alt="wave">
-	</div>
+	<div class="site-footer__img"></div>
 </footer>

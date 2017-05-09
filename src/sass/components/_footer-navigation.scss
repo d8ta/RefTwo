@@ -1,0 +1,50 @@
+$block: ".footer-navigation";
+$nav-side-padding: 1%;
+#{$block} {
+    @include mq($until: screen-xs) {
+        display: none;
+    }
+    a {
+        display: block;
+    }
+    ul.level-1 {
+        @include clearfix;
+        margin-left: -$nav-side-padding;
+        margin-right: -$nav-side-padding;
+        @include mq($from: screen-lg) {
+            display: table;
+            width: 100%;
+            table-layout: fixed;
+        }
+        > li {
+            float: left;
+            width: 33.3333% - 2*$nav-side-padding;
+            padding-left: $nav-side-padding;
+            padding-right: $nav-side-padding;
+            padding-bottom: em(30);
+            @include mq($from: screen-sm) {
+                width: 50% - 2*$nav-side-padding;
+            }
+            @include mq($from: screen-md) {
+                width: 33.3333% - 2*$nav-side-padding;
+            }
+            @include mq($from: screen-lg) {
+                float: none;
+                display: table-cell;
+            }
+            > a {
+                font-size: em(14);
+                font-weight: bold;
+                text-transform: uppercase;
+                margin-bottom: 0.5em;
+            }
+        }
+    }
+    ul.level-2 {
+        > li {
+            > a {
+                @extend %footer-text;
+            }
+        }
+    }
+}
