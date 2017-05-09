@@ -6,14 +6,14 @@ $block: ".research-teaser";
     &__content {
         &--whitebox-top {
             background: white;
-            height: 5em;
+            height: 3em;
             width: 100% !important;
-            margin-bottom: -6em;
+            margin-bottom: -1.3em;
             z-index: 1;
         }
         &--whitebox-bottom {
             background: white;
-            height: 8em;
+            height: 3em;
             width: 100% !important;
             margin-top: -2em;
         }
@@ -21,7 +21,8 @@ $block: ".research-teaser";
         height: auto;
         position: relative;
         &--left {
-            padding-top: 8em;
+            padding-top: 4em;
+            padding-bottom: 3em;
             color: $color-white;
             h2 {
                 @extend %h1-inner;
@@ -35,9 +36,7 @@ $block: ".research-teaser";
             }
             .btn {}
         }
-        &--right {
-            margin-top: 4em;
-        }
+        &--right {}
         &__images {
             &--big {}
             &__image {
@@ -68,35 +67,27 @@ $block: ".research-teaser";
     @include clearfix;
     @include mq($from: screen-sm) {
         &__content {
-            &--left {
-                h2 {
-                    max-width: 70%;
-                }
-            }
             width: 50%;
             float: left;
             p {
                 width: 85%;
             }
-            &__image {
-                height: 144%;
-                width: 100%;
-                position: absolute;
-                right: 0;
-                top: -22%;
-                max-width: 100%;
-            }
-            &--left {}
-            &--right {
-                float: right;
-                images {
-                    position: absolute;
-                    max-width: 100%;
-                    bottom: 0;
-                    top: 0;
-                    margin: auto 0;
+            &--left {
+                h2 {
+                    max-width: 70%;
                 }
             }
+            &--right {
+                float: right;
+            }
+            // &__images {
+            //     height: 144%;
+            //     width: 100%;
+            //     position: absolute;
+            //     right: 0;
+            //     top: -22%;
+            //     max-width: 100%;
+            // }
         }
     }
 }
