@@ -1,14 +1,16 @@
-$block: ".site-navigation";
+$block: ".header-navigation";
 #{$block} {
-    margin-top: 40px;
-    &__list {
-        
-        margin-top: em(60);
+    margin-top: em(60);
+    a {
+        display: block;
+    }
+    
+    ul.level-1 {
         @include clearfix;
-        &__item {
-            float: right;
+        > li {
+            float: left;
             padding-left: em(40);
-            a {
+            > a {
                 font-size: em(14);
                 font-weight: bold;
                 text-transform: uppercase;
@@ -16,6 +18,7 @@ $block: ".site-navigation";
             
         }
     }
+
     @include mq($until: width-mobile-menu) {
         display: none;
     }
