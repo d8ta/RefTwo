@@ -29,7 +29,7 @@ $buttontext = $block->getButtonText();
 					
 					{{-- right --}}
 					<div class="research-teaser__content research-teaser__content--right js-matchheight" >
-						<div class="research-teaser__content__images">
+						<div class="research-teaser__content__image-container">
 							<div class="research-teaser__content__images research-teaser__content__images--big">
 								<img alt="{{$title}}" src="{{$bigimage}}" class="research-teaser__content__images__image">
 								<img src="assets/images/icons/entwicklung.svg" class="research-teaser__content__images__icon" alt="{{$title}} icon" />

@@ -80,18 +80,23 @@ $block: ".research-teaser";
             &--right {
                 float: right;
             }
-            // &__images {
-            //     height: 144%;
-            //     width: 100%;
-            //     position: absolute;
-            //     right: 0;
-            //     top: -22%;
-            //     max-width: 100%;
-            // }
+            &__image-container {
+                position: absolute;
+                padding-bottom: 70.33333%;
+                height: 0;
+                top: 0;
+                bottom: 0;
+                margin: auto 0;
+            }
         }
     }
-}
-
-.whitebox {
-    background: green;
+    @include mq($from: $screen-xl - 100px) {
+        &__content {
+            &__image-container {
+                margin: 0;
+                position: relative;
+                margin: 0;
+            }
+        }
+    }
 }
