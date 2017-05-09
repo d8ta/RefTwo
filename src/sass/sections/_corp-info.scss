@@ -1,40 +1,62 @@
 $block: '.corp-info';
 #{$block} {
-    &__images {
-        &__img {
-            float: right;
-            margin: rem(5) rem(5);
-        }
-    }
     &__text {
-        &--left {
-            margin: 0;
-        }
-    }
-    @include mq($until: screen-lg) {
+        margin: 0 auto;
         text-align: center;
-        &__text {
-            &--left {
-                margin: 0 auto 20px auto;
-            }
-        }
-        &__images {
-            display: inline-block;
-            &__img {}
+        max-width: 80%;
+    }
+    &__images {
+        margin-top: 2em;
+        text-align: center;
+        &--image {
+            border-radius: 0.5em;
+            display: block;
+            margin-bottom: 1em;
         }
     }
-    @include mq($until: screen-sm) {
-        &__text {
-            &--left {
-                width: 100%;
+    @include mq($from: screen-sm) {
+
+        &__images {
+
+            &--image {
+                display: inline;
+                margin-left: 1em;
             }
         }
+    }   
+     @include mq($from: screen-lg) {
         &__images {
-            &__img {
-                float: none;
-                clear: both;
-                margin: rem(5) rem(5);
+
+            &--image {
+                display: none;
+                margin-left: 1em;
             }
         }
     }
+    // @include mq($until: screen-lg) {
+    //     text-align: center;
+    //     &__text {
+    //         &--left {
+    //             margin: 0 auto 20px auto;
+    //         }
+    //     }
+    //     &__images {
+    //         display: inline-block;
+    //         &__img {}
+    //     }
+    // }
+    // @include mq($until: screen-sm) {
+    //     &__text {
+    //         &--left {
+    //             width: 100%;
+    //         }
+    //     }
+    //     &__images {
+    //         &__img {
+    //             float: none;
+    //             clear: both;
+    //             margin: rem(5) rem(5);
+    //         }
+    //     }
+    // }
 }
