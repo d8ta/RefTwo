@@ -7,66 +7,67 @@ $block: ".research-teaser";
         width: 100%;
         height: auto;
         position: relative;
-        // > .big-headline {
-        //     width: 80%;
-        // }
         &--left {
+            // background: red;
             color: $color-white;
         }
         &--right {
-            // display: inline-block;
-        }
-        &__image {
-            margin-top: scut-em(15);
-            width: 70%;
-            height: auto;
-            border-radius: 0.5em;
-        }
-        &__smallimg {
-            display: block;
-            &--inner {
-                margin-top: scut-em(15);
-                width: 20%;
-                height: auto;
-                border-radius: 0.5em;
+            // background: green;
+            &__images {
+                display: inline-block;
+                float: left;
+                &__image {
+                    margin-top: scut-em(15);
+                    width: 70%;
+                    height: auto;
+                    border-radius: 0.5em;
+                }
+                &__icon {
+                    margin-top: scut-em(15);
+                    width: 10%;
+                    height: auto;
+                    border-radius: 0.5em;
+                    position: absolute;
+                    left: 0.5em;
+                    top: 0.5em;
+                }
+                &__smallimg {
+                    background: blue;
+                    display: block;
+                    margin-top: scut-em(15);
+                    width: 20%;
+                    height: auto;
+                    border-radius: 0.5em;
+                }
             }
-        }
-        &__icon {
-            margin-top: scut-em(15);
-            width: 10%;
-            height: auto;
-            border-radius: 0.5em;
-            position: absolute;
-            left: 0.5em;
-            top: 0.5em;
         }
     }
     @include clearfix;
-        @include mq($from: screen-sm) {
-        //     &__content {
-        //         width: 50%;
-        //         float: left;
-        //         p {
-        //             width: 85%;
-        //         }
-        //         &__image {
-        //             height: 144%;
-        //             width: 100%;
-        //             position: absolute;
-        //             right: 0;
-        //             top: -22%;
-        //             max-width: 100%;
-        //         }
-        //         &--right {
-        //             float: right;
-        //             img {
-        //                 position: absolute;
-        //                 max-width: 100%;
-        //                 bottom: 0;
-        //                 top: 0;
-        //                 margin: auto 0;
-        //             }
-        //         }
-        //     }
+    @include mq($from: screen-sm) {
+        &__content {
+            width: 50%;
+            float: left;
+            p {
+                width: 85%;
+            }
+            &__image {
+                height: 144%;
+                width: 100%;
+                position: absolute;
+                right: 0;
+                top: -22%;
+                max-width: 100%;
+            }
+            &--right {
+                float: right;
+                images {
+                    position: absolute;
+                    max-width: 100%;
+                    bottom: 0;
+                    top: 0;
+                    margin: auto 0;
+                }
+            }
         }
+    }
 }
