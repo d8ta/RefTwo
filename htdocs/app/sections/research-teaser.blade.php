@@ -15,7 +15,7 @@ $buttontext = $block->getButtonText();
 			<div class="research-teaser">
 
 				<div class="research-teaser__content research-teaser__content--left" js-match-height>
-					<h2 class="h1">{{$title}}</h2>
+					<h2 class="h2">{{$title}}</h2>
 					<p class="h2">{{$description}}</p>
              		<button class="btn btn--icon-text" type="button">
                         <i class="btn__icon primary-color"></i>

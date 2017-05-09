@@ -8,8 +8,17 @@ $block: ".research-teaser";
         height: auto;
         position: relative;
         &--left {
-            // background: red;
+            padding-top: 3em;
             color: $color-white;
+            h2 {
+                @extend %h1-inner;
+                margin: 0;
+                padding-bottom: 1em;
+            }
+            p {
+                padding-bottom: 1em;
+            }
+            .btn {}
         }
         &--right {
             // background: green;
@@ -57,6 +66,9 @@ $block: ".research-teaser";
                 right: 0;
                 top: -22%;
                 max-width: 100%;
+            }
+            &--left {
+                max-width: 160px;
             }
             &--right {
                 float: right;
