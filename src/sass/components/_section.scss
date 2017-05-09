@@ -9,11 +9,29 @@ $block: ".section";
             padding-right: 0;
         }
     }
-    &--action-box {
-        padding: em(50) 0 em(100);
+    &--welcome-slider {
+        margin: 3.125rem 0 3.125rem 0;
     }
-    &--margin {
-        margin: rem(60) 0;
+    &--action-box {
+        margin: 3.125rem 0 10.56em 0;
+    }
+    &--product-teaser {
+        margin: 3.125rem 0 1.25rem 0;
+    }
+    &--product-links {
+        margin: 3.125rem 0 10.25rem 0;
+    }
+    &--research-teaser {
+        margin: 3.125rem 0 18.25rem 0;
+    }
+    &--technology-teaser {
+        margin: 3.125rem 0 4.7rem 0;
+    }
+    &--technology-boxes {
+        margin: 3.125rem 0 19.5rem 0;
+    }
+    &--maps {
+        margin: 18.88rem 0 0.4rem 0;
     }
     &--yellow {
         background-color: $brand-primary;

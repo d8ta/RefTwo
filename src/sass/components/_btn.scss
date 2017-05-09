@@ -9,7 +9,7 @@ $block: '.btn';
         font-weight: bold;
         background-color: $color-light-grey;
         color: $color-text;
-        padding: em(15) em(25);
+        padding: em(10) em(10);
         #{$block} {
             &__icon {
                 vertical-align: text-top;
@@ -17,7 +17,7 @@ $block: '.btn';
                 margin-top: em(5);
                 @include icon(arrowright) &:before {
                     @extend %icon;
-                    margin-top: em(5);
+                    margin-top: em(10);
                     &__primary {
                         color: $brand-primary;
                     }
