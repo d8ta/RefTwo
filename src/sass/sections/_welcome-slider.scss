@@ -40,7 +40,7 @@ $image-height: 300px;
                 background-position: 0 -3.5em;
             }
             &__text {
-                // @extend %section-content;
+                @extend %section-content;
                 height: 100%;
                 position: relative;
                 z-index: 2;
@@ -60,6 +60,7 @@ $image-height: 300px;
                     width: 91%;
                     display: table;
                     height: 100%;
+                    padding: 2em 0 1em 0;
                     text-align: left;
                     &__td {
                         display: table-cell;
@@ -71,9 +72,9 @@ $image-height: 300px;
     }
     @include mq($from: screen-lg) {
         &__slide {
-            // padding-bottom: 40%;
-            @include clearfix;
+            padding-bottom: 40%;
             &__inner {
+                position: absolute;
                 &__image {
                     height: 100%;
                     width: 70%;
@@ -96,6 +97,7 @@ $image-height: 300px;
                         position: absolute;
                         left: 0;
                         width: em(420);
+                        padding: 2em 2em 0 em(50);
                         text-align: left;
                         padding-right: em(50);
                         &__td {
@@ -111,7 +113,9 @@ $image-height: 300px;
         }
     }
     @include mq($from: screen-xl) {
-        &__slide {}
+        &__slide {
+            padding-bottom: 34%;
+        }
     }
     @include mq($from: screen-xxl) {
         &__slide {
