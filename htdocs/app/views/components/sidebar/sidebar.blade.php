@@ -8,10 +8,10 @@ $options = array(
 );
 ?>
 <aside class="sidebar">
-	<div class="sidebar__content sidebar__content--full">
-		<nav class="navigation navigation--sidebar js-nested-navigation">
-			<?php wp_nav_menu( $options ); ?>
-		</nav>
+	<div class="sidebar__content">
+
+		@include('components.sidebar.navigation')
+
 		<div class="sidebar__lang-switch">
     		@include('components.header.language-switch')
     	</div>

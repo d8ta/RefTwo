@@ -134,10 +134,3 @@ $image-height: 300px;
         }
     }
 }
-
-.section--welcome {
-    margin-top: 9em;
-    @include mq($from: screen-sm) {
-        margin-top: 6em;
-    }
-}

@@ -1,0 +1,10 @@
+$block: ".navigation";
+#{$block} {
+    ul {
+        display: none;
+        &.level-1,
+        &.level-2 {
+            display: block;
+        }
+    }
+}

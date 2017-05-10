@@ -3,6 +3,8 @@ $block: ".logo-box";
     margin: em(10) 0;
     display: block;
     img {
-        width: 13em;
+        max-width: 13em;
+        width: 100%;
+        height: auto;
     }
 }
