@@ -27,9 +27,11 @@ $block: ".sidebar-navigation";
 		}
 	}
 
-	li.active > a {
-		color: $brand-primary;
-	}
+	li.active {
+        > a {
+            color: $color-text-grey;
+        }
+    }
 
 
     li > ul.level-2 {
