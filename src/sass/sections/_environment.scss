@@ -1,66 +1,44 @@
     $block: '.environment';
     #{$block} {
         &__image {
-            padding-bottom: 40%;
+            padding-bottom: 41.6666%;
+            margin-bottom: 2em;
+            position: relative;
         }
         &__box {
-            border-radius: 5px;
-            width: 33%;
-            float: right;
-            margin-top: -28.5rem;
-            margin-right: 5rem;
-            background: $color-white;
             &__text {
-                padding: 2rem;
+                text-align: center;
+                padding: 0 0.5em;
                 &__description {
+                    max-width: 80%;
+                    margin: 0 auto;
                     overflow: hidden;
-                    height: 15em / 4 * 3;
-                    margin-bottom: 30px;
+                    height: 100%;
                     &__clamp {
                         display: -webkit-box;
-                        -webkit-line-clamp: 5;
+                        -webkit-line-clamp: 100;
                         -webkit-box-orient: vertical;
                     }
                 }
             }
         }
-        @include mq($until: screen-xl) {
+        @include mq($from: screen-lg) {
             &__box {
-                width: 40%;
-                margin-top: -24rem;
-                margin-right: 5rem;
-                background: $color-white;
+                background: red;
+                max-width: 33%;
+                border-radius: 0.5em;
                 &__text {
-                    padding: 2rem;
-                    &__description {
-                        overflow: hidden;
-                        height: 15em / 4 * 3;
-                        margin-bottom: 30px;
-                        &__clamp {
-                            display: -webkit-box;
-                            -webkit-line-clamp: 5;
-                            -webkit-box-orient: vertical;
-                        }
+                    padding: 2em;
+                    &__title {
+                        text-align: left;
                     }
-                }
-            }
-        }
-        @include mq($until: screen-lg) {
-            text-align: center;
-            &__box {
-                width: 100%;
-                margin-top: 0;
-                margin-right: 0;
-                &__text {
+                    &__subtitle {
+                        text-align: left;
+                    }
                     &__description {
-                        overflow: hidden;
-                        height: 100%;
-                        margin-bottom: 30px;
-                        &__clamp {
-                            display: -webkit-box;
-                            -webkit-line-clamp: 100;
-                            -webkit-box-orient: vertical;
-                        }
+                        text-align: left;
+                        margin-left: 0;
+                        &__clamp {}
                     }
                 }
             }
