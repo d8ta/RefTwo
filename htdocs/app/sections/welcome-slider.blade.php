@@ -4,7 +4,7 @@
 <div class="section--first">
 	<div class="section section--fullwidth">
 		<div class="section__content">
- -			<div class="welcome-slider @if(count($slides) > 1) js-owl-carousel owl-carousel @endif">
+ 			<div class="welcome-slider @if(count($slides) > 1) js-owl-carousel owl-carousel @endif">
 					@foreach ($slides as $slide)
 					<?php 
 					$title = $slide['title'];
