@@ -20,6 +20,8 @@ var uglify         = require('gulp-uglify');
 var filter         = require('gulp-filter');
 
 /* ======== Variables ======== */
+var fontName = 'iconfont_v2';
+
 var paths = {
   prefix: {
     dist: 'htdocs/assets/'
@@ -194,8 +196,6 @@ gulp.task("images::watch", function(callback) {
 
 // Iconfont
 gulp.task('iconfont', function() {
-
-  var fontName = 'iconfont';
 
   return gulp.src(paths.src.iconfont + '*.svg')
     .pipe(iconfontCss({
