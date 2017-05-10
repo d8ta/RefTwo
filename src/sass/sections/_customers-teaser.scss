@@ -5,25 +5,40 @@
                 margin-bottom: 0.2em;
             }
             &--subtitle {
-                margin-bottom: 1em;
                 @extend %h2;
                 text-align: center;
             }
             &__textbox {
                 @extend %h2-inner;
-                margin: 0;
-                display: inline;
+                margin: 0 auto;
                 &__left {
-                    padding: 0.5em;
-                    float: left;
-                    width: 50%;
-                    text-align: left;
+                    padding: 0.5em 5em;
+
+                    width: 100%;
+                    text-align: center;
                 }
                 &__right {
-                    padding: 0.5em;
-                    float: left;
-                    width: 50%;
-                    text-align: left;
+                    padding: 0.5em 5em  ;
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+        }
+        @include mq($from: screen-lg) {
+            &__inner {
+                &__textbox {
+                    margin: 0;
+                    display: inline;
+                    &__left {
+                        float: left;
+                        width: 50%;
+                        text-align: left;
+                    }
+                    &__right {
+                        float: left;
+                        width: 50%;
+                        text-align: left;
+                    }
                 }
             }
         }
