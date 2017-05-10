@@ -9,7 +9,21 @@ $block: ".section";
             padding-right: 0;
         }
     }
-
+    // ### general ###
+    // default
+    &--margin {
+        margin: rem(100) 0;
+    }
+    &--maps {
+        margin: 18.88rem 0 0.4rem 0;
+    }
+    &--yellow {
+        background-color: $brand-primary;
+    }
+    &__content {
+        @extend %section-content;
+    }
+    // #### main ###
     // welcome slider
     &--first {
         margin: 3.125rem 0 3.125rem 0;
@@ -20,7 +34,7 @@ $block: ".section";
     }
     // product teaser
     &--third {
-        margin: 3.125rem 0 1.25rem 0;
+        margin: 10.56rem 0 1.25rem 0;
     }
     // product links
     &--forth {
@@ -38,19 +52,13 @@ $block: ".section";
     &--seventh {
         margin: 3.125rem 0 19.5rem 0;
     }
-    // standard
-    &--margin {
-        margin: rem(100) 0;
+    // ### corporation
+    &--first-corp {
+        margin: 6rem 0 3.125rem 0;
     }
-
-    &--maps {
-        margin: 18.88rem 0 0.4rem 0;
-    }
-    &--yellow {
-        background-color: $brand-primary;
-    }
-    &__content {
-        @extend %section-content;
+    // corporation second section
+    &--second-corp {
+        margin: 20.56rem 0 22.56em 0;
     }
 }
 

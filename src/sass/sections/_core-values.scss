@@ -1,23 +1,29 @@
 $block: '.core-values';
 #{$block} {
     &__info {
-        width: 33%;
-        display: inline-block;
-        &__image {}
-        &__text {
-            &__description {
-                padding: 5px;
-            }
+        text-align: center;
+        margin-bottom: 4em;
+        &__image {
+            margin-top: 1em;
+        }
+        p {
+            margin: 0 auto;
+            max-width: 80%;
         }
     }
-    @include mq($until: screen-lg) {
-        text-align: center;
-    }
-    @include mq($until: screen-sm) {
-        text-align: center;
+    @include mq($from: screen-sm) {
         &__info {
-            display: block;
-            width: 100%;
+            text-align: left;
+            width: 33%;
+            display: inline-block;
+            &__text {
+                &--title {
+                    margin-top: 3em;
+                }
+            }
+        }
+        p {
+            margin-left: 0;
         }
     }
 }
