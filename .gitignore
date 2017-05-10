@@ -12,6 +12,8 @@ bower_components/
 /htdocs/cache/
 /htdocs/wp-content/uploads/
 
+/src/sass/common/_iconfont.scss
+
 credentials.md
 sftp-config.json
 _misc/
