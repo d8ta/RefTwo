@@ -3,11 +3,11 @@ namespace Project\Helpers;
 
 class MenuHelper extends \A365\Wordpress\Helpers\MenuHelper
 {
-    private $_menu_name = "";
+    private $_with_submenu_div = false;
 
-    public function getMenuItems( $menu_id, $tree = true )
+    public function getMenuItems( $menu_id, $with_submenu_div = false )
     {
-        $this->_menu_name = $menu_id;
+        $this->_with_submenu_div = $with_submenu_div;
 
         if ( ( $locations = get_nav_menu_locations() ) && isset( $locations[ $menu_id ] ) ) {
             $menu = wp_get_nav_menu_object( $locations[ $menu_id ] );
@@ -41,7 +41,7 @@ class MenuHelper extends \A365\Wordpress\Helpers\MenuHelper
 
                 $element->level = $level;
                 $element->class = $class;
-                $element->menu_name = $this->_menu_name;
+                $element->with_submenu_div = $this->_with_submenu_div;
 
                 $branch[$element->ID] = $element;
                 unset( $element );

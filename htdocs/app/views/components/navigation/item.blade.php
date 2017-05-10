@@ -1,5 +1,5 @@
 <?php
-$has_submenu = $nav_item->level == 1 && $nav_item->menu_name == "primary";
+$has_submenu = $nav_item->level == 1 && $nav_item->with_submenu_div;
 ?>
 <li class="{{$nav_item->class}}">
 	<a href="{{ get_permalink(pll_get_post($nav_item->object_id)) }}">{{$nav_item->title}}</a>
