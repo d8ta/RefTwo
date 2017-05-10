@@ -2,9 +2,20 @@ $block: ".header-navigation";
 $submenu: ".nav-submenu";
 #{$block} {
     margin-top: em(60);
+    
+    li.active {
+        > a {
+            color: $color-text-grey;
+        }
+    }
     a {
         display: block;
+        transition: color 0.2s;
+        &:hover {
+            color: $color-text-base !important;
+        }
     }
+
 
     ul.level-1 {
         @include clearfix;
@@ -24,14 +35,18 @@ $submenu: ".nav-submenu";
                 font-weight: bold;
                 text-transform: uppercase;
             }
-            &:hover {
+             &:hover {
                 > #{$submenu} {
                     display: block;
                 }
+                
+            }
+            &:hover {
                 &:after {
                     display: block;
                 }
             }
+
             &:after {
                 display: none;
                 content: '';
@@ -54,6 +69,8 @@ $submenu: ".nav-submenu";
         }
     }
 
+   
+
     @include mq($until: width-mobile-menu) {
         display: none;
     }
@@ -64,6 +81,7 @@ $submenu: ".nav-submenu";
     position: absolute;
     width: 100%;
     background: #fff;
+    left: 0;
     &__table {
         display: table;
         width: 100%;

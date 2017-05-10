@@ -2,26 +2,16 @@ $block: ".sidebar";
 $sidebar-bg: $color-white;
 $sidebar-fg: $color-text;
 #{$block} {
-    nav {
-        font-size: em(24);
-        margin-top: 3em;
-    }
-    nav ul li {
-        padding: 25px;
-    }
-
-    font-weight: bold;
+    
     text-align: center;
     position: fixed;
     width: 100%;
     min-height: 100vh;
-    
     right: 0;
     z-index: 0;
-    // padding-left: 10%;
     background: $brand-primary;
     @include mq($from: screen-xs) {
-        padding-left: 40%;
+        padding-left: 30%;
     }
     @include mq($from: screen-sm) {
         padding-left: 50%;
@@ -35,14 +25,9 @@ $sidebar-fg: $color-text;
         opacity: 0;
         transition: opacity 0.3s 0.6s;
         margin: 0 auto;
-        padding-left: $side-padding;
-        padding-right: $side-padding;
+        padding: $height-header $side-padding em(40);
         box-sizing: content-box;
         @include clearfix;
-        &--full {
-            padding-left: 0;
-            padding-right: 0;
-        }
     }
     &__lang-switch {
         margin-top: em(40);
@@ -73,19 +58,10 @@ $sidebar-fg: $color-text;
                 opacity: 1;
                 transition: (opacity 0.3s, visibility 0s);
             }
-            .menu-burger {
-                //display: block;
-            }
         }
         //transition: transform 300ms $easeOutCubic;
     }
     @include mq($from: width-mobile-menu) {
         display: none;
-    }
-    .menu-burger {
-        // display: none;
-    }
-    .menu-burger__bar {
-        background: $color-text;
     }
 }

@@ -1,1 +1,0 @@
-<div class="sidebar__page-overlay"></div>

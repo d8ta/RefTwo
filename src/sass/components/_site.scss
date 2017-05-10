@@ -19,35 +19,9 @@ $block: ".site";
         }
     }
     body.sidebar-open & {
-        html.ie9up & {
-            transform: translateX(-90%);
-            transition: transform 300ms $easeOutCubic;
-            @include mq($from: screen-xs) {
-                transform: translateX(-60%);
-            }
-            @include mq($from: screen-sm) {
-                transform: translateX(-50%);
-            }
-            @include mq($from: width-mobile-menu) {
-                transform: translateX(0);
-                position: relative;
-            }
-        }
-        html.ie9 & {
-            left: -90%;
-            @include mq($from: screen-xs) {
-                left: -60%;
-            }
-            @include mq($from: screen-sm) {
-                left: -50%;
-            }
-            @include mq($from: width-mobile-menu) {
-                left: 0%;
-                position: relative;
-            }
-        }
+        transform: translateX(-100%);
         @include mq($from: screen-xs) {
-            transform: translateX(-60%);
+            transform: translateX(-70%);
         }
         @include mq($from: screen-sm) {
             transform: translateX(-50%);
