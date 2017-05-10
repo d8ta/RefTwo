@@ -14,7 +14,7 @@ $block: ".language-switch";
         visibility: visible;
         transition: opacity 0.3s, visibility 0s;
     }
-    @include icon(arrowright, after);
+    @include icon(menu-arrow-down, after);
     &:after {
         @extend %icon;
         position: absolute;
@@ -23,13 +23,13 @@ $block: ".language-switch";
         z-index: 11;
         color: $color-text-grey;
         font-size: 0.8em;
-        line-height: 1.8em;
-        transform: rotateZ(90deg);
+        line-height: 1.5em;
+        transform: rotateZ(0deg);
         transition: all 0.2s ease;
     }
     &.opened {
         &:after {
-            transform: rotateZ(270deg);
+            transform: rotateZ(180deg);
         }
     }
     #{$block}__current,
@@ -55,16 +55,6 @@ $block: ".language-switch";
             margin-right: em(5);
         }
     }
-    /*&--main {
-        margin-left: em(50);
-    }
-    &--sidebar {
-        font-size: em(15);
-        #{$block}__current,
-        .lang-item a {
-            padding-left: 0;
-        }
-    }*/
     #{$block}__current {
         position: relative;
         z-index: 1;

@@ -19,8 +19,8 @@ $block: ".site";
         }
     }
     body.sidebar-open & {
-        html.ie9up & {
-            transform: translateX(-90%);
+        /*html.ie9up & {
+            transform: translateX(-100%);
             transition: transform 300ms $easeOutCubic;
             @include mq($from: screen-xs) {
                 transform: translateX(-60%);
@@ -34,7 +34,7 @@ $block: ".site";
             }
         }
         html.ie9 & {
-            left: -90%;
+            left: -100%;
             @include mq($from: screen-xs) {
                 left: -60%;
             }
@@ -45,9 +45,10 @@ $block: ".site";
                 left: 0%;
                 position: relative;
             }
-        }
+        }*/
+        transform: translateX(-100%);
         @include mq($from: screen-xs) {
-            transform: translateX(-60%);
+            transform: translateX(-70%);
         }
         @include mq($from: screen-sm) {
             transform: translateX(-50%);
