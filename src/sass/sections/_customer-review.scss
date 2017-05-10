@@ -1,133 +1,95 @@
-$block: '.customer-review';
+$block: ".customer-review";
 #{$block} {
-    background: $brand-primary;
+    position: relative;
+    width: 100%;
+    height: auto;
     &__content {
-        background: $brand-primary;
-        height: 0;
-        padding-bottom: 35%;
-        @extend %section-content;
-        &__text {
+        &--whitebox-top {
+            background: white;
+            height: 3em;
+            width: 100% !important;
+            margin-bottom: -1.3em;
+            z-index: 1;
+        }
+        &--whitebox-bottom {
+            background: white;
+            height: 3em;
+            width: 100% !important;
+            margin-top: -2em;
+        }
+        width: 100%;
+        height: auto;
+        position: relative;
+        &--left {
+            padding-top: 4em;
+            padding-bottom: 3em;
             color: $color-white;
-            position: absolute;
-            top: em(120);
-            width: 25%;
+            h2 {
+                @extend %h1-inner;
+                margin: 0;
+                padding-bottom: 1em;
+                text-align: left;
+                max-width: 100%;
+            }
+            p {
+                padding-bottom: 1em;
+            }
+            h3 {
+                font-size: 1.5em;
+                margin-top: 0.25em;
+            }
         }
+        &--right {}
         &__images {
-            @extend %section-content;
-            position: relative;
-            &--big {
-                position: absolute;
-                border-radius: 15px;
-                right: 14.5%;
-                top: 0;
-                &__icon {
-                    width: 15%;
-                    position: absolute;
-                    left: 20px;
-                    top: 10px;
-                }
-                &__inner {
-                    border-radius: 15px;
-                    margin-top: -10px;
-                }
+            &--big {}
+            &__image {
+                float: left;
+                width: 72%;
+                height: auto;
+                border-radius: 0.5em;
+                margin-right: 1%;
             }
-            &--small {
-                border-radius: 10px;
-                position: absolute;
-                width: 13.333%;
-                right: 0%;
-                top: -11px;
+            &__smallimg {
                 display: block;
-                &__inner {
-                    border-radius: 10px;
-                    margin-bottom: 10px;
-                }
+                width: 23.2%;
+                height: auto;
+                border-radius: 0.5em;
+                margin-bottom: 1.2%;
             }
         }
     }
-    @include mq($from: screen-xl) {
+    @include clearfix;
+    @include mq($from: screen-sm) {
         &__content {
-            height: 590px;
-            padding-bottom: 0;
-            &__text {}
-            &__images {
-                &--big {
-                    &__inner {}
-                }
-                &--small {
-                    &__inner {}
+            width: 50%;
+            float: left;
+            p {
+                width: 85%;
+            }
+            &--left {
+                h2 {
+                    max-width: 70%;
                 }
             }
-        }
-    }
-    @include mq($until: screen-xl) {
-        &__content {
-            &__text {
-                color: $color-white;
+            &--right {
+                float: right;
+            }
+            &__image-container {
                 position: absolute;
-                top: em(50);
-                width: 25%;
-                font-size: 75%;
-            }
-            &__images {
-                &--big {
-                    width: 41.25%;
-                    right: 14.5%;
-                    top: 0;
-                    &__inner {
-                        width: 100%;
-                        border-radius: 15px;
-                        margin-top: -10px;
-                    }
-                }
-                &--small {
-                    width: 13.333%;
-                    right: 0%;
-                    top: -11px;
-                    display: block;
-                    &__inner {
-                        width: 100%;
-                        border-radius: 10px;
-                        margin-bottom: 5%;
-                    }
-                }
+                padding-bottom: 70.33333%;
+                height: 0;
+                top: 0;
+                bottom: 0;
+                margin: auto 0;
             }
         }
     }
-    @include mq($until: screen-lg) {
+    @include mq($from: $screen-xl - 100px) {
         &__content {
-            height: auto;
-            &__text {
-                color: $color-white;
-                position: absolute;
-                top: em(50);
-                width: 30%;
-                font-size: 75%;
-            }
-        }
-    }
-    @include mq($until: screen-md) {
-        // margin-bottom: 40px;
-        &__content {
-            height: em(590);
-            &__text {
+            &__image-container {
+                margin: 0;
                 position: relative;
-                width: 100%;
-            }
-            &__images {
-                margin-top: 50px;
-            }
-        }
-    }
-    @include mq($until: screen-md) {
-        &__content {
-            &__text {
-                position: relative;
-                width: 100%;
-            }
-            &__images {
-                margin-top: 80px;
-                margin-left: -80%;
+                margin: 0;
             }
         }
     }

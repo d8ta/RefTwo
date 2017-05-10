@@ -1,38 +1,50 @@
 <?php 
 	$customerimg = $block->getCustomerImg();
 ?>
-<div class="section section--fullwidth">
-	<div class="section__content">
-		<div class="margin">
+		
+<?php 
+$bigimage = $block->getBigImage();
+$title = $block->getTitle();
+$description = $block->getDescription();
+$signature = $block->getSignature();
+?>
+
+
+<div class="section--fifth section--yellow">
+	<div class="customer-review__content customer-review__content--whitebox-top"></div>
+	<div class="section section__content">
+		<div class="section__inner">
 			<div class="customer-review">
-				<div class="customer-review__content">
-					<?php 
-					$bigimage = $block->getBigImage();
-					$title = $block->getTitle();
-					$description = $block->getDescription();
-					$signature = $block->getSignature();
-					?>
-					<div class="customer-review__content__text">
-						<h2 class="h1">{{$title}}</h2>
-						<h3 class="h2">{{$description}}</h3>
-						<h3 class="h2">{{$signature}}</h3>
-					</div>
-					<div class="customer-review__content__images">
-						<div class="customer-review__content__images--big">
-							<img src="{{$bigimage}}" alt="Forschungsbild groß" class="customer-review__content__images--big__inner" />
-						</div>
-						<div class="customer-review__content__images--small">
-						@foreach ($customerimg as $img)
-						<?php 
-						$smallimg = $img['image'];
-						?>
-						<img src="{{$smallimg}}" alt="Forschungsbild klein" class="customer-review__content__images--small__inner" />
-						@endforeach
-						</div>
-					</div>
+
+				
+				{{-- left --}}
+				<div class="customer-review__content customer-review__content--left js-matchheight" >
+					<h2 class="h1-inner">{{$title}}</h2>
+					<p class="h2">{{$description}}</p>
+					<h3 class="h4">{{$signature}}</h3>
 				</div>
+
+				
+				{{-- right --}}
+				<div class="customer-review__content customer-review__content--right js-matchheight" >
+					<div class="customer-review__content__image-container">
+						<div class="customer-review__content__images customer-review__content__images--big">
+							<img alt="{{$title}}" src="{{$bigimage}}" class="customer-review__content__images__image">
+							@foreach ($customerimg as $img)
+						</div>
+						<div class="customer-review__content__images customer-review__content__images--small">
+							<?php 
+							$customerimg = $img['image'];
+							?>
+							<img src="{{$customerimg}}" alt="Kundenbild klein" class="customer-review__content__images__smallimg" />
+							@endforeach
+						</div>
+					</div>	
+				</div>
+
 			</div>
 		</div>
 	</div>
+	<div class="customer-review__content customer-review__content--whitebox-bottom"></div>
 </div>
 				

@@ -9,27 +9,8 @@ $block: ".section";
             padding-right: 0;
         }
     }
-    &--welcome-slider {
-        margin: 3.125rem 0 3.125rem 0;
-    }
-    &--action-box {
-        margin: 3.125rem 0 10.56em 0;
-    }
-    &--product-teaser {
-        margin: 3.125rem 0 1.25rem 0;
-    }
-    &--product-links {
-        margin: 3.125rem 0 10.25rem 0;
-    }
-    &--research-teaser {
-        margin: 3.125rem 0 18.25rem 0;
-    }
-    &--technology-teaser {
-        margin: 3.125rem 0 4.7rem 0;
-    }
-    &--technology-boxes {
-        margin: 3.125rem 0 19.5rem 0;
-    }
+    // ### general ###
+    // default
     &--margin {
         margin: rem(100) 0;
     }
@@ -41,6 +22,46 @@ $block: ".section";
     }
     &__content {
         @extend %section-content;
+    }
+    // #### main ###
+    // welcome slider
+    &--first {
+        margin: 3.125rem 0 3.125rem 0;
+    }
+    // action box
+    &--second {
+        margin: 3.125rem 0 10.56em 0;
+    }
+    // product teaser
+    &--third {
+        margin: 10.56rem 0 1.25rem 0;
+    }
+    // product links
+    &--forth {
+        margin: 3.125rem 0 10.25rem 0;
+    }
+    // reserach teaser
+    &--fifth {
+        margin: 3.125rem 0 18.25rem 0;
+    }
+    // technology teaser
+    &--sixth {
+        margin: 3.125rem 0 4.7rem 0;
+    }
+    // technology boxes
+    &--seventh {
+        margin: 3.125rem 0 19.5rem 0;
+    }
+    // ### corporation
+    &--first-corp {
+        margin: 6rem 0 3.125rem 0;
+    }
+    // corporation second section
+    &--second-corp {
+        margin: 20.56rem 0 22.56em 0;
+    }
+    &--seventh-corp {
+        margin: 10.125rem 0 19.5rem 0;
     }
 }
 

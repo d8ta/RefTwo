@@ -1,15 +1,43 @@
     $block: '.customers-teaser';
     #{$block} {
         &__inner {
-            margin: 0 auto;
-            text-align: center;
-            &__textbox {}
+            &--title {
+                margin-bottom: 0.2em;
+            }
+            &--subtitle {
+                @extend %h2;
+                text-align: center;
+            }
+            &__textbox {
+                @extend %h2-inner;
+                margin: 0 auto;
+                &__left {
+                    padding: 0.5em 5em;
+
+                    width: 100%;
+                    text-align: center;
+                }
+                &__right {
+                    padding: 0.5em 5em  ;
+                    width: 100%;
+                    text-align: center;
+                }
+            }
         }
-        @include mq($until: screen-md) {
+        @include mq($from: screen-lg) {
             &__inner {
                 &__textbox {
-                    h3 {
-                        width: 100%;
+                    margin: 0;
+                    display: inline;
+                    &__left {
+                        float: left;
+                        width: 50%;
+                        text-align: left;
+                    }
+                    &__right {
+                        float: left;
+                        width: 50%;
+                        text-align: left;
                     }
                 }
             }

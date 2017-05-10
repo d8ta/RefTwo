@@ -1,4 +1,4 @@
-<div class="section section--product-teaser">
+<div class="section section--third">
 	<div class="section__content">
 		<div class="">
 			<div class="product-teaser">
