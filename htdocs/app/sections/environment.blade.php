@@ -18,9 +18,11 @@
 					<div class="environment__box__text">
 						<h2 class="h1-inner primary-color environment__box__text__title">{{$title}}</h2>
 						<h3 class="h2 subtitle environment__box__text__subtitle">{{$subtitle}}</h3>
-							<div class="environment__box__text__description">
-								<p class="environment__box__text__description__clamp">{!!$description!!}</p>
-							</div>
+							
+						<div class="environment__box__text__description">
+							<p class="environment__box__text__description__clamp h3">{!!$description!!}</p>
+						</div>
+
 					</div>	
 				</div>
 

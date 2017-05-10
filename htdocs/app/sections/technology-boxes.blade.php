@@ -18,9 +18,11 @@
 						<div class="technology-boxes__box__text--title">
 							<h2 class="h4 primary-color">{{$title}}</h2>
 						</div>
+
 						<div class="technology-boxes__box__text--description">
-								<p class="technology-boxes__box__text--description__clamp h3">{{$description}}</p>
+							<p class="technology-boxes__box__text--description__clamp h3">{{$description}}</p>
 						</div>
+						
 						<div class="technology-boxes__box__text--link btn--icon-text primary-brand-btn">
 							<i class="btn__icon white-icon"></i>
 							<span class="btn__text">mehr erfahren</span>
