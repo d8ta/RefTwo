@@ -9,30 +9,40 @@ $block: ".section";
             padding-right: 0;
         }
     }
-    &--welcome-slider {
+
+    // welcome slider
+    &--first {
         margin: 3.125rem 0 3.125rem 0;
     }
-    &--action-box {
+    // action box
+    &--second {
         margin: 3.125rem 0 10.56em 0;
     }
-    &--product-teaser {
+    // product teaser
+    &--third {
         margin: 3.125rem 0 1.25rem 0;
     }
-    &--product-links {
+    // product links
+    &--forth {
         margin: 3.125rem 0 10.25rem 0;
     }
-    &--research-teaser {
+    // reserach teaser
+    &--fifth {
         margin: 3.125rem 0 18.25rem 0;
     }
-    &--technology-teaser {
+    // technology teaser
+    &--sixth {
         margin: 3.125rem 0 4.7rem 0;
     }
-    &--technology-boxes {
+    // technology boxes
+    &--seventh {
         margin: 3.125rem 0 19.5rem 0;
     }
+    // standard
     &--margin {
         margin: rem(100) 0;
     }
+
     &--maps {
         margin: 18.88rem 0 0.4rem 0;
     }

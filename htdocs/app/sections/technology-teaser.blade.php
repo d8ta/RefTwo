@@ -1,4 +1,4 @@
-<div class="section section--technology-teaser">
+<div class="section section--sixth">
 	<div class="section__content">
 		<div class="margin-teaser">	
 			<div class="technology-teaser">

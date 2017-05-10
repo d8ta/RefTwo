@@ -1,7 +1,7 @@
 <?php 
 	$links = $block->getLinks();
 ?>
-<div class="section section--product-links">
+<div class="section section--forth">
 	<div class="section__content">
 		<div class="product-links">
 			<div class="product-links__inner">

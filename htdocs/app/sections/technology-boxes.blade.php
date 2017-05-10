@@ -2,7 +2,7 @@
 	$techboxes = $block->getBox();
 	$mh_group = "technology-boxes-" . rand();
 ?>
-<div class="section section--technology-boxes">
+<div class="section section--seventh">
 	<div class="section__content">
 		<div class="technology-boxes">
 			@foreach ($techboxes as $techbox)

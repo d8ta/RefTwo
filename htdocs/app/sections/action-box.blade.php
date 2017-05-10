@@ -1,7 +1,7 @@
 <?php 
 $boxes = $block->getBox();
 ?>
-<div class="section section--action-box">
+<div class="section section--second">
 	<div class="section__content">
 		<div class="action-box">
 			<div class="action-box__inner">
