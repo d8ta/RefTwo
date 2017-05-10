@@ -25,7 +25,6 @@
 	//= include modules/LanguageSwitch.js
 	//= include modules/Page.js
 	//= include modules/NestedNavigation.js
-	//= include modules/NestedNavigationBig.js
 	//= include modules/Sidebar.js
 	//= include modules/SiteController.js
 	//= include modules/ParsleyController.js
@@ -48,7 +47,6 @@
 		.addModule(new CookieAlert(), 'CookieAlert')
 		.addModule(new Page(), 'Page')
 		.addModule(new NestedNavigation(), 'nestedNavigation')
-		.addModule(new NestedNavigationBig(), 'nestedNavigationBig')
 		.addModule(new Sidebar(), 'sidebar')
 		.addModule(new SiteController(), 'siteController')
 		.addModule(new ParsleyController(), 'parsleyController')

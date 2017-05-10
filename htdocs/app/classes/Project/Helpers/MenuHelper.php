@@ -24,11 +24,12 @@ class MenuHelper extends \A365\Wordpress\Helpers\MenuHelper
     {
         $branch = array();
         $level += 1;
-        $class = "";
+        
             
 
         foreach ( $elements as &$element )
         {
+            $class = "";
             if ($element->object_id == get_the_ID()) {
                 $class .= " active";
             }
