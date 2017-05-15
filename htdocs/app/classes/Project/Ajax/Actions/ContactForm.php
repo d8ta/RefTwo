@@ -31,11 +31,10 @@ class ContactForm extends Action
 		
 		$label_subject = __('Your Request');
 
-		$companySubject = 'EAS - Neue Kontaktanfrage';
+		$companySubject = 'Siconnex - Neue Kontaktanfrage';
 		$companyView = 'ajax.contact-form.company';
-		$feedbackSubject = 'EAS - ' . $label_subject;
+		$feedbackSubject = 'Siconnex - ' . $label_subject;
 		$feedbackView = 'ajax.contact-form.feedback';
-		
 
 		try {
 
@@ -43,10 +42,14 @@ class ContactForm extends Action
 
 			$v = new Validator( $data );
 
-			$v->rule('required', ['name', 'email', 'message']);
+			$v->rule('required', ['firstname', 'lastname', 'company', 'email', 'message']);
 			$v->rule('email', 'email');
 
+
 			if (!$v->validate()) {throw new Exception('Form not correct', 10);}
+
+
+			$customer_name = $data['firstname'] . ' ' . $data['lastname'];
 			
 
 			$templateEngine = TemplateEngine::getInstance();
@@ -54,7 +57,7 @@ class ContactForm extends Action
 			$sendto = $_config->getItem('mail.to');
 
 			if (preg_match("/\@a365\.at$/", $data['email'])) {
-				$sendto = array($data['email'] => $data['name']);
+				$sendto = array($data['email'] => $customer_name);
 			}
 
 			$response->sent = $email->send(
@@ -66,7 +69,7 @@ class ContactForm extends Action
 			if (isset($data['email']) && strlen($data['email'])) {
 				$response->feedback = new stdClass;
 				$response->feedback->sent = $email->send(
-					array($data['email'] => $data['name']),
+					array($data['email'] => $customer_name),
 					$feedbackSubject,
 					$templateEngine->renderView( $feedbackView , $data)
 				);

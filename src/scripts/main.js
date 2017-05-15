@@ -25,6 +25,7 @@
 	//= include modules/LanguageSwitch.js
 	//= include modules/Page.js
 	//= include modules/NestedNavigation.js
+	//= include modules/FastclickController.js
 	//= include modules/Sidebar.js
 	//= include modules/SiteController.js
 	//= include modules/ParsleyController.js
@@ -48,6 +49,7 @@
 		.addModule(new Page(), 'Page')
 		.addModule(new NestedNavigation(), 'nestedNavigation')
 		.addModule(new Sidebar(), 'sidebar')
+		.addModule(new FastclickController(), 'fastclickController')
 		.addModule(new SiteController(), 'siteController')
 		.addModule(new ParsleyController(), 'parsleyController')
 		.addModule(new Scroll(), 'scroll')
