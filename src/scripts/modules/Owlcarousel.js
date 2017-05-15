@@ -29,7 +29,7 @@ Owlcarousel.prototype.variables = {
         850: {
             items: 1
         }
-    },]
+    }, ]
 };
 
 Owlcarousel.prototype.options = {
@@ -53,8 +53,8 @@ Owlcarousel.prototype.options = {
     touchDrag: true,
     mouseDrag: false,
     navText: [
-      "<i class='icon'></i>",
-      "<i class='icon'></i>"
+        "<i class='icon'></i>",
+        "<i class='icon'></i>"
     ],
     scrollleft: false,
 };
@@ -77,8 +77,8 @@ Owlcarousel.prototype.init = function() {
             self.elements.owl.find(".owl-stage-outer").before(self.elements.owl.find(".owl-nav"));
             self.elements.owl.find(".owl-dots").wrap('<div class="dots-wrapper"></div>');
             self.elements.owl.find(".owl-dots").wrap('<div class="dots-overflow-wrapper"></div>');
-            jQuery( "<div class='before-dots'></div>").insertBefore(self.elements.owl.find(".owl-dots"));
-            jQuery( "<div class='after-dots'></div>").insertAfter(self.elements.owl.find(".owl-dots"));
+            jQuery("<div class='before-dots'></div>").insertBefore(self.elements.owl.find(".owl-dots"));
+            jQuery("<div class='after-dots'></div>").insertAfter(self.elements.owl.find(".owl-dots"));
         };
     }
 
@@ -125,10 +125,9 @@ Owlcarousel.prototype.init = function() {
                 widthDot = self.elements.owl.find(".owl-dot").eq(0).width(),
                 widthDots = self.elements.owl.find(".dots-overflow-wrapper").eq(0).width(),
                 left = Math.max((index * widthDot) - (widthDots / 2) + (widthDot * 3 / 2), 0);
-        
-            self.elements.owl.find(".dots-overflow-wrapper").animate({scrollLeft:left}, 200);
+
+            self.elements.owl.find(".dots-overflow-wrapper").animate({ scrollLeft: left }, 200);
         }
 
     });
 };
-

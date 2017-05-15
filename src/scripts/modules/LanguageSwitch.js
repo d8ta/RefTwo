@@ -34,7 +34,7 @@ LanguageSwitch.prototype.init = function() {
     this.prepare();
     //this.elements.ul.hide();
 
-    this.elements.wrap.on("click", {self: this}, this.toggle);
+    this.elements.wrap.on("click", { self: this }, this.toggle);
     //this.elements.wrap.on("mouseleave", {self: this}, this.close);
 
     this.elements.wrap.addClass("show");

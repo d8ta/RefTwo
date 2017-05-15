@@ -27,7 +27,8 @@ NestedNavigation.prototype.parse = function($context) {
     var $navigations = $context.find(this.getSelector('navigation')).not('.' + this.classes.initialized);
 
     if (!$navigations.length) {
-        return; }
+        return;
+    }
 
     this.addListener($navigations);
 
@@ -43,7 +44,7 @@ NestedNavigation.prototype.addListener = function($navigations) {
 NestedNavigation.prototype.eventHandler = function(event) {
 
     /*if (window.innerWidth > 1400) {
-    	return;
+        return;
     }*/
 
     event.stopPropagation();
@@ -91,10 +92,12 @@ NestedNavigation.prototype.closeOpenUls = function($elements) {
         $ul = $element.children('ul');
 
         if (!$ul.length) {
-            continue; }
+            continue;
+        }
 
         if (!$ul.is(':visible')) {
-            continue; }
+            continue;
+        }
 
         $ul.velocity('slideUp', 300, 'easeInOutCubic');
 
