@@ -7,7 +7,6 @@ $nav-side-padding: 1%;
     a {
         display: block;
     }
-    
     ul.level-1 {
         @include clearfix;
         margin-left: -$nav-side-padding;

@@ -1,10 +1,10 @@
-$block: ".menu-burger";
+$block: '.menu-burger';
 $padding: 16px;
 #{$block} {
     padding: $padding;
     width: 20px + 2 * $padding;
     margin: 0 0 0 auto;
-    transition: all 0.3s ease;
+    transition: all .3s ease;
     @include mq($from: screen-xs) {
         &--main {
             transform: translateX($padding);
@@ -13,7 +13,7 @@ $padding: 16px;
     cursor: pointer;
     &__bar {
         position: relative;
-        top: -0.3em;
+        top: -.3em;
         height: 3px;
         margin-bottom: 3px;
         background-color: $color-grey;
@@ -22,14 +22,6 @@ $padding: 16px;
             margin-bottom: 0;
         }
     }
-    /*@include mq($from: screen-sm){
-		width: 40px + (2 * $padding);
-
-		&__bar {
-			height: 8px;
-			margin-bottom: 4px;
-		}
-	}*/
     body.sidebar-open & {
         &__bar {
             transition: top 250ms, transform 250ms 200ms, opacity 200ms;
@@ -45,18 +37,6 @@ $padding: 16px;
                 transform: rotate(-45deg);
             }
         }
-        /*@include mq($from: screen-sm){
-			
-			&__bar {
-				&:first-child {
-					top: 12px;
-				}
-
-				&:last-child {
-					top: -12px;
-				}
-			}
-		}*/
     }
     @include mq($from: width-mobile-menu) {
         display: none;

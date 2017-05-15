@@ -15,7 +15,7 @@ use Valitron\Validator;
 class ContactForm extends Action
 {
 
-	const KEY_HONEYPOT = 't_NT2GxLPEkcNmV';
+	const KEY_HONEYPOT = 't_NT2GxLPEkcNmZ';
 
 	protected function _action()
 	{

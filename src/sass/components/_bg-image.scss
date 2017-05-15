@@ -3,14 +3,11 @@ $block: '.bg-image';
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    
     &--contain {
         background-size: contain;
     }
-
     &--pattern {
-    	background-repeat: repeat;
-    	background-size: initial;
+        background-repeat: repeat;
+        background-size: initial;
     }
-    
 }

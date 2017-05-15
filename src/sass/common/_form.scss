@@ -1,0 +1,96 @@
+$block: '.form';
+$form-padding: em(30);
+#{$block} {
+    position: relative;
+    text-align: left;
+    max-width: em(650);
+    margin: em(80) auto 0;
+    &__fields {
+        position: relative;
+        z-index: 10;
+        transition: transform 350ms $ease-in-cubic, opacity 300ms;
+        margin-left: -$form-padding;
+        margin-right: -$form-padding;
+        .clearfix {
+            @include clearfix;
+        }
+        &__row {
+            width: 50%;
+            float: left;
+            margin-bottom: 1.3em;
+            padding-left: $form-padding;
+            padding-right: $form-padding;
+            position: relative;
+            @include clearfix;
+            &--full {
+                width: 100%;
+            }
+            &--honey {
+                position: absolute;
+                top: -9999px;
+                left: -9999px;
+            }
+            &__label {
+                @extend %h-pre;
+                display: block;
+                margin: 0;
+                font-size: em(12);
+                margin-bottom: em(6);
+                &--hidden {
+                    visibility: hidden;
+                }
+            }
+        }
+    }
+    &__success {
+        position: absolute;
+        width: 100%;
+        z-index: 5;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transform: translateY(-2em);
+        text-align: center;
+        $delay: 350ms;
+        transition: transform 300ms $delay $ease-out-cubic, opacity 180ms $delay;
+    }
+    &--in-progress {
+        pointer-events: none;
+        #{$block} {
+            &__fields {
+                opacity: .6;
+            }
+        }
+    }
+    &--sent {
+        #{$block}__fields {
+            transform: translateY(-2em);
+            opacity: 0;
+        }
+        #{$block} {
+            &__success {
+                z-index: 20;
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    }
+}
+
+.parsley-errors-list {
+    color: $color-error;
+}
+
+$formcontrol: '.form-control';
+#{$formcontrol} {
+    background-color: $color-white;
+    border: 1px solid $color-form-control-border;
+    border-radius: 0;
+    width: 100%;
+    padding: em(10) em(12) em(8);
+    line-height: 1.5em;
+}
+
+textarea#{$formcontrol} {
+    min-height: scut-em(150);
+}

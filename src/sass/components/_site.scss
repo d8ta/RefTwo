@@ -1,14 +1,14 @@
-$block: ".site";
+$block: '.site';
 #{$block} {
     position: relative;
     overflow: hidden;
-    transition: transform 300ms $easeInCubic;
+    transition: transform 300ms $ease-in-cubic;
     z-index: 1;
-    background: #fff;
+    background: $color-white;
     body.site-fixed & {
         position: fixed;
         width: 100%;
-        &:after {
+        &::after {
             position: fixed;
             top: 0;
             left: 0;
