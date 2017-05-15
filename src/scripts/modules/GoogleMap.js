@@ -38,17 +38,17 @@ GoogleMap.prototype.init = function() {
     this.elements.infobox = jQuery(".js-google-maps-infobox");
 
     var defaultIcon = {
-        url: "/assets/images/layout/maps-marker.png",
-        size: new google.maps.Size(32, 40),
-        scaledSize: new google.maps.Size(16, 20),
-        anchor: new google.maps.Point(8, 20),
+        url: "/assets/images/layout/pin.png",
+        size: new google.maps.Size(72, 72),
+        scaledSize: new google.maps.Size(22, 22),
+        anchor: new google.maps.Point(11, 11),
     };
 
     var activeIcon = {
-        url: "/assets/images/layout/maps-marker.png",
-        size: new google.maps.Size(32, 40),
-        //scaledSize: new google.maps.Size(20, 20),
-        anchor: new google.maps.Point(16, 40),
+        url: "/assets/images/layout/pin.png",
+        size: new google.maps.Size(72, 72),
+        scaledSize: new google.maps.Size(36, 36),
+        anchor: new google.maps.Point(18, 18),
     };
 
     this.elements.icon = { default: defaultIcon, active: activeIcon };
