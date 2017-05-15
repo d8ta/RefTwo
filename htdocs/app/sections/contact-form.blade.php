@@ -12,7 +12,7 @@
 	
 <section class="section section--margin contact-locations">
 	<div class="section__content">
-		<h2 class="h-upper-bold center">{{$headline}}</h2>
+		<h2 class="h1-inner">{{$headline}}</h2>
 		
 		<div class="contact-form__content">
 		

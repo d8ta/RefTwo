@@ -14,7 +14,7 @@ class ContactForm extends \A365\Wordpress\Block\AcfBlock {
 	public static function getAcfSubfields()
 	{
 		return [
-			
+			FieldHelper::createText('headline', 'Überschrift')->setRequired()
 		];
 	}
 }
