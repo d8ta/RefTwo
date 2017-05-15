@@ -1,13 +1,10 @@
 $padding-selectize: em(20);
 .selectize-control {
-
-    
-
     input {
         display: none !important;
     }
     &.single .selectize-input {
-        background: #fff;
+        background: $color-white;
     }
     .selectize-input {
         position: relative;
@@ -15,7 +12,7 @@ $padding-selectize: em(20);
     }
     .option {
         cursor: pointer;
-        transition: all 0.3s ease;
+        transition: all .3s ease;
         &.selected {
             //display: none;
         }
@@ -25,12 +22,12 @@ $padding-selectize: em(20);
     }
     .selectize-input,
     .option {
-        background: #fff;
+        @extend %h-normal-bold;
+        background: $color-white;
         padding-left: $padding-selectize;
         padding-right: $padding-selectize;
         padding-top: em(18);
         padding-bottom: em(16);
-        @extend %h-normal-bold;
         margin: 0;
         cursor: pointer;
     }

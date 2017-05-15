@@ -1,8 +1,7 @@
-$block: ".sidebar";
+$block: '.sidebar';
 $sidebar-bg: $color-white;
 $sidebar-fg: $color-text;
 #{$block} {
-    
     text-align: center;
     position: fixed;
     width: 100%;
@@ -23,11 +22,15 @@ $sidebar-fg: $color-text;
     }
     &__content {
         opacity: 0;
-        transition: opacity 0.3s 0.6s;
+        transition: opacity .3s .6s;
         margin: 0 auto;
         padding: $height-header $side-padding em(40);
         box-sizing: content-box;
         @include clearfix;
+        body.sidebar-open & {
+            opacity: 1;
+            transition: opacity .3s 0s;
+        }
     }
     &__lang-switch {
         margin-top: em(40);
@@ -43,23 +46,18 @@ $sidebar-fg: $color-text;
         left: 0;
         visibility: hidden;
         opacity: 0;
-        transition: (opacity 0.3s 0.1s, visibility 0s 0.4s);
+        transition: (opacity .3s .1s, visibility 0s .4s);
+        body.sidebar-open & {
+            @include mq($until: width-mobile-menu) {
+                visibility: visible;
+                opacity: 1;
+                transition: (opacity .3s, visibility 0s);
+            }
+        }
     }
     body.sidebar-open & {
         position: relative;
         width: auto;
-        &__content {
-            opacity: 1;
-            transition: opacity 0.3s 0s;
-        }
-        @include mq($until: width-mobile-menu) {
-            &__page-overlay {
-                visibility: visible;
-                opacity: 1;
-                transition: (opacity 0.3s, visibility 0s);
-            }
-        }
-        //transition: transform 300ms $easeOutCubic;
     }
     @include mq($from: width-mobile-menu) {
         display: none;
