@@ -14,8 +14,9 @@
     margin: 0 em(4);
     border-radius: 50%;
     background-color: $color-light-grey;
-    transition: background 0.2s;
-    &.active, &:hover {
+    transition: background .2s;
+    &.active,
+    &:hover {
         background-color: $brand-primary;
     }
 }
@@ -33,18 +34,16 @@
 
 .owl-prev,
 .owl-next {
-    height: em(40);
-    width: em(40);
+    height: em(42);
+    width: em(42);
     margin: auto 0;
-    color: white;
+    color: $color-white;
     position: absolute;
     right: .5em;
     top: 0;
     bottom: 0;
     background: $color-white;
     border-radius: em(5);
-    width: 3em;
-    height: 3em;
     .icon {
         font-size: em(12);
         position: absolute;
@@ -58,15 +57,14 @@
         right: 0;
         color: $color-text;
         transition: all .2s;
-        &:before {
+        &::before {
             @extend %icon;
         }
     }
-    
 }
 
 .owl-prev {
-    top: 3.3em;
+    top: em(-47);
     .icon {
         @include icon(arrowleft);
     }
@@ -78,7 +76,7 @@
 }
 
 .owl-next {
-    top: -3.3em;
+    top: em(47);
     .icon {
         @include icon(arrowright);
     }
