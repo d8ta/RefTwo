@@ -3,9 +3,9 @@ namespace Project\Sections;
 
 use A365\Wordpress\Helpers\Acf\FieldHelper;
 
-class Hireing extends \A365\Wordpress\Block\AcfBlock {
+class Hiring extends \A365\Wordpress\Block\AcfBlock {
 
-	protected $_template = 'hireing';
+	protected $_template = 'hiring';
 	protected static $_label = 'Offene Stellen';
 
 	/**
