@@ -1,13 +1,11 @@
-$block: ".site-footer";
+$block: '.site-footer';
 #{$block} {
     margin-top: rem(100);
-
     &__table {
         &__col {
             margin-bottom: em(30);
         }
     }
-
     @include mq($from: screen-sm) {
         &__table {
             display: table;
@@ -21,12 +19,10 @@ $block: ".site-footer";
             }
         }
     }
-
     &__copy {
         @extend %footer-text;
         margin-top: em(20);
     }
-    
     &__img {
         z-index: 100;
         position: relative;
@@ -34,7 +30,7 @@ $block: ".site-footer";
         width: 100%;
         padding-bottom: 5.42%;
         height: 0;
-        background-image: url(../images/layout/wave.png);
+        background-image: url('../images/layout/wave.png');
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center center;

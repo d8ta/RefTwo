@@ -1,19 +1,13 @@
 $block: '.location-address';
 #{$block} {
     display: block;
-
-
     &__group {
         margin-bottom: em(10);
     }
-
     &__headline {
         font-weight: bold;
     }
-
     &__text {
         @extend %h2-inner;
     }
-
-    
 }

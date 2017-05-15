@@ -5,7 +5,7 @@ $block: '.address';
         display: block;
         font-weight: bold;
         color: $brand-primary;
-        margin-bottom: 0.5em;
+        margin-bottom: .5em;
     }
     &__text {
         @extend %footer-text;

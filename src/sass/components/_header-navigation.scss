@@ -1,8 +1,7 @@
-$block: ".header-navigation";
-$submenu: ".nav-submenu";
+$block: '.header-navigation';
+$submenu: '.nav-submenu';
 #{$block} {
     margin-top: em(60);
-    
     li.active {
         > a {
             color: $color-text-grey;
@@ -10,44 +9,34 @@ $submenu: ".nav-submenu";
     }
     a {
         display: block;
-        transition: color 0.2s;
+        transition: color .2s;
         &:hover {
             color: $color-text-base !important;
         }
     }
-
-
     ul.level-1 {
         @include clearfix;
         position: relative;
-        margin-right: em(-25);
+        margin-right: em(-20);
         > li {
             float: left;
             > a {
                 padding-left: em(20, 14);
                 padding-right: em(20, 14);
                 padding-bottom: em(18);
-            }
-            
-            
-            > a {
                 font-size: em(14);
                 font-weight: bold;
                 text-transform: uppercase;
             }
-             &:hover {
+            &:hover {
                 > #{$submenu} {
                     display: block;
                 }
-                
-            }
-            &:hover {
-                &:after {
+                &::after {
                     display: block;
                 }
             }
-
-            &:after {
+            &::after {
                 display: none;
                 content: '';
                 background: $brand-primary;
@@ -68,9 +57,6 @@ $submenu: ".nav-submenu";
             }
         }
     }
-
-   
-
     @include mq($until: width-mobile-menu) {
         display: none;
     }
@@ -80,7 +66,7 @@ $submenu: ".nav-submenu";
     display: none;
     position: absolute;
     width: 100%;
-    background: #fff;
+    background: $color-white;
     left: 0;
     &__table {
         display: table;
@@ -101,7 +87,6 @@ $submenu: ".nav-submenu";
         width: 75%;
         padding: em(30) 0 em(20);
     }
-
     &__box {
         background: $brand-primary;
         width: 100%;

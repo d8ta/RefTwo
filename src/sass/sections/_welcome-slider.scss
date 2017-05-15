@@ -1,25 +1,3 @@
-// $block: '.welcome-slider';
-// #{$block} {
-//     &__slide {
-//         &__inner {
-//             @include clearfix;
-//             &__content {
-//                 float: left;
-//             }
-//             &__image {
-//                 width: 70%;
-//                 &__content {
-//                     width: 100%;
-//                     padding-bottom: 43%;
-//                 }
-//             }
-//             &__text {
-//                 width: 30%;
-//                 padding-right: em(90)
-//             }
-//         }
-//     }
-// }
 $block: '.welcome-slider';
 $image-height: 300px;
 #{$block} {
@@ -60,7 +38,7 @@ $image-height: 300px;
                     width: 91%;
                     display: table;
                     height: 100%;
-                    padding: 2em 0 1em 0;
+                    padding: 2em 0 1em;
                     text-align: left;
                     &__td {
                         display: table-cell;
