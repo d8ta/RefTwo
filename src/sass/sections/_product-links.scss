@@ -1,88 +1,88 @@
-            $block: '.product-links';
-            #{$block} {
-                text-align: center;
-                &__content {
+$block: '.product-links';
+#{$block} {
+    text-align: center;
+    &__content {
+        margin: 0 auto;
+        display: table;
+        &__image {
+            display: table-cell;
+            &--batch {
+                width: 65%;
+            }
+            &--logo {
+                margin-bottom: 4em;
+            }
+            &__text {
+                padding: .5em;
+                @extend %h2-inner;
+                overflow: hidden;
+                height: 12em;
+                display: none;
+                &__clamp {
+                    display: -webkit-box;
+                    -webkit-line-clamp: 100;
+                    -webkit-box-orient: vertical;
+                }
+            }
+        }
+    }
+    @include mq($from: screen-sm) {
+        &__content {
+            width: 100%;
+            &__image {
+                &--logogroup {
                     margin: 0 auto;
-                    display: table;
-                    &__image {
-                        display: table-cell;
-                        &--batch {
-                            width: 65%;
-                        }
-                        &--logo {
-                            margin-bottom: 4em;
-                        }
-                        &__text {
-                            padding: 0.5em;
-                            @extend %h2-inner;
-                            overflow: hidden;
-                            height: 12em;
-                            display: none;
-                            &__clamp {
-                                display: -webkit-box;
-                                -webkit-line-clamp: 100;
-                                -webkit-box-orient: vertical;
-                            }
-                        }
-                    }
+                    width: 60%;
                 }
-                @include mq($from: screen-sm) {
-                    &__content {
-                        width: 100%;
-                        &__image {
-                            &--logogroup {
-                                margin: 0 auto;
-                                width: 60%;
-                            }
-                            &__text {
-                                text-align: left;
-                            }
-                            &--logo {
-                                display: block;
-                                text-align: center;
-                                margin: 0 auto;
-                            }
-                            &__text {
-                                overflow: hidden;
-                                display: inline-block;
-                                &__clamp {
-                                    display: -webkit-box;
-                                    -webkit-line-clamp: 5;
-                                    -webkit-box-orient: vertical;
-                                }
-                            }
-                        }
-                    }
+                &__text {
+                    text-align: left;
                 }
-                @include mq($from: screen-md) {
-                    &__content {
-                        width: 30%;
-                        display: inline-block;
-                        &__image {
-                            &--logogroup {}
-                            &--batch {
-                                width: 90%;
-                            }
-                            &--logo {
-                                display: block;
-                                text-align: center;
-                                margin: 0;
-                            }
-                            &__text {
-                                verflow: hidden;
-                                display: inline-block;
-                                padding: 0;
-                                &__clamp {
-                                    display: -webkit-box;
-                                    -webkit-line-clamp: 10;
-                                    -webkit-box-orient: vertical;
-                                }
-                            }
-                        }
+                &--logo {
+                    display: block;
+                    text-align: center;
+                    margin: 0 auto;
+                }
+                &__text {
+                    overflow: hidden;
+                    display: inline-block;
+                    &__clamp {
+                        display: -webkit-box;
+                        -webkit-line-clamp: 5;
+                        -webkit-box-orient: vertical;
                     }
                 }
             }
-            
-            // .section--product-link {
-            //     margin: 8.25rem 0 14.25rem 0;
-            // }
+        }
+    }
+    @include mq($from: screen-md) {
+        &__content {
+            width: 30%;
+            display: inline-block;
+            &__image {
+                &--logogroup {}
+                &--batch {
+                    width: 90%;
+                }
+                &--logo {
+                    display: block;
+                    text-align: center;
+                    margin: 0;
+                }
+                &__text {
+                    verflow: hidden;
+                    display: inline-block;
+                    padding: 0;
+                    &__clamp {
+                        display: -webkit-box;
+                        -webkit-line-clamp: 10;
+                        -webkit-box-orient: vertical;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// .section--product-link {
+//     margin: 8.25rem 0 14.25rem 0;
+// }

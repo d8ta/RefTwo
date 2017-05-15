@@ -9,7 +9,7 @@ $block: '.product-teaser';
             @extend %h1-inner;
             width: 49%;
             margin: 0 auto;
-            margin-bottom: 0.3em;
+            margin-bottom: .3em;
         }
         &--description {
             @extend %h2-inner;
@@ -29,7 +29,7 @@ $block: '.product-teaser';
     }
     @include mq($from: screen-md) {
         .btn--icon-text {
-            font-size: 0.75em;
+            font-size: .75em;
         }
     }
 }

@@ -1,17 +1,17 @@
-    $block: '.evolution-teaser';
-    #{$block} {
+$block: '.evolution-teaser';
+#{$block} {
+    &__inner {
+        text-align: center;
+        margin: 0 auto;
+        &__textbox {}
+    }
+    @include mq($until: screen-md) {
         &__inner {
-            text-align: center;
-            margin: 0 auto;
-            &__textbox {}
-        }
-        @include mq($until: screen-md) {
-            &__inner {
-                &__textbox {
-                    h3 {
-                        width: 100%;
-                    }
+            &__textbox {
+                h3 {
+                    width: 100%;
                 }
             }
         }
     }
+}

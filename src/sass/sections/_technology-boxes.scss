@@ -18,10 +18,10 @@ $block: '.technology-boxes';
             height: 7em;
             margin-bottom: em(40);
             margin-top: 0;
-            border-bottom-right-radius: 0.5em;
-            border-bottom-left-radius: 0.5em;
+            border-bottom-right-radius: .5em;
+            border-bottom-left-radius: .5em;
             &--title {
-                padding: 0.1em;
+                padding: .1em;
             }
             &--description {
                 display: none;
@@ -55,7 +55,7 @@ $block: '.technology-boxes';
                     }
                 }
                 &:hover {
-                    transition: background 0.3s;
+                    transition: background .3s;
                     background: $color-text;
                     color: #fff;
                     #{$block}__box__text--link {

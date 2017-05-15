@@ -18,7 +18,7 @@ $block: '.corp-info';
         margin: 0 auto;
         text-align: center;
         &--image {
-            border-radius: 0.5em;
+            border-radius: .5em;
             margin-bottom: 1em;
         }
     }
@@ -52,7 +52,7 @@ $block: '.corp-info';
             &--image {
                 width: 30%;
                 display: inline;
-                margin-left: 0.5em;
+                margin-left: .5em;
             }
         }
     }

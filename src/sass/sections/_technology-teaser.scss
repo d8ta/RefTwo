@@ -4,7 +4,7 @@ $block: '.technology-teaser';
         text-align: center;
         &__title {
             @extend %h1-inner;
-            margin-bottom: 0.2em;
+            margin-bottom: .2em;
         }
         &__description {
             @extend %h2-inner;

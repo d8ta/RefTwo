@@ -1,45 +1,44 @@
-    $block: '.customers-teaser';
-    #{$block} {
-        &__inner {
-            &--title {
-                margin-bottom: 0.2em;
-            }
-            &--subtitle {
-                @extend %h2;
+$block: '.customers-teaser';
+#{$block} {
+    &__inner {
+        &--title {
+            margin-bottom: .2em;
+        }
+        &--subtitle {
+            @extend %h2;
+            text-align: center;
+        }
+        &__textbox {
+            @extend %h2-inner;
+            margin: 0 auto;
+            &__left {
+                padding: .5em 5em;
+                width: 100%;
                 text-align: center;
             }
-            &__textbox {
-                @extend %h2-inner;
-                margin: 0 auto;
-                &__left {
-                    padding: 0.5em 5em;
-
-                    width: 100%;
-                    text-align: center;
-                }
-                &__right {
-                    padding: 0.5em 5em  ;
-                    width: 100%;
-                    text-align: center;
-                }
+            &__right {
+                padding: .5em 5em;
+                width: 100%;
+                text-align: center;
             }
         }
-        @include mq($from: screen-lg) {
-            &__inner {
-                &__textbox {
-                    margin: 0;
-                    display: inline;
-                    &__left {
-                        float: left;
-                        width: 50%;
-                        text-align: left;
-                    }
-                    &__right {
-                        float: left;
-                        width: 50%;
-                        text-align: left;
-                    }
+    }
+    @include mq($from: screen-lg) {
+        &__inner {
+            &__textbox {
+                margin: 0;
+                display: inline;
+                &__left {
+                    float: left;
+                    width: 50%;
+                    text-align: left;
+                }
+                &__right {
+                    float: left;
+                    width: 50%;
+                    text-align: left;
                 }
             }
         }
     }
+}
