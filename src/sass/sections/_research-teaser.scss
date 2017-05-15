@@ -33,6 +33,7 @@ $block: ".research-teaser";
             }
             p {
                 padding-bottom: 1em;
+                max-width: 70%;
             }
             .btn {}
         }
@@ -76,40 +77,53 @@ $block: ".research-teaser";
                 h2 {
                     max-width: 70%;
                 }
-            }
-            &--right {
-                float: right;
-            }
-            &__image-container {
-                position: absolute;
-                padding-bottom: 70.33333%;
-                height: 0;
-                top: 0;
-                bottom: 0;
-                margin: auto 0;
-            }
-        }
-    }
-    @include mq($from: $screen-xl - 100px) {
-        &__content {
-            &__image-container {
-                margin: 0;
-                position: relative;
-                margin: 0;
-            }
-        }
-    }
-    @include mq($from: screen-xl) {
-        &__content {
-            &__images {
-                &__icon {
-                    margin-top: scut-em(15);
-                    width: 6.25em;
-                    height: auto;
-                    border-radius: 0.5em;
+                &--right {
+                    float: right;
+                }
+                &__image-container {
                     position: absolute;
-                    left: 1em;
-                    top: 0.2em;
+                    padding-bottom: 70.33333%;
+                    height: 0;
+                    top: 0;
+                    bottom: 0;
+                    margin: auto 0;
+                }
+            }
+        }
+        @include mq($from: screen-md) {
+            .btn--icon-text {
+                font-size: 0.75em;
+            }
+        }
+        @include mq($from: $screen-xl - 100px) {
+            &__content {
+                &__image-container {
+                    margin: 0;
+                    position: relative;
+                    margin: 0;
+                }
+            }
+        }
+        @include mq($from: screen-xl) {
+            &__content {
+                &--left {
+                    h2 {
+                        padding-bottom: 0.5em;
+                    }
+                    p {
+                        font-size: 1.5em;
+                    }
+                }
+                &__images {
+                    &__icon {
+                        margin-top: scut-em(15);
+                        width: 6.25em;
+                        height: auto;
+                        border-radius: 0.5em;
+                        position: absolute;
+                        left: 1em;
+                        top: 0.2em;
+                    }
                 }
             }
         }
