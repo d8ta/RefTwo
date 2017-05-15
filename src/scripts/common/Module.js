@@ -1,4 +1,4 @@
-function Module() {};
+function Module() {}
 
 Module.prototype = {
 
@@ -11,7 +11,7 @@ Module.prototype = {
 
         if (!noDot) {
             selector = '.' + selector;
-        };
+        }
 
         return selector;
     },
@@ -32,7 +32,7 @@ Module.prototype = {
 
         if (callback) {
             defered.done(callback);
-        };
+        }
 
         defered.fail(function(){
             console.error('Failed to load file: ' + file);
@@ -40,4 +40,4 @@ Module.prototype = {
 
         return defered;
     },
-}
+};

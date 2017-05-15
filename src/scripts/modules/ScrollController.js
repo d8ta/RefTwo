@@ -1,7 +1,7 @@
 function ScrollController () {
 	return {
 		init: this.init.bind(this)
-	}
+	};
 }
 
 ScrollController.prototype = new Module();
@@ -39,7 +39,7 @@ ScrollController.prototype.init = function($context) {
 
 	jQuery(".js-scrolldown").on("click", function() {
 		application.getModule('scroll').scrollDown();
-	})
+	});
 
 
 };

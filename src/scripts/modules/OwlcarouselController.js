@@ -27,7 +27,7 @@ OwlcarouselController.prototype.initElements = function() {
 	var $owl = jQuery(this.getSelector('owl'));
 	if (!$owl.length) {
 		return false;
-	};
+	}
 	
 	this.elements.owl = $owl;
 
@@ -40,7 +40,7 @@ OwlcarouselController.prototype.initOwl = function() {
 	if (typeof $owl !== "undefined" && $owl) {
 		for(var i = 0, len = $owl.length; i < len; i++) {
 			new Owlcarousel($owl.eq(i));
-		};
+		}
 	}
 
 };

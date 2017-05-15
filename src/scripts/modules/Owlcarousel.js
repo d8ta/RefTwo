@@ -5,7 +5,7 @@ function Owlcarousel($element) {
     return {};
 }
 
-Owlcarousel.prototype = new Module;
+Owlcarousel.prototype = new Module();
 Owlcarousel.prototype.constructor = Owlcarousel;
 
 Owlcarousel.prototype.variables = {

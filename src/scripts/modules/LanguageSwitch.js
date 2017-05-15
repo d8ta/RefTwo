@@ -6,7 +6,7 @@ function LanguageSwitch() {
     };
 }
 
-LanguageSwitch.prototype = new Module;
+LanguageSwitch.prototype = new Module();
 LanguageSwitch.prototype.constructor = LanguageSwitch;
 
 LanguageSwitch.prototype.elements = {

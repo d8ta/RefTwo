@@ -6,9 +6,9 @@ function Scroll(){
 		scrollDown: this.scrollDown.bind(this)
 	};
 
-};
+}
 
-Scroll.prototype = new Module;
+Scroll.prototype = new Module();
 Scroll.prototype.constructor = Scroll;
 
 Scroll.prototype.selectors = {

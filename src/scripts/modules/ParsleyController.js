@@ -1,7 +1,7 @@
 function ParsleyController () {
 	return {
 		parse: this.parse.bind(this)
-	}
+	};
 }
 
 ParsleyController.prototype = new Module();
@@ -16,7 +16,7 @@ ParsleyController.prototype.parse = function($context) {
 	var self = this;
 	var $forms = $context.find(this.getSelector('form'));
 
-	if (!$forms.length) {return;};
+	if (!$forms.length) {return;}
 
 	var lang = jQuery("html").attr("lang").split("-")[0];
 
@@ -36,7 +36,7 @@ ParsleyController.prototype.parse = function($context) {
 		
 	} else {
 		$forms.parsley();
-	};
+	}
 
 };
 

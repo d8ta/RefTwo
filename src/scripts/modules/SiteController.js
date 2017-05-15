@@ -2,7 +2,7 @@ function SiteController () {
 	return {
 		init: this.init.bind(this),
 		fixSite: this.fixSite.bind(this)
-	}
+	};
 }
 
 SiteController.prototype = new Module();
@@ -65,6 +65,6 @@ SiteController.prototype.fixSite = function(toggle) {
 
 		$header
 			.removeAttr('style');
-	};
+	}
 
 };

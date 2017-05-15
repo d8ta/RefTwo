@@ -6,7 +6,7 @@ function Page() {
     };
 }
 
-Page.prototype = new Module;
+Page.prototype = new Module();
 Page.prototype.constructor = Page;
 
 Page.prototype.elements = {

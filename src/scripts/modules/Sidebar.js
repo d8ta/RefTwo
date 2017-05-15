@@ -3,7 +3,7 @@ function Sidebar () {
 		init: this.init.bind(this),
 		closeSidebar: this.closeSidebar.bind(this),
 		isSidebarOpened: this.isSidebarOpened.bind(this)
-	}
+	};
 }
 
 Sidebar.prototype = new Module();
@@ -51,7 +51,7 @@ Sidebar.prototype.setupMediaQuery = function() {
 	enquire.register("screen and (min-width: "+application.getVar('breakpoints').md+"px)", {
     match : function() {
 
-    	if (!$body.hasClass(self.classes.sidebarOpen)) {return;};
+    	if (!$body.hasClass(self.classes.sidebarOpen)) {return;}
 
     	self.toggleSidebar();
     }
@@ -70,10 +70,10 @@ Sidebar.prototype.toggleListener = function(toggle) {
 	var $site = this.getElement('site');
 
 	if (toggle) {
-		$site.on('click', {self:this}, this.eventHandler)
+		$site.on('click', {self:this}, this.eventHandler);
 	} else{
 		$site.off();
-	};
+	}
 };
 
 
@@ -96,7 +96,7 @@ Sidebar.prototype.toggleSidebar = function() {
 		method = 'addClass';
 		this.toggleListener(true);
 		fixSite = true;
-	};
+	}
 
 	if (delay) {
 		setTimeout(function() {
@@ -104,7 +104,7 @@ Sidebar.prototype.toggleSidebar = function() {
 		}, delay);
 	}else {
 		application.getModule('siteController').fixSite(fixSite);
-	};
+	}
 
 
 	$body[method](self.classes.sidebarOpen);
@@ -137,7 +137,7 @@ Sidebar.prototype.closeSidebar = function() {
 		}, delay);
 	}else {
 		application.getModule('siteController').fixSite(fixSite);
-	};
+	}
 
 
 	$body[method](self.classes.sidebarOpen);

@@ -6,7 +6,7 @@ function CookieAlert() {
     };
 }
 
-CookieAlert.prototype = new Module;
+CookieAlert.prototype = new Module();
 CookieAlert.prototype.constructor = CookieAlert;
 
 CookieAlert.prototype.vars = {

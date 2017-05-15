@@ -36,7 +36,7 @@ AjaxForm.prototype.submitHandler = function(event) {
 	if (!self.isValid()) {
 		console.error('Form is not valid.');
 		return;
-	};
+	}
 
 	var options = {
 		context: self,
@@ -48,7 +48,7 @@ AjaxForm.prototype.submitHandler = function(event) {
 	if ($form.hasClass(self.classes.inProgress)) {
 		console.warn('Form already in progress');
 		return;
-	};
+	}
 
 	$form.addClass(self.classes.inProgress);
 
@@ -62,7 +62,7 @@ AjaxForm.prototype.isValid = function() {
 	var $form = this.$element;
 	var parsley = $form.data('Parsley');
 
-	if (!parsley || typeof jQuery.fn.parsley === 'undefined') {return true;};
+	if (!parsley || typeof jQuery.fn.parsley === 'undefined') {return true;}
 
 	return $form.parsley().isValid();
 
@@ -79,7 +79,7 @@ AjaxForm.prototype.requestAlways = function(response) {
 		if (typeof ga === 'function') {
 			ga('send', 'event', 'Kontaktformular', 'gesendet', $form.data('name'));
 		}
-	};
+	}
 };
 
 AjaxForm.prototype.requestDone = function(response) {

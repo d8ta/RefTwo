@@ -16,7 +16,7 @@ Application.prototype = {
 
 		if (!config) {
 			console.error('Config "'+key+'" is not set.');
-		};
+		}
 
 		return config;
 	},
@@ -33,7 +33,7 @@ Application.prototype = {
 		for(var module in this.getModules()){
 			module = this.modules[module];
 
-			if (typeof module.init !== "function") {continue};
+			if (typeof module.init !== "function") {continue;}
 
 			module.init();
 		}
@@ -46,7 +46,7 @@ Application.prototype = {
 		for(var module in this.getModules()){
 			module = this.modules[module];
 
-			if (typeof module.parse !== "function") {continue};
+			if (typeof module.parse !== "function") {continue;}
 
 			module.parse($context);
 		}
@@ -68,7 +68,7 @@ Application.prototype = {
 		if (typeof modules[name] === 'undefined') {
 			console.error('Module "' + name + '" is not defined');
 			return false;
-		};
+		}
 
 		return modules[name];
 	},
