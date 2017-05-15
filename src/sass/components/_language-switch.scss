@@ -1,4 +1,4 @@
-$block: ".language-switch";
+$block: '.language-switch';
 #{$block} {
     position: relative;
     display: inline-block;
@@ -12,23 +12,23 @@ $block: ".language-switch";
     &.show {
         opacity: 1;
         visibility: visible;
-        transition: opacity 0.3s, visibility 0s;
+        transition: opacity .3s, visibility 0s;
     }
     @include icon(menu-arrow-down, after);
-    &:after {
+    &::after {
         @extend %icon;
         position: absolute;
         right: 0;
         top: 0;
         z-index: 11;
         color: $color-text-grey;
-        font-size: 0.8em;
+        font-size: .8em;
         line-height: 1.5em;
         transform: rotateZ(0deg);
-        transition: all 0.2s ease;
+        transition: all .2s ease;
     }
     &.opened {
-        &:after {
+        &::after {
             transform: rotateZ(180deg);
         }
     }
@@ -40,11 +40,11 @@ $block: ".language-switch";
         font-family: $font-normal;
         padding: em(6) em(10);
         padding-right: 0;
-        background: #fff;
+        background: $color-white;
         display: block;
         width: 100%;
         text-align: left;
-        transition: color 0.3s;
+        transition: color .3s;
         html.no-touchevents &:hover {
             color: darken($color-text-grey, 20);
         }

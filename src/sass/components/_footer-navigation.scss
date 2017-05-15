@@ -1,4 +1,4 @@
-$block: ".footer-navigation";
+$block: '.footer-navigation';
 $nav-side-padding: 1%;
 #{$block} {
     @include mq($until: screen-xs) {
@@ -18,15 +18,15 @@ $nav-side-padding: 1%;
         }
         > li {
             float: left;
-            width: 33.3333% - 2*$nav-side-padding;
+            width: 33.3333% - 2 * $nav-side-padding;
             padding-left: $nav-side-padding;
             padding-right: $nav-side-padding;
             padding-bottom: em(30);
             @include mq($from: screen-sm) {
-                width: 50% - 2*$nav-side-padding;
+                width: 50% - 2 * $nav-side-padding;
             }
             @include mq($from: screen-md) {
-                width: 33.3333% - 2*$nav-side-padding;
+                width: 33.3333% - 2 * $nav-side-padding;
             }
             @include mq($from: screen-lg) {
                 float: none;
@@ -36,7 +36,7 @@ $nav-side-padding: 1%;
                 font-size: em(14);
                 font-weight: bold;
                 text-transform: uppercase;
-                margin-bottom: 0.5em;
+                margin-bottom: .5em;
             }
         }
     }

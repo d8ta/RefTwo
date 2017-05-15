@@ -21,9 +21,7 @@ $padding: 16px;
         &:last-child {
             margin-bottom: 0;
         }
-    }
-    body.sidebar-open & {
-        &__bar {
+        body.sidebar-open & {
             transition: top 250ms, transform 250ms 200ms, opacity 200ms;
             &:first-child {
                 top: 6px;
