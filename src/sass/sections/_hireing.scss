@@ -1,0 +1,20 @@
+$block: '.hireing';
+#{$block} {
+    width: 95%;
+    margin: 0 auto;
+    text-align: center;
+    &__inner {
+        text-align: center;
+        &--title {
+            @extend %h1-inner;
+        }
+        &--description {
+            @extend %h2-inner;
+        }
+    }
+    @include mq($until: $screen-xs - 100) {
+        &--button {
+            font-size: 1.3em;
+        }
+    }
+}
