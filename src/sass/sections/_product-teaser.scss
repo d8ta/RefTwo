@@ -20,6 +20,13 @@ $block: '.product-teaser';
             font-size: 1em;
         }
     }
+    @include mq($until: screen-xs) {
+        &__inner {
+            &--title {
+                width: 100%;
+            }
+        }
+    }
     @include mq($from: screen-md) {
         .btn--icon-text {
             font-size: 0.75em;
