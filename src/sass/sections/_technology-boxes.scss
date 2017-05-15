@@ -11,7 +11,7 @@
                 border-top-right-radius: 0.5em;
                 border-top-left-radius: 0.5em;
                 height: 0;
-                padding-bottom: 100%;
+                padding-bottom: 80%;
             }
             &__text {
                 background: $color-light-grey;
@@ -22,13 +22,16 @@
                 border-bottom-left-radius: 0.5em;
                 &--title {
                     padding: 0.1em;
+                    h2 {
+                        margin: 1.2em 0 0.2em 0;
+                    }
                 }
                 &--description {
                     display: none;
                 }
                 &--link {
                     display: none;
-                    margin-top: 4em;
+                    margin-top: 0;
                     background: #FABB00;
                     height: 3em;
                     padding-top: -1.5em;
@@ -41,7 +44,7 @@
             &__box {
                 width: 17%;
                 &__text {
-                    height: 18em;
+                    height: 12em;
                     &__link {}
                     &--description {
                         padding: 0 1em 0 1em;
