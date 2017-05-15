@@ -108,9 +108,10 @@ $block: '.btn--small';
         margin-left: -0.5em;
         #{$block} {
             &__icon {
-                vertical-align: text-top;
-                padding-right: em(8);
-                margin-top: em(5);
+                // vertical-align: text-top;
+                //padding-right: em(8);
+                //margin-top: em(5);
+
                 @include icon(arrowright) &:before {
                     @extend %icon;
                     margin-top: em(5);
