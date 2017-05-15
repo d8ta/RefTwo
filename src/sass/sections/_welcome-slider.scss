@@ -46,10 +46,11 @@ $image-height: 300px;
                 z-index: 2;
                 &__title {
                     @extend %h1;
-                    width: 92%;
+                    width: 74%;
+                    font-size: 2.4em;
                 }
                 &__description {
-                    max-width: 73%;
+                    max-width: 68%;
                 }
                 &__table {
                     left: 0;
@@ -65,6 +66,10 @@ $image-height: 300px;
                     &__td {
                         display: table-cell;
                         vertical-align: middle;
+                        .btn--icon-text {
+                            padding: 0.9em;
+                            padding-right: 1.5em;
+                        }
                     }
                 }
             }
@@ -120,14 +125,27 @@ $image-height: 300px;
     @include mq($from: screen-xxl) {
         &__slide {
             &__inner {
+                &__image {
+                    background-position: center 86%;
+                }
                 &__text {
                     width: 25%;
+                    &__table {
+                        top: -2em;
+                        &__td {
+                            .btn--icon-text {
+                                padding: 0.9em;
+                                padding-right: 1.5em;
+                            }
+                        }
+                    }
                     &__title {
                         max-width: 100%;
                         width: 7.5em;
                     }
                     &__description {
                         max-width: 80%;
+                        margin-bottom: 3em;
                     }
                 }
             }

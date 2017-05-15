@@ -28,6 +28,25 @@ $block: '.btn';
             }
         }
     }
+    @include mq($until: screen-xs) {
+        &--icon-text {
+            white-space: nowrap;
+            &__text {
+                font-size: em(22);
+                margin-top: 20px;
+            }
+        }
+    }
+    @include mq($until: $screen-xs - 160) {
+        &--icon-text {
+            font-size: 0.8em;
+            white-space: nowrap;
+            &__text {
+                font-size: em(22);
+                margin-top: 20px;
+            }
+        }
+    }
     @include mq($from: screen-md) {
         &--icon-text {
             #{$block} {
@@ -54,22 +73,23 @@ $block: '.btn';
             &__text {}
         }
     }
-    @include mq($until: screen-xs) {
+    @include mq($from: screen-md) {
         &--icon-text {
-            white-space: nowrap;
-            &__text {
-                font-size: em(22);
-                margin-top: 20px;
-            }
-        }
-    }
-    @include mq($until: $screen-xs - 160) {
-        &--icon-text {
-            font-size: 0.8em;
-            white-space: nowrap;
-            &__text {
-                font-size: em(22);
-                margin-top: 20px;
+            #{$block} {
+                &__icon {
+                    vertical-align: text-top;
+                    padding-right: em(8);
+                    margin-top: em(5);
+                    @include icon(arrowright) &:before {
+                        margin-top: em(5);
+                        &__primary {
+                            color: $brand-primary;
+                        }
+                    }
+                }
+                &__text {
+                    font-size: 1.4em;
+                }
             }
         }
     }
