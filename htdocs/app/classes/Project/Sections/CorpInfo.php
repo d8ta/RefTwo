@@ -18,7 +18,7 @@ class CorpInfo extends \A365\Wordpress\Block\AcfBlock {
 			FieldHelper::createWYSIWYG('description', 'Beschreibung')->setRequired(), //getDescription()
 			FieldHelper::createRepeater('sectionimg', 'Sectionimg', ["min" => 3, "max" => 3]) // getSectionimg() --> $sectionimg['background'];
 				->addSubfields([
-					FieldHelper::createImageCrop('image', 'Bild', ["crop_type" => "hard", 'target_size' => 'custom', 'force_crop' => 'yes', 'save_format' => 'url', "width" => 200, "height" => 200])->setRequired(),
+					FieldHelper::createImageCrop('image', 'Bild', ["crop_type" => "hard", 'target_size' => 'custom', 'force_crop' => 'yes', 'save_format' => 'url', "width" => 240, "height" => 240])->setRequired(),
 					]),
 		];
 	}

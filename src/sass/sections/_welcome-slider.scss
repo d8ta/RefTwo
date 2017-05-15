@@ -36,6 +36,7 @@ $image-height: 300px;
                 width: 100%;
                 position: relative;
                 height: 100%;
+                // padding-bottom: 34%;
                 padding-bottom: 47%;
                 background-position: 0 -3.5em;
             }
@@ -86,7 +87,8 @@ $image-height: 300px;
                     position: absolute;
                     right: 0;
                     z-index: 1;
-                    padding-bottom: 40%;
+                    // padding-bottom: 40%;
+                    padding-bottom: 34%;
                     background-position: center center;
                 }
                 &__text {
