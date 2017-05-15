@@ -1,124 +1,90 @@
 .owl-dots {
-    display: none;
-    position: absolute;
-    // top: em(650);
-    padding-top: 32% !important;
-    top: 0;
+    margin: em(12) 0 em(20);
     text-align: center;
-    width: 0;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    @include clearfix;
     @include mq($from: screen-sm) {
-        padding-top: 74%;
-        display: block;
-    }
-    @include mq($from: screen-lg) {
-        padding-top: 72%;
+        display: none;
     }
 }
 
 .owl-dot {
-    display: none;
-    margin: 0 auto;
-    margin: em(3);
-    width: em(15);
-    height: em(15);
+    display: inline-block;
+    font-size: em(18);
+    width: 1em;
+    height: 1em;
+    margin: 0 em(4);
     border-radius: 50%;
     background-color: $color-light-grey;
     transition: background 0.2s;
-    &.active {
-        background-color: $brand-primary;
-    }
-    &:hover {
+    &.active, &:hover {
         background-color: $brand-primary;
     }
 }
 
 .owl-nav {
     position: absolute;
-    top: 0em;
+    top: 0;
     right: 0;
-    background: red;
-    height: 0;
-    padding-bottom: 34%; // variable for heigth of slider!
-    @include mq($from: screen-lg) {
-        padding-bottom: 40%;
-    }
-    @include mq($from: screen-xl) {
-        padding-bottom: 34%;
+    height: 100%;
+    display: none;
+    @include mq($from: screen-sm) {
+        display: block;
     }
 }
 
 .owl-prev,
 .owl-next {
-    display: none;
     height: em(40);
     width: em(40);
     margin: auto 0;
     color: white;
     position: absolute;
-    right: 0.5em;
+    right: .5em;
     top: 0;
     bottom: 0;
-    .blue-circle {
-        width: 100%;
-        height: 100%;
-        background-color: $blue;
-        border-radius: em(30);
-    }
+    background: $color-white;
+    border-radius: em(5);
+    width: 3em;
+    height: 3em;
     .icon {
         font-size: em(12);
         position: absolute;
-        padding: em(20);
-        margin: auto auto;
-    }
-    @include mq($from: screen-lg) {
-        display: block;
-    }
-}
-
-.owl-prev {
-    background: white;
-    border-radius: 5px;
-    width: 3em;
-    height: 3em;
-    top: 3.3em;
-    .icon {
+        width: 1em;
+        height: 1em;
+        line-height: 1;
+        margin: auto;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
         color: $color-text;
-        @include icon(arrowleft);
-        left: em(5);
-        transition: left 0.2s;
+        transition: all .2s;
         &:before {
             @extend %icon;
         }
     }
+    
+}
+
+.owl-prev {
+    top: 3.3em;
+    .icon {
+        @include icon(arrowleft);
+    }
     &:hover {
         .icon {
-            left: 0;
+            transform: translateX(-.3em);
         }
     }
 }
 
 .owl-next {
-    background: white;
-    border-radius: 5px;
-    width: 3em;
-    height: 3em;
     top: -3.3em;
     .icon {
-        color: $color-text;
         @include icon(arrowright);
-        left: em(5);
-        transition: left 0.2s;
-        &:before {
-            @extend %icon;
-        }
     }
     &:hover {
         .icon {
-            left: 0.5em;
+            transform: translateX(.3em);
         }
     }
 }
