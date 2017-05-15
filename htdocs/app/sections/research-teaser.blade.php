@@ -10,7 +10,7 @@ $buttontext = $block->getButtonText();
 ?>
 
 <div class="section--fifth section--yellow">
-	<div class="research-teaser__content research-teaser__content--whitebox-top"></div>
+	<div class="research-teaser__whitebox-top"></div>
 	<div class="section section__content">
 		<div class="section__inner">
 			<div class="research-teaser">
@@ -18,8 +18,8 @@ $buttontext = $block->getButtonText();
 				
 				{{-- left --}}
 				<div class="research-teaser__content research-teaser__content--left js-matchheight" >
-					<h2 class="h1-inner">{{$title}}</h2>
-					<p class="h2">{{$description}}</p>
+					<h2>{{$title}}</h2>
+					<p>{{$description}}</p>
              		<button class="btn btn--icon-text" type="button">
                         <i class="btn__icon primary-color"></i>
                         <span class="btn__text">{{$buttontext}}</span>
@@ -48,7 +48,7 @@ $buttontext = $block->getButtonText();
 			</div>
 		</div>
 	</div>
-	<div class="research-teaser__content research-teaser__content--whitebox-bottom"></div>
+	<div class="research-teaser__whitebox-bottom"></div>
 </div>
 
 

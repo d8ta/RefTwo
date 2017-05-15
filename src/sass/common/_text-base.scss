@@ -96,6 +96,19 @@
     
 }
 
+
+%heidi-headline {
+    @extend %h1-inner;
+    text-align: left;
+    margin-bottom: 0.7em;
+}
+%heidi-subline {
+    font-size: em(21);
+    line-height: 1.2em;
+    margin-bottom: 0.7em;
+
+}
+
 %text-base {
     font-family: $font-normal;
     line-height: 1.65em;
