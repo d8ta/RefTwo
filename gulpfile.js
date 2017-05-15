@@ -169,6 +169,12 @@ gulp.task("scripts::vendor", function() {
 
     var files = [
         paths.src.scripts + 'vendor/*.min.js',
+        paths.src.bower + 'jquery/dist/jquery.min.js',
+        paths.src.bower + 'fastclick/lib/fastclick.js',
+        paths.src.bower + 'parsleyjs/dist/parsley.min.js',
+        paths.src.bower + 'parsleyjs/dist/parsley.min.js.map',
+        paths.src.bower + 'parsleyjs/dist/i18n/de.js',
+        paths.src.bower + 'parsleyjs/dist/i18n/en.js',
     ];
 
     return gulp.src(files)

@@ -5,7 +5,7 @@ function MatchHeightController() {
     return {
         parse: this.parse.bind(this)
     };
-    
+
 
 }
 
@@ -18,8 +18,7 @@ MatchHeightController.prototype.selectors = {
     matchHeight: 'js-matchheight'
 };
 
-MatchHeightController.prototype.variables = {
-};
+MatchHeightController.prototype.variables = {};
 
 
 
@@ -46,4 +45,3 @@ MatchHeightController.prototype.initMatchHeight = function() {
     });
 
 };
-

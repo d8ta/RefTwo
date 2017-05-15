@@ -22,7 +22,7 @@
         "a365/core": "0.4.x",
         "a365/wordpress": "0.9.x",
         "a365/customizr": "0.2.x",
-        "geoip/geoip": "^1.17"
-        
+        "geoip/geoip": "^1.17",
+        "vlucas/valitron": "^1.4"
     }
 }
