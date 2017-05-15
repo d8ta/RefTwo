@@ -1,0 +1,72 @@
+    $block: '.childcare';
+    #{$block} {
+        &__image {
+            padding-bottom: 41.6666%;
+            margin-bottom: 2em;
+        }
+        &__box {
+            &__text {
+                text-align: center;
+                padding: 0 0.5em;
+                &__description {
+                    max-width: 80%;
+                    margin: 0 auto;
+                }
+            }
+        }
+        @include mq($from: screen-lg) {
+            &__image {
+                position: relative;
+            }
+            &__box {
+                background: white;
+                max-width: 33%;
+                border-radius: 0.5em;
+                position: absolute;
+                top: 5em;
+                bottom: 7em;
+                left: 6em;
+                &__text {
+                    padding: 3.5em;
+                    &__title {
+                        text-align: left;
+                    }
+                    &__subtitle {
+                        text-align: left;
+                    }
+                    &__description {
+                        text-align: left;
+                        margin-left: 0;
+                        max-width: 100%;
+                        display: block;
+                        overflow: hidden;
+                        height: 8em;
+                        &__clamp {
+                            display: -webkit-box;
+                            -webkit-line-clamp: 5;
+                            -webkit-box-orient: vertical;
+                        }
+                    }
+                }
+            }
+        }
+        @include mq($from: screen-xl) {
+            &__box {
+                &__text {
+                    &__description {
+                        text-align: left;
+                        margin-left: 0;
+                        max-width: 100%;
+                        display: block;
+                        overflow: hidden;
+                        height: 15em;
+                        &__clamp {
+                            display: -webkit-box;
+                            -webkit-line-clamp: 8;
+                            -webkit-box-orient: vertical;
+                        }
+                    }
+                }
+            }
+        }
+    }
