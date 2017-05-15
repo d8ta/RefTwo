@@ -7,6 +7,9 @@ $block: '.product-teaser';
         text-align: center;
         &--title {
             @extend %h1-inner;
+            width: 49%;
+            margin: 0 auto;
+            margin-bottom: 0.3em;
         }
         &--description {
             @extend %h2-inner;
@@ -14,7 +17,19 @@ $block: '.product-teaser';
     }
     @include mq($until: $screen-xs - 100) {
         &--button {
-            font-size: 1.3em;
+            font-size: 1em;
+        }
+    }
+    @include mq($until: screen-xs) {
+        &__inner {
+            &--title {
+                width: 100%;
+            }
+        }
+    }
+    @include mq($from: screen-md) {
+        .btn--icon-text {
+            font-size: 0.75em;
         }
     }
 }

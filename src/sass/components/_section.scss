@@ -30,14 +30,23 @@ $block: '.section';
     // welcome slider
     &--first {
         margin: 3.125rem 0 3.125rem 0;
+        @include mq($until: screen-xs) {
+            margin: 3.125rem 0 6.125rem 0;
+        }
     }
     // action box
     &--second {
         margin: 3.125rem 0 10.56em 0;
+        @include mq($until: screen-xs) {
+            margin: 3.125rem 0 6.56em 0;
+        }
     }
     // product teaser
     &--third {
         margin: 10.56rem 0 1.25rem 0;
+        @include mq($until: screen-xs) {
+            margin: 10.56rem 0 10.25rem 0;
+        }
     }
     // product links
     &--forth {
@@ -45,15 +54,24 @@ $block: '.section';
     }
     // reserach teaser
     &--fifth {
-        margin: 3.125rem 0 18.25rem 0;
+        margin: 3.125rem 0 21.25rem 0;
+        @include mq($until: screen-xs) {
+            margin: 10.56rem 0 10.25rem 0;
+        }
     }
     // technology teaser
     &--sixth {
         margin: 3.125rem 0 4.7rem 0;
+        @include mq($until: screen-xs) {
+            margin: 3.125rem 0 8.7rem 0;
+        }
     }
     // technology boxes
     &--seventh {
         margin: 3.125rem 0 19.5rem 0;
+        @include mq($until: screen-xs) {
+            margin: 3.125rem 0 0 0;
+        }
     }
     // ### corporation
     &--first-corp {

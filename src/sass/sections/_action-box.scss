@@ -15,7 +15,7 @@ $box-margin: 2em;
         border-bottom-right-radius: 0.5em;
         background: $color-light-grey;
         color: $color-text;
-        padding: em(20);
+        padding: em(29);
         position: relative;
         margin-bottom: 3rem;
         &__image {
@@ -69,7 +69,7 @@ $box-margin: 2em;
                 display: none;
                 overflow: hidden;
                 height: 5.5em / 4 * 3;
-                margin-bottom: em(20);
+                margin-bottom: em(10);
                 &__clamp {
                     display: -webkit-box;
                     -webkit-line-clamp: 3;

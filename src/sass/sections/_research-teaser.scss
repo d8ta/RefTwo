@@ -5,6 +5,7 @@ $block: ".research-teaser";
     height: auto;
     &__content {
         &--whitebox-top {
+            display: none;
             background: white;
             height: 3em;
             width: 100% !important;
@@ -15,7 +16,7 @@ $block: ".research-teaser";
             background: white;
             height: 3em;
             width: 100% !important;
-            margin-top: -2em;
+            margin-top: -1.5em;
         }
         width: 100%;
         height: auto;
@@ -33,6 +34,7 @@ $block: ".research-teaser";
             }
             p {
                 padding-bottom: 1em;
+                max-width: 100%;
             }
             .btn {}
         }
@@ -48,7 +50,7 @@ $block: ".research-teaser";
             }
             &__icon {
                 margin-top: scut-em(15);
-                width: 18%;
+                width: 4.25em;
                 height: auto;
                 border-radius: 0.5em;
                 position: absolute;
@@ -66,6 +68,7 @@ $block: ".research-teaser";
     }
     @include clearfix;
     @include mq($from: screen-sm) {
+        padding-bottom: 6em;
         &__content {
             width: 50%;
             float: left;
@@ -90,12 +93,59 @@ $block: ".research-teaser";
             }
         }
     }
-    @include mq($from: $screen-xl - 100px) {
+    @include mq($from: screen-md) {
         &__content {
-            &__image-container {
-                margin: 0;
-                position: relative;
-                margin: 0;
+            &--whitebox-bottom {
+                display: none;
+            }
+            &--right {
+                &__image-container {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+        }
+        .btn--icon-text {
+            font-size: 0.75em;
+        }
+    }
+    @include mq($from: screen-lg) {
+        padding-bottom: 0;
+    }
+    @include mq($from: screen-xl) {
+        .research-teaser__content__image-container {
+            position: relative;
+            width: 105%;
+            padding-bottom: 0;
+            margin-top: -1.2em;
+        }
+        &__content {
+            &--whitebox-bottom {
+                display: inline;
+            }
+            &--left {
+                h2 {
+                    padding-bottom: 0.5em;
+                }
+                p {
+                    font-size: 1.5em;
+                    width: 95%;
+                }
+            }
+            &--right {
+                &__image-container {}
+            }
+            &__images {
+                &__icon {
+                    margin-top: scut-em(15);
+                    width: 6.25em;
+                    height: auto;
+                    border-radius: 0.5em;
+                    position: absolute;
+                    left: 1em;
+                    top: 0.2em;
+                }
             }
         }
     }
