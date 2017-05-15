@@ -1,26 +1,26 @@
-$block: ".research-teaser";
+$block: '.research-teaser';
 #{$block} {
     position: relative;
     width: 100%;
     height: auto;
     &__content {
+        width: 100%;
+        height: auto;
+        position: relative;
         &--whitebox-top {
             display: none;
-            background: white;
+            background: $color-white;
             height: 3em;
             width: 100% !important;
             margin-bottom: -1.3em;
             z-index: 1;
         }
         &--whitebox-bottom {
-            background: white;
+            background: $color-white;
             height: 3em;
             width: 100% !important;
             margin-top: -1.5em;
         }
-        width: 100%;
-        height: auto;
-        position: relative;
         &--left {
             padding-top: 4em;
             padding-bottom: 3em;
@@ -36,7 +36,6 @@ $block: ".research-teaser";
                 padding-bottom: 1em;
                 max-width: 100%;
             }
-            .btn {}
         }
         &--right {}
         &__images {
@@ -55,7 +54,7 @@ $block: ".research-teaser";
                 border-radius: .5em;
                 position: absolute;
                 left: .5em;
-                top: -0.5em;
+                top: -.5em;
             }
             &__smallimg {
                 display: block;
