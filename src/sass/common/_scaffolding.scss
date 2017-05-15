@@ -1,11 +1,11 @@
 html {
-	font-size: $font-size-base * 0.3;
+	font-size: $font-size-base * .3;
 
-	@include mq($from: screen-xs){font-size: $font-size-base * 0.4;}
-	@include mq($from: screen-sm){font-size: $font-size-base * 0.5;}
-	@include mq($from: screen-md){font-size: $font-size-base * 0.6;}
-	@include mq($from: screen-lg){font-size: $font-size-base * 0.7;}
-	@include mq($from: screen-xl){font-size: $font-size-base * 0.85;}
+	@include mq($from: screen-xs){font-size: $font-size-base * .4;}
+	@include mq($from: screen-sm){font-size: $font-size-base * .5;}
+	@include mq($from: screen-md){font-size: $font-size-base * .6;}
+	@include mq($from: screen-lg){font-size: $font-size-base * .7;}
+	@include mq($from: screen-xl){font-size: $font-size-base * .85;}
 	@include mq($from: screen-xxl){font-size: $font-size-base * 1.0;}
 }
 
@@ -13,10 +13,10 @@ body {
 
 	font-size: $font-size-base * .875;
 
-	@include mq($from: screen-xs){font-size: $font-size-base * 0.9;}
-	@include mq($from: screen-sm){font-size: $font-size-base * 0.925;}
-	@include mq($from: screen-md){font-size: $font-size-base * 0.95;}
-	@include mq($from: screen-lg){font-size: $font-size-base * 0.975;}
+	@include mq($from: screen-xs){font-size: $font-size-base * .9;}
+	@include mq($from: screen-sm){font-size: $font-size-base * .925;}
+	@include mq($from: screen-md){font-size: $font-size-base * .95;}
+	@include mq($from: screen-lg){font-size: $font-size-base * .975;}
 	@include mq($from: screen-xl){font-size: $font-size-base * 1;}
 	// @include mq($from: screen-xxl){font-size: $font-size-base * 1.25;}
 	// @include mq($from: screen-xxl){font-size: $font-size-base * 1.05;} 

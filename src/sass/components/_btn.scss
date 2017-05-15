@@ -39,7 +39,7 @@ $block: '.btn';
     }
     @include mq($until: $screen-xs - 160) {
         &--icon-text {
-            font-size: 0.8em;
+            font-size: .8em;
             white-space: nowrap;
             &__text {
                 font-size: em(22);

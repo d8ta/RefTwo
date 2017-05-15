@@ -7,7 +7,7 @@ $block: '.environment';
     &__box {
         &__text {
             text-align: center;
-            padding: 0 0.5em;
+            padding: 0 .5em;
             &__description {
                 max-width: 80%;
                 margin: 0 auto;
@@ -21,7 +21,7 @@ $block: '.environment';
         &__box {
             background: white;
             max-width: 33%;
-            border-radius: 0.5em;
+            border-radius: .5em;
             position: absolute;
             top: 5em;
             bottom: 7em;

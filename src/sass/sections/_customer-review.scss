@@ -36,7 +36,7 @@ $block: ".customer-review";
             }
             h3 {
                 font-size: 1.5em;
-                margin-top: 0.25em;
+                margin-top: .25em;
             }
         }
         &--right {}
@@ -46,14 +46,14 @@ $block: ".customer-review";
                 float: left;
                 width: 72%;
                 height: auto;
-                border-radius: 0.5em;
+                border-radius: .5em;
                 margin-right: 1%;
             }
             &__smallimg {
                 display: block;
                 width: 23.2%;
                 height: auto;
-                border-radius: 0.5em;
+                border-radius: .5em;
                 margin-bottom: 1.2%;
             }
         }

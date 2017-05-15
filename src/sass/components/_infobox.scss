@@ -1,24 +1,20 @@
 $block: ".infobox";
 #{$block} {
-	position: relative;
-	&__image {
-		height: 0;
-		padding-bottom: 70%;
-	}
-
-	&__content {
-		padding: em(40) 7%;
-
-		&__headline {
-			font-weight: bold;
-		}
-
-		&__link {
-			@extend %quicklink-button;
-			background: transparent;
-			color: #000;
-			margin-top: em(30);
-		}
-	}
-	
+    position: relative;
+    &__image {
+        height: 0;
+        padding-bottom: 70%;
+    }
+    &__content {
+        padding: em(40) 7%;
+        &__headline {
+            font-weight: bold;
+        }
+        &__link {
+            @extend %quicklink-button;
+            background: transparent;
+            color: #000;
+            margin-top: em(30);
+        }
+    }
 }
