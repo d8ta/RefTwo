@@ -40,7 +40,6 @@
     position: absolute;
     top: 0em;
     right: 0;
-    background: red;
     height: 0;
     padding-bottom: 34%; // variable for heigth of slider!
     @include mq($from: screen-lg) {
