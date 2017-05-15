@@ -23,6 +23,10 @@ $block: ".section";
     &__content {
         @extend %section-content;
     }
+
+    &--padding {
+        padding: em(60) 0;
+    }
     // #### main ###
     // welcome slider
     &--first {

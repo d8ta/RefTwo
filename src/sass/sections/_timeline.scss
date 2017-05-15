@@ -1,0 +1,289 @@
+$block: '.timeline';
+#{$block} {
+    color: white;
+    &__wrapper {
+        text-align: center;
+        .h2 {
+            font-size: em(48);
+        }
+    }
+    &__intro {
+        max-width: em(620);
+        width: 100%;
+        margin: 0 auto;
+        font-size: em(16);
+    }
+    &__horizontal {
+        opacity: 0;
+        margin: 2em auto;
+        transition: opacity 0.2s;
+        &:before {
+          /* never visible - this is used in jQuery to check the current MQ */
+          content: 'mobile';
+          display: none;
+        } 
+        &__line {
+            position: relative;
+            height: em(120);
+            width: 90%;
+            max-width: em(1000);
+            margin: 0 auto;
+        } 
+
+        &__navigation {
+            width: 100%;
+            a {
+                /* these are the left/right arrows to navigate the timeline */
+                position: absolute;
+                z-index: 1;
+                top: 43%;
+                bottom: auto;
+                transform: translateY(-50%);
+                height: em(20);
+                width: em(20);
+                border-radius: 50%;
+                border: em(1) solid white;
+                /* replace text with an icon */
+                overflow: hidden;
+                color: transparent;
+                text-indent: 100%;
+                white-space: nowrap;
+                transition: border-color 0.3s;
+                &:after {
+                
+                }
+                &.prev {
+                    left: 0;
+                    transform: translateY(-50%) rotate(180deg);
+                }
+                &.next {
+                    right: 0;
+                }
+            }
+        } 
+        &.loaded {
+            opacity: 1;
+        }
+
+        .events-wrapper {
+            position: relative;
+            height: 100%;
+            margin: 0 em(50);
+            overflow-x: hidden;
+            overflow-y: visible;
+            &:after, &:before {
+                content: '';
+                position: absolute;
+                z-index: 2;
+                top: 0;
+                height: 100%;
+                width: em(20);
+            }
+            &:before {
+                left: 0;
+                background-image: -webkit-linear-gradient( left , $brand-primary, rgba($brand-primary, 0));
+                background-image: linear-gradient(to right, $brand-primary, rgba($brand-primary, 0));
+            }
+            &:after {
+                right: 0;
+                background-image: -webkit-linear-gradient( right , $brand-primary, rgba($brand-primary, 0));
+                background-image: linear-gradient(to left, $brand-primary, rgba($brand-primary, 0));
+            }
+        }
+        .events {
+            position: absolute;
+            z-index: 1;
+            left: 0;
+            top: em(50);
+            height: em(1);
+            /* width will be set using JavaScript */
+            background: #f1d528;
+            transition: transform 0.4s;
+            a {
+                position: absolute;
+                bottom: 0;
+                z-index: 2;
+                text-align: center;
+                font-size: 1.3rem;
+                padding-bottom: em(15);
+                color: white;
+                transform: translateZ(0);
+                &:after {
+                    content: '';
+                    position: absolute;
+                    left: 50%;
+                    right: auto;
+                    transform: translateX(-50%);
+                    bottom: em(-4);
+                    height: em(8);
+                    width: em(8);
+                    border-radius: 50%;
+                    border: em(1) solid white;
+                    background-color: $brand-primary;
+                    transition: background-color 0.3s, border-color 0.3s;
+                }
+                &:hover {
+                    &:after {
+                        background-color: white;
+                        border-color: white;
+                    }
+                }
+                span {
+                    position: absolute;
+                    bottom: em(-50);
+                    left: em(-16);
+                    font-size: em(20);
+                    transition: all 0.5s;
+                }
+                &.selected {
+                    pointer-events: none;
+                    &:after {
+                        background-color: white;
+                        border: em(2) solid $brand-primary;
+                        bottom: em(-7);
+                        height: em(14);
+                        width: em(14);
+                    }
+                    span {
+                        font-size: em(32);
+                        bottom: em(-35);
+                        left: em(-18);
+                    }
+                }
+                &.older-event {
+                    &:after {
+                        border-color: white;
+                        background-color: white;
+                    }
+                }
+            }
+            &__content {
+                position: relative;
+                width: 100%;
+                margin: 2em 0;
+                overflow: hidden;
+                transition: height 0.4s;
+                li {
+                    position: absolute;
+                    z-index: 1;
+                    width: 100%;
+                    left: 0;
+                    top: 0;
+                    transform: translateX(-100%);
+                    padding: 0 5%;
+                    opacity: 0;
+                    animation-duration: 0.4s;
+                    animation-timing-function: ease-in-out;
+                    &.selected {
+                        /* visible event content */
+                        position: relative;
+                        z-index: 2;
+                        opacity: 1;
+                        transform: translateX(0);
+                    }
+                    &.enter-right,
+                    &.leave-right {
+                        animation-name: cd-enter-right;
+                    }
+                    &.enter-left,
+                    &.leave-left {
+                        animation-name: cd-enter-left;
+                    }
+
+                    &.leave-right, 
+                    &.leave-left {
+                        animation-direction: reverse;
+                    }
+                    > * {
+                        max-width: 800px;
+                        margin: 0 auto;
+                    }
+                }
+            }
+        }
+        .filling-line {
+            position: absolute;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            background-color: white;
+            transform: scaleX(0);
+            transform-origin: left center;
+            transition: transform 0.3s;
+        }
+    }
+}
+
+@media only screen and (min-width: 1100px) {
+  .cd-horizontal-timeline {
+    margin: 6em auto;
+  }
+  .cd-horizontal-timeline::before {
+    /* never visible - this is used in jQuery to check the current MQ */
+    content: 'desktop';
+  }
+}
+
+
+@-webkit-keyframes cd-enter-right {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0%);
+  }
+}
+@-moz-keyframes cd-enter-right {
+  0% {
+    opacity: 0;
+    -moz-transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    -moz-transform: translateX(0%);
+  }
+}
+@keyframes cd-enter-right {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+@-webkit-keyframes cd-enter-left {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0%);
+  }
+}
+@-moz-keyframes cd-enter-left {
+  0% {
+    opacity: 0;
+    -moz-transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    -moz-transform: translateX(0%);
+  }
+}
+@keyframes cd-enter-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
