@@ -27,7 +27,7 @@ $block: '.research-teaser';
                 margin-right: 1%;
             }
             &__icon {
-                margin-top: scut-em(15);
+                margin-top: em(15);
                 width: 4.25em;
                 height: auto;
                 border-radius: .5em;
@@ -99,7 +99,7 @@ $block: '.research-teaser';
     }
     @include mq($from: screen-xl) {
         &__whitebox-bottom {
-            display: inline;
+            display: block;
         }
         &__content {
             &__image-container {
@@ -110,7 +110,7 @@ $block: '.research-teaser';
             }
             &__images {
                 &__icon {
-                    margin-top: scut-em(15);
+                    margin-top: em(15);
                     width: 6.25em;
                     height: auto;
                     border-radius: .5em;
