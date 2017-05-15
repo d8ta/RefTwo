@@ -1,12 +1,16 @@
+<?php 
+	$slides = $block->getSlides();
+?>
 <div class="section section--third">
 	<div class="section section--fullwidth">
 		<div class="section__content">
-			<div class="childcare">
+ 			<div class="childcare @if(count($slides) > 1) js-owl-carousel owl-carousel @endif">
+				@foreach ($slides as $slide)
 				<?php 
-				$background = $block->getBackground();
-				$title = $block->getTitle();
-				$subtitle = $block->getSubtitle();
-				$description = $block->getDescription();
+				$background = $slide['background'];
+				$title = $slide['title'];
+				$subtitle = $slide['subtitle'];
+				$description = $slide['description'];
 				?>
 
 				{{-- background img --}}
@@ -25,7 +29,7 @@
 
 					</div>	
 				</div>
-
+				@endforeach
 			</div>
 		</div>
 	</div>
