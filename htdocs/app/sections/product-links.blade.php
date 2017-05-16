@@ -5,20 +5,22 @@
 	<div class="section__content">
 		<div class="product-links">
 			<div class="product-links__inner">
-				@foreach ($links as $link)
+				@foreach ($links as $link) 
 				<?php 
 				$description = $link['description'];
-				$batchimage = $link['image'];
+				$image = $link['image'];
 				$logo = $link['logo'];
 				$link = $link['box_url'];
 				?>
-				<a class="product-links__content" href="{{$link}}">
-					<img src="{{$batchimage}}" alt="Produkt Link" class="product-links__content__image--batch" />
-					<div class="product-links__content__image--logogroup">
-						<img src="{{$logo}}" alt="Batchspray Logo" class="product-links__content__image--logo" />
-						<p class="product-links__content__image__text">
-							<div class="product-links__content__image__text__clamp">{{$description}}</div>
-						</p>
+				<a class="product-links__link" href="{{$link}}">
+					<div class="product-links__link__image">
+						<img src="{{$image}}" alt="Produkt Link" class="product-links__link__image__img" />
+					</div>
+					<div class="product-links__link__text">
+						<img src="{{$logo}}" alt="Batchspray Logo" class="product-links__link__text__logo" />
+						<div class="product-links__link__text__text">
+							{{$description}}
+						</div>
 					</div>
 				</a>
 				@endforeach

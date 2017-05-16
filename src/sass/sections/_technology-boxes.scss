@@ -1,66 +1,63 @@
 $block: '.technology-boxes';
+$box-padding: 1%;
 #{$block} {
     text-align: center;
-    width: 100%;
+    margin-right: -$box-padding;
+    margin-left: -$box-padding;
     &__box {
-        width: 27%;
+        width: 31% - 2 * $box-padding;
+        margin-right: $box-padding;
+        margin-left: $box-padding;
+        max-width: em(300);
         display: inline-block;
+        margin-bottom: em(20);
         vertical-align: top;
-        margin-right: 1em;
+        border-radius: .5em;
+        overflow: hidden;
+        background: $color-light-grey;
         &__image {
-            border-top-right-radius: .5em;
-            border-top-left-radius: .5em;
             height: 0;
             padding-bottom: 100%;
         }
         &__text {
-            background: $color-light-grey;
-            height: 7em;
-            margin-bottom: em(40);
-            margin-top: 0;
-            border-bottom-right-radius: .5em;
-            border-bottom-left-radius: .5em;
-            &--title {
-                padding: .1em;
+            padding: em(30) 8% em(20);
+            &__title {
+                @extend %h4;
             }
-            &--description {
+            &__description {
+                @extend %text-base;
                 display: none;
             }
-            &--link {
-                display: none;
-                margin-top: 4em;
-                background: #FABB00;
-                height: 3em;
-                padding-top: -1.5em;
-                border-top-right-radius: 0;
-                border-top-left-radius: 0;
+            &__link {
+                margin-top: 1em;
+                visibility: hidden;
+                opacity: 0;
+                background: $brand-primary;
+                color: #fff;
+                transition: visibility 0s 0.2s, opacity 0.2s;
+            }
+        }
+    }
+    @include mq($from: screen-xs) {
+        &__box {
+            &__text {
+                &__description {
+                    display: block;
+                }
             }
         }
     }
     @include mq($from: screen-md) {
         &__box {
-            width: 17%;
-            &__text {
-                height: 18em;
-                &__link {}
-                &--description {
-                    padding: 0 1em 0 1em;
-                    display: block;
-                    overflow: hidden;
-                    height: 8em;
-                    &__clamp {
-                        display: -webkit-box;
-                        -webkit-line-clamp: 6;
-                        -webkit-box-orient: vertical;
-                    }
-                }
-                &:hover {
-                    transition: background .3s;
-                    background: $color-text;
-                    color: #fff;
-                    #{$block}__box__text--link {
-                        display: block;
-                    }
+            width: 19% - 2 * $box-padding;
+            &:hover {
+                transition: background .3s;
+                background: $color-text;
+                color: #fff;
+                #{$block}__box__text__link {
+                    visibility: visible;
+                    opacity: 1;
+                    transition: visibility 0s, opacity 0.2s;
                 }
             }
         }
