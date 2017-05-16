@@ -19,7 +19,7 @@ class TechnologyTeaser extends \A365\Wordpress\Block\AcfBlock {
 			FieldHelper::createText('description', 'Beschreibung')->setRequired(),
 			FieldHelper::createRepeater('box', 'Boxes', ["min" => 5, "max" => 5])
 				->addSubfields([
-					FieldHelper::createImageCrop('background', 'Hintergrund', ["crop_type" => "hard", 'target_size' => 'custom', 'force_crop' => 'yes', 'save_format' => 'url', "width" => 280, "height" => 220])->setRequired(),
+					FieldHelper::createImageCrop('background', 'Hintergrund', ["crop_type" => "hard", 'target_size' => 'custom', 'force_crop' => 'no', 'save_format' => 'url', "width" => 280, "height" => 220])->setRequired(),
 					FieldHelper::createText('title', 'Überschrift')->setRequired(),
 					FieldHelper::createText('description', 'Beschreibung')->setRequired(),
 			]),
