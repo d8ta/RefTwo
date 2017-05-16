@@ -10,7 +10,7 @@ Timeline.prototype.constructor = Timeline;
 Timeline.prototype.elements = {};
 
 Timeline.prototype.vars = {
-    eventsMinDistance: 100,
+    eventsMinDistance: 160,
 };
 
 Timeline.prototype.selectors = {

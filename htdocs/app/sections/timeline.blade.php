@@ -20,7 +20,12 @@
 					<div class="events">
 						<ol>
 							@foreach($timeline as $key => $value)
-								<li><a href="#0" data-date="{{$key}}/01/{{$value['year']}}" @if($key == 0) class="selected" @endif><span>{{$value['year']}}<span></a></li>
+								<li>
+									<a href="#0" data-date="{{$key}}/01/{{$value['year']}}" @if($key == 0) class="selected" @endif>
+										<img src="{{$value['image']}}" alt="{{$value['title']}}">
+										<span>{{$value['year']}}<span>
+									</a>
+								</li>
 							@endforeach
 						</ol>
 						<span class="filling-line" aria-hidden="true"></span>

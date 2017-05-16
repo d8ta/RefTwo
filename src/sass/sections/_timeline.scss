@@ -18,22 +18,20 @@ $block: '.timeline';
         margin: 2em auto;
         transition: opacity 0.2s;
         &:before {
-          /* never visible - this is used in jQuery to check the current MQ */
           content: 'mobile';
           display: none;
         } 
         &__line {
             position: relative;
-            height: em(120);
+            height: em(500);
             width: 90%;
-            max-width: em(1000);
+            max-width: em(1550);
             margin: 0 auto;
         } 
 
         &__navigation {
             width: 100%;
             a {
-                /* these are the left/right arrows to navigate the timeline */
                 position: absolute;
                 z-index: 1;
                 top: 43%;
@@ -43,7 +41,6 @@ $block: '.timeline';
                 width: em(20);
                 border-radius: 50%;
                 border: em(1) solid white;
-                /* replace text with an icon */
                 overflow: hidden;
                 color: transparent;
                 text-indent: 100%;
@@ -95,10 +92,17 @@ $block: '.timeline';
             z-index: 1;
             left: 0;
             top: em(50);
+            margin-top: em(200);
             height: em(1);
             /* width will be set using JavaScript */
             background: #f1d528;
             transition: transform 0.4s;
+            img {
+                max-width: em(100);
+                width: 100%;
+                transition: all .2s ease-in-out;
+                padding-bottom: em(20);
+            }
             a {
                 position: absolute;
                 bottom: 0;
@@ -129,11 +133,13 @@ $block: '.timeline';
                     }
                 }
                 span {
-                    position: absolute;
-                    bottom: em(-50);
-                    left: em(-16);
-                    font-size: em(20);
-                    transition: all 0.5s;
+                    display: block;
+                    
+                    // position: absolute;
+                    // bottom: em(-50);
+                    // left: em(-16);
+                    // font-size: em(20);
+                    // transition: all 0.3s;
                 }
                 &.selected {
                     pointer-events: none;
@@ -148,6 +154,9 @@ $block: '.timeline';
                         font-size: em(32);
                         bottom: em(-35);
                         left: em(-18);
+                    }
+                    img {
+                        transform: scale(1.6);
                     }
                 }
                 &.older-event {
@@ -195,7 +204,7 @@ $block: '.timeline';
                         animation-direction: reverse;
                     }
                     > * {
-                        max-width: 800px;
+                        // max-width: em(1550);
                         margin: 0 auto;
                     }
                 }
