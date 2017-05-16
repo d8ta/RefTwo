@@ -1,54 +1,45 @@
 $block: '.batchspray';
 #{$block} {
     &__text {
-        margin: 0 auto;
         text-align: center;
         &__title {
             @extend %h1;
+            color: $brand-primary;
         }
         &__subtitle {
             @extend %h2;
+            color: $color-grey;
         }
     }
     &__images {
-        margin-top: 2em;
+        max-width: 25em;
+        margin: 2em auto 0;
         text-align: right;
         &__image {
-            width: 100%;
-            margin-bottom: 1em;
+            max-width: 100%;
+            width: auto;
+            height: auto;
+        }
+    }
+    @include mq($from: screen-xs) {
+        &__text {
+            text-align: left;
         }
     }
     @include mq($from: screen-sm) {
-        &__images {
-            &__image {
-                display: inline;
-                margin-left: 1em;
-            }
-        }
-    }
-    @include mq($from: screen-lg) {
+        @include clearfix;
         &__text {
-            margin: 0;
-            text-align: left;
-            max-width: 50%;
-            &__title {
-                text-align: left;
-            }
+            width: 40%;
+            float: left;
+            &__title {}
         }
         &__images {
-            width: 50%;
-            display: inline;
-            &__image {
-                width: 45%;
-            }
+            width: 60%;
+            float: right;
+            padding-left: 2em;
+            max-width: 60em;
+            margin-right: 0;
         }
     }
-    @include mq($from: screen-xxl) {
-        &__images {
-            &__image {
-                margin-top: -2em;
-                margin-left: 10em;
-            }
-        }
-    }
+
 }

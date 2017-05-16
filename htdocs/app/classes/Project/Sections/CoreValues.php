@@ -13,11 +13,11 @@ class CoreValues extends \A365\Wordpress\Block\AcfBlock {
 	public static function getAcfSubfields()
 	{
 		return [
-			FieldHelper::createRepeater('corevalues', 'Unternehmenswerte', ["min" => 3, "max" => 3]) // getSectionimg() --> $sectionimg['background'];
+			FieldHelper::createRepeater('corevalues', 'Unternehmenswerte', ["min" => 3, "max" => 3]) 
 				->addSubfields([
 					FieldHelper::createImageCrop('image', 'Bild', ["crop_type" => "hard", 'target_size' => 'custom', 'force_crop' => 'yes', 'save_format' => 'url', "width" => 200, "height" => 200])->setRequired(),
-					FieldHelper::createText('title', 'Überschrift')->setRequired(), //getTitle()
-					FieldHelper::createWYSIWYG('description', 'Beschreibung')->setRequired(), //getDescription()
+					FieldHelper::createText('title', 'Überschrift')->setRequired(), 
+					FieldHelper::createWYSIWYG('description', 'Beschreibung')->setRequired(), 
 					]),
 		];
 	}
