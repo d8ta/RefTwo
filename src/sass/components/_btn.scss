@@ -1,21 +1,23 @@
 $block: '.btn';
 #{$block} {
-    width: 100%;
-    min-width: em(200);
-    padding: em(12) em(20);
+    @extend %arrow-link;
+    padding: em(10) em(20) em(10) em(37);
     background-color: white;
-    font-size: em(16);
-    font-weight: 600;
-    border-radius: em(8);
-    position: relative;
-    @include icon(arrowright, before);
+    border-radius: em(5);
     &:before {
-        @extend %icon;
-        position: absolute;
+        top: em(17);
         left: em(20);
-        top: em(19);
-        transition: left 0.3s;
-        font-size: em(14);
-        color: $brand-primary;
+    }
+    &:hover {
+        &:before {
+            left: em(23);
+        }
+    }
+    &--yellow {
+        background-color: $brand-primary;
+        color: white;
+        &:before {
+            color: white;
+        }
     }
 }
