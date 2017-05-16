@@ -9,9 +9,9 @@ $description = $block->getDescription();
 $buttontext = $block->getButtonText();
 ?>
 
-<div class="section--fifth section--yellow">
+<div class="section section--margin-sm section--yellow">
 	<div class="research-teaser__whitebox-top"></div>
-	<div class="section section__content">
+	<div class="section__content">
 		<div class="section__inner">
 			<div class="research-teaser">
 
