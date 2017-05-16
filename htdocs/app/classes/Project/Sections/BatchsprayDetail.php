@@ -18,7 +18,7 @@ class BatchsprayDetail extends \A365\Wordpress\Block\AcfBlock {
 			FieldHelper::createWYSIWYG('description_left', 'Beschreibung links')->setRequired(),
 			FieldHelper::createWYSIWYG('description_middle', 'Beschreibung mitte')->setRequired(),
 			FieldHelper::createWYSIWYG('description_right', 'Beschreibung rechts')->setRequired(),
-			FieldHelper::createImageCrop('image', 'Bild', ["crop_type" => "hard", 'target_size' => 'custom', 'force_crop' => 'yes', 'save_format' => 'url', "width" => 200, "height" => 200])->setRequired(),
+			FieldHelper::createImageCrop('image', 'Bild', ["crop_type" => "hard", 'target_size' => 'custom', 'force_crop' => 'no', 'save_format' => 'url', "width" => 200, "height" => 200])->setRequired(),
 		];
 	}
 }
