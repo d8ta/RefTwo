@@ -11,13 +11,13 @@
 			<div class="images-section__images">
 				<!-- left -->
 				<div class="images-section__images__left">
-					<img src="{{$image1}}" alt="Image" class="images-section__images__image" />
-					<img src="{{$image2}}" alt="Image" class="images-section__images__image" />
+					<img src="{{$image1}}" alt="Image" class="images-section__images__image__left" />
+					<img src="{{$image2}}" alt="Image" class="images-section__images__image__left" />
 				</div>
 				<!-- right -->
 				<div class="images-section__images__right">
-					<img src="{{$image3}}" alt="Image" class="images-section__images__image" />
-					<img src="{{$image4}}" alt="Image" class="images-section__images__image" />
+					<img src="{{$image3}}" alt="Image" class="images-section__images__image__right" />
+					<img src="{{$image4}}" alt="Image" class="images-section__images__image__right" />
 				</div>
 
 			</div>
