@@ -14,10 +14,9 @@
 					<h3 class="product-teaser__inner__subtitle">{{$subtitle}}</h3>
 					<div class="product-teaser__inner__description">{{$description}}</div>
 					<div class="product-teaser__inner__button">
-						<button class="btn--icon-text primary-brand-btn" type="button">
-							<i class="btn__icon white-icon"></i>
-							<span class="btn__text">{{$button_text}}</span>
-						</button>
+						<a class="btn btn--yellow" href="#">
+							{{$button_text}}
+						</a>
 					</div>
 				</div>
 			</div>

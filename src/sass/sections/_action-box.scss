@@ -48,12 +48,6 @@ $box-margin: 2em;
                     vertical-align: middle;
                     left: 16.25em;
                     // height: 6em;
-                    &__button {
-                        background-color: $color-light-grey;
-                        color: $color-text;
-                        border-radius: 0;
-                        padding: 0;
-                    }
                 }
             }
             &__headline {
@@ -70,6 +64,9 @@ $box-margin: 2em;
                     -webkit-line-clamp: 3;
                     -webkit-box-orient: vertical;
                 }
+            }
+            &__button {
+                @extend %arrow-link;
             }
         }
     }

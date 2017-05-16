@@ -25,9 +25,8 @@
 											<h2 class="welcome-slider__slide__text__title">{{$title}}</h2>
 											<p class="welcome-slider__slide__text__description">{{$description}}</p>
 										</div>
-										<a class="btn btn--icon-text" href="{{$button_url}}">
-											<i class="btn__icon primary-color"></i>
-											<span class="btn__text">{{$buttontext}}</span>
+										<a class="btn" href="{{$button_url}}">
+											{{$buttontext}}
 										</a>
 									</div>
 								</div>

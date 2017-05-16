@@ -95,11 +95,11 @@
 
 %arrow-link {
     display: block;
-    //width: 100%;
     font-size: em(16);
     padding-left: em(25);
     font-weight: bold;
     position: relative;
+    color: $color-text;
     @include icon(arrowright, before);
     &:before {
         @extend %icon;
