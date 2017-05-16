@@ -1,83 +1,66 @@
 $block: '.product-links';
+$block-padding: 2%;
 #{$block} {
-    text-align: center;
-    &__content {
-        margin: 0 auto;
+    &__link {
         display: table;
-        &__image {
+        width: 100%;
+        margin-bottom: em(30);
+        &__image,
+        &__text {
             display: table-cell;
-            &--batch {
-                width: 65%;
+            vertical-align: middle;
+        }
+        &__image {
+            width: 25%;
+            min-width: em(190);
+            padding-right: em(20);
+            &__img {
+                max-width: 100%;
+                width: auto;
+                height: auto;
             }
-            &--logo {
-                margin-bottom: 4em;
+        }
+        &__text {
+            &__logo {
+                max-width: 100%;
+                width: auto;
+                height: auto;
+                margin-bottom: em(12);
             }
             &__text {
                 @extend %text-base;
-                padding: .5em;
-                overflow: hidden;
-                height: 12em;
                 display: none;
-                &__clamp {
-                    display: -webkit-box;
-                    -webkit-line-clamp: 100;
-                    -webkit-box-orient: vertical;
+            }
+        }
+    }
+    @include mq($from: screen-xs) {
+        &__link {
+            &__image, &__text {
+                vertical-align: top;
+            }
+            &__text {
+                &__logo {
+                    margin-top: em(30);
+                }
+                &__text {
+                    display: block;
                 }
             }
         }
     }
-    @include mq($from: screen-sm) {
-        &__content {
-            width: 100%;
-            &__image {
-                &--logogroup {
-                    margin: 0 auto;
-                    width: 60%;
-                }
-                &--logo {
-                    display: block;
-                    text-align: center;
-                    margin: 0 auto;
-                }
-                &__text {
-                    overflow: hidden;
-                    display: block;
-                    text-align: left;
-                    &__clamp {
-                        display: -webkit-box;
-                        -webkit-line-clamp: 5;
-                        -webkit-box-orient: vertical;
-                    }
-                }
-            }
-        }
-    }
-    @include mq($from: screen-md) {
-        &__content {
-            width: 30%;
-            display: inline-block;
-            &__image {
-                &--logogroup {}
-                &--batch {
-                    width: 90%;
-                }
-                &--logo {
-                    display: block;
-                    text-align: center;
-                    margin: 0;
-                }
-                &__text {
-                    &__clamp {
-                        display: -webkit-box;
-                        -webkit-line-clamp: 10;
-                        -webkit-box-orient: vertical;
-                    }
+    @include mq($from: screen-lg) {
+        margin-left: -$block-padding;
+        margin-right: -$block-padding;
+        &__link {
+            width: 33.3333% - 2 * $block-padding;
+            margin-left: $block-padding;
+            margin-right: $block-padding;
+            float: left;
+            &__text {
+                &__logo {
+
                 }
             }
         }
     }
 }
-
-// .section--product-link {
-//     margin: 8.25rem 0 14.25rem 0;
-// }
