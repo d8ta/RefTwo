@@ -2,8 +2,16 @@ $block: '.download';
 #{$block} {
 	&__wrapper {
 		width: 100%;
+		text-align: center;
 		.h2 {
+			@extend %h1;
 			font-size: em(48);
+			margin: 0;
+		}
+		.h3 {
+			@extend %h2;
+			font-family: $font-normal;
+			margin-bottom: em(40);
 		}
 	}
 	&__content {
@@ -21,49 +29,28 @@ $block: '.download';
 			background-color: $brand-primary;
 			padding: em(24);
 			border-radius: em(8);
+			text-align: left;
 			@include clearfix;
 			&__content {
 				float: left;
+				width: 50%;
 				&--info {
-					width: 70%;
+					color: white;
 					.h2 {
 						font-size: em(20);
 						font-weight: 600;
 						margin-bottom: em(5);
+						color: white;
 					}
 					p {
 						font-size: em(16);
 						margin-bottom: 0;
 					}
 				}
-				&--arrow {
-					width: 30%;
+				&--link {
 					text-align: right;
-				}
-			}
-			&:hover {
-				#{$block} {
-					&__list {
-						&__elem {
-							&__content {
-								&--arrow {
-									.icon {
-										
-									}
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-	@include mq($until: screen-xs) {
-		&__list {
-			&__elem {
-				&__content {
-					&--info {
-						min-width: initial;
+					.btn {
+						float: right;
 					}
 				}
 			}
