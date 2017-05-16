@@ -1,7 +1,8 @@
 <?php 
 $boxes = $block->getBox();
+	$mh_group = "technology-boxes-" . rand();
 ?>
-<div class="section section--second">
+<div class="section section--margin-xs">
 	<div class="section__content">
 		<div class="action-box">
 			<div class="action-box__inner">
@@ -19,9 +20,11 @@ $boxes = $block->getBox();
 						<div class="action-box__box__text">
 							<div class="action-box__box__text__table">
 							<div class="action-box__box__text__table__td">
-								<h2 class="action-box__box__text__headline js-matchheight">{{$title}}</h2>
-								<div class="action-box__box__text__description">
-									<div class="action-box__box__text__description__clamp">{{$description}}</div>
+								<div class="action-box__box__text__wrapper js-matchheight" data-mh="{{ $mh_group }}">
+									<h2 class="action-box__box__text__headline">{{$title}}</h2>
+									<div class="action-box__box__text__description">
+										<div class="action-box__box__text__description__clamp">{{$description}}</div>
+									</div>
 								</div>
 								<div class="action-box__box__text__button">
 									{{$buttontext}}

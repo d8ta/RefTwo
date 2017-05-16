@@ -1,7 +1,7 @@
 $block: '.product-teaser';
 #{$block} {
     max-width: em(800);
-    margin: 0 auto;
+    margin: 0 auto em(50);
     text-align: center;
     &__inner {
         text-align: center;
@@ -16,6 +16,69 @@ $block: '.product-teaser';
             max-width: em(650);
             margin-left: auto;
             margin-right: auto;
+        }
+    }
+}
+
+$block: '.product-teaser__links';
+$block-padding: 2%;
+#{$block} {
+    &__link {
+        display: table;
+        width: 100%;
+        margin-bottom: em(30);
+        &__image,
+        &__text {
+            display: table-cell;
+            vertical-align: middle;
+        }
+        &__image {
+            width: 25%;
+            min-width: em(190);
+            padding-right: em(20);
+            &__img {
+                max-width: 100%;
+                width: auto;
+                height: auto;
+            }
+        }
+        &__text {
+            &__logo {
+                max-width: 100%;
+                width: auto;
+                height: auto;
+                margin-bottom: em(12);
+            }
+            &__text {
+                @extend %text-base;
+                display: none;
+            }
+        }
+    }
+    @include mq($from: screen-xs) {
+        &__link {
+            &__image,
+            &__text {
+                vertical-align: top;
+            }
+            &__text {
+                &__logo {
+                    margin-top: em(30);
+                }
+                &__text {
+                    display: block;
+                }
+            }
+        }
+    }
+    @include mq($from: screen-lg) {
+        margin-left: -$block-padding;
+        margin-right: -$block-padding;
+        &__link {
+            width: 33.3333% - 2 * $block-padding;
+            margin-left: $block-padding;
+            margin-right: $block-padding;
+            float: left;
         }
     }
 }
