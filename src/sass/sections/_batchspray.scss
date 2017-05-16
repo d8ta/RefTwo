@@ -15,10 +15,10 @@ $block: '.batchspray';
         }
     }
     &__images {
-        margin: 0 auto;
-        text-align: center;
+        margin-top: 2em;
+        text-align: right;
         &--image {
-            border-radius: .5em;
+            width: 100%;
             margin-bottom: 1em;
         }
     }
@@ -53,6 +53,14 @@ $block: '.batchspray';
             }
             &--image {
                 width: 45%;
+            }
+        }
+    }
+    @include mq($from: screen-xxl) {
+        &__images {
+            &--image {
+                margin-top: -2em;
+                margin-left: 10em;
             }
         }
     }

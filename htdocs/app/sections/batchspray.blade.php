@@ -1,4 +1,4 @@
-<div class="section section--batchspray section--first-corp">
+<div class="section section--batchspray section--first">
 	<div class="section__content">
 		<?php 
 		$title = $block->getTitle();
