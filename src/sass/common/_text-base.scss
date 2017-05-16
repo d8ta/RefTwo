@@ -5,7 +5,8 @@
     font-size: em(33);
     font-weight: bold;
     line-height: 1.1;
-    margin-bottom: .5em;
+    margin-bottom: .3em;
+    color: $brand-primary;
     @include mq($from: screen-sm) {
         font-size: em(36);
     }
@@ -24,37 +25,29 @@
 }
 
 %h2 {
-    font-size: em(21);
+    font-size: em(24);
     line-height: 1.2;
     font-weight: bold;
     margin-bottom: .5em;
-    @include mq($from: screen-sm) {
-        font-size: em(20);
-    }
-    @include mq($from: screen-md) {
-        font-size: em(19);
-    }
-    @include mq($from: screen-lg) {
-        font-size: em(18);
-    }
-    @include mq($from: screen-xl) {
-        font-size: em(17);
-    }
-    @include mq($from: screen-xxl) {
-        font-size: em(16);
-    }
+    color: $color-grey;
 }
 
 %h3 {
-    font-size: em(15);
+    font-size: em(24);
+    line-height: 1.2;
+    font-family: $font-headline;
+    font-weight: bold;
     margin-bottom: .5em;
+    color: $brand-primary;
 }
 
 %h4 {
-    font-size: em(18);
+    font-size: em(20);
+    font-family: $font-headline;
     font-weight: bold;
-    line-height: 1.5;
-    margin-bottom: .5em;
+    line-height: 1.2;
+    margin-bottom: .3em;
+    color: $brand-primary;
 }
 
 %h5 {

@@ -1,14 +1,20 @@
 $block: '.technology-teaser';
 #{$block} {
+    max-width: em(850);
+    margin: 0 auto;
+    text-align: center;
     &__inner {
-        text-align: center;
         &__title {
             @extend %h1;
-            margin-bottom: .2em;
+        }
+        &__subtitle {
+            @extend %h2;
         }
         &__description {
-            @extend %h2;
-            line-height: 1.5em;
+            @extend %text-base;
+            max-width: em(650);
+            margin-left: auto;
+            margin-right: auto;
         }
     }
 }

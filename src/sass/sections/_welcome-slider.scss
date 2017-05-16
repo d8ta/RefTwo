@@ -26,6 +26,7 @@ $block: '.welcome-slider';
             &__title {
                 @extend %h1;
                 max-width: em(220);
+                color: $color-white;
             }
             &__description {
                 @extend %intro-text;

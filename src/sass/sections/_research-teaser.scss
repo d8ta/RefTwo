@@ -13,6 +13,7 @@ $block: '.research-teaser';
             color: $color-white;
             h2 {
                 @extend %h1;
+                color: $color-white;
             }
             p {
                 @extend %intro-text;
