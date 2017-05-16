@@ -7,9 +7,15 @@ $info-padding: 1%;
         &__image {
             margin-top: 1em;
         }
-        p {
-            margin: 0 auto;
-            max-width: 80%;
+        &__text {
+            &__title {
+                @extend %h3;
+            }
+            &__description {
+                @extend %text-base;
+                margin: 0;
+                max-width: 80%;
+            }
         }
     }
     @include mq($from: screen-sm) {
@@ -23,12 +29,12 @@ $info-padding: 1%;
             margin-right: $info-padding;
             float: left;
             &__text {
-                &--title {
+                &__title {
                     margin-top: 3em;
                 }
             }
         }
-        p {
+        &__description {
             margin-left: 0;
         }
     }

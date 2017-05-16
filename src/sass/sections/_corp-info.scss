@@ -1,30 +1,28 @@
 $block: '.corp-info';
 #{$block} {
     &__text {
-        margin: 0 auto;
         text-align: center;
-        max-width: 80%;
-        &--title {
+        &__title {
             @extend %h1;
         }
-        &--subtitle {
+        &__subtitle {
             @extend %h2;
         }
-        p {
-            @extend %h2;
+        &__description {
+            @extend %text-base;
         }
     }
     &__images {
         margin: 0 auto;
         text-align: center;
-        &--image {
+        &__image {
             border-radius: .5em;
             margin-bottom: 1em;
         }
     }
     @include mq($from: screen-sm) {
         &__images {
-            &--image {
+            &__image {
                 display: inline;
                 margin-left: 1em;
             }
@@ -36,10 +34,11 @@ $block: '.corp-info';
             margin: 0;
             text-align: left;
             max-width: 50%;
-            &--title {
+            &__title {
                 text-align: left;
             }
-            p {
+            &__description {
+                max-width: 45em;
                 margin-left: 0;
                 margin-right: 0;
             }
@@ -49,7 +48,7 @@ $block: '.corp-info';
             width: 50%;
             float: left;
             text-align: right;
-            &--image {
+            &__image {
                 width: 30%;
                 display: inline;
                 margin-left: .5em;
