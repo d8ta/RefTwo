@@ -23,11 +23,15 @@ $block: '.section';
     &--margin-xl {
         margin: rem(200) 0;
     }
+    &--margin-xxl {
+        margin: rem(250) 0;
+    }
+    &--margin-xxxl {
+        margin: rem(300) 0;
+    }
     &--margin {
         margin: rem(100) 0;
     }
-    
-    
     &--yellow {
         background-color: $brand-primary;
     }
@@ -37,11 +41,9 @@ $block: '.section';
             margin-bottom: 1em;
         }
     }
-
     &--padding {
         padding: em(60) 0;
     }
-    
 }
 
 #{$block}-container {

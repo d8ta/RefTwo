@@ -1,4 +1,4 @@
-<div class="section section--third">
+<div class="section section--margin-xl">
 	<div class="section section--fullwidth">
 		<div class="section__content">
 			<div class="environment">
