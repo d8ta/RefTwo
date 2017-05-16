@@ -243,27 +243,7 @@ $config = [
 						'readonly' => 0,
 						'disabled' => 0,
 					),
-					array (
-						'key' => 'field_5718c68945jkld8',
-						'label' => 'Beschreibung',
-						'name' => 'description',
-						'type' => 'text',
-						'instructions' => '',
-						'required' => 0,
-						'conditional_logic' => 0,
-						'wrapper' => array (
-							'width' => '',
-							'class' => '',
-							'id' => '',
-						),
-						'default_value' => '',
-						'placeholder' => '',
-						'prepend' => '',
-						'append' => '',
-						'maxlength' => '',
-						'readonly' => 0,
-						'disabled' => 0,
-					),
+					
 					array (
 						'key' => 'field_5718c6d7f2469',
 						'label' => 'Straße',

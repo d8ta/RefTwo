@@ -15,7 +15,6 @@ $buttontext = $block->getButtonText();
 		<div class="section__inner">
 			<div class="research-teaser">
 
-				
 				{{-- left --}}
 				<div class="research-teaser__content research-teaser__content--left js-matchheight" >
 					<h2>{{$title}}</h2>
@@ -26,7 +25,6 @@ $buttontext = $block->getButtonText();
                     </button>
 				</div>
 
-				
 				{{-- right --}}
 				<div class="research-teaser__content research-teaser__content--right js-matchheight" >
 					<div class="research-teaser__content__image-container">

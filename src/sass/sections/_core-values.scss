@@ -9,7 +9,7 @@ $info-padding: 1%;
         }
         &__text {
             &__title {
-                @extend %h3;
+                @extend %h4-alt;
             }
             &__description {
                 @extend %text-base;

@@ -54,6 +54,11 @@
     color: $brand-primary;
 }
 
+%h4-alt {
+    @extend %h4;
+    font-family: $font-normal;
+}
+
 %h5 {}
 
 %h6 {}
