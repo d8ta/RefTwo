@@ -24,8 +24,7 @@
 			</div>
 			{{-- right --}}
 			<div class="batchspray__images">	
-					<img src="{{$logo}}" alt="Logo" class="batchspray__images--logo" />
-					<img src="{{$image}}" alt="Image" class="batchspray__images--image" />
+				<img src="{{$image}}" alt="Image" class="batchspray__images--image" />
 			</div>
 
 		</div>
