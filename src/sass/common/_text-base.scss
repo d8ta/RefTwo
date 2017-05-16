@@ -1,5 +1,4 @@
 // HEADLINES
-
 %h1 {
     font-family: $font-headline;
     font-size: em(33);
@@ -33,11 +32,10 @@
 }
 
 %h3 {
-    font-size: em(24);
-    line-height: 1.2;
     font-family: $font-headline;
+    font-size: em(24);
     font-weight: bold;
-    margin-bottom: .5em;
+    margin-bottom: .3em;
     color: $brand-primary;
 }
 
@@ -50,13 +48,9 @@
     color: $brand-primary;
 }
 
-%h5 {
-    
-}
+%h5 {}
 
-%h6 {
-    
-}
+%h6 {}
 
 %intro-text {
     font-size: em(21);
