@@ -1,0 +1,37 @@
+.editor-content, body#tinymce.wp-editor {
+    p {
+        @extend %text-base;
+    }
+    ul {
+        @extend %ul !optional;
+    }
+    h1 {
+        @extend %h1 !optional;
+    }
+    h2 {
+        @extend %h2 !optional;
+    }
+    h3 {
+        @extend %h3 !optional;
+    }
+    h4 {
+        @extend %h4 !optional;
+    }
+    h5 {
+        @extend %h5 !optional;
+    }
+    h6 {
+        @extend %h6 !optional;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin-top: 1em;
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+}

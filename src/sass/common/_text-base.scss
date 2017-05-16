@@ -125,110 +125,14 @@
     @include clearfix;
 }
 
-
-
 %footer-text {
     font-size: em(15);
 }
 
-// Maps
-%h-mini-bold {
-    font-size: em(20);
-    font-weight: bold;
-    line-height: 1.06;
-    margin-bottom: em(9);
-}
-
-%h-pre {
-    font-size: em(13);
-    font-weight: bold;
-    text-transform: uppercase;
-    line-height: 1.2em;
-    margin-bottom: .8em;
-    letter-spacing: .1em;
-}
-
-%h-normal-bold {
-    font-size: 1em;
-    font-weight: bold;
-    line-height: 1.1;
-    margin-bottom: em(9);
-}
-
-%quicklink-button {
-    @extend %quicklink;
-    @extend %button;
-    padding-left: em(35);
-    &:hover,
-    &:focus,
-    &:active {
-        &:before {
-            color: #000;
-        }
-    }
-}
-
-%quicklink {
-    @extend %miniuppertext;
-    position: relative;
-    padding-left: em(35);
-    display: inline-block;
-    white-space: nowrap;
-    letter-spacing: .05em;
-    @include icon(arrowright, before);
-    &:before {
-        @extend %icon;
-        color: $brand-primary;
-        position: absolute;
-        left: em(10);
-    }
-}
-
-%button {
-    display: inline-block;
-    position: relative;
-    line-height: 1;
-    padding: em(17) em(20) em(15);
-    background: #000;
-    color: #fff;
-    cursor: pointer;
-    transition: all .2s ease;
-    @extend %miniuppertext;
-    > i,
-    > span {
-        vertical-align: middle;
-    }
-    > i {
-        position: relative;
-        top: 0;
-        bottom: 0;
-        line-height: 1;
-        height: 1em;
-        margin: auto 0;
-        color: $brand-primary;
-        padding-right: em(10);
-    }
-    > span {
-        line-height: 1;
-        display: inline-block;
-    }
-    &:hover,
-    &:focus,
-    &:active {
-        background: $brand-primary;
-        color: #000;
-        > i {
-            color: #000;
-        }
-    }
-}
-
-%miniuppertext {
-    font-weight: bold;
-    text-transform: uppercase;
-    font-size: em(13);
-}
-
 %lefttext {
     margin-left: 0;
+}
+
+%ul {
+    
 }

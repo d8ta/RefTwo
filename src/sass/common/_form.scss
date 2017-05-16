@@ -31,10 +31,13 @@ $form-padding: em(30);
                 left: -9999px;
             }
             &__label {
-                @extend %h-pre;
+                font-weight: bold;
+                text-transform: uppercase;
+                line-height: 1.2em;
+                letter-spacing: .1em;
                 display: block;
                 margin: 0;
-                font-size: em(12);
+                font-size: em(13);
                 margin-bottom: em(6);
                 &--hidden {
                     visibility: hidden;

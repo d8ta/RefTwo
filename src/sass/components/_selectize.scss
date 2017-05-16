@@ -22,7 +22,10 @@ $padding-selectize: em(20);
     }
     .selectize-input,
     .option {
-        @extend %h-normal-bold;
+        font-size: 1em;
+        font-weight: bold;
+        line-height: 1.1;
+        margin-bottom: em(9);
         background: $color-white;
         padding-left: $padding-selectize;
         padding-right: $padding-selectize;
