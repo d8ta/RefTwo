@@ -31,6 +31,12 @@
     color: $color-grey;
 }
 
+%h2-alt {
+    @extend %h2;
+    font-family: $font-headline;
+    color: $brand-primary;
+}
+
 %h3 {
     font-family: $font-headline;
     font-size: em(24);

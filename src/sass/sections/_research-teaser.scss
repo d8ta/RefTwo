@@ -91,9 +91,6 @@ $block: '.research-teaser';
                 }
             }
         }
-        .btn--icon-text {
-            font-size: .75em;
-        }
     }
     @include mq($from: screen-lg) {
         padding-bottom: 0;

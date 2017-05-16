@@ -21,9 +21,8 @@ $locations = \Project\Models\Location::allPublished();
 		</div>
 
 		<div class="maps__infobox__button">
-			<a class="btn btn--icon-text primary-brand-btn">
-				<i class="btn__icon white-icon"></i>
-				<span class="btn__text">Kontaktformular</span>
+			<a class="btn btn--yellow">
+				<?php _e('Kontaktformular'); ?>
 			</a>
 		</div>
 
