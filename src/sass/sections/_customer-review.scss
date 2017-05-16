@@ -4,6 +4,21 @@ $block: ".customer-review";
     width: 100%;
     height: auto;
     &__content {
+        &__title {
+            @extend %h1;
+            color: $color-white;
+        }
+        &__description {
+            @extend %h2;
+            max-width: 30em;
+            font-weight: normal;
+            color: $color-white;
+            padding-top: 1em;
+        }
+        &__signature {
+            @extend %h2;
+            color: $color-white;
+        }
         &--whitebox-top {
             background: white;
             height: 3em;
@@ -21,23 +36,9 @@ $block: ".customer-review";
         height: auto;
         position: relative;
         &--left {
-            padding-top: 4em;
+            padding-top: 10em;
             padding-bottom: 3em;
             color: $color-white;
-            h2 {
-                @extend %h1;
-                margin: 0;
-                padding-bottom: 1em;
-                text-align: left;
-                max-width: 100%;
-            }
-            p {
-                padding-bottom: 1em;
-            }
-            h3 {
-                font-size: 1.5em;
-                margin-top: .25em;
-            }
         }
         &--right {}
         &__images {

@@ -21,18 +21,16 @@ $block: '.environment';
     }
     @include mq($from: screen-lg) {
         &__image {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
+            position: relative;
         }
         &__box {
             background: white;
             max-width: 84%;
             border-radius: .5em;
-            position: relative;
-            
+            position: absolute;
+            top: 5em;
+            bottom: 7em;
+            right: 6em;
             &__text {
                 padding: 3.5em;
                 &__title {
@@ -52,9 +50,7 @@ $block: '.environment';
     }
     @include mq($from: screen-xl) {
         &__box {
-            max-width: 40%;
-            margin-left: auto;
-            margin-right: 0;
+            max-width: 50%;
             &__text {
                 &__description {
                     text-align: left;

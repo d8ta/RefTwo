@@ -1,4 +1,4 @@
-<div class="section section--corp-info section--first-corp">
+<div class="section section--corp-info section--margin">
 	<div class="section__content">
 		<?php 
 		$title = $block->getTitle();
