@@ -1,16 +1,19 @@
 $block: '.customers-teaser';
 #{$block} {
     &__inner {
-        &--title {
-            margin-bottom: .2em;
+        &__title {
+            @extend %h1;
+            text-align: center;
         }
-        &--subtitle {
+        &__subtitle {
             @extend %h2;
             text-align: center;
         }
+        &__description {
+            @extend %text-base;
+            text-align: center;
+        }
         &__textbox {
-            @extend %h2;
-            margin: 0 auto;
             &__left {
                 padding: .5em 5em;
                 width: 100%;
@@ -25,6 +28,9 @@ $block: '.customers-teaser';
     }
     @include mq($from: screen-lg) {
         &__inner {
+            &__description {
+                text-align: left;
+            }
             &__textbox {
                 margin: 0;
                 display: inline;
