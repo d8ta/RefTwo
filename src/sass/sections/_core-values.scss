@@ -12,10 +12,11 @@ $block: '.core-values';
         }
     }
     @include mq($from: screen-sm) {
+        @include clearfix;
         &__info {
             text-align: left;
-            width: 33%;
-            display: inline-block;
+            width: 33.3333%;
+            float: left;
             &__text {
                 &--title {
                     margin-top: 3em;
