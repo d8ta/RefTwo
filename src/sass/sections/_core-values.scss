@@ -1,4 +1,5 @@
 $block: '.core-values';
+$info-padding: 1%;
 #{$block} {
     &__info {
         text-align: center;
@@ -13,9 +14,13 @@ $block: '.core-values';
     }
     @include mq($from: screen-sm) {
         @include clearfix;
+        margin-left: -$info-padding;
+        margin-right: -$info-padding;
         &__info {
             text-align: left;
-            width: 33.3333%;
+            width: 33.3333% - 2 * $info-padding;
+            margin-left: $info-padding;
+            margin-right: $info-padding;
             float: left;
             &__text {
                 &--title {
