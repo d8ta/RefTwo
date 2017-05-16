@@ -1,4 +1,4 @@
-<div class="section section--evolution-teaser">
+<div class="section section--evolution-teaser section--margin">
 	<div class="section__content">
 		<div class="margin">
 			<div class="evolution-teaser">

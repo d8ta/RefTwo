@@ -6,7 +6,7 @@ use A365\Wordpress\Helpers\Acf\FieldHelper;
 class Environment extends \A365\Wordpress\Block\AcfBlock {
 
 	protected $_template = 'environment';
-	protected static $_label = 'Umweltgedanke';
+	protected static $_label = 'Fullwidth Hintergrund, Textbox rechts';
 
 	/**
 	 * @inheritdoc

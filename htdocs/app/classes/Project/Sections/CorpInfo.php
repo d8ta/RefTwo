@@ -6,7 +6,7 @@ use A365\Wordpress\Helpers\Acf\FieldHelper;
 class CorpInfo extends \A365\Wordpress\Block\AcfBlock {
 
 	protected $_template = 'corp-info';
-	protected static $_label = 'Unternehmens Information';
+	protected static $_label = 'Textbox rechts, Dreier Bilder links';
 	/**
 	 * @inheritdoc
 	 */

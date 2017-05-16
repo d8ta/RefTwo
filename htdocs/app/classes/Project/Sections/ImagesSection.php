@@ -6,7 +6,7 @@ use A365\Wordpress\Helpers\Acf\FieldHelper;
 class ImagesSection extends \A365\Wordpress\Block\AcfBlock {
 
 	protected $_template = 'images-section';
-	protected static $_label = 'Bilder Sektion';
+	protected static $_label = '4er Bilder Sektion';
 	/**
 	 * @inheritdoc
 	 */

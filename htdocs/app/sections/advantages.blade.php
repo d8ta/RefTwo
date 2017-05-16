@@ -1,7 +1,7 @@
 <?php 
 	$researchimg = $block->getResearchImg();
 ?>
-<div class="section section--fullwidth">
+<div class="section section--fullwidth section--margin">
 	<div class="section__content">
 		<div class="margin">
 			<div class="advantages">

@@ -6,7 +6,7 @@ use A365\Wordpress\Helpers\Acf\FieldHelper;
 class Childcare extends \A365\Wordpress\Block\AcfBlock {
 
 	protected $_template = 'childcare';
-	protected static $_label = 'Kinderbetreuung';
+	protected static $_label = 'Fullwidth Background + Textbox links, Slider';
 
 	/**
 	 * @inheritdoc

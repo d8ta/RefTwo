@@ -3,7 +3,7 @@ $jobs = $block->getJobs();
 $title = $block->getTitle();
 $subtitle = $block->getSubtitle();
 ?>
-<div class="section section--third">
+<div class="section section--margin">
 	<div class="section__content">
 		<div class="">
 			<div class="hiring">

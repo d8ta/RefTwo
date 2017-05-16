@@ -4,7 +4,7 @@
 	$timeline = $block->getTimeline();
 ?>
 
-<div class="section section--yellow section--padding">
+<div class="section section--yellow section--margin">
 	<div class="section__content">
 		<div class="timeline">
 			<div class="timeline__wrapper">

@@ -6,7 +6,7 @@ use A365\Wordpress\Helpers\Acf\FieldHelper;
 class CoreValues extends \A365\Wordpress\Block\AcfBlock {
 
 	protected $_template = 'core-values';
-	protected static $_label = 'Unternehmenswerte';
+	protected static $_label = 'Dreier Icon/Title/Text';
 	/**
 	 * @inheritdoc
 	 */

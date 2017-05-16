@@ -1,7 +1,7 @@
 <?php 
 	$slides = $block->getSlides();
 ?>
-<div class="section section--third">
+<div class="section section--margin">
 	<div class="section section--fullwidth">
 		<div class="section__content">	
  			<div class="childcare @if(count($slides) > 1) js-owl-carousel owl-carousel @endif">

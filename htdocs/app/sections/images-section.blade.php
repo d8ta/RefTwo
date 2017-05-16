@@ -1,4 +1,4 @@
-<div class="section section--images-section section--first">
+<div class="section section--images-section section--margin">
 	<div class="section__content">
 		<?php 
 		$image1 = $block->getImage1();

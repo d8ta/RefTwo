@@ -1,7 +1,7 @@
 <?php 
 	$slides = $block->getSlides();
 ?>
-<div class="section section--fullwidth">
+<div class="section section--fullwidth section--margin">
 	<div class="section__content">
 		<div class="welcome-slider @if(count($slides) > 1) js-owl-carousel owl-carousel @endif">
 			@foreach ($slides as $slide)

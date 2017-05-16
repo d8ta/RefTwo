@@ -1,4 +1,4 @@
-<div class="section section--batchspray-detail">
+<div class="section section--batchspray-detail section--margin">
 	<div class="section__content">
 		<div class="margin">
 			<div class="batchspray-detail">
