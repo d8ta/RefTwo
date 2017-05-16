@@ -10,26 +10,24 @@
 			$title = $techbox['title'];
 			$description = $techbox['description'];
 			?>
-			<div class="technology-boxes__box">
-				<a href="" class="technology-boxes__box__inner">
-					<div class="technology-boxes__box__image bg-image" style="background-image: url({{$techbox['background']}})">
-					</div>
-					<div class="technology-boxes__box__text js-matchheight" data-mh="{{ $mh_group }}">
-						<div class="technology-boxes__box__text--title">
-							<h2 class="h4 primary-color">{{$title}}</h2>
-						</div>
+			<a href="" class="technology-boxes__box">
+				<div class="technology-boxes__box__image bg-image" style="background-image: url({{$techbox['background']}})">
+				</div>
+				<div class="technology-boxes__box__text">
+					<div class="js-matchheight" data-mh="{{ $mh_group }}">
+						<h2 class="technology-boxes__box__text__title">{{$title}}</h2>
 
-						<div class="technology-boxes__box__text--description">
-							<p class="technology-boxes__box__text--description__clamp h3">{{$description}}</p>
-						</div>
-						
-						<div class="technology-boxes__box__text--link btn--icon-text primary-brand-btn">
-							<i class="btn__icon white-icon"></i>
-							<span class="btn__text">mehr erfahren</span>
+						<div class="technology-boxes__box__text__description">
+							{{$description}}
 						</div>
 					</div>
-				</a>
-			</div>
+					
+					<div class="technology-boxes__box__text__link btn--icon-text primary-brand-btn">
+						<i class="btn__icon white-icon"></i>
+						<span class="btn__text">mehr erfahren</span>
+					</div>
+				</div>
+			</a>
 			@endforeach
 		</div>
 	</div>

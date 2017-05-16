@@ -1,5 +1,9 @@
 $block: '.maps';
 #{$block} {
+    &__headline {
+        @extend %h1;
+        text-align: center;
+    }
     &__td {
         position: relative;
         &--map {
