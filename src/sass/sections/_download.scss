@@ -1,0 +1,72 @@
+$block: '.download';
+#{$block} {
+	&__wrapper {
+		width: 100%;
+		.h2 {
+			font-size: em(48);
+		}
+	}
+	&__content {
+		width: 100%;
+		max-width: em(800);
+		height: auto;
+		margin: 0 auto;
+	}
+	&__list {
+		&__elem {
+			width: 100%;
+			height: auto;
+			display: inline-block;
+			margin: em(8) 0;
+			background-color: $brand-primary;
+			padding: em(24);
+			border-radius: em(8);
+			@include clearfix;
+			&__content {
+				float: left;
+				&--info {
+					width: 70%;
+					.h2 {
+						font-size: em(20);
+						font-weight: 600;
+						margin-bottom: em(5);
+					}
+					p {
+						font-size: em(16);
+						margin-bottom: 0;
+					}
+				}
+				&--arrow {
+					width: 30%;
+					text-align: right;
+				}
+			}
+			&:hover {
+				#{$block} {
+					&__list {
+						&__elem {
+							&__content {
+								&--arrow {
+									.icon {
+										
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	@include mq($until: screen-xs) {
+		&__list {
+			&__elem {
+				&__content {
+					&--info {
+						min-width: initial;
+					}
+				}
+			}
+		}
+	}
+}

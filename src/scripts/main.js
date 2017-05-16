@@ -37,6 +37,7 @@
     //= include modules/GoogleMap.js
     //= include modules/GoogleMapsController.js
     //= include modules/Location.js
+    //= include modules/Timeline.js
 
 
 
@@ -58,7 +59,8 @@
         .addModule(new MatchHeightController(), 'MatchHeightController')
         .addModule(new GoogleMapsController(), 'googleMapsController')
         .addModule(new Location(), 'Location')
-    .run();
+        .addModule(new Timeline(), 'Timeline')
+        .run();
 
 
 })(jQuery);

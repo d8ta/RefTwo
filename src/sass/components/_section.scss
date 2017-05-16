@@ -26,6 +26,10 @@ $block: '.section';
             margin-bottom: 1em;
         }
     }
+
+    &--padding {
+        padding: em(60) 0;
+    }
     // #### main ###
     // welcome slider
     &--first {
