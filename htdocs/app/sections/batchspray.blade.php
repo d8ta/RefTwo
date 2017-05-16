@@ -14,9 +14,9 @@
 
 			{{-- left --}}
 			<div class="batchspray__text">
-				<h2 class="primary-color batchspray__text--title h1-inner">{{$title}}</h2>
-				<h3 class="batchspray__text--subtitle h2 subtitle">{{$subtitle}}</h3>
-				<p class="batchspray__text batchspray__text--left batchspray__text--description h2-inner">{!!$description!!}</p>
+				<h2 class="batchspray__text__title">{{$title}}</h2>
+				<h3 class="batchspray__text__subtitle">{{$subtitle}}</h3>
+				<div class="batchspray__text__description editor-content">{!!$description!!}</div>
 				<a class="btn btn--icon-text primary-brand-btn" href="{{$button_url}}">
 					<i class="btn__icon white-icon"></i>
 					<span class="btn__text">{{$buttontext}}</span>
@@ -24,7 +24,7 @@
 			</div>
 			{{-- right --}}
 			<div class="batchspray__images">	
-				<img src="{{$image}}" alt="Image" class="batchspray__images--image" />
+				<img src="{{$image}}" alt="Image" class="batchspray__images__image" />
 			</div>
 
 		</div>

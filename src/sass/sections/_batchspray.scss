@@ -3,28 +3,24 @@ $block: '.batchspray';
     &__text {
         margin: 0 auto;
         text-align: center;
-        max-width: 80%;
-        &--title {
-            @extend %h1-inner;
+        &__title {
+            @extend %h1;
         }
-        &--subtitle {
+        &__subtitle {
             @extend %h2;
-        }
-        p {
-            @extend %h2-inner;
         }
     }
     &__images {
         margin-top: 2em;
         text-align: right;
-        &--image {
+        &__image {
             width: 100%;
             margin-bottom: 1em;
         }
     }
     @include mq($from: screen-sm) {
         &__images {
-            &--image {
+            &__image {
                 display: inline;
                 margin-left: 1em;
             }
@@ -32,33 +28,24 @@ $block: '.batchspray';
     }
     @include mq($from: screen-lg) {
         &__text {
-            float: left;
             margin: 0;
             text-align: left;
             max-width: 50%;
-            &--title {
+            &__title {
                 text-align: left;
-            }
-            p {
-                margin-left: 0;
-                margin-right: 0;
             }
         }
         &__images {
             width: 50%;
             display: inline;
-            &--logo {
-                position: absolute;
-                top: 27em;
-            }
-            &--image {
+            &__image {
                 width: 45%;
             }
         }
     }
     @include mq($from: screen-xxl) {
         &__images {
-            &--image {
+            &__image {
                 margin-top: -2em;
                 margin-left: 10em;
             }

@@ -15,7 +15,7 @@ $corevalues = $block->getCorevalues();
 					<img src="{{$image}}" alt="Section Image" class="core-values__info__image" />
 					<div class="core-values__info__text">
 						<h2 class="h4 primary-color core-values__info__text core-values__info__text--title">{{$title}}</h2>
-						<p class="core-values__info__text core-values__info__text--description">{!!$description!!}</p>
+						<div class="core-values__info__text core-values__info__text--description editor-content">{!!$description!!}</div>
 					</div>
 				</div>
 				@endforeach
