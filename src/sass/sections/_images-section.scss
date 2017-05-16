@@ -28,10 +28,13 @@
         @include mq($from: screen-xl) {
             &__images {
                 &__image__left {
-                    max-width: 100%;
-                } 
+                    max-width: 96%;
+                    padding-bottom: 1.8%;
+                }
                 &__image__right {
-                    max-width: 49%;
+                    max-width: 48%;
+                    padding-bottom: 1.8%;
+                    margin-right: 1.4%;
                 }
                 display: table;
                 &__left {
