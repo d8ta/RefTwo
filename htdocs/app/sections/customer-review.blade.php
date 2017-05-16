@@ -1,7 +1,7 @@
 <?php 
 $customerimg = $block->getCustomerImg();
 ?>
-<div class="section--yellow section--margin">
+<div class="section--yellow section--margin-xl">
 	<div class="customer-review__content customer-review__content--whitebox-top"></div>
 	<div class="section section__content">
 		<div class="section__inner">
