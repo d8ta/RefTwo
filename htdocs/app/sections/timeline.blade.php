@@ -23,7 +23,7 @@
 								<li>
 									<a href="#0" data-date="{{$key}}/01/{{$value['year']}}" @if($key == 0) class="selected" @endif>
 										<img src="{{$value['image']}}" alt="{{$value['title']}}">
-										<span>{{$value['year']}}<span>
+										<p>{{$value['year']}}</p>
 									</a>
 								</li>
 							@endforeach
@@ -31,19 +31,21 @@
 						<span class="filling-line" aria-hidden="true"></span>
 					</div> 
 				</div> 
-				<ul class="timeline__horizontal__navigation">
+				{{-- <ul class="timeline__horizontal__navigation">
 					<li><a href="#0" class="prev inactive">Prev</a></li>
 					<li><a href="#0" class="next">Next</a></li>
-				</ul> 
+				</ul>  --}}
 			</div> 
 			<div class="events__content">
 				<ol>
 					@foreach($timeline as $key => $value)
 						<li @if($key == 0) class="selected" @endif data-date="{{$key}}/01/{{$value['year']}}">
-							<h2>{{$value['title']}}</h2>
-							<p>	
+							<div class="events__content__text events__content__text--headline"> 
+								<h2 class="h2">{{$value['title']}}</h2>
+							</div>
+							<div class="events__content__text events__content__text--description"> 
 								{!!$value['description']!!}
-							</p>
+							</div>
 						</li>
 					@endforeach
 				</ol>

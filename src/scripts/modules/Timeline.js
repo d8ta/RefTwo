@@ -10,7 +10,7 @@ Timeline.prototype.constructor = Timeline;
 Timeline.prototype.elements = {};
 
 Timeline.prototype.vars = {
-    eventsMinDistance: 160,
+    eventsMinDistance: 150,
 };
 
 Timeline.prototype.selectors = {
@@ -152,7 +152,7 @@ Timeline.prototype.setDatePosition = function(timelineComponents, min) {
     var that = this;
     for (i = 0; i < timelineComponents['timelineDates'].length; i++) { 
         var distance = that.daydiff(timelineComponents['timelineDates'][0], timelineComponents['timelineDates'][i]),
-            distanceNorm = Math.round(distance/timelineComponents['eventsMinLapse']) + 2;
+            distanceNorm = Math.round(distance/timelineComponents['eventsMinLapse']) + 0.5;
         timelineComponents['timelineEvents'].eq(i).css('left', distanceNorm*min+'px');
     }
 }
@@ -162,8 +162,6 @@ Timeline.prototype.setTimelineWidth = function(timelineComponents, width) {
         timeSpanNorm = timeSpan/timelineComponents['eventsMinLapse'],
         timeSpanNorm = Math.round(timeSpanNorm) + 4,
         totalWidth = timeSpanNorm*width;
-
-        console.log(timeSpan);
     timelineComponents['eventsWrapper'].css('width', totalWidth+'px');
     this.updateFilling(timelineComponents['timelineEvents'].eq(0), timelineComponents['fillingLine'], totalWidth);
 
@@ -228,8 +226,8 @@ Timeline.prototype.parseDate = function(events) {
     var dateArrays = [];
     events.each(function(){
         var dateComp = jQuery(this).data('date').split('/'),
-            newDate = new Date(2010, dateComp[0], dateComp[0]);
-        console.log(newDate);
+            newDate = new Date(2009, dateComp[0]+1, dateComp[0]);
+            console.log(newDate);
         dateArrays.push(newDate);
     });
     return dateArrays;

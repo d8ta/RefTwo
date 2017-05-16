@@ -20,7 +20,7 @@
 		 							<h2 class="h2">{{$download["title"]}}</h2>
 		 							<p>{{$download["info"]}}<p>
 		 						</div>
-		 						<div class="download__list__elem__content download__list__elem__content--arrow js-matchheight">
+		 						<div class="download__list__elem__content download__list__elem__content--link js-matchheight">
 		 							<div class="table table--fullheight">
 		 								<div class="table__td">
 		 									<div class="btn">PDF herunterladen</div>

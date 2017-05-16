@@ -92,3 +92,27 @@
     max-width: $width-max-container;
     @include clearfix;
 }
+
+%arrow-link {
+    display: block;
+    //width: 100%;
+    font-size: em(16);
+    padding-left: em(25);
+    font-weight: bold;
+    position: relative;
+    @include icon(arrowright, before);
+    &:before {
+        @extend %icon;
+        position: absolute;
+        left: em(0);
+        top: em(6);
+        transition: left 0.3s;
+        font-size: em(14);
+        color: $brand-primary;
+    }
+    &:hover {
+        &:before {
+            left: em(3);
+        }
+    }
+}
