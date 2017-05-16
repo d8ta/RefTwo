@@ -49,17 +49,17 @@ $block: '.maps';
                 padding-right: 10%;
             }
             &--headline {
-                @extend %h1-inner;
+                @extend %h1;
                 margin: 0;
             }
             &--address {
-                @extend %h2-inner;
+                @extend %h2;
                 max-width: 4em;
                 margin-left: 0;
                 margin-right: 0;
             }
             &--phone {
-                @extend %h2-inner;
+                @extend %h2;
                 white-space: pre-line;
             }
         }

@@ -10,7 +10,7 @@
 	<div class="section section--fullwidth">
 		<div class="section--maps">
 			<div class="section__content">
-				<h2 class="section__content--headline primary-color h1-inner">{{$headline}}</h2>
+				<h2 class="section__content--headline primary-color h1">{{$headline}}</h2>
 				<div class="maps">
 					<div class="maps__td maps__td--map">
 						<div class='maps__map js-google-maps'

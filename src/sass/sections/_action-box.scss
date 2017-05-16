@@ -57,13 +57,9 @@ $box-margin: 2em;
                 }
             }
             &__headline {
-                @extend %h1;
+                @extend %h2;
                 color: $brand-primary;
-                font-family: $font-normal;
-                font-size: em(20);
                 white-space: nowrap;
-                margin-bottom: em(10);
-                margin-left: -.5em;
             }
             &__description {
                 display: none;

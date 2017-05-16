@@ -8,6 +8,6 @@ $block: '.location-address';
         font-weight: bold;
     }
     &__text {
-        @extend %h2-inner;
+        @extend %h2;
     }
 }

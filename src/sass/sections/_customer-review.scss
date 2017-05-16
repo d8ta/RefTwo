@@ -25,7 +25,7 @@ $block: ".customer-review";
             padding-bottom: 3em;
             color: $color-white;
             h2 {
-                @extend %h1-inner;
+                @extend %h1;
                 margin: 0;
                 padding-bottom: 1em;
                 text-align: left;

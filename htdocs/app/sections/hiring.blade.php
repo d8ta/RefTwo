@@ -8,7 +8,7 @@ $subtitle = $block->getSubtitle();
 		<div class="">
 			<div class="hiring">
 				<div class="hiring__inner">
-						<h2 class="hiring__inner--title h1-inner primary-color">{{$title}}</h2>
+						<h2 class="hiring__inner--title h1 primary-color">{{$title}}</h2>
 						<h3 class="hiring__inner--subtitle h2 subtitle">{{$subtitle}}</h3>
 					 <div class="hiring__inner--button">
 					 	@foreach ($jobs as $job)

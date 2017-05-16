@@ -6,13 +6,13 @@ $block: '.product-teaser';
     &__inner {
         text-align: center;
         &--title {
-            @extend %h1-inner;
+            @extend %h1;
             width: 49%;
             margin: 0 auto;
             margin-bottom: .3em;
         }
         &--description {
-            @extend %h2-inner;
+            @extend %h2;
         }
     }
     @include mq($until: $screen-xs - 100) {
