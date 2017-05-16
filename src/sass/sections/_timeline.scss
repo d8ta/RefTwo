@@ -25,7 +25,7 @@ $block: '.timeline';
         }
         &__line {
             position: relative;
-            height: em(330);
+            height: em(360);
             width: 90%;
             max-width: em(1550);
             margin: 0 auto;
@@ -100,7 +100,7 @@ $block: '.timeline';
                 max-width: em(100);
                 width: 100%;
                 transition: all .2s ease-in-out;
-                padding-bottom: em(20);
+                padding-bottom: em(30);
             }
             a {
                 position: absolute;
@@ -111,6 +111,7 @@ $block: '.timeline';
                 padding-bottom: em(15);
                 color: white;
                 transform: translateZ(0);
+                font-size: em(20);
                 &:after {
                     content: '';
                     position: absolute;
@@ -125,26 +126,26 @@ $block: '.timeline';
                     background-color: $brand-primary;
                     transition: background-color 0.3s, border-color 0.3s;
                 }
-                &:hover {
-                    &:after {
-                        background-color: white;
-                        border-color: white;
-                    }
-                }
                 p {
                     display: block;
                     font-family: $font-headline;
                     font-size: em(20);
                     transition: all 0.3s;
+                    margin-bottom: -4.5em;
                     &:before {
                         height: em(30);
-                        width: em(1);
+                        width: 1px;
                         background-color: rgba(white, 0.3);
                         display: block;
+                        content: '';
+                        margin: auto auto;
                     }
-                    // position: absolute;
-                    // bottom: em(-50);
-                    // left: em(-16);
+                }
+                &:hover {
+                    &:after {
+                        background-color: white;
+                        border-color: white;
+                    }
                 }
                 &.selected {
                     pointer-events: none;
@@ -155,10 +156,8 @@ $block: '.timeline';
                         height: em(14);
                         width: em(14);
                     }
-                    span {
-                        font-size: em(32);
-                        bottom: em(-35);
-                        left: em(-18);
+                    p {
+                        transform: scale(1.4);
                     }
                     img {
                         transform: scale(1.6);
