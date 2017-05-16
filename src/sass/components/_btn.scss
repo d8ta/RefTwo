@@ -1,23 +1,17 @@
 $block: '.btn';
 #{$block} {
     @extend %arrow-link;
-    padding: em(10) em(20) em(10) em(37);
+    padding: em(10) em(20);
     background-color: $color-white;
     border-radius: em(5);
     display: inline-block;
-    &::before {
-        top: em(17);
-        left: em(20);
-    }
-    &:hover {
-        &::before {
-            left: em(23);
-        }
-    }
     &--yellow {
         background-color: $brand-primary;
         color: $color-white;
         &::before {
+            color: $color-white;
+        }
+        &:hover {
             color: $color-white;
         }
     }

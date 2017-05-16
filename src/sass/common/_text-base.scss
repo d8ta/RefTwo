@@ -88,25 +88,25 @@
 }
 
 %arrow-link {
-    display: block;
+    display: inline-block;
     font-size: em(16);
-    padding-left: em(25);
     font-weight: bold;
     position: relative;
     color: $color-text;
+    cursor: pointer;
     @include icon(arrowright, before);
     &:before {
         @extend %icon;
-        position: absolute;
-        left: em(0);
-        top: em(6);
-        transition: left 0.3s;
+        transition: transform 0.3s;
         font-size: em(14);
+        display: inline-block;
+        padding-right: em(5);
         color: $brand-primary;
     }
     &:hover {
+        color: $color-text;
         &:before {
-            left: em(3);
+            transform: translateX(em(3));
         }
     }
 }
