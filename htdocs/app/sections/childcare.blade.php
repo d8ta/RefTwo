@@ -19,7 +19,7 @@
 					{{-- textbox --}}
 					<div class="childcare__box">
 						<div class="childcare__box__text">
-							<h2 class="h1-inner primary-color childcare__box__text__title">{{$title}}</h2>
+							<h2 class="h1 primary-color childcare__box__text__title">{{$title}}</h2>
 							<h3 class="h2 subtitle childcare__box__text__subtitle">{{$subtitle}}</h3>
 								
 							<div class="childcare__box__text__description">

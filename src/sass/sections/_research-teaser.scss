@@ -12,10 +12,10 @@ $block: '.research-teaser';
             padding-bottom: 3em;
             color: $color-white;
             h2 {
-                @extend %heidi-headline;
+                @extend %h1;
             }
             p {
-                @extend %heidi-subline;
+                @extend %intro-text;
             }
         }
         &__images {

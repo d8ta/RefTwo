@@ -3,11 +3,11 @@ $block: '.technology-teaser';
     &__inner {
         text-align: center;
         &__title {
-            @extend %h1-inner;
+            @extend %h1;
             margin-bottom: .2em;
         }
         &__description {
-            @extend %h2-inner;
+            @extend %h2;
             line-height: 1.5em;
         }
     }

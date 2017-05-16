@@ -20,7 +20,7 @@ $customerimg = $block->getCustomerImg();
 				{{-- <div> --}}
 					{{-- left --}}
 					<div class="customer-review__content customer-review__content--left js-matchheight" >
-						<h2 class="h1-inner">{{$title}}</h2>
+						<h2 class="h1">{{$title}}</h2>
 						<p class="h2">{{$description}}</p>
 						<h3 class="h4">{{$signature}}</h3>
 					</div>

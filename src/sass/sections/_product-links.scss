@@ -13,8 +13,8 @@ $block: '.product-links';
                 margin-bottom: 4em;
             }
             &__text {
+                @extend %text-base;
                 padding: .5em;
-                @extend %h2-inner;
                 overflow: hidden;
                 height: 12em;
                 display: none;
@@ -34,9 +34,6 @@ $block: '.product-links';
                     margin: 0 auto;
                     width: 60%;
                 }
-                &__text {
-                    text-align: left;
-                }
                 &--logo {
                     display: block;
                     text-align: center;
@@ -44,7 +41,8 @@ $block: '.product-links';
                 }
                 &__text {
                     overflow: hidden;
-                    display: inline-block;
+                    display: block;
+                    text-align: left;
                     &__clamp {
                         display: -webkit-box;
                         -webkit-line-clamp: 5;
@@ -69,9 +67,6 @@ $block: '.product-links';
                     margin: 0;
                 }
                 &__text {
-                    verflow: hidden;
-                    display: inline-block;
-                    padding: 0;
                     &__clamp {
                         display: -webkit-box;
                         -webkit-line-clamp: 10;

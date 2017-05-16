@@ -1,20 +1,11 @@
 // HEADLINES
-%h1 {
-    font-family: $font-headline;
-    font-size: em(48);
-    font-weight: bold;
-    line-height: 1.2em;
-    margin-bottom: .3em;
-}
 
-%h1-inner {
+%h1 {
     font-family: $font-headline;
     font-size: em(33);
     font-weight: bold;
-    line-height: 1.2em;
-    margin-bottom: em(5);
-    text-align: center;
-
+    line-height: 1.1;
+    margin-bottom: .5em;
     @include mq($from: screen-sm) {
         font-size: em(36);
     }
@@ -33,24 +24,15 @@
 }
 
 %h2 {
-    font-family: $font-normal;
-    font-size: em(22);
-    font-weight: normal;
-    line-height: 1.2em;
-}
-
-%h2-inner {
-    font-family: $font-normal;
     font-size: em(21);
-    font-weight: normal;
-    line-height: 1.2em;
-    margin: em(20) auto em(10) auto;
+    line-height: 1.2;
+    font-weight: bold;
+    margin-bottom: .5em;
     @include mq($from: screen-sm) {
         font-size: em(20);
     }
     @include mq($from: screen-md) {
         font-size: em(19);
-        max-width: 40em;
     }
     @include mq($from: screen-lg) {
         font-size: em(18);
@@ -65,56 +47,49 @@
 
 %h3 {
     font-size: em(15);
-    margin: 0 0 em(20) 0;
+    margin-bottom: .5em;
 }
 
 %h4 {
-    font-family: $font-normal;
-    font-size: 1.3em;
+    font-size: em(18);
     font-weight: bold;
-    line-height: 1.5em;
-    margin: em(25) 0 em(20) 0;
+    line-height: 1.5;
+    margin-bottom: .5em;
 }
 
 %h5 {
-    font-family: $font-normal;
-    font-size: em(18.5);
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1em;
-    margin-bottom: em(20);
-}
-
-%h6-inner {
-    font-family: $font-normal;
-    font-size: 1em;
-    font-weight: normal;
-    line-height: 1.2em;
-    @include mq($from: screen-sm) {
-        font-size: em(14.25);
-    }
     
 }
 
-
-%heidi-headline {
-    @extend %h1-inner;
-    text-align: left;
-    margin-bottom: 0.7em;
+%h6 {
+    
 }
-%heidi-subline {
-    font-size: em(21);
-    line-height: 1.2em;
-    margin-bottom: 0.7em;
 
+%intro-text {
+    font-size: em(21);
+    line-height: 1.2;
+    margin-bottom: .8em;
 }
 
 %text-base {
     font-family: $font-normal;
-    line-height: 1.65em;
-    font-size: em(18);
+    font-size: em(16);
+    line-height: 1.65;
+    margin-bottom: .8em;
 }
 
+%pre-headline {
+    line-height: 1.4;
+    font-size: em(18);
+    margin-bottom: .8em;
+}
+
+%footer-text {
+    font-size: em(15);
+    line-height: 1.65;
+}
+
+%ul {}
 
 %section-content {
     margin: 0 auto;
@@ -123,16 +98,4 @@
     box-sizing: content-box;
     max-width: $width-max-container;
     @include clearfix;
-}
-
-%footer-text {
-    font-size: em(15);
-}
-
-%lefttext {
-    margin-left: 0;
-}
-
-%ul {
-    
 }

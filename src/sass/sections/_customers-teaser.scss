@@ -9,7 +9,7 @@ $block: '.customers-teaser';
             text-align: center;
         }
         &__textbox {
-            @extend %h2-inner;
+            @extend %h2;
             margin: 0 auto;
             &__left {
                 padding: .5em 5em;

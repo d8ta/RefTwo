@@ -21,14 +21,14 @@ $block: '.welcome-slider';
                 padding: 2em 0;
             }
             &__pretitle {
-                @extend %h5;
+                @extend %pre-headline;
             }
             &__title {
-                @extend %heidi-headline;
+                @extend %h1;
                 max-width: em(220);
             }
             &__description {
-                @extend %heidi-subline;
+                @extend %intro-text;
                 max-width: em(400);
             }
         }
