@@ -1,5 +1,6 @@
 <?php
 $locations = \Project\Models\Location::allPublished();
+$contact_form_id = Project\Application::getInstance()->getConfig('pages.contact-page.id');
 ?>
 
 <div class="maps__infobox js-google-maps-infobox maps__infobox--locations">
@@ -21,7 +22,7 @@ $locations = \Project\Models\Location::allPublished();
 		</div>
 
 		<div class="maps__infobox__button">
-			<a class="btn btn--yellow">
+			<a class="btn btn--yellow" href="{{get_permalink(pll_get_post($contact_form_id))}}">
 				<?php _e('Kontaktformular'); ?>
 			</a>
 		</div>

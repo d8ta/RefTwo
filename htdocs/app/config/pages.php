@@ -1,11 +1,8 @@
 <?php
 $config = [
 	'pages' => [
-		'project-map' => [
-			'id' => 195
-		],
-		'project-grid' => [
-			'id' => 191
+		'contact-page' => [
+			'id' => 29
 		],
 	]
 ];

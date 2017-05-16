@@ -12,6 +12,7 @@ $boxes = $block->getBox();
 				$description = $box['description'];
 				$buttontext = $box['button_text'];
 				$icon = $box['icon'];
+				$button_url = $box['button_url'];
 				?>
 				<div class="action-box__box">
 					<div class="action-box__box__image bg-image" style="background-image: url({{$box['background']}})">
@@ -26,9 +27,9 @@ $boxes = $block->getBox();
 										<div class="action-box__box__text__description__clamp">{{$description}}</div>
 									</div>
 								</div>
-								<div class="action-box__box__text__button">
+								<a class="action-box__box__text__button" href="{{$button_url}}">
 									{{$buttontext}}
-								</div>
+								</a>
 							</div>
 						</div>
 					</div>

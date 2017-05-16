@@ -17,7 +17,7 @@
 				<h3 class="product-teaser__inner__subtitle">{{$subtitle}}</h3>
 				<div class="product-teaser__inner__description">{{$description}}</div>
 				<div class="product-teaser__inner__button">
-					<a class="btn btn--yellow" href="#">
+					<a class="btn btn--yellow" href="{{$button_url}}">
 						{{$button_text}}
 					</a>
 				</div>

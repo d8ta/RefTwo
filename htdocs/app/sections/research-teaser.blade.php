@@ -7,6 +7,7 @@ $bigimage = $block->getBigImage();
 $title = $block->getTitle();
 $description = $block->getDescription();
 $buttontext = $block->getButtonText();
+$button_url = $block->getButtonUrl();
 ?>
 
 <div class="section section--margin-sm section--yellow">
@@ -19,10 +20,9 @@ $buttontext = $block->getButtonText();
 				<div class="research-teaser__content research-teaser__content--left js-matchheight" >
 					<h2>{{$title}}</h2>
 					<p>{{$description}}</p>
-             		<button class="btn btn--icon-text" type="button">
-                        <i class="btn__icon primary-color"></i>
-                        <span class="btn__text">{{$buttontext}}</span>
-                    </button>
+             		<a class="btn" href="{{$button_url}}">
+                        {{$buttontext}}
+                    </a>
 				</div>
 
 				{{-- right --}}
