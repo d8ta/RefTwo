@@ -32,9 +32,10 @@ $box-padding: 1%;
                 margin-top: 1em;
                 visibility: hidden;
                 opacity: 0;
+                display: none;
                 background: $brand-primary;
-                color: #fff;
-                transition: visibility 0s 0.2s, opacity 0.2s;
+                color: $color-white;
+                transition: visibility 0s .2s, opacity .2s;
             }
         }
     }
@@ -50,14 +51,17 @@ $box-padding: 1%;
     @include mq($from: screen-md) {
         &__box {
             width: 19% - 2 * $box-padding;
+            &__text__link {
+                display: block;
+            }
             &:hover {
                 transition: background .3s;
                 background: $color-text;
-                color: #fff;
+                color: $color-white;
                 #{$block}__box__text__link {
                     visibility: visible;
                     opacity: 1;
-                    transition: visibility 0s, opacity 0.2s;
+                    transition: visibility 0s, opacity .2s;
                 }
             }
         }

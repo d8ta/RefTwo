@@ -35,7 +35,8 @@ $block-padding: 2%;
     }
     @include mq($from: screen-xs) {
         &__link {
-            &__image, &__text {
+            &__image,
+            &__text {
                 vertical-align: top;
             }
             &__text {
@@ -56,11 +57,6 @@ $block-padding: 2%;
             margin-left: $block-padding;
             margin-right: $block-padding;
             float: left;
-            &__text {
-                &__logo {
-
-                }
-            }
         }
     }
 }
