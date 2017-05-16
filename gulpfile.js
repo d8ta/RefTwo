@@ -119,7 +119,7 @@ gulp.task("sass", function(callback) {
 
 gulp.task("sass::watch", function(callback) {
     runSequence(
-        'sass',
+        'sass::src',
         'livereload',
         callback
     );
