@@ -1,4 +1,4 @@
-<div class="section section--seventh-corp">
+<div class="section section--margin-md">
 	<div class="section__content">
 		<div class="margin">
 			<div class="customers-teaser">

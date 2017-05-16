@@ -1,7 +1,7 @@
 <?php 
 $corevalues = $block->getCorevalues();
 ?>
-<div class="section section--second-corp">
+<div class="section section--margin-xl">
 	<div class="section__content">
 		<div class="core-values">
 			@foreach ($corevalues as $value)
