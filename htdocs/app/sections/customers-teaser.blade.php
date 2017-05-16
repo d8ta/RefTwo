@@ -9,14 +9,14 @@
 				$description_right = $block->getDescriptionRight();
 				?>
 				<div class="customers-teaser__inner">
-					<h2 class="h1 primary-color customers-teaser__inner customers-teaser__inner--title">{{$title}}</h2>
-					<h3 class="h2 subtitle customers-teaser__inner customers-teaser__inner--subtitle">{{$subtitle}}</h3>
+					<h2 class="customers-teaser__inner customers-teaser__inner__title">{{$title}}</h2>
+					<h3 class="customers-teaser__inner customers-teaser__inner__subtitle">{{$subtitle}}</h3>
 					<div class="customers-teaser__inner__textbox">
 						<div class="customers-teaser__inner__textbox__left">
-							<p class="h2">{!!$description_left!!}</p>
+							<div class="customers-teaser__inner__description">{!!$description_left!!}</div>
 						</div>
 						<div class="customers-teaser__inner__textbox__right">
-							<p class="h2">{!!$description_right!!}</p>
+							<div class="customers-teaser__inner__description">{!!$description_right!!}</div>
 						</div>
 					</div>
 				</div>
