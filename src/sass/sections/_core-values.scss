@@ -14,7 +14,6 @@ $info-padding: 1%;
             &__description {
                 @extend %text-base;
                 margin: 0;
-                max-width: 80%;
             }
         }
     }
