@@ -21,6 +21,9 @@ $block: '.environment';
         }
     }
     @include mq($from: screen-lg) {
+        &__image {
+            position: relative;
+        }
         &__box {
             background: $color-white;
             max-width: 84%;
@@ -63,7 +66,7 @@ $block: '.environment';
     @include mq($from: screen-xxl) {
         &__box {
             max-width: 33%;
-            max-height: 60%;
+            max-height: 70%;
         }
     }
 }
