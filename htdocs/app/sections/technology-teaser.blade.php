@@ -33,10 +33,16 @@
 						</div>
 					</div>
 					
-					<div class="technology-teaser__boxes__box__text__link btn--icon-text primary-brand-btn">
+					<div class="technology-teaser__boxes__box__text__link btn btn--yellow">
 						<i class="btn__icon white-icon"></i>
 						<span class="btn__text">mehr erfahren</span>
 					</div>
+					
+				{{-- 	<div class="technology-teaser__boxes__box__text__link btn--icon-text primary-brand-btn">
+						<i class="btn__icon white-icon"></i>
+						<span class="btn__text">mehr erfahren</span>
+					</div> --}}
+
 				</div>
 			</a>
 			@endforeach
