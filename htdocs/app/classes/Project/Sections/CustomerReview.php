@@ -14,8 +14,6 @@ class CustomerReview extends \A365\Wordpress\Block\AcfBlock {
 	public static function getAcfSubfields()
 	{
 		return [
-				// FieldHelper::createRepeater('slides', 'Slides', ["min" => 1, "max" => 6])
-			 //    ->addSubfields([
 					FieldHelper::createText('title', 'Überschrift')->setRequired(),
 					FieldHelper::createText('description', 'Beschreibung')->setRequired(),
 					FieldHelper::createText('signature', 'Unterschrift')->setRequired(),
@@ -24,7 +22,6 @@ class CustomerReview extends \A365\Wordpress\Block\AcfBlock {
 					->addSubfields([
 									FieldHelper::createImageCrop('image', 'Kundenbild klein', ["crop_type" => "hard", 'target_size' => 'custom', 'force_crop' => 'no', 'save_format' => 'url', "width" => 200, "height" => 200])->setRequired()
 									]),
-								// ])	
 				];
 	}
 }

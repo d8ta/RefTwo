@@ -11,6 +11,11 @@ $block: '.customer-review';
             @extend %h1;
             color: $color-white;
         }
+        &__quoteimage {
+            // display: none;
+            margin-left: -3em;
+            margin-top: -1.5em;
+        }
         &__description {
             @extend %h2;
             max-width: 30em;

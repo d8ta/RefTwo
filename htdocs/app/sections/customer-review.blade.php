@@ -15,7 +15,10 @@ $customerimg = $block->getCustomerImg();
 					{{-- left --}}
 					<div class="customer-review__content customer-review__content--left js-matchheight" >
 						<h2 class="customer-review__content__title">{{$title}}</h2>
-						<div class="customer-review__content__description">{{$description}}</div>
+						<div class="customer-review__content__description">
+							<img src="/assets/images/layout/quotes.png" alt="Quotes" class="customer-review__content__quoteimage" />
+							{{$description}}
+						</div>
 						<h3 class="customer-review__content__signature">{{$signature}}</h3>
 					</div>
 					{{-- right --}}
