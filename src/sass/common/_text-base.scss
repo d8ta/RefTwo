@@ -106,9 +106,9 @@
     color: $color-text;
     cursor: pointer;
     @include icon(arrowright, before);
-    &:before {
+    &::before {
         @extend %icon;
-        transition: transform 0.3s;
+        transition: transform .3s;
         font-size: em(14);
         display: inline-block;
         padding-right: em(5);
@@ -116,7 +116,7 @@
     }
     &:hover {
         color: $color-text;
-        &:before {
+        &::before {
             transform: translateX(em(3));
         }
     }

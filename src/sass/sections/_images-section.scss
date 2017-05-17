@@ -27,6 +27,7 @@ $block: '.images-section';
     }
     @include mq($from: screen-xl) {
         &__images {
+            display: table;
             &__image__left {
                 max-width: 96%;
                 padding-bottom: 1.8%;
@@ -36,7 +37,6 @@ $block: '.images-section';
                 padding-bottom: 1.8%;
                 margin-right: 1.4%;
             }
-            display: table;
             &__left {
                 vertical-align: top;
                 display: table-cell;

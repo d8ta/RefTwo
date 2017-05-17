@@ -1,13 +1,13 @@
 $block: '.location-address';
 #{$block} {
     display: block;
-    color: #fff;
+    color: $color-white;
     &__group {
         margin-bottom: em(10);
     }
     &__headline {
         @extend %h3;
-        color: #fff;
+        color: $color-white;
     }
     &__text {
         @extend %text-base;

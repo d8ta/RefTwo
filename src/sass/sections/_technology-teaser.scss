@@ -19,9 +19,9 @@ $block: '.technology-teaser';
     }
 }
 
-$block: '.technology-teaser__boxes';
+$block2: '.technology-teaser__boxes';
 $box-padding: 1%;
-#{$block} {
+#{$block2} {
     text-align: center;
     margin-right: -$box-padding;
     margin-left: -$box-padding;
@@ -82,7 +82,7 @@ $box-padding: 1%;
                 transition: background .3s;
                 background: $color-text;
                 color: $color-white;
-                #{$block}__box__text__link {
+                #{$block2}__box__text__link {
                     visibility: visible;
                     opacity: 1;
                     transition: visibility 0s, opacity .2s;

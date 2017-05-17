@@ -21,7 +21,7 @@ var sassLint = require('gulp-sass-lint');
 var yargs = require('yargs').argv;
 
 /* ======== Variables ======== */
-var fontName = 'iconfont_v2';
+var fontName = 'iconfont_v3';
 
 var paths = {
     prefix: {
@@ -190,7 +190,7 @@ gulp.task("scripts", function(callback) {
 
 gulp.task("scripts::watch", function(callback) {
     runSequence(
-        'scripts',
+        'scripts::src',
         'livereload',
         callback
     );

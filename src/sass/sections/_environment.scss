@@ -24,7 +24,7 @@ $block: '.environment';
             position: relative;
         }
         &__box {
-            background: white;
+            background: $color-white;
             max-width: 84%;
             border-radius: .5em;
             position: absolute;
