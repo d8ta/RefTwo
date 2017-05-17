@@ -87,7 +87,24 @@
     line-height: 1.65;
 }
 
-%ul {}
+
+%ul {
+    margin: 0 0 em(20);
+    > * {
+        line-height: 1.48em;
+        margin-bottom: 0.4em;
+        padding-left: em(20);
+        position: relative;
+        @include icon('arrowright');
+        &:before {
+            @extend %icon;
+            font-size: em(6);
+            position: absolute;
+            left: em(15);
+            top: 0;
+        }
+    }
+}
 
 %section-content {
     margin: 0 auto;

@@ -1,8 +1,8 @@
 $block: '.environment';
 #{$block} {
     &__image {
-        padding-bottom: 41.6666%;
-        margin-bottom: 2em;
+        padding-bottom: 42%;
+        position: relative;
     }
     &__box {
         &__text {
@@ -20,9 +20,6 @@ $block: '.environment';
         }
     }
     @include mq($from: screen-lg) {
-        &__image {
-            position: relative;
-        }
         &__box {
             background: $color-white;
             max-width: 84%;

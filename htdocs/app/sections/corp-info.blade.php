@@ -10,9 +10,9 @@
 
 			{{-- left --}}
 			<div class="corp-info__text">
-				<h2 class="primary-color corp-info__text__title">{{$title}}</h2>
+				<h2 class="corp-info__text__title">{{$title}}</h2>
 				<h3 class="corp-info__text__subtitle">{{$subtitle}}</h3>
-				<div class="corp-info__text corp-info__text--left corp-info__text__description">{!!$description!!}</div>
+				<div class="corp-info__text__description editor-content">{!!$description!!}</div>
 			</div>
 
 			{{-- right --}}
