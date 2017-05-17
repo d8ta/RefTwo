@@ -16,8 +16,8 @@
 					</div>
 				</div>
 				<div class="batchspray-detail__text">
-					<h2 class="h2 primary-color">{{$title}}</h2>
-					<h2 class="">{{$subtitle}}</h2>
+					<h2 class="h2">{{$title}}</h2>
+					<h3 class="">{{$subtitle}}</h3>
 					<div class="batchspray-detail__text__enumerate">
 						<h3 class="batchspray-detail__text__enumerate--left">{!!$descriptionleft!!}</h3>
 						<h3 class="batchspray-detail__text__enumerate--middle">{!!$descriptionmiddle!!}</h3>

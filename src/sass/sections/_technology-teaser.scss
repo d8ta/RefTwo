@@ -41,14 +41,13 @@ $box-padding: 1%;
             padding-bottom: 100%;
         }
         &__text {
-            padding: em(30) 0 0;
+            padding: em(30) 8%;
             &__title {
                 @extend %h4;
             }
             &__description {
                 @extend %text-base;
                 display: none;
-                padding: em(30) 8%;
             }
             &__link {
                 visibility: hidden;
