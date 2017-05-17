@@ -1,0 +1,32 @@
+$block: '.products-overview';
+#{$block} {
+    &__listing {
+        &__elem {
+            width: 33.333%;
+            padding: 0 em(5);
+            float: left;
+        }
+        &__content {
+            &__image {
+                width: 100%;
+                padding-bottom: 81.22%;
+                background-size: cover !important; 
+            }
+            &__info {
+                background-color: $color-product-grey;
+                padding: rem(111) rem(68);
+                &__logo {
+                    margin-bottom: em(15);
+                    img {
+                        width: 100%;
+                        max-width: em(280);
+                    }
+                }
+                &__description {
+                    margin-bottom: em(40);
+                    max-width: em(456);
+                }
+            }
+        }
+    }
+}
