@@ -1,11 +1,5 @@
 .editor-content,
 body#tinymce.wp-editor {
-    p {
-        @extend %text-base;
-    }
-    ul {
-        @extend %ul !optional;
-    }
     h1 {
         @extend %h1 !optional;
     }
@@ -23,6 +17,12 @@ body#tinymce.wp-editor {
     }
     h6 {
         @extend %h6 !optional;
+    }
+    p {
+        @extend %text-base;
+    }
+    ul {
+        @extend %ul !optional;
     }
     h1,
     h2,
