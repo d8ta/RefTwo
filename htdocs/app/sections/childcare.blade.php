@@ -20,7 +20,6 @@
 							<h2 class="childcare__box__text__title">{{$title}}</h2>
 							<h3 class="childcare__box__text__subtitle">{{$subtitle}}</h3>
 							<div class="childcare__box__text__description">{!!$description!!}</div>
-
 						</div>	
 					</div>
 				</div>
