@@ -12,8 +12,6 @@ if (is_readable($css)) {
 
     <base href="{{get_site_url()}}" />
 
-    <title>{{get_bloginfo()}}</title>
-
     {{-- Styles --}}
     <link rel="stylesheet" href="{{$css}}" type="text/css" media="all">
 
