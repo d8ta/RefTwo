@@ -1,16 +1,22 @@
 $block: '.childcare';
 #{$block} {
     &__image {
-        padding-bottom: 41.6666%;
-        margin-bottom: 2em;
+        padding-bottom: 42%;
+        position: relative;
     }
     &__box {
         &__text {
             text-align: center;
             padding: 0 .5em;
+            &__title {
+                @extend %h1;
+                margin-top: 1em;
+            }
+            &__subtitle {
+                @extend %h2;
+            }
             &__description {
-                max-width: 80%;
-                margin: 0 auto;
+                @extend %text-base;
             }
         }
     }
@@ -20,7 +26,7 @@ $block: '.childcare';
         }
         &__box {
             background: $color-white;
-            max-width: 33%;
+            max-width: 84%;
             border-radius: .5em;
             position: absolute;
             top: 5em;
@@ -30,6 +36,7 @@ $block: '.childcare';
                 padding: 3.5em;
                 &__title {
                     text-align: left;
+                    margin-top: 0;
                 }
                 &__subtitle {
                     text-align: left;
@@ -39,19 +46,13 @@ $block: '.childcare';
                     margin-left: 0;
                     max-width: 100%;
                     display: block;
-                    overflow: hidden;
-                    height: 8em;
-                    &__clamp {
-                        display: -webkit-box;
-                        -webkit-line-clamp: 5;
-                        -webkit-box-orient: vertical;
-                    }
                 }
             }
         }
     }
     @include mq($from: screen-xl) {
         &__box {
+            max-width: 50%;
             &__text {
                 &__description {
                     text-align: left;
@@ -67,6 +68,12 @@ $block: '.childcare';
                     }
                 }
             }
+        }
+    }
+    @include mq($from: screen-xxl) {
+        &__box {
+            max-width: 33%;
+            max-height: 60%;
         }
     }
 }
