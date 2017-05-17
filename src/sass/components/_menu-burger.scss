@@ -3,7 +3,7 @@ $padding: 16px;
 #{$block} {
     padding: $padding;
     width: 20px + 2 * $padding;
-    margin: 0 0 0 auto;
+    margin: em(30) 0 0 auto;
     transition: all .3s ease;
     @include mq($from: screen-xs) {
         &--main {
