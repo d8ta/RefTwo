@@ -22,19 +22,6 @@ $block: '.customer-review';
             @extend %h2;
             color: $color-white;
         }
-        &--whitebox-top {
-            background: $color-white;
-            height: 3em;
-            width: 100%;
-            margin-bottom: -1.3em;
-            z-index: 1;
-        }
-        &--whitebox-bottom {
-            background: $color-white;
-            height: 3em;
-            width: 100%;
-            margin-top: -2em;
-        }
         &--left {
             padding-top: 10em;
             padding-bottom: 3em;
@@ -62,7 +49,7 @@ $block: '.customer-review';
         &__content {
             width: 50%;
             float: left;
-            p {
+            &__description {
                 width: 85%;
             }
             &--left {
