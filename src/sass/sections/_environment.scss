@@ -1,5 +1,13 @@
 $block: '.environment';
 #{$block} {
+    &__slide {
+        &--text-right {
+            #{$block}__box {
+                right: 6em;
+                left: auto;
+            }
+        }
+    }
     &__image {
         padding-bottom: 42%;
         position: relative;
@@ -31,7 +39,7 @@ $block: '.environment';
             position: absolute;
             top: 5em;
             bottom: 7em;
-            right: 6em;
+            left: 6em;
             padding: 0;
             &__text {
                 padding: 3.5em;
