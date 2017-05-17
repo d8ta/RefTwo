@@ -22,7 +22,7 @@
 							<div class="products-overview__listing__content__info__description">
 								<p>{{$product['description']}}</p>
 							</div>
-							<div class="products-overview__listing__content__info__link btn btn--yellow">{{$product['linktext']}}</div>
+							<a class="products-overview__listing__content__info__link btn btn--yellow" href="{{$product['link']}}">{{$product['linktext']}}</a>
 						</div>
 					</div>
 				</div>
