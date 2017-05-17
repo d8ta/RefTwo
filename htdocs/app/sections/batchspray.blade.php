@@ -1,4 +1,4 @@
-<div class="section section--batchspray section--margin">
+<div class="section section--batchspray section--margin-xl">
 	<div class="section__content">
 		<?php 
 		$title = $block->getTitle();
