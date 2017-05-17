@@ -17,8 +17,8 @@
 						<h3 class="advantages__content__text__description">{{$description}}</h3>
 					</div>
 					<div class="advantages__content__images">
-						<div class="advantages__content__images--big">
-							<img src="{{$bigimage}}" alt="Forschungsbild groß" class="advantages__content__images--big__inner" />
+						<div class="advantages__content__images__big">
+							<img src="{{$bigimage}}" alt="Forschungsbild groß" class="advantages__content__images__big__inner" />
 						</div>
 					</div>
 				</div>

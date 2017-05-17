@@ -6,7 +6,11 @@ $block: '.advantages';
         &__text {
             padding-top: 8em;
             display: table-cell;
-            h3 {
+            &__title {
+                @extend %h1;
+            }
+            &__description {
+                @extend %text-base;
                 margin: 0;
                 width: 100%;
             }
@@ -14,7 +18,7 @@ $block: '.advantages';
         &__images {
             @extend %section-content;
             display: table-cell;
-            &--big {
+            &__big {
                 border-radius: 5px;
                 &__inner {
                     border-radius: 5px;
@@ -30,6 +34,7 @@ $block: '.advantages';
             }
             &__images {
                 display: inline-block;
+                border-radius: .5em;
             }
         }
     }
