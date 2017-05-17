@@ -33,9 +33,8 @@
 					<input type="hidden" name="form[lang]" value="<?php echo get_locale(); ?>">
 					<div class="form__fields__row">
 						<div class="form__fields__row__input">
-							<button class="btn btn--icon-text primary-brand-btn" type="submit">
-								<i class="btn__icon white-icon"></i>
-								<span class="btn__text"><?php echo __('Send Form'); ?></span>
+							<button class="btn" type="submit">
+								<?php echo __('Send Form'); ?>
 							</button>
 						</div>
 					</div>
