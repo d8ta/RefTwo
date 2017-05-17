@@ -5,45 +5,54 @@ $title = $block->getTitle();
 $description = $block->getDescription();
 $buttontext = $block->getButtonText();
 $button_url = $block->getButtonUrl();
-$mh_group = "research-teaser-" . rand();
 ?>
 
 <div class="section section--margin-sm section--yellow">
-	<div class="research-teaser__whitebox-top"></div>
-
 	<div class="section__content">
 		<div class="research-teaser">
-
 			{{-- left --}}
-			<div class="research-teaser__content research-teaser__content--left js-matchheight" data-mh="{{$mh_group}}">
-				<h2>{{$title}}</h2>
-				<p>{{$description}}</p>
-         		<a class="btn" href="{{$button_url}}">
-                    {{$buttontext}}
-                </a>
+			<div class="research-teaser__content research-teaser__content--left">
+				<div class="research-teaser__text">
+					<div class="research-teaser__text__inner">
+						<h2 class="research-teaser__text__title">{{$title}}</h2>
+						<div class="research-teaser__text__description">{{$description}}</div>
+		         		<a class="btn" href="{{$button_url}}">
+		                    {{$buttontext}}
+		                </a>
+	                </div>
+                </div>
 			</div>
 
 			{{-- right --}}
-			<div class="research-teaser__content research-teaser__content--right js-matchheight" data-mh="{{$mh_group}}">
-				<div class="research-teaser__content__image-container">
-					<div class="research-teaser__content__images research-teaser__content__images--big">
-						<img alt="{{$title}}" src="{{$bigimage}}" class="research-teaser__content__images__image">
-						<img src="assets/images/icons/entwicklung.svg" class="research-teaser__content__images__icon" alt="{{$title}} icon" />
-						@foreach ($researchimg as $img)
+			<div class="research-teaser__content research-teaser__content--right">
+				<div class="research-teaser__images">
+					<div class="research-teaser__images__big">
+						<div class="research-teaser__images__img">
+							<img src="{{$bigimage}}" alt="{{$title}}">
+						</div>
 					</div>
-					<div class="research-teaser__content__images research-teaser__content__images--small">
-						<?php 
-						$smallimg = $img['image'];
-						?>
-						<img src="{{$smallimg}}" alt="Forschungsbild klein" class="research-teaser__content__images__smallimg" />
+					<div class="research-teaser__images__small">
+						@foreach ($researchimg as $img)
+							<div class="research-teaser__images__img">
+								<img src="{{$img['image']}}" alt="{{$title}}">
+							</div>
 						@endforeach
+					</div>
+					<div class="research-teaser__icon">
+						<i class="icon"></i>
 					</div>
 				</div>	
 			</div>
+			
+		</div>
+		<div class="research-teaser__whitebox-top">
+			<div class="research-teaser__whitebox-helper"></div>
+		</div>
+		<div class="research-teaser__whitebox-bottom">
+			<div class="research-teaser__whitebox-helper"></div>
 		</div>
 	</div>
-
-	<div class="research-teaser__whitebox-bottom"></div>
+	
 </div>
 
 
