@@ -25,6 +25,32 @@ $block: '.products-overview';
                 &__description {
                     margin-bottom: em(40);
                     max-width: em(456);
+                    min-height: em(120);
+                }
+            }
+        }
+    }
+    @include mq($until: 640px) {
+        &__listing {
+            &__elem {
+                width: 100%;
+                margin: em(5) 0;
+            }
+        }
+    }
+    @include mq($from: 641px, $until: 1024px) { 
+        &__listing {
+            &__elem {
+                width: 100%;
+                margin: em(5) 0;
+            }
+            &__content {
+                &__all {
+                    width: 50%;
+                    float: left;
+                }
+                &__image {
+                    padding-bottom: 40%;
                 }
             }
         }
