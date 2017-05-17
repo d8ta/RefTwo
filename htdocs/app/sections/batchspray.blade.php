@@ -17,9 +17,8 @@
 				<h2 class="batchspray__text__title">{{$title}}</h2>
 				<h3 class="batchspray__text__subtitle">{{$subtitle}}</h3>
 				<div class="batchspray__text__description editor-content">{!!$description!!}</div>
-				<a class="btn btn--icon-text primary-brand-btn" href="{{$button_url}}">
-					<i class="btn__icon white-icon"></i>
-					<span class="btn__text">{{$buttontext}}</span>
+				<a class="btn" href="{{$button_url}}">
+					{{$buttontext}}
 				</a>
 			</div>
 			{{-- right --}}

@@ -4,16 +4,14 @@ $form-padding: em(30);
     position: relative;
     text-align: left;
     max-width: em(650);
-    margin: em(80) auto 0;
+    margin-top: em(80);
     &__fields {
         position: relative;
         z-index: 10;
         transition: transform 350ms $ease-in-cubic, opacity 300ms;
         margin-left: -$form-padding;
         margin-right: -$form-padding;
-        .clearfix {
-            @include clearfix;
-        }
+        @include clearfix;
         &__row {
             width: 50%;
             float: left;
@@ -21,8 +19,10 @@ $form-padding: em(30);
             padding-left: $form-padding;
             padding-right: $form-padding;
             position: relative;
-            @include clearfix;
             &--full {
+                width: 100%;
+            }
+            @include mq($until: screen-xs) {
                 width: 100%;
             }
             &--honey {
