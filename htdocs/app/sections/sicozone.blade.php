@@ -1,6 +1,5 @@
-<div class="section section--fullwidth section--margin">
-	<div class="section__content">
-		<div class="margin">
+	<div class="section section--fullwidth section--margin">
+		<div class="section__content">
 			<div class="sicozone">
 				<?php 
 				$background = $block->getBackground();
@@ -12,14 +11,11 @@
 				</div>
 				<div class="sicozone__box">
 					<div class="sicozone__box__text">
-						<h2 class="h1 primary-color">{{$title}}</h2>
-						<h2 class="h2 subtitle-color">{{$subtitle}}</h2>
-							<div class="sicozone__box__text__description">
-								<h3 class="sicozone__box__text__description__clamp">{!!$description!!}</h3>
-							</div>
+						<h2 class="sicozone__box__text__title">{{$title}}</h2>
+						<h3 class="sicozone__box__text__subtitle">{{$subtitle}}</h3>
+						<div class="sicozone__box__text__description">{!!$description!!}</div>
 					</div>	
 				</div>
 			</div>
 		</div>
 	</div>
-</div>

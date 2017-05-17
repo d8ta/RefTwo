@@ -1,5 +1,4 @@
-<div class="section">
-	<div class="section section--fullwidth">
+	<div class="section section--fullwidth section--margin">
 		<div class="section__content">
 			<div class="environment">
 				<?php 
@@ -8,12 +7,8 @@
 				$subtitle = $block->getSubtitle();
 				$description = $block->getDescription();
 				?>
-
-				{{-- background img --}}
 				<div class="environment__image bg-image" style="background-image: url({{$background}})">
 				</div>
-
-				{{-- textbos --}}
 				<div class="environment__box">
 					<div class="environment__box__text">
 						<h2 class="environment__box__text__title">{{$title}}</h2>
@@ -21,8 +16,6 @@
 						<div class="environment__box__text__description">{!!$description!!}</div>
 					</div>	
 				</div>
-
 			</div>
 		</div>
 	</div>
-</div>
