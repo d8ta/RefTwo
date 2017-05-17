@@ -1,5 +1,5 @@
 <?php 
-$boxes = $block->getBox();
+	$boxes = $block->getBox();
 	$mh_group = "technology-boxes-" . rand();
 ?>
 <div class="section section--margin-xs">

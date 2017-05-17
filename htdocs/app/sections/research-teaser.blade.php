@@ -1,13 +1,11 @@
 <?php 
 $researchimg = $block->getResearchImg();
-?>
-
-<?php 
 $bigimage = $block->getBigImage();
 $title = $block->getTitle();
 $description = $block->getDescription();
 $buttontext = $block->getButtonText();
 $button_url = $block->getButtonUrl();
+$mh_group = "research-teaser-" . rand();
 ?>
 
 <div class="section section--margin-sm section--yellow">
@@ -17,7 +15,7 @@ $button_url = $block->getButtonUrl();
 		<div class="research-teaser">
 
 			{{-- left --}}
-			<div class="research-teaser__content research-teaser__content--left js-matchheight" >
+			<div class="research-teaser__content research-teaser__content--left js-matchheight" data-mh="{{$mh_group}}">
 				<h2>{{$title}}</h2>
 				<p>{{$description}}</p>
          		<a class="btn" href="{{$button_url}}">
@@ -26,7 +24,7 @@ $button_url = $block->getButtonUrl();
 			</div>
 
 			{{-- right --}}
-			<div class="research-teaser__content research-teaser__content--right js-matchheight" >
+			<div class="research-teaser__content research-teaser__content--right js-matchheight" data-mh="{{$mh_group}}">
 				<div class="research-teaser__content__image-container">
 					<div class="research-teaser__content__images research-teaser__content__images--big">
 						<img alt="{{$title}}" src="{{$bigimage}}" class="research-teaser__content__images__image">

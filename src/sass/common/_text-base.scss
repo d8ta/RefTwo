@@ -90,18 +90,26 @@
 
 %ul {
     margin: 0 0 em(20);
-    > * {
-        line-height: 1.48em;
+    ul {
+        margin-bottom: em(10);
+        margin-top: em(5);
+        > li {
+            font-size: 0.95em;
+        }
+    }
+    > li {
+        line-height: 1.45;
         margin-bottom: 0.4em;
         padding-left: em(20);
         position: relative;
         @include icon('arrowright');
         &:before {
             @extend %icon;
-            font-size: em(6);
             position: absolute;
-            left: em(15);
-            top: 0;
+            font-size: 0.8em;
+            left: 0;
+            top: 0.6em;
+            color: $brand-primary;
         }
     }
 }

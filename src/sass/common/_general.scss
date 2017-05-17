@@ -34,31 +34,6 @@ p {
     font-weight: bold;
 }
 
-.menu-burger {
-    margin-top: em(30);
-}
-
 .centertext {
     text-align: center;
-}
-
-.lefttext {
-    h3 {
-        margin-left: 0;
-    }
-}
-
-.whitebox-top {
-    background: $color-white;
-    height: 3em;
-    width: 100%;
-    margin-bottom: -1.3em;
-    z-index: 1;
-}
-
-.whitebox-bottom {
-    background: $color-white;
-    height: 3em;
-    width: 100%;
-    margin-top: -2em;
 }
