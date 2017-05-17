@@ -6,7 +6,7 @@
 	$maps = $block->getMaps();
 	$branches = $block->getMaps();
 ?>
-<div class="section section--margin-sm section--fullwidth">
+<div class="section section--margin-xl section--fullwidth">
 	<div class="section__content">
 		<h2 class="maps__headline">{{$headline}}</h2>
 		<div class="maps">

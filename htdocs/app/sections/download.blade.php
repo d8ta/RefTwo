@@ -6,7 +6,7 @@
 	$title = $block->getHeadline();
 	$subtitle = $block->getSubline();
 ?>
-<div class="section section--margin">
+<div class="section section--margin-xl">
 	<div class="section__content">
 		<div class="download">
 		 	<div class="download__wrapper">
