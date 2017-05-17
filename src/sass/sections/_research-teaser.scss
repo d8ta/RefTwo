@@ -20,13 +20,14 @@ $block-padding: em(80);
         &--quote {
             margin-left: em(30);
             #{$block}__text__description {
-                @include icon('arrowright');
+                margin-top: em(20);
+                @include icon('quote');
                 &::before {
                     @extend %icon;
                     position: absolute;
-                    top: 0;
-                    left: -1em;
-                    font-size: em(40);
+                    top: -.2em;
+                    left: -1.3em;
+                    font-size: em(30);
                     line-height: 1;
                     display: block;
                     opacity: .3;
