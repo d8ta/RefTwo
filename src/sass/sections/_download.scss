@@ -35,12 +35,12 @@ $block: '.download';
                 float: left;
                 width: 50%;
                 &--info {
-                    color: white;
+                    color: $color-white;
                     .h2 {
                         font-size: em(20);
                         font-weight: 600;
                         margin-bottom: em(5);
-                        color: white;
+                        color: $color-white;
                     }
                     p {
                         font-size: em(16);

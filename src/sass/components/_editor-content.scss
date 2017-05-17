@@ -1,4 +1,5 @@
-.editor-content, body#tinymce.wp-editor {
+.editor-content,
+body#tinymce.wp-editor {
     p {
         @extend %text-base;
     }

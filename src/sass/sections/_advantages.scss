@@ -8,7 +8,7 @@ $block: '.advantages';
             display: table-cell;
             h3 {
                 margin: 0;
-                width: 100%
+                width: 100%;
             }
         }
         &__images {
@@ -30,9 +30,6 @@ $block: '.advantages';
             }
             &__images {
                 display: inline-block;
-                &--big {
-                    &__inner {}
-                }
             }
         }
     }

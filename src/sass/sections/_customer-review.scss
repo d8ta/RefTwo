@@ -1,9 +1,12 @@
-$block: ".customer-review";
+$block: '.customer-review';
 #{$block} {
     position: relative;
     width: 100%;
     height: auto;
     &__content {
+        width: 100%;
+        height: auto;
+        position: relative;
         &__title {
             @extend %h1;
             color: $color-white;
@@ -20,29 +23,24 @@ $block: ".customer-review";
             color: $color-white;
         }
         &--whitebox-top {
-            background: white;
+            background: $color-white;
             height: 3em;
-            width: 100% !important;
+            width: 100%;
             margin-bottom: -1.3em;
             z-index: 1;
         }
         &--whitebox-bottom {
-            background: white;
+            background: $color-white;
             height: 3em;
-            width: 100% !important;
+            width: 100%;
             margin-top: -2em;
         }
-        width: 100%;
-        height: auto;
-        position: relative;
         &--left {
             padding-top: 10em;
             padding-bottom: 3em;
             color: $color-white;
         }
-        &--right {}
         &__images {
-            &--big {}
             &__image {
                 float: left;
                 width: 72%;
@@ -90,7 +88,6 @@ $block: ".customer-review";
             &__image-container {
                 margin: 0;
                 position: relative;
-                margin: 0;
             }
         }
     }

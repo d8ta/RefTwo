@@ -41,7 +41,7 @@ $box-margin: 2em;
             position: relative;
             z-index: 2;
             &__wrapper {
-                margin-bottom: 0.8em;
+                margin-bottom: .8em;
             }
             &__table {
                 background: $color-light-grey;
@@ -50,7 +50,6 @@ $box-margin: 2em;
                 &__td {
                     vertical-align: middle;
                     left: 16.25em;
-                    // height: 6em;
                 }
             }
             &__headline {

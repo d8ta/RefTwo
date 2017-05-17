@@ -5,13 +5,16 @@ $submenu: '.nav-submenu';
     li.active {
         > a {
             color: $color-text-grey;
+            &:hover {
+                color: $color-text-base;
+            }
         }
     }
     a {
         display: block;
         transition: color .2s;
         &:hover {
-            color: $color-text-base !important;
+            color: $color-text-base;
         }
     }
     ul.level-1 {

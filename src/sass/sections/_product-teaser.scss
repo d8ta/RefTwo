@@ -20,9 +20,9 @@ $block: '.product-teaser';
     }
 }
 
-$block: '.product-teaser__links';
+$block2: '.product-teaser__links';
 $block-padding: 2%;
-#{$block} {
+#{$block2} {
     &__link {
         display: table;
         width: 100%;
