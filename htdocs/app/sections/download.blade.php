@@ -5,6 +5,7 @@
 	$downloads = $block->getDownloads();
 	$title = $block->getHeadline();
 	$subtitle = $block->getSubline();
+	$mh_group = "download-" . rand();
 ?>
 <div class="section section--margin-xl">
 	<div class="section__content">
@@ -16,11 +17,11 @@
 		 			<div class="download__list">
 						@foreach($downloads as $download)
 		 					<a class="download__list__elem" href="{{$download['file']['url']}}">
-		 						<div class="download__list__elem__content download__list__elem__content--info js-matchheight">
+		 						<div class="download__list__elem__content download__list__elem__content--info js-matchheight" data-mh="{{$mh_group}}">
 		 							<h2 class="h2">{{$download["title"]}}</h2>
 		 							<p>{{$download["info"]}}<p>
 		 						</div>
-		 						<div class="download__list__elem__content download__list__elem__content--link js-matchheight">
+		 						<div class="download__list__elem__content download__list__elem__content--link js-matchheight" data-mh="{{$mh_group}}">
 		 							<div class="table table--fullheight">
 		 								<div class="table__td">
 		 									<div class="btn">PDF herunterladen</div>
