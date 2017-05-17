@@ -10,7 +10,7 @@ $block: '.products-overview';
             &__image {
                 width: 100%;
                 padding-bottom: 81.22%;
-                background-size: cover !important; 
+                background-size: cover !important;
             }
             &__info {
                 background-color: $color-product-grey;
@@ -38,7 +38,7 @@ $block: '.products-overview';
             }
         }
     }
-    @include mq($from: 641px, $until: 1024px) { 
+    @include mq($from: 641px, $until: 1024px) {
         &__listing {
             &__elem {
                 width: 100%;

@@ -59,10 +59,6 @@
     font-family: $font-normal;
 }
 
-%h5 {}
-
-%h6 {}
-
 %intro-text {
     font-size: em(21);
     line-height: 1.2;
@@ -94,21 +90,21 @@
         margin-bottom: em(10);
         margin-top: em(5);
         > li {
-            font-size: 0.95em;
+            font-size: .95em;
         }
     }
     > li {
         line-height: 1.45;
-        margin-bottom: 0.4em;
+        margin-bottom: .4em;
         padding-left: em(20);
         position: relative;
         @include icon('arrowright');
-        &:before {
+        &::before {
             @extend %icon;
             position: absolute;
-            font-size: 0.8em;
+            font-size: .8em;
             left: 0;
-            top: 0.6em;
+            top: .6em;
             color: $brand-primary;
         }
     }
