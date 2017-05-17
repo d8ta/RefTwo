@@ -1,122 +1,164 @@
 $block: '.research-teaser';
+$block-padding: em(80);
 #{$block} {
+    color: $color-white;
     position: relative;
-    width: 100%;
-    height: auto;
-    &__content {
+    padding: $block-padding 0;
+    z-index: 3;
+    img {
         width: 100%;
         height: auto;
-        position: relative;
+        display: block;
+    }
+    &__content {
         &--left {
-            padding-top: 4em;
-            padding-bottom: 3em;
+            margin-bottom: em(50);
+        }
+        &--right {}
+    }
+    &__text {
+        max-width: em(650);
+        &--quote {
+            margin-left: em(30);
+            #{$block}__text__description {
+                @include icon("arrowright");
+                &:before {
+                    position: absolute;
+                    top: 0;
+                    left: -1em;
+                    font-size: em(40);
+                    line-height: 1;
+                    display: block;
+                    opacity: 0.3;
+                    @extend %icon;
+                }
+            }
+        }
+        &__inner {
+            position: relative;
+        }
+        &__title {
+            @extend %h1;
             color: $color-white;
-            h2 {
-                @extend %h1;
-                color: $color-white;
-            }
-            p {
-                @extend %intro-text;
-            }
         }
-        &__images {
-            &__image {
-                float: left;
-                width: 72%;
-                height: auto;
-                border-radius: .5em;
-                margin-right: 1%;
-            }
-            &__icon {
-                margin-top: em(15);
-                width: 4.25em;
-                height: auto;
-                border-radius: .5em;
-                position: absolute;
-                left: .5em;
-                top: -.5em;
-            }
-            &__smallimg {
-                display: block;
-                width: 23.2%;
-                height: auto;
-                border-radius: .5em;
-                margin-bottom: 1.2%;
-            }
+        &__description {
+            @extend %intro-text;
+            color: $color-white;
+            position: relative;
         }
+        &__author {
+            @extend %intro-text;
+            color: $color-white;
+            font-weight: bold;
+        }
+    }
+    &__images {
+        @include clearfix;
+        margin-left: em(-5);
+        margin-right: em(-5);
+        position: relative;
+        &__big {
+            float: left;
+            width: 75%;
+        }
+        &__small {
+            float: right;
+            width: 25%;
+        }
+        &__img {
+            padding: em(5);
+        }
+        img {
+            border-radius: em(10);
+        }
+    }
+    &__icon {
+        position: absolute;
+        background: $brand-primary;
+        font-size: em(80);
+        height: 1em;
+        width: 1em;
+        border-radius: em(2);
+        left: em(4);
+        top: em(4);
+        .icon {
+            @include icon("box-idea");
+            line-height: 1;
+            display: block;
+            font-size: 1em;
+            height: 1em;
+            width: 1em;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+        }
+    }
+    &__whitebox-top,
+    &__whitebox-bottom {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        background: #fff;
+        padding-top: 10%;
+        z-index: 2;
+        display: none;
     }
     &__whitebox-top {
-        display: none;
-        background: $color-white;
-        height: 3em;
-        width: 100%;
-        margin-bottom: -1.3em;
-        z-index: 1;
+        top: 0;
     }
     &__whitebox-bottom {
-        background: $color-white;
-        height: 3em;
-        width: 100%;
-        margin-top: -1.5em;
+        bottom: 0;
+        display: block;
     }
-    @include clearfix;
-    @include mq($from: screen-sm) {
-        padding-bottom: 6em;
-        &__content {
-            width: 50%;
-            float: left;
-            &--right {
-                float: right;
-            }
-            &__image-container {
-                position: absolute;
-                padding-bottom: 70.33333%;
-                height: 0;
-                top: 0;
-                bottom: 0;
-                margin: auto 0;
-            }
-        }
+    &__whitebox-helper {
+        height: $block-padding;
     }
     @include mq($from: screen-md) {
+        @include clearfix;
+        &__content {
+            &--left {
+                float: left;
+                width: 45%;
+                margin-bottom: 0;
+            }
+            &--right {
+                float: right;
+                width: 50%;
+            }
+        }
         &__whitebox-bottom {
             display: none;
         }
-        &__content {
-            &--right {
-                &__image-container {
-                    position: absolute;
-                    top: 50%;
-                    transform: translateY(-50%);
-                }
-            }
-        }
     }
     @include mq($from: screen-lg) {
+        padding-top: 0;
         padding-bottom: 0;
-    }
-    @include mq($from: screen-xl) {
+        &__content {
+            &--right {
+                position: absolute;
+                right: 0;
+                height: 100%;
+                float: none;
+            }
+        }
+        &__text {
+            padding: $block-padding*2 0;
+        }
+        &__images {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto 0;
+            padding-bottom: 75%;
+            height: 0;
+        }
+        &__whitebox-top,
         &__whitebox-bottom {
             display: block;
-        }
-        &__content {
-            &__image-container {
-                position: relative;
-                width: 105%;
-                padding-bottom: 0;
-                margin-top: -1.2em;
-            }
-            &__images {
-                &__icon {
-                    margin-top: em(15);
-                    width: 6.25em;
-                    height: auto;
-                    border-radius: .5em;
-                    position: absolute;
-                    left: 1em;
-                    top: .2em;
-                }
-            }
+            padding: 0;
         }
     }
 }
