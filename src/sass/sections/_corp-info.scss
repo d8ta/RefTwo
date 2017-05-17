@@ -10,6 +10,7 @@ $block: '.corp-info';
         }
         &__description {
             @extend %text-base;
+            margin-bottom: 1.8em;
         }
     }
     &__images {
@@ -41,6 +42,7 @@ $block: '.corp-info';
                 max-width: 45em;
                 margin-left: 0;
                 margin-right: 0;
+                width: 80%;
             }
         }
         &__images {
