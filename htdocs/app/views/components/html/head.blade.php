@@ -11,6 +11,8 @@ if (is_readable($css)) {
     <meta name="format-detection" content="telephone=no">
 
     <base href="{{get_site_url()}}" />
+    
+    <title><?php wp_title(''); ?></title>
 
     {{-- Styles --}}
     <link rel="stylesheet" href="{{$css}}" type="text/css" media="all">
