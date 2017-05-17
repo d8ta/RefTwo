@@ -13,18 +13,13 @@
 				$description = $slide['description'];
 				?>
 				<div>
-					{{-- background img --}}
 					<div class="childcare__image bg-image" style="background-image: url({{$background}})">
 					</div>
-					{{-- textbox --}}
 					<div class="childcare__box">
 						<div class="childcare__box__text">
-							<h2 class="h1 primary-color childcare__box__text__title">{{$title}}</h2>
-							<h3 class="h2 subtitle childcare__box__text__subtitle">{{$subtitle}}</h3>
-								
-							<div class="childcare__box__text__description">
-								<p class="childcare__box__text__description__clamp h3">{!!$description!!}</p>
-							</div>
+							<h2 class="childcare__box__text__title">{{$title}}</h2>
+							<h3 class="childcare__box__text__subtitle">{{$subtitle}}</h3>
+							<div class="childcare__box__text__description">{!!$description!!}</div>
 
 						</div>	
 					</div>
