@@ -1,0 +1,14 @@
+$block: '.headquarters';
+#{$block} {
+    &__headline {
+        @extend %h1;
+    }
+    &__locations {
+        &__location {
+            float: left;
+            width: 20%;
+            background: grey;
+            padding-left: 1em;
+        }
+    }
+}
