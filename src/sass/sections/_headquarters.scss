@@ -5,10 +5,39 @@ $block: '.headquarters';
     }
     &__locations {
         &__location {
-            float: left;
-            width: 20%;
-            background: grey;
-            padding-left: 1em;
+            text-align: center;
+            margin-top: 3em;
+            &__headline {
+                @extend %h4;
+            }
+            &__text {
+                @extend %text-base;
+            }
+        }
+    }
+    @include mq($from: screen-sm) {
+        &__locations {
+            &__location {
+                float: left;
+                width: 50%;
+                            text-align: left;
+
+            }
+        }
+    }
+    @include mq($from: screen-md) {
+        &__locations {
+            &__location {
+                float: left;
+                width: 33.3333%;
+                padding-left: 1em;
+            }
+        }
+    }
+    @include mq($from: screen-xxl) {
+        &__locations {
+            &__location {
+            }
         }
     }
 }
