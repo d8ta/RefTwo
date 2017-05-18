@@ -1,6 +1,6 @@
 <?php
 $menuHelper = \Project\Helpers\MenuHelper::getInstance();
-$nav_items  = $menuHelper->getMenuItems('primary', true);
+$nav_items  = $menuHelper->getMenuItems('primary', ["with_submenu_div" => true]);
 ?>
 {{-- Navigation --}}
 <nav class="navigation header-navigation js-site-navigation">
