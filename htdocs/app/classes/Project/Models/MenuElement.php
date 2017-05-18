@@ -3,7 +3,7 @@ namespace Project\Models;
 
 use A365\Wordpress\Models\Page;
 
-class MenuElement extends \A365\Wordpress\Models\Post
+class MenuElement
 {
 
     public $level = 0;
