@@ -14,7 +14,7 @@ $button_text = $block->getButtonText();
 				<div class="terms__info__text">
 
 
-					<h2 class="terms__infnfo__text terms__info__text__headline" id="impressum">Impressum</h2>
+					<h2 class="terms__infnfo__text terms__info__text__headline">Impressum</h2>
 
 					<h2 class="terms__infnfo__text terms__info__text__title">Management</h2>
 					<div class="terms__info__text terms__info__text__name">{{$ceo}}</div>
