@@ -6,7 +6,7 @@ use A365\Wordpress\Helpers\Acf\FieldHelper;
 class Sicozone extends \A365\Wordpress\Block\AcfBlock {
 
 	protected $_template = 'sicozone';
-	protected static $_label = 'Fullwidth Hintergrund, Textbos links';
+	protected static $_label = 'Fullwidth Hintergrund + Textbox links';
 
 	/**
 	 * @inheritdoc

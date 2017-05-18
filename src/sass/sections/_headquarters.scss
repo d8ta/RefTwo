@@ -20,8 +20,7 @@ $block: '.headquarters';
             &__location {
                 float: left;
                 width: 50%;
-                            text-align: left;
-
+                text-align: left;
             }
         }
     }
@@ -36,8 +35,7 @@ $block: '.headquarters';
     }
     @include mq($from: screen-xxl) {
         &__locations {
-            &__location {
-            }
+            &__location {}
         }
     }
 }

@@ -6,7 +6,7 @@ use A365\Wordpress\Helpers\Acf\FieldHelper;
 class CustomerReview extends \A365\Wordpress\Block\AcfBlock {
 
 	protected $_template = 'customer-review';
-	protected static $_label = 'Gelber Background Fullwidth, Grosses Bild + 3 Kleine Bilder';
+	protected static $_label = 'Text + Grosses Bild + 3 Bilder';
 
 	/**
 	 * @inheritdoc

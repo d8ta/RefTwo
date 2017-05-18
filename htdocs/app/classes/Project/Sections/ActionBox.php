@@ -6,7 +6,7 @@ use A365\Wordpress\Helpers\Acf\FieldHelper;
 class ActionBox extends \A365\Wordpress\Block\AcfBlock {
 
 	protected $_template = 'action-box';
-	protected static $_label = 'Dreier Box Bild/Text/Btn';
+	protected static $_label = 'Box (Text/Bild/Icon)';
 
 	/**
 	 * @inheritdoc

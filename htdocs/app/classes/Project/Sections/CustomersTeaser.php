@@ -6,7 +6,7 @@ use A365\Wordpress\Helpers\Acf\FieldHelper;
 class CustomersTeaser extends \A365\Wordpress\Block\AcfBlock {
 
 	protected $_template = 'customers-teaser';
-	protected static $_label = 'Kunden Ankündigung';
+	protected static $_label = 'Text links/rechts';
 
 	/**
 	 * @inheritdoc

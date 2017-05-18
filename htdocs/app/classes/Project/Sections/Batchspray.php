@@ -6,7 +6,7 @@ use A365\Wordpress\Helpers\Acf\FieldHelper;
 class Batchspray extends \A365\Wordpress\Block\AcfBlock {
 
 	protected $_template = 'batchspray';
-	protected static $_label = 'Text und Spezifikationen, Grosses Produktbild';
+	protected static $_label = 'Textbox + Liste + Bild';
 	/**
 	 * @inheritdoc
 	 */
