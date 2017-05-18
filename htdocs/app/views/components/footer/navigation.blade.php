@@ -1,6 +1,6 @@
 <?php
 $menuHelper = \Project\Helpers\MenuHelper::getInstance();
-$nav_items      = $menuHelper->getMenuItems('footer');
+$nav_items      = $menuHelper->getMenuItems('footer', ["with_submenu_div" => false]);
 ?>
 {{-- Navigation --}}
 <nav class="navigation footer-navigation">
