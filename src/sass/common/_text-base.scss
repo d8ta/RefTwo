@@ -130,9 +130,9 @@
     &::before {
         @extend %icon;
         transition: transform .3s;
-        font-size: em(14);
+        font-size: em(11);
         display: inline-block;
-        padding-right: em(5);
+        padding-right: em(8);
         color: $brand-primary;
     }
     &:hover {

@@ -24,8 +24,8 @@ $submenu: '.nav-submenu';
         > li {
             float: left;
             > a {
-                padding-left: em(20, 14);
-                padding-right: em(20, 14);
+                padding-left: em(25, 14);
+                padding-right: em(25, 14);
                 padding-bottom: em(18);
                 font-size: em(14);
                 font-weight: bold;
@@ -77,17 +77,17 @@ $submenu: '.nav-submenu';
         padding-left: em(20);
         padding-right: em(20);
         min-height: em(200);
-        padding-top: em(20);
+        padding-top: em(10);
     }
     &__nav {
         display: table-cell;
-        width: 25%;
+        width: 22%;
         min-width: em(250);
     }
     &__content {
         display: table-cell;
         vertical-align: top;
-        width: 75%;
+        width: 78%;
         padding: em(30) 0 em(20);
     }
     &__box {

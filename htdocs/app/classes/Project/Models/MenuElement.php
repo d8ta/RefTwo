@@ -8,6 +8,7 @@ class MenuElement
 
     public $level = 0;
     public $class = "";
+    public $page_id;
     public $page;
     public $menu_item_parent;
     public $menu_item_id;
@@ -24,6 +25,7 @@ class MenuElement
         $model->menu_item_id = $menu_item_id;
         
         if (isset($config["page_id"])) {
+            $model->page_id = $config["page_id"];
             $model->page = Page::find($config["page_id"]);
         }
 
