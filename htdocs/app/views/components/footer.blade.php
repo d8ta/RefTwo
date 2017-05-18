@@ -7,7 +7,17 @@
 				</div>
 				<div class="site-footer__copy">
 					&copy; {{date("Y")}} Siconnex GmbH
+				</div>	
+
+				<div class="site-footer__socialmedia">
+					<div class="site-footer__socialmedia__facebook">
+					</div>
+					<div class="site-footer__socialmedia__linkedin">
+					</div>				
+					<div class="site-footer__socialmedia__xing">
+					</div>
 				</div>
+
 			</div>
 			<div class="site-footer__table__col">
 				@include('components.footer.navigation')
