@@ -6,10 +6,15 @@ class MenuHelper extends \A365\Wordpress\Helpers\MenuHelper
     private $_with_submenu_div = false;
     private $_depth = 2;
 
-    public function getMenuItems( $menu_id, $with_submenu_div = false, $depth = 2 )
+    public function getMenuItems( $menu_id, $config = array() )
     {
-        $this->_with_submenu_div = $with_submenu_div;
-        $this->_depth = $depth;
+        
+        if (isset($config["with_submenu_div"])) {
+            $this->_with_submenu_div = $config["with_submenu_div"];
+        }
+        if (isset($config["depth"])) {
+            $this->_depth = $config["depth"];
+        }
 
         if ( ( $locations = get_nav_menu_locations() ) && isset( $locations[ $menu_id ] ) ) {
             $menu = wp_get_nav_menu_object( $locations[ $menu_id ] );
