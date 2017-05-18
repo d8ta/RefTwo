@@ -22,6 +22,7 @@ $block: '.products-overview';
                     }
                 }
                 &__description {
+                    @extend %text-base;
                     margin-bottom: em(40);
                     max-width: em(456);
                     min-height: em(120);
