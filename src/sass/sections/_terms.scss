@@ -1,0 +1,41 @@
+$block: '.terms';
+$info-padding: 1%;
+#{$block} {
+    &__info {
+        text-align: center;
+        margin-bottom: 4em;
+        &__text {
+            &__headline {
+                @extend %h1;
+            }
+            &__title {
+                @extend %h4-alt;
+            }
+            &__subtitle {
+                @extend %h4-alt;
+                font-weight: normal;
+                color: #000;
+            }
+            &__name {
+                @extend %text-base;
+            }
+        }
+    }
+    @include mq($from: screen-sm) {
+        @include clearfix;
+        margin-left: -$info-padding;
+        margin-right: -$info-padding;
+        &__info {
+            text-align: left;
+            width: 33.3333% - 2 * $info-padding;
+            margin-left: $info-padding;
+            margin-right: $info-padding;
+            float: left;
+            &__text {
+                &__title {
+                    margin-top: 3em;
+                }
+            }
+        }
+    }
+}
