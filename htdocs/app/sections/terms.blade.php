@@ -7,11 +7,14 @@ $bankdata = $block->getBankdata();
 $button_url = $block->getButtonUrl();
 $button_text = $block->getButtonText();
 ?>
-<div class="section section--margin">
+<div class="section section--margin-xl">
 	<div class="section__content">
 		<div class="terms">
 			<div class="terms__info">
 				<div class="terms__info__text">
+
+
+					<h2 class="terms__infnfo__text terms__info__text__headline">Impressum</h2>
 
 					<h2 class="terms__infnfo__text terms__info__text__title">Management</h2>
 					<div class="terms__info__text terms__info__text__name">{{$ceo}}</div>
