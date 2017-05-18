@@ -1,10 +1,14 @@
 <?php
 namespace Project\Helpers;
 
+
+use Project\Models\MenuElement;
+
 class MenuHelper extends \A365\Wordpress\Helpers\MenuHelper
 {
     private $_with_submenu_div = false;
     private $_depth = 2;
+    private $_elements = array();
 
     public function getMenuItems( $menu_id, $config = array() )
     {
@@ -20,39 +24,43 @@ class MenuHelper extends \A365\Wordpress\Helpers\MenuHelper
             $menu = wp_get_nav_menu_object( $locations[ $menu_id ] );
             $menu_id = $menu->term_id;
         }
-        
-        $items = wp_get_nav_menu_items( $menu_id );
-        return  $items ? $this->_buildTree( $items, 0 ) : null;
+
+        $this->_elements = wp_get_nav_menu_items( $menu_id );
+        return  $this->_elements ? $this->_buildTree() : null;
     }
 
-    private function _buildTree( array &$elements, $parentId = 0, $level = 0)
+    private function _buildTree($parentMenuElement = null, $level = 0)
     {
         $branch = array();
         $level += 1;
+
+        if (!$parentMenuElement) {
+            $parentMenuElement = MenuElement::create(0, $level);
+        }
         
-            
+        foreach ( $this->_elements as &$element ) {
 
-        foreach ( $elements as &$element )
-        {
-            $class = "";
-            if ($element->object_id == get_the_ID()) {
-                $class .= " active";
-            }
 
-            if ( $element->menu_item_parent == $parentId )
+            if ( $element->menu_item_parent == $parentMenuElement->menu_item_id )
             {
+
+                $config = array();
+                $config["active"] = ($element->object_id == get_the_ID());
+                $config["page_id"] = $element->object_id;
+                $config["menu_item_parent"] = $element->menu_item_parent;
+                $config["with_submenu_div"] = $this->_with_submenu_div;
+                $config["title"] = $element->title;
+                
+                $menuElement = MenuElement::create($element->ID, $level, $config);
+
                 if ($level < $this->_depth) {
-                    $children = $this->_buildTree( $elements, $element->ID, $level );
-                    if ( $children) {
-                        $element->submenu = $children;
-                    }
+                    $menuElement->addHashSections($menuElement->page->getHashSections(), $level, $element->object_id);
+                    $menuElement->addSubmenuPages($this->_buildTree($menuElement, $level ));
                 }
 
-                $element->level = $level;
-                $element->class = $class;
-                $element->with_submenu_div = $this->_with_submenu_div;
+                $element = $menuElement;
 
-                $branch[$element->ID] = $element;
+                $branch[$element->menu_item_id] = $element;
                 unset( $element );
             }
         }
