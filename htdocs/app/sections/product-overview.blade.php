@@ -14,7 +14,7 @@
 			@foreach($products as $product)
 				<div class="products-overview__listing__elem">
 					<div class="products-overview__listing__content">
-						<div class="products-overview__listing__content__all products-overview__listing__content__image bg-image js-matchheight" style="background:url('{!!$imageHelper->getImageUrl($product["image"], "")!!}')"></div>
+						<div class="products-overview__listing__content__all products-overview__listing__content__image bg-image js-matchheight" style="background-image:url('{!!$imageHelper->getImageUrl($product["image"], "")!!}')"></div>
 						<div class="products-overview__listing__content__all products-overview__listing__content__info js-matchheight">
 							<div class="products-overview__listing__content__info__logo">
 								<img src="{!!$imageHelper->getImageUrl($product['logo'], '')!!}" alt="">
