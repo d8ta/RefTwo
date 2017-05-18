@@ -8,9 +8,13 @@ $info-padding: 1%;
             &__title {
                 @extend %h4-alt;
             }
-            &__description {
+            &__subtitle {
+                @extend %h4-alt;
+                font-weight: normal;
+                color: $color-grey;
+            }
+            &__name {
                 @extend %text-base;
-                margin: 0;
             }
         }
     }
