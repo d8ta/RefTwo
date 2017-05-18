@@ -14,7 +14,7 @@ $info-padding: 1%;
             &__subtitle {
                 @extend %h4-alt;
                 font-weight: normal;
-                color: $color-grey;
+                color: #000;
             }
             &__name {
                 @extend %text-base;
@@ -36,9 +36,6 @@ $info-padding: 1%;
                     margin-top: 3em;
                 }
             }
-        }
-        &__description {
-            margin-left: 0;
         }
     }
 }
