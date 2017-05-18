@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "47fe96f8b7985b7bdaaff0dcafcc177a",
+    "hash": "5ccf7dea13af2b2ec88399c11a9cf578",
     "content-hash": "6df4632a0ce61cce2c5b37a2305566a8",
     "packages": [
         {
@@ -38,11 +38,11 @@
         },
         {
             "name": "a365/customizr",
-            "version": "v0.2.4",
+            "version": "v0.2.5",
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:a365/a365-customizr.git",
-                "reference": "038a99c5910beed7a48c3e39676a9105b183b84f"
+                "reference": "6ad18b99abd1ef205ae85757e3c16c0efabda212"
             },
             "require": {
                 "composer/installers": "^1.0",
@@ -59,7 +59,7 @@
                 "plugin",
                 "wordpress"
             ],
-            "time": "2017-04-26 14:33:29"
+            "time": "2017-05-18 06:20:43"
         },
         {
             "name": "a365/wordpress",
