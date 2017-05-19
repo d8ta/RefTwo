@@ -18,7 +18,7 @@ $block: '.applications';
             &__editor {
                 @extend %text-base;
                 &__middle {
-                    margin-top: -3.25em;
+                    // margin-top: -3.25em;
                 }
             }
         }
@@ -34,11 +34,30 @@ $block: '.applications';
                     max-width: 80em;
                 }
                 &__editor {
-                    width: 20%;
-                    padding-right: 2em;
-                    padding-left: 2em;
+                    width: 22%;
+                    padding-left: 1em;
+                    padding-right: 3em;
                     &__middle {
-                        margin-top: 0;
+                        // margin-top: 0;
+                    }
+                }
+            }
+        }
+    }
+    @include mq($from: screen-lg) {
+        &__info {
+            &__text {
+                float: left;
+                &__image {
+                    float: left;
+                }
+                &__description {
+                    max-width: 80em;
+                }
+                &__editor {
+                    width: 25%;
+                    &__middle {
+                        width: 25%;
                     }
                 }
             }
