@@ -18,7 +18,7 @@ $block: '.applications';
             &__editor {
                 @extend %text-base;
                 &__middle {
-                    // margin-top: -3.25em;
+                    margin-top: -3.25em;
                 }
             }
         }
@@ -26,18 +26,19 @@ $block: '.applications';
     @include mq($from: screen-md) {
         &__info {
             &__text {
-                // width: 100%;
-                // float: left;
+                float: left;
                 &__image {
-                    // float: left;
+                    float: left;
                 }
                 &__description {
-                    // max-width: 80em;
+                    max-width: 80em;
                 }
                 &__editor {
-                    // width: 25%;
+                    width: 20%;
+                    padding-right: 2em;
+                    padding-left: 2em;
                     &__middle {
-                        // margin-top: 0;
+                        margin-top: 0;
                     }
                 }
             }
