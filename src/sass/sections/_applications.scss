@@ -4,6 +4,7 @@ $block: '.applications';
         text-align: left;
         margin-bottom: 1em;
         &__text {
+            padding-bottom: 4em;
             &__title {
                 @extend %h1;
             }
@@ -18,7 +19,6 @@ $block: '.applications';
             &__editor {
                 @extend %text-base;
                 &__middle {
-                    // margin-top: -3.25em;
                 }
             }
         }
@@ -38,7 +38,6 @@ $block: '.applications';
                     padding-left: 1em;
                     padding-right: 3em;
                     &__middle {
-                        // margin-top: 0;
                     }
                 }
             }
