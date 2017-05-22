@@ -1,7 +1,7 @@
 $block: '.footer-navigation';
 $nav-side-padding: 1%;
 #{$block} {
-    @include mq($until: screen-xs) {
+    @include mq($until: $screen-md + 32) {
         display: none;
     }
     a {

@@ -5,7 +5,7 @@ $block: '.headquarters';
     }
     &__locations {
         &__location {
-            text-align: center;
+            text-align: left;
             margin-top: 3em;
             &__headline {
                 @extend %h4;
@@ -31,11 +31,6 @@ $block: '.headquarters';
                 width: 33.3333%;
                 padding-left: 1em;
             }
-        }
-    }
-    @include mq($from: screen-xxl) {
-        &__locations {
-            &__location {}
         }
     }
 }
