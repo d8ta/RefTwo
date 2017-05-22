@@ -14,6 +14,7 @@ class ProductOverview extends \A365\Wordpress\Block\AcfBlock {
 	public static function getAcfSubfields()
 	{
 		return [
+			FieldHelper::createWYSIWYG('editor', 'Introtext'),
 			FieldHelper::createRepeater('products', 'Produkte', ["min" => 3, "max" => 3])
 				->addSubfields([
 					FieldHelper::createImage('image', 'Produktbild')->setRequired(),

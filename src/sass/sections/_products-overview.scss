@@ -1,5 +1,8 @@
 $block: '.products-overview';
 #{$block} {
+    &__text {
+        display: none;
+    }
     &__listing {
         &__elem {
             width: 33.333%;
