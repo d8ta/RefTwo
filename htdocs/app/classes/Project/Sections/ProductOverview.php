@@ -14,12 +14,7 @@ class ProductOverview extends \A365\Wordpress\Block\AcfBlock {
 	public static function getAcfSubfields()
 	{
 		return [
-			FieldHelper::createText('title', 'Überschrift')->setRequired(),
-			FieldHelper::createText('subtitle', 'Unterüberschrift')->setRequired(),
-			FieldHelper::createText('text', 'Beschreibung')->setRequired(),
-			FieldHelper::createPageLink('button_url', 'Button Link'),
-			FieldHelper::createText('button_text', 'Button Text')->setRequired(),
-			
+			FieldHelper::createWYSIWYG('editor', 'Introtext'),
 			FieldHelper::createRepeater('products', 'Produkte', ["min" => 3, "max" => 3])
 				->addSubfields([
 					FieldHelper::createImage('image', 'Produktbild')->setRequired(),

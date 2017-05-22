@@ -1,29 +1,8 @@
-
-
-$block: '.product-overview';
-#{$block} {
-    max-width: em(800);
-    margin: 0 auto em(50);
-    text-align: center;
-    &__text {
-        text-align: center;
-        &__title {
-            @extend %h1;
-        }
-        &__subtitle {
-            @extend %h2;
-        }
-        &__text {
-            @extend %text-base;
-            max-width: em(650);
-            margin-left: auto;
-            margin-right: auto;
-        }
-    }
-}
-
 $block: '.products-overview';
 #{$block} {
+    &__text {
+        display: none;
+    }
     &__listing {
         &__elem {
             width: 33.333%;
