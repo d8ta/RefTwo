@@ -19,6 +19,7 @@ $block: '.applications';
             &__editor {
                 @extend %text-base;
                 &__middle {
+                    margin-top: -5.75em;
                 }
             }
         }
@@ -34,10 +35,11 @@ $block: '.applications';
                     max-width: 80em;
                 }
                 &__editor {
-                    width: 22%;
+                    width: 20%;
                     padding-left: 1em;
                     padding-right: 3em;
                     &__middle {
+                        margin-top: 1.8em;
                     }
                 }
             }
