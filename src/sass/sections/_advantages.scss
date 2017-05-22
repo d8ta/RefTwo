@@ -13,15 +13,16 @@ $block: '.advantages';
                 @extend %text-base;
                 margin: 0;
                 width: 100%;
+                padding-bottom: 2em;
             }
         }
         &__images {
             @extend %section-content;
             display: table-cell;
             &__big {
-                border-radius: 5px;
+                border-radius: .5em;
                 &__inner {
-                    border-radius: 5px;
+                    border-radius: .5em;
                 }
             }
         }
