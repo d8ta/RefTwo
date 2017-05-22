@@ -8,14 +8,16 @@
 ?>
 <section class="section section--margin-md">
 	<div class="section__content">
-		<div class="products-overview>
+		<div class="products-overview">
 			<div class="product-overview__text">
 				<?php
-				$text = $block->getEditor();
+				$title = $block->getTitle();
+				$subtitle = $block->getSubtitle();
+				$text = $block->getText();
 				?>
-				<div class="product-teaser__inner">
-					<div class="product-teaser__inner__intro editor-content">{!!$text!!}</div>
-				</div>
+				<h2 class="products-overview__text__title">{{$title}}</h2>
+				<h3 class="products-overview__text__subtitle">{{$subtitle}}</h3>
+				<div class="products-overview__text__text">{{$text}}</div>
 			</div>
 			<div class="products-overview__listing">
 			@foreach($products as $product)
