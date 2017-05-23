@@ -3,9 +3,10 @@ $info-padding: 1%;
 #{$block} {
     &__info {
         text-align: center;
-        margin-bottom: 4em;
+        // margin-bottom: 4em;
         &__image {
-            margin-top: 1em;
+            // margin-top: 1em;
+            padding-bottom: 1em;
         }
         &__text {
             &__title {
@@ -29,7 +30,7 @@ $info-padding: 1%;
             float: left;
             &__text {
                 &__title {
-                    margin-top: 3em;
+                    // margin-top: 3em;
                 }
             }
         }
