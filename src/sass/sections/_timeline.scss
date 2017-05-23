@@ -1,11 +1,11 @@
 $block: '.timeline';
 #{$block} {
-    color: white;
+    color: #fff;
     &__wrapper {
         text-align: center;
         .h2 {
             @extend %h1;
-            color: white;
+            color: #fff;
             font-size: em(48);
             padding-top: 1em;
         }
@@ -42,7 +42,7 @@ $block: '.timeline';
                 height: em(20);
                 width: em(20);
                 border-radius: 50%;
-                border: em(1) solid white;
+                border: em(1) solid #fff;
                 overflow: hidden;
                 color: transparent;
                 text-indent: 100%;
@@ -94,7 +94,7 @@ $block: '.timeline';
             margin-top: em(200);
             height: em(1);
             /* width will be set using JavaScript */
-            background: rgba(white, 0.3);
+            background: rgba(#fff, 0.3);
             transition: transform 0.4s;
             img {
                 max-width: em(100);
@@ -109,7 +109,7 @@ $block: '.timeline';
                 text-align: center;
                 font-size: 1.3rem;
                 padding-bottom: em(15);
-                color: white;
+                color: #fff;
                 transform: translateZ(0);
                 font-size: em(20);
                 &:after {
@@ -122,7 +122,7 @@ $block: '.timeline';
                     height: em(8);
                     width: em(8);
                     border-radius: 50%;
-                    border: em(1) solid white;
+                    border: em(1) solid #fff;
                     background-color: $brand-primary;
                     transition: background-color 0.3s, border-color 0.3s;
                 }
@@ -135,7 +135,7 @@ $block: '.timeline';
                     &:before {
                         height: em(30);
                         width: 1px;
-                        background-color: rgba(white, 0.3);
+                        background-color: rgba(#fff, 0.3);
                         display: block;
                         content: '';
                         margin: auto auto;
@@ -143,14 +143,14 @@ $block: '.timeline';
                 }
                 &:hover {
                     &:after {
-                        background-color: white;
-                        border-color: white;
+                        background-color: #fff;
+                        border-color: #fff;
                     }
                 }
                 &.selected {
                     pointer-events: none;
                     &:after {
-                        background-color: white;
+                        background-color: #fff;
                         border: em(2) solid $brand-primary;
                         bottom: em(-7);
                         height: em(14);
@@ -165,8 +165,8 @@ $block: '.timeline';
                 }
                 &.older-event {
                     &:after {
-                        border-color: white;
-                        background-color: white;
+                        border-color: #fff;
+                        background-color: #fff;
                     }
                 }
             }
@@ -195,10 +195,10 @@ $block: '.timeline';
                     opacity: 0;
                     animation-duration: 0.4s;
                     animation-timing-function: ease-in-out;
-                    color: white;
+                    color: #fff;
                     .h2 {
                         @extend %h1;
-                        color: white;
+                        color: #fff;
                         text-transform: uppercase;
                         font-size: em(48);
                     }
@@ -238,7 +238,7 @@ $block: '.timeline';
             top: 0;
             height: 100%;
             width: 100%;
-            background-color: white;
+            background-color: #fff;
             transform: scaleX(0);
             transform-origin: left center;
             transition: transform 0.3s;
