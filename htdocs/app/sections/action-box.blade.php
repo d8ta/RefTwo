@@ -1,6 +1,25 @@
 <?php 
 	$boxes = $block->getBox();
 	$mh_group = "technology-boxes-" . rand();
+
+	$news_items = Project\Models\News::allPublished();
+
+	if (!empty($news_items)) {
+
+		$news_item_src = $news_items[0];
+
+		$image_id = $news_item_src->getHomeImage();
+		$image = wp_get_attachment_image_src($image_id, 'full');
+
+		$news_item = array();
+		$news_item['title'] = $news_item_src->getPostTitle();
+		$news_item['description'] = $news_item_src->getIntroHome();
+		$news_item['button_text'] = __("Mehr erfahren");
+		$news_item['icon'] = "siconnex";
+		$news_item['button_url'] = get_permalink(pll_get_post($news_item_src->getId()));
+		$news_item['background'] = $image[0];
+		$boxes[0] = $news_item;
+	}
 ?>
 <div class="section section--margin-xs">
 	<div class="section__content">
