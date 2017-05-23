@@ -3,16 +3,15 @@
 	 * @var \Project\Sections\Download $block
 	 */
 	$downloads = $block->getDownloads();
-	$title = $block->getHeadline();
-	$subtitle = $block->getSubline();
-	// $mh_group = "download-" . rand();
+	$headline = $block->getHeadline();
+	$subline = $block->getSubline();
 ?>
 <div class="section section--margin-xl">
 	<div class="section__content">
 		<div class="download">
 		 	<div class="download__wrapper">
-		 		<h2 class="h2">{{$title}}</h2>
-		 		<h2 class="h3">{{$subtitle}}</h3>
+		 		<h2 class="h2">{{$headline}}</h2>
+		 		<h2 class="h3">{{$subline}}</h3>
 		 		<div class="download__content">
 		 			<div class="download__list">
 						@foreach($downloads as $download)
@@ -21,7 +20,7 @@
 		 							<h2 class="h2">{{$download["title"]}}</h2>
 		 							<p>{{$download["info"]}}<p>
 		 						</div>
-		 						<div class="download__list__elem__content download__list__elem__content--link js-matchheight" data-mh="{{$mh_group}}">
+		 						<div class="download__list__elem__content download__list__elem__content--link ">
 		 							<div class="table table--fullheight">
 		 								<div class="table__td">
 		 									<div class="btn">PDF herunterladen</div>
@@ -32,6 +31,7 @@
 						@endforeach
 		 			</div>
 		 		</div>
+
 		 	</div>
 		</div>
 	</div>
