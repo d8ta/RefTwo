@@ -56,4 +56,22 @@ $block: '.download';
             }
         }
     }
+    @include mq($until: screen-xs) {
+        &__list {
+            &__elem {
+                &__content {
+                    padding-top: 1em;
+                    float: none;
+                    width: 100%;
+                    text-align: center;
+                    &--link {
+                        text-align: center;
+                        .btn {
+                            float: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
