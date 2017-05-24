@@ -24,7 +24,7 @@ class FormHelper extends \A365\Core\Abstracts\Helper
 
 
 		$ret = '<div class="' . $form_field_row . '">
-							<label class="form__fields__row__label">' . $label . '*' . '</label>
+							<label class="form__fields__row__label">' . $label . '</label>
 							<div class="form__fields__row__input">
 								' . $input . '
 							</div>
