@@ -20,11 +20,16 @@ $block: '.timeline';
     &__horizontal {
         padding-bottom: rem(100);
         &__content {
-            margin: em(60) 0 em(150);
+            margin: em(60) 0;
             &__text {
                 display: none;
+                opacity: 0;
+                transition: all 0.3s;
+                @include clearfix;
                 &.active {
                     display: block;
+                    opacity: 1;
+
                 }
             }
             &__inner {
@@ -62,6 +67,7 @@ $block: '.timeline';
                         width: 80%;
                         img {
                             width: 100%;
+                            transition: all 0.3s;
                         }
                         &::after {
                             width: em(9);
@@ -78,6 +84,7 @@ $block: '.timeline';
                             left: 0;
                             right: 0;
                             z-index: 5;
+                            transition: all 0.3s;
                         }
                     }
                     &__dot {
@@ -103,6 +110,7 @@ $block: '.timeline';
                         opacity: 0.7;
                         position: relative;
                         .h3 {
+                            transition: all 0.3s;
                             font-size: em(20);
                             font-weight: bold;
                             color: white;
