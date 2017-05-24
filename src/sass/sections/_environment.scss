@@ -28,18 +28,19 @@ $block: '.environment';
             }
         }
     }
-    @include mq($from: $screen-xxl - 20) {
+    @include mq($from: $screen-xxl - 100) {
         &__image {
             position: relative;
         }
         &__box {
             background: $color-white;
             max-width: 33%;
-            max-height: 35em;
+            // max-height: 35em;
+            max-height: 100%;
             border-radius: .5em;
             position: absolute;
             top: 5em;
-            bottom: 7em;
+            bottom: 5em;
             left: 6em;
             padding: 0;
             &__text {
