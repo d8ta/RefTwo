@@ -28,13 +28,14 @@ $block: '.environment';
             }
         }
     }
-    @include mq($from: screen-lg) {
+    @include mq($from: $screen-xxl - 20) {
         &__image {
             position: relative;
         }
         &__box {
             background: $color-white;
-            max-width: 84%;
+            max-width: 33%;
+            max-height: 35em;
             border-radius: .5em;
             position: absolute;
             top: 5em;
@@ -53,29 +54,10 @@ $block: '.environment';
                 &__description {
                     text-align: left;
                     margin-left: 0;
-                    max-width: 100%;
+                    max-width: 85%;
                     display: block;
                 }
             }
-        }
-    }
-    @include mq($from: screen-xl) {
-        &__box {
-            max-width: 50%;
-            &__text {
-                &__description {
-                    text-align: left;
-                    margin-left: 0;
-                    max-width: 100%;
-                    display: block;
-                }
-            }
-        }
-    }
-    @include mq($from: screen-xxl) {
-        &__box {
-            max-width: 33%;
-            max-height: 70%;
         }
     }
 }
