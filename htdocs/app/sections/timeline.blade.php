@@ -2,6 +2,8 @@
 	$headline = $block->getTitle();
 	$description = $block->getDescription();
 	$timeline = $block->getTimeline();
+
+	$rand_active = rand(0,count($timeline)-1);
 ?>
 
 <div class="section section--yellow section--margin">
@@ -13,42 +15,34 @@
 					{!!$description!!}
 				</div>
 			</div>
-		</div>
-		<div class="timeline__horizontal">
-			<div class="timeline__horizontal__line">
-				<div class="events-wrapper">
-					<div class="events">
-						<ol>
-							@foreach($timeline as $key => $value)
-								<li>
-									<a href="#0" data-date="{{$key}}/01/{{$value['year']}}" @if($key == 0) class="selected" @endif>
-										<img src="{{$value['image']}}" alt="{{$value['title']}}">
-										<p>{{$value['year']}}</p>
-									</a>
-								</li>
-							@endforeach
-						</ol>
-						<span class="filling-line" aria-hidden="true"></span>
-					</div> 
+			<div class="timeline__horizontal">
+				<div class="timeline__horizontal__line">
+					<div class="timeline__horizontal__line__content table">
+						@foreach($timeline as $key => $elem)
+						<div class="timeline__horizontal__line__content__inner table__td table__td--center @if($key === $rand_active) active @endif" data-id="id-{{$key}}">
+							<div class="timeline__horizontal__line__content__inner__image">
+								<img src="{{$elem['image']}}" alt="{{$elem['title']}}">
+							</div>
+							<div class="timeline__horizontal__line__content__inner__dot"></div>
+							<div class="timeline__horizontal__line__content__inner__year">
+								<h3 class="h3">{{$elem['year']}}</h3>
+							</div>
+						</div>
+						@endforeach
+					</div>
 				</div> 
-				{{-- <ul class="timeline__horizontal__navigation">
-					<li><a href="#0" class="prev inactive">Prev</a></li>
-					<li><a href="#0" class="next">Next</a></li>
-				</ul>  --}}
-			</div> 
-			<div class="events__content">
-				<ol>
-					@foreach($timeline as $key => $value)
-						<li @if($key == 0) class="selected" @endif data-date="{{$key}}/01/{{$value['year']}}">
-							<div class="events__content__text events__content__text--headline"> 
-								<h2 class="h2">{{$value['title']}}</h2>
+				<div class="timeline__horizontal__content">
+					@foreach($timeline as $key => $elem)
+						<div class="timeline__horizontal__content__text @if($key === $rand_active) active @endif" data-id="id-{{$key}}">
+							<div class="timeline__horizontal__content__inner timeline__horizontal__content__inner--left">
+								<h2 class="h2">{{$elem['title']}}</h2>
 							</div>
-							<div class="events__content__text events__content__text--description"> 
-								{!!$value['description']!!}
+							<div class="timeline__horizontal__content__inner timeline__horizontal__content__inner--right">
+								{!!$elem['description']!!}
 							</div>
-						</li>
+						</div>
 					@endforeach
-				</ol>
+				</div>
 			</div>
 		</div>
 	</div>
