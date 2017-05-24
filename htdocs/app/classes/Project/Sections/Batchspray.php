@@ -6,7 +6,7 @@ use A365\Wordpress\Helpers\Acf\FieldHelper;
 class Batchspray extends \A365\Wordpress\Block\AcfBlock {
 
 	protected $_template = 'batchspray';
-	protected static $_label = 'Textbox + Liste + Bild';
+	protected static $_label = 'Textbox + Liste + Bild/Logo';
 	/**
 	 * @inheritdoc
 	 */
@@ -18,7 +18,8 @@ class Batchspray extends \A365\Wordpress\Block\AcfBlock {
 			FieldHelper::createWYSIWYG('description', 'Beschreibung')->setRequired(),
 			FieldHelper::createPageLink('button_url', 'Button Link'),
 			FieldHelper::createText('button_text', 'Button Text')->setRequired(),
-			FieldHelper::createImageCrop('image', 'Bild', ["crop_type" => "hard", 'target_size' => 'custom', 'force_crop' => 'no', 'save_format' => 'url', "width" => 600, "height" => 600])->setRequired(),					
+			FieldHelper::createImageCrop('image', 'Bild', ["crop_type" => "hard", 'target_size' => 'custom', 'force_crop' => 'no', 'save_format' => 'url', "width" => 600, "height" => 600])->setRequired(),				
+			FieldHelper::createImageCrop('logo', 'Logo', ["crop_type" => "hard", 'target_size' => 'custom', 'force_crop' => 'no', 'save_format' => 'url', "width" => 280, "height" => 60])->setRequired(),					
 					
 		];
 	}

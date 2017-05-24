@@ -31,6 +31,9 @@ $block: '.batchspray';
         &__text {
             width: 40%;
             float: left;
+            &__logolink {
+                max-width: 20em;
+            }
         }
         &__images {
             width: 60%;
@@ -38,6 +41,9 @@ $block: '.batchspray';
             padding-left: 2em;
             max-width: 60em;
             margin-right: 0;
+            &__logo {
+                padding-top: 2em;
+            }
         }
     }
 }
