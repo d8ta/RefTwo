@@ -1,69 +1,15 @@
 $block: '.sicozone';
 #{$block} {
-    &__image {
-        padding-bottom: 42%;
-        position: relative;
-    }
-    &__box {
-        &__text {
-            text-align: center;
-            padding: 0 .5em;
-            &__title {
-                @extend %h1;
-                margin-top: 1em;
-            }
-            &__subtitle {
-                @extend %h2;
-            }
-            &__description {
-                @extend %text-base;
-            }
+    &__text {
+        text-align: left;
+        &__title {
+            @extend %h1;
         }
-    }
-    @include mq($from: screen-lg) {
-        &__box {
-            background: $color-white;
-            max-width: 84%;
-            border-radius: .5em;
-            position: absolute;
-            top: 5em;
-            bottom: 7em;
-            left: 6em;
-            &__text {
-                padding: 3.5em;
-                &__title {
-                    text-align: left;
-                    margin-top: 0;
-                }
-                &__subtitle {
-                    text-align: left;
-                }
-                &__description {
-                    text-align: left;
-                    margin-left: 0;
-                    max-width: 100%;
-                    display: block;
-                }
-            }
+        &__subtitle {
+            @extend %h2;
         }
-    }
-    @include mq($from: screen-xl) {
-        &__box {
-            max-width: 50%;
-            &__text {
-                &__description {
-                    text-align: left;
-                    margin-left: 0;
-                    max-width: 100%;
-                    display: block;
-                }
-            }
-        }
-    }
-    @include mq($from: screen-xxl) {
-        &__box {
-            max-width: 33%;
-            max-height: 60%;
+        &__description {
+            @extend %text-base;
         }
     }
 }
