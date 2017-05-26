@@ -18,12 +18,10 @@ $block: '.customers-teaser';
         }
         &__textbox {
             &__left {
-                padding: .5em 5em;
                 width: 100%;
                 text-align: center;
             }
             &__right {
-                padding: .5em 5em;
                 width: 100%;
                 text-align: center;
             }
@@ -38,11 +36,13 @@ $block: '.customers-teaser';
                 margin: 0;
                 display: inline;
                 &__left {
+                    padding: .5em 5em;
                     float: left;
                     width: 50%;
                     text-align: left;
                 }
                 &__right {
+                    padding: .5em 5em;
                     float: left;
                     width: 50%;
                     text-align: left;

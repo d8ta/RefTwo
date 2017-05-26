@@ -1,0 +1,20 @@
+$block: '.membership';
+#{$block} {
+    max-width: em(850);
+    margin: 0 auto em(50);
+    text-align: center;
+    &__inner {
+        &__title {
+            @extend %h1;
+        }
+        &__subtitle {
+            @extend %h2;
+        }
+    }
+    &__logos {
+        text-align: center;
+        &__logo {
+            padding: 1em 2em;
+        }
+    }
+}
