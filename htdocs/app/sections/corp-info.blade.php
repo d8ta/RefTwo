@@ -4,6 +4,7 @@
 		$title = $block->getTitle();
 		$subtitle = $block->getSubtitle();
 		$description = $block->getDescription();
+		$logo = $block->getLogo();
 		$sectionimg = $block->getSectionimg();
 		?>
 		<div class="corp-info">
@@ -13,6 +14,8 @@
 				<h2 class="corp-info__text__title">{{$title}}</h2>
 				<h3 class="corp-info__text__subtitle">{{$subtitle}}</h3>
 				<div class="corp-info__text__description editor-content">{!!$description!!}</div>
+				<img src="assets/images/icons/{{$logo}}.svg" class="corp-info__text__logo" alt="Iso 9001 Logo" />
+
 			</div>
 
 			{{-- right --}}

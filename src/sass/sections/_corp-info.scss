@@ -12,6 +12,11 @@ $block: '.corp-info';
             @extend %text-base;
             margin-bottom: 1.8em;
         }
+        &__logo {
+            width: em(400);
+            margin-top: -4em;
+            margin-left: -8em;
+        }
     }
     &__images {
         margin: 0 auto;
