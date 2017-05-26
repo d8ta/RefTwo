@@ -2,13 +2,13 @@ $block: '.core-values';
 $info-padding: 1%;
 #{$block} {
     &__info {
-        text-align: center;
-        // margin-bottom: 4em;
+        padding-bottom: em;
+        text-align: left;
         &__image {
-            // margin-top: 1em;
             padding-bottom: 1em;
         }
         &__text {
+            padding-right: 1em;
             &__title {
                 @extend %h4-alt;
             }

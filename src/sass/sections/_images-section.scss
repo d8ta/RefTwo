@@ -1,13 +1,12 @@
 $block: '.images-section';
 #{$block} {
-    &__images {
+ &__images {
         text-align: center;
         &__image__left,
         &__image__right {
             max-width: 20em;
             padding-bottom: 1%;
             padding-left: .5em;
-            border-radius: .5em;
         }
     }
     @include mq($from: screen-xs) {

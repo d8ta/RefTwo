@@ -1,7 +1,7 @@
 $block: '.batchspray';
 #{$block} {
     &__text {
-        text-align: center;
+        text-align: left;
         &__title {
             @extend %h1;
             color: $brand-primary;
@@ -9,6 +9,15 @@ $block: '.batchspray';
         &__subtitle {
             @extend %h2;
             color: $color-grey;
+        }
+        &__description {
+            @extend %text-base;
+        }
+        &__footer {
+            max-width: 30em;
+        }
+        &__logo {
+            padding-top: 3em;
         }
     }
     &__images {
@@ -21,12 +30,12 @@ $block: '.batchspray';
             height: auto;
         }
     }
+    // @include mq($from: screen-xs) {
+    //     &__text {
+    //         text-align: left;
+    //     }
+    // }
     @include mq($from: screen-xs) {
-        &__text {
-            text-align: left;
-        }
-    }
-    @include mq($from: screen-sm) {
         @include clearfix;
         &__text {
             width: 40%;

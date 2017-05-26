@@ -17,11 +17,11 @@
 				<h2 class="batchspray__text__title">{{$title}}</h2>
 				<h3 class="batchspray__text__subtitle">{{$subtitle}}</h3>
 				<div class="batchspray__text__description editor-content">{!!$description!!}</div>
-				<div class="batchspray__text__logolink">
+				<div class="batchspray__text__footer">
 					<a class="btn btn--yellow" href="{{$button_url}}">
 						{{$buttontext}}
 					</a>
-					<img src="{{$logo}}" alt="Logo" class="batchspray__images__logo" />		
+					<img src="{{$logo}}" alt="Logo" class="batchspray__text__logo" />		
 				</div>
 			{{-- right --}}
 			</div>

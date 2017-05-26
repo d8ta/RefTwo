@@ -1,7 +1,7 @@
 $block: '.corp-info';
 #{$block} {
     &__text {
-        text-align: center;
+        text-align: left;
         &__title {
             @extend %h1;
         }
