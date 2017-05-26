@@ -1,13 +1,13 @@
 <?php
-$title = __('Siconnex');
+$title = __('Jobs & Karriere');
 $description = __('Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id praesentium eum.');
 $linktext = __('Mehr erfahren');
-$link_page_id = 21;
+$link_page_id = 38;
 ?>
 <div class="nav-content">
 	<a class="nav-content__image-box" href="{{get_permalink(pll_get_post($link_page_id))}}">
 		<div class="nav-content__image-box__image">
-			<div class="nav-content__image-box__image__img bg-image" style="background-image: url('assets/images/nav-menu/siconnex.png'); border-radius: .5em"></div>
+			<div class="nav-content__image-box__image__img bg-image" style="background-image: url('assets/images/nav-menu/karriere.jpg') border-radius: .5em"></div>
 		</div>
 		<div class="nav-content__image-box__text">
 			<div class="nav-content__image-box__text__headline">{{ $title }}</div>
