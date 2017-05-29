@@ -1,5 +1,8 @@
 $block: '.terms';
 #{$block} {
+    &__arrow {
+        @extend %arrow-link;
+    }
     &__info {
         text-align: left;
         margin-bottom: 1em;

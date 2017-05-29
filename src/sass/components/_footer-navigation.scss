@@ -6,6 +6,10 @@ $nav-side-padding: 1%;
     }
     a {
         display: block;
+                transition: color .2s;
+        &:hover {
+            color: $color-grey;
+        }
     }
     ul.level-1 {
         @include clearfix;

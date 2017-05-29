@@ -51,6 +51,7 @@ $box-padding: 1%;
             }
             &__link {
                 visibility: hidden;
+                border: em(2) solid $brand-primary;
                 opacity: 0;
                 display: none;
                 background: $brand-primary;
@@ -82,6 +83,7 @@ $box-padding: 1%;
                 color: $color-white;
                 #{$block2}__box__text__link {
                     visibility: visible;
+                    border: em(2) solid $brand-primary;
                     opacity: 1;
                     transition: visibility 0s, opacity .2s;
                 }

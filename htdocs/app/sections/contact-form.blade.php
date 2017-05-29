@@ -31,7 +31,7 @@ $formHelper = Project\Helpers\FormHelper::getInstance();
                     <input type="hidden" name="form[lang]" value="<?php echo get_locale(); ?>">
                     <div class="form__fields__row">
                         <div class="form__fields__row__input">
-                            <button class="btn" type="submit">
+                            <button class="btn btn--yellow" type="submit">
                                 <?php echo __('Send Form'); ?>
                             </button>
                         </div>

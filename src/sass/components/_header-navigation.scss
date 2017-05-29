@@ -14,7 +14,7 @@ $submenu: '.nav-submenu';
         display: block;
         transition: color .2s;
         &:hover {
-            color: $color-text-base;
+            color: $color-grey;
         }
     }
     ul.level-1 {
@@ -70,6 +70,7 @@ $submenu: '.nav-submenu';
     position: absolute;
     width: 100%;
     background: $color-white;
+
     left: 0;
     &__table {
         display: table;
