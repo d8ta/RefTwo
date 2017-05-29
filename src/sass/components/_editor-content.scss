@@ -24,6 +24,12 @@ body#tinymce.wp-editor {
     ul {
         @extend %ul !optional;
     }
+    a {
+        text-decoration: underline;
+        &:hover {
+            text-decoration: none;
+        }
+    }
     h1,
     h2,
     h3,
