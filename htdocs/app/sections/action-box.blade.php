@@ -33,7 +33,8 @@
 				$icon = $box['icon'];
 				$button_url = $box['button_url'];
 				?>
-				<div class="action-box__box">
+				<a a href="{{$button_url}}">
+				<div class="action-box__box ">
 					<div class="action-box__box__image bg-image" style="background-image: url({{$box['background']}})">
 						<img src="assets/images/icons/{{$icon}}.svg" class="action-box__box__image--icon" alt="Icon" />
 					</div>
@@ -46,13 +47,14 @@
 										<div class="action-box__box__text__description__clamp">{{$description}}</div>
 									</div>
 								</div>
-								<a class="action-box__box__text__button" href="{{$button_url}}">
+								<div class="action-box__box__text__button">
 									{{$buttontext}}
-								</a>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
+				</a>
 				@endforeach
 			</div>
 		</div>
