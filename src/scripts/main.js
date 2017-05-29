@@ -9,6 +9,7 @@
     //= include ../bower_components/js-cookie/src/js.cookie.js
     //= include ../bower_components/matchHeight/dist/jquery.matchHeight-min.js
     //= include ../bower_components/selectize/dist/js/standalone/selectize.js
+    //= include ../bower_components/bowser/src/bowser.js
 
 
 
@@ -21,7 +22,8 @@
 
     /* ======== Module includes ======== */
     //= include modules/AjaxFormController.js
-    //= include modules/CookieAlert.js
+    //= include modules/Alert.js
+    //= include modules/AlertController.js
     //= include modules/LanguageSwitch.js
     //= include modules/Page.js
     //= include modules/NestedNavigation.js
@@ -45,8 +47,8 @@
     var application = new Application();
     application
         .addModule(new AjaxFormController(), 'ajaxFormController')
+        .addModule(new AlertController(), 'AlertController')
         .addModule(new LanguageSwitch(), 'LanguageSwitch')
-        .addModule(new CookieAlert(), 'CookieAlert')
         .addModule(new Page(), 'Page')
         .addModule(new NestedNavigation(), 'nestedNavigation')
         .addModule(new Sidebar(), 'sidebar')

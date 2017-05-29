@@ -11,7 +11,7 @@ $label_modern = __('Modern Browsers are');
 	<div class="table">
 		<div class="table__td">
 			<div class="logo">
-				<img src="assets/images/logo/rieder-logo.png" alt="{{get_bloginfo()}}">
+				<img src="assets/images/layout/siconnex_logo.png" alt="{{get_bloginfo()}}">
 			</div>
 			<div class="h2">{{$label_old_browser}}</div>
 			<p>{{$label_modern}}:</p>

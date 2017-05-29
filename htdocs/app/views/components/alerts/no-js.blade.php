@@ -10,7 +10,7 @@ $label_btn = __('I understand');
 		<div class="table">
 			<div class="table__td">
 				<div class="logo">
-					<img src="assets/images/logo/rieder-logo-negativ.png" alt="{{get_bloginfo()}}">
+					<img src="assets/images/layout/siconnex_logo.png" alt="{{get_bloginfo()}}">
 				</div>
 				<div class="h2">{{$label_headline}}</div>
 				<p>{{$label_text}}</p>
