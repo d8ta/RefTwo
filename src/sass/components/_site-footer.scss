@@ -25,38 +25,26 @@ $block: '.site-footer';
     }
     &__socialmedia {
         width: 100%;
-        &__facebook {
-            float: left;
-            @include icon('facebook');
-            width: 7%;
-            &::before {
-                @extend %icon;
-                font-size: 1.2em;
-                margin-left: 0;
-                top: .6em;
-            }
-        }
-        &__linkedin {
-            float: left;
-            width: 7%;
-            @include icon('linkedin');
-            &::before {
-                @extend %icon;
-                font-size: 1.2em;
-                margin-left: 0;
-                top: .6em;
-            }
-        }
+        &__facebook,
+        &__linkedin,
         &__xing {
             float: left;
             width: 7%;
-            @include icon('xing');
             &::before {
                 @extend %icon;
                 font-size: 1.2em;
                 margin-left: 0;
                 top: .6em;
             }
+        }
+        &__facebook {
+            @include icon('facebook');
+        }
+        &__linkedin {
+            @include icon('linkedin');
+        }
+        &__xing {
+            @include icon('xing');
         }
     }
     &__img {
