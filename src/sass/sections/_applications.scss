@@ -11,6 +11,7 @@ $block: '.applications';
             &__description {
                 @extend %text-base;
                 padding-right: 2em;
+                padding-bottom: em(10);
             }
             &__image {
                 padding-right: 2em;
