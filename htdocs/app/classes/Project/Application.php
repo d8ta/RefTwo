@@ -12,6 +12,7 @@ class Application extends BaseApplication
 
 		add_action('after_setup_theme', [$this, 'loadTextdomain']);
 		add_filter('wp_get_attachment_url', [$this, 'ssl_post_thumbnail_urls'], 10, 2);
+		remove_action('wp_head', 'wp_generator');
 		
 	}
 
