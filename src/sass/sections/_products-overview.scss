@@ -33,6 +33,11 @@ $block: '.products-overview';
             &__info {
                 background-color: $color-product-grey;
                 padding: rem(111) rem(68);
+                transition: background .3s;
+                border-radius: .5em;
+                &:hover {
+                    background: $color-product-grey - 10%;
+                }
                 &__logo {
                     margin-bottom: em(15);
                     img {

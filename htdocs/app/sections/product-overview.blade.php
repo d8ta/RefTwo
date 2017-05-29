@@ -20,22 +20,25 @@
 				<div class="products-overview__text__text">{{$text}}</div>
 			</div>
 			<div class="products-overview__listing">
-			@foreach($products as $product)
-				<div class="products-overview__listing__elem">
-					<div class="products-overview__listing__content">
-						<div class="products-overview__listing__content__all products-overview__listing__content__image bg-image js-matchheight" style="background-image:url('{!!$imageHelper->getImageUrl($product["image"], "")!!}')"></div>
-						<div class="products-overview__listing__content__all products-overview__listing__content__info js-matchheight">
-							<div class="products-overview__listing__content__info__logo">
-								<img src="{!!$imageHelper->getImageUrl($product['logo'], '')!!}" alt="">
+				@foreach($products as $product)
+					<div class="products-overview__listing__elem">
+						<div class="products-overview__listing__content">
+							<div class="products-overview__listing__content__all products-overview__listing__content__image bg-image js-matchheight" style="background-image:url('{!!$imageHelper->getImageUrl($product["image"], "")!!}')">	
 							</div>
-							<div class="products-overview__listing__content__info__description">
-								<div>{{$product['description']}}</div>
+							<a href="{{$product['link']}}">
+							<div class="products-overview__listing__content__all products-overview__listing__content__info js-matchheight">
+								<div class="products-overview__listing__content__info__logo">
+									<img src="{!!$imageHelper->getImageUrl($product['logo'], '')!!}" alt="">
+								</div>
+								<div class="products-overview__listing__content__info__description">
+									<div>{{$product['description']}}</div>
+								</div>
+								<a class="products-overview__listing__content__info__link btn btn--yellow" href="{{$product['link']}}">{{$product['linktext']}}</a>
 							</div>
-							<a class="products-overview__listing__content__info__link btn btn--yellow" href="{{$product['link']}}">{{$product['linktext']}}</a>
+							</a>
 						</div>
 					</div>
-				</div>
-			@endforeach
+				@endforeach
 			</div>
 		</div>
 	</div>
