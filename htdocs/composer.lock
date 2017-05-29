@@ -9,11 +9,11 @@
     "packages": [
         {
             "name": "a365/core",
-            "version": "v0.4.0",
+            "version": "v0.4.1",
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:a365/core.git",
-                "reference": "61a1947228e8abad9a6d80256ea3dd0c7c753033"
+                "reference": "3fa49a12fbfb3616f3e82a01a49c8f3385f3166e"
             },
             "require": {
                 "caseyamcl/configula": "~2.2",
@@ -34,7 +34,7 @@
                     "email": "peter.schwab@a365.at"
                 }
             ],
-            "time": "2017-04-20 12:32:07"
+            "time": "2017-05-29 13:46:21"
         },
         {
             "name": "a365/customizr",
