@@ -25,7 +25,7 @@
 							</div>
 							<div class="timeline__horizontal__line__content__inner__dot"></div>
 							<div class="timeline__horizontal__line__content__inner__year">
-								<h3 class="h3">{{$elem['year']}}</h3>
+								<div class="h3">{{$elem['year']}}</div>
 							</div>
 						</div>
 						@endforeach
@@ -35,7 +35,7 @@
 					@foreach($timeline as $key => $elem)
 						<div class="timeline__horizontal__content__text js-timeline__content @if($key === $rand_active) active @endif" data-id="{{$key}}">
 							<div class="timeline__horizontal__content__inner timeline__horizontal__content__inner--left">
-								<h2 class="h2">{{$elem['title']}}</h2>
+								<h3 class="h2">{{$elem['title']}}</h3>
 							</div>
 							<div class="timeline__horizontal__content__inner timeline__horizontal__content__inner--right">
 								{!!$elem['description']!!}

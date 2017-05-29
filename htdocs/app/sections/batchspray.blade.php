@@ -14,8 +14,8 @@
 
 			{{-- left --}}
 			<div class="batchspray__text">
-				<h2 class="batchspray__text__title">{{$title}}</h2>
-				<h3 class="batchspray__text__subtitle">{{$subtitle}}</h3>
+				<h1 class="batchspray__text__title">{{$title}}</h1>
+				<h2 class="batchspray__text__subtitle">{{$subtitle}}</h2>
 				<div class="batchspray__text__description editor-content">{!!$description!!}</div>
 				<div class="batchspray__text__footer">
 					<a class="btn btn--yellow" href="{{$button_url}}">
