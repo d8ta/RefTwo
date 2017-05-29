@@ -28,32 +28,32 @@ $block: '.site-footer';
         &__facebook {
             float: left;
             @include icon('facebook');
-            width: 6%;
+            width: 7%;
             &::before {
                 @extend %icon;
-                font-size: .8em;
+                font-size: 1.2em;
                 margin-left: 0;
                 top: .6em;
             }
         }
         &__linkedin {
             float: left;
-            width: 6%;
+            width: 7%;
             @include icon('linkedin');
             &::before {
                 @extend %icon;
-                font-size: .8em;
+                font-size: 1.2em;
                 margin-left: 0;
                 top: .6em;
             }
         }
         &__xing {
             float: left;
-            width: 6%;
+            width: 7%;
             @include icon('xing');
             &::before {
                 @extend %icon;
-                font-size: .8em;
+                font-size: 1.2em;
                 margin-left: 0;
                 top: .6em;
             }
