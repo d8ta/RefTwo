@@ -3,7 +3,7 @@ $block: '.environment';
     &__slide {
         &--text-right {
             #{$block}__box {
-                right: 6em;
+                right: 2%;
                 left: auto;
             }
         }
@@ -28,23 +28,57 @@ $block: '.environment';
             }
         }
     }
-    @include mq($from: $screen-xxl - 100) {
-        &__image {
-            position: relative;
+    @include mq($from: screen-sm) {
+        &__box {
+            &__text {
+                &__description {
+                    margin: 0 auto;
+                    max-width: 30em;
+                }
+            }
         }
+    }
+    @include mq($from: $screen-lg + 15) {
         &__box {
             background: $color-white;
-            max-width: 33%;
-            // max-height: 35em;
-            max-height: 100%;
+            max-width: 40%;
+            max-height: 75%;
             border-radius: .5em;
             position: absolute;
-            top: 5em;
-            bottom: 5em;
-            left: 6em;
+            top: 5%;
+            bottom: 5%;
+            left: 5%;
             padding: 0;
             &__text {
-                padding: 3.5em;
+                padding: 2em;
+                &__title {
+                    text-align: left;
+                    margin-top: 0;
+                }
+                &__subtitle {
+                    text-align: left;
+                }
+                &__description {
+                    text-align: left;
+                    margin-left: 0;
+                    max-width: 85%;
+                    display: block;
+                }
+            }
+        }
+    }    
+    @include mq($from: $screen-lg + 100) {
+        &__box {
+            max-width: 35em;
+            max-height: 30em;
+            border-radius: .5em;
+            position: absolute;
+            top: 5%;
+            bottom: 5%;
+            left: 5%;
+            padding: 0;
+            &__text {
+                padding: 2em;
                 &__title {
                     text-align: left;
                     margin-top: 0;
@@ -61,4 +95,37 @@ $block: '.environment';
             }
         }
     }
+    // @include mq($from: $screen-xxl - 100) {
+    //     &__image {
+    //         position: relative;
+    //     }
+    //     &__box {
+    //         background: $color-white;
+    //         max-width: 33%;
+    //         // max-height: 35em;
+    //         max-height: 100%;
+    //         border-radius: .5em;
+    //         position: absolute;
+    //         top: 5em;
+    //         bottom: 5em;
+    //         left: 6em;
+    //         padding: 0;
+    //         &__text {
+    //             padding: 3.5em;
+    //             &__title {
+    //                 text-align: left;
+    //                 margin-top: 0;
+    //             }
+    //             &__subtitle {
+    //                 text-align: left;
+    //             }
+    //             &__description {
+    //                 text-align: left;
+    //                 margin-left: 0;
+    //                 max-width: 85%;
+    //                 display: block;
+    //             }
+    //         }
+    //     }
+    // }
 }
