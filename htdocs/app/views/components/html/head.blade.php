@@ -20,7 +20,7 @@ if (is_readable($css)) {
 
 
 
-    @if(!A365\Wordpress\Environment::isDevelop())
+    @if(A365\Wordpress\Environment::isProduction())
         @include('components.header.tracking')
     @endif
 
