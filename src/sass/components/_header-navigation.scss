@@ -2,14 +2,6 @@ $block: '.header-navigation';
 $submenu: '.nav-submenu';
 #{$block} {
     margin-top: em(60);
-    li.active {
-        > a {
-            color: $color-text-grey;
-            &:hover {
-                color: $color-text-base;
-            }
-        }
-    }
     a {
         display: block;
         transition: color .2s;
@@ -23,6 +15,25 @@ $submenu: '.nav-submenu';
         margin-right: em(-20);
         > li {
             float: left;
+            &.active {
+                > a {
+                    color: $color-text-grey;
+                    &:hover {
+                        color: $color-text-base;
+                    }
+                }
+                &::after {
+                    display: block;
+                    content: '';
+                    background: $brand-primary;
+                    height: em(4);
+                    position: relative;
+                    z-index: 10;
+                    margin-left: em(20);
+                    margin-right: em(20);
+                    margin-top: em(-3);
+                }
+            }
             > a {
                 padding-left: em(25, 14);
                 padding-right: em(25, 14);

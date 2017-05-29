@@ -42,6 +42,7 @@ $block: '.timeline';
                         color: white;
                         text-transform: uppercase;
                         line-height: 1em;
+                        font-family: $font-headline;
                     }
                 }
                 &--right {
@@ -135,7 +136,8 @@ $block: '.timeline';
                     &__text {
                         display: none;
                     }
-                    &.active {
+                    &.active,
+                    &:hover {
                         #{$block}{
                             &__horizontal {
                                 &__line {
@@ -160,7 +162,7 @@ $block: '.timeline';
                                                     height: em(50);
                                                 }
                                                 .h3 {
-                                                    transform: scale(1.5);
+                                                   // transform: scale(1.5);
                                                 }
 
                                             }
