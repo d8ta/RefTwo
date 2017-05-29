@@ -15,7 +15,9 @@
             @include('components.footer')
             <div class="sidebar__page-overlay"></div>
         </div>
-            @include('components.sidebar.sidebar')
+        
+        @include('components.sidebar.sidebar')
+        @include('components.alerts.alerts')
         @include('components.html.foot')
     </body>
 </html>
