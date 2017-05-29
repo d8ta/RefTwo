@@ -30,7 +30,12 @@ $block: '.download';
             padding: em(24);
             border-radius: em(8);
             text-align: left;
+            transition: background-color .3s;
             @include clearfix;
+            &:hover {
+            background-color: $brand-primary + 10%;
+
+            }
             &__content {
                 float: left;
                 width: 50%;
