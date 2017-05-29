@@ -36,7 +36,8 @@
                 }
             }
             &__text {
-                width: 100% - $image-width - 15%;
+                // width: 100% - $image-width - 15%;
+                width: 65%;
                 height: 100%;
                 position: relative;
                 z-index: 2;
@@ -72,30 +73,30 @@
                 }
             }
         }
-        @include mq($from: screen-sm) {
-            &__box {
-                // height: 15em;
-                &__image {
-                    &--icon {
-                        display: block;
-                    }
-                }
-                &__text {
-                    &__description {
-                        display: block;
-                        &__table {
-                            &__td {
-                                // height: 4em;
-                            }
-                        }
-                    }
-                    &__headline {
-                        white-space: normal;
-                    }
-                }
-            }
-        }
-        @include mq($from: screen-lg) {
+        // @include mq($from: screen-sm) {
+        //     &__box {
+        //         // height: 15em;
+        //         &__image {
+        //             &--icon {
+        //                 display: block;
+        //             }
+        //         }
+        //         &__text {
+        //             &__description {
+        //                 display: block;
+        //                 &__table {
+        //                     &__td {
+        //                         // height: 4em;
+        //                     }
+        //                 }
+        //             }
+        //             &__headline {
+        //                 white-space: normal;
+        //             }
+        //         }
+        //     }
+        // }
+        @include mq($from: $screen-md - 80) {
             max-width: 100%;
             width: 100%;
             &__box {
