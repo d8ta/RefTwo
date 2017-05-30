@@ -1,50 +1,45 @@
 $block: '.images-section';
 #{$block} {
- &__images {
-        text-align: center;
-        &__image__left,
-        &__image__right {
-            max-width: 20em;
-            padding-bottom: 1%;
-            padding-left: .5em;
-        }
-    }
-    @include mq($from: screen-xs) {
-        &__images {
-            &__image__left,
-            &__image__right {
-                max-width: 30em;
+    &__images {
+        &__left,
+        &__right {
+            &__img {
+                text-align: center;
+                padding-left: em(10);
+                padding-bottom: em(10);
+                img {
+                    border-radius: em(5);
+                    width: 80%;
+                    max-width: 20em;
+                }
             }
         }
     }
-    @include mq($from: screen-md) {
-        &__images {
-            &__image__left,
-            &__image__right {
-                max-width: 40em;
-            }
-        }
-    }
-    @include mq($from: screen-xl) {
+    @include mq($from: screen-sm) {
         &__images {
             display: table;
-            &__image__left {
-                max-width: 96%;
-                padding-bottom: 1.8%;
-            }
-            &__image__right {
-                max-width: 48%;
-                padding-bottom: 1.8%;
-                margin-right: 1.4%;
-            }
+            width: 100%;
             &__left {
-                vertical-align: top;
                 display: table-cell;
-                width: 33%;
+                width: 33.3333%;
+                vertical-align: top;
+                &__img {
+                    img {
+                        width: 97.75%;
+                        max-width: 32em;
+                    }
+                }
             }
             &__right {
                 display: table-cell;
-                width: 66%;
+                width: 66.6666%;
+                &__img {
+                    display: inline;
+                    img {
+                        width: 48.25%;
+                        max-width: 32em;
+                    }
+                }
             }
         }
     }
