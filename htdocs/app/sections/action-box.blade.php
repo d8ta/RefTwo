@@ -33,7 +33,7 @@
 				$icon = $box['icon'];
 				$button_url = $box['button_url'];
 				?>
-				<a a href="{{$button_url}}">
+				<a href="{{$button_url}}">
 				<div class="action-box__box ">
 					<div class="action-box__box__image bg-image" style="background-image: url({{$box['background']}})">
 						<img src="assets/images/icons/{{$icon}}.svg" class="action-box__box__image--icon" alt="Icon" />

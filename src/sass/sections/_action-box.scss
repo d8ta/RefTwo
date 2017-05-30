@@ -4,9 +4,6 @@
     #{$block} {
         margin: 0 auto;
         max-width: em(520);
-        &__inner {
-            // margin-right: -3.7%;
-        }
         &__box {
             max-height: em(200);
             border-top-left-radius: .5em;
@@ -28,16 +25,15 @@
                 right: 0;
                 top: 0;
                 &--icon {
-                    width: 3.125em; //50px
+                    width: 3.125em;
                     position: absolute;
-                    top: 1.25em; //20px;
-                    left: -1.5625em; //-25px;
+                    top: 1.25em;
+                    left: -1.5625em;
                     display: none;
                     z-index: 5;
                 }
             }
             &__text {
-                // width: 100% - $image-width - 15%;
                 width: 65%;
                 height: 100%;
                 position: relative;
