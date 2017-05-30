@@ -4,6 +4,7 @@ $block: '.corp-info';
         text-align: left;
         &__title {
             @extend %h1;
+            padding-right: 2em;
         }
         &__subtitle {
             @extend %h2;
@@ -22,17 +23,17 @@ $block: '.corp-info';
     &__images {
         margin: 0 auto;
         text-align: center;
+        max-width: 30em;
         &__image {
+            display: inline-block;
             border-radius: .5em;
-            margin-bottom: 1em;
+            margin-left: em(10);
+            margin-bottom: em(10);
         }
     }
     @include mq($from: screen-sm) {
         &__images {
-            &__image {
-                display: inline;
-                margin-left: 1em;
-            }
+            max-width: 47em;
         }
     }
     @include mq($from: screen-lg) {
@@ -63,3 +64,69 @@ $block: '.corp-info';
         }
     }
 }
+
+// $block: '.corp-info';
+// #{$block} {
+//     &__text {
+//         text-align: left;
+//         &__title {
+//             @extend %h1;
+//         }
+//         &__subtitle {
+//             @extend %h2;
+//         }
+//         &__description {
+//             @extend %text-base;
+//             margin-bottom: 1.8em;
+//         }
+//         &__logo {
+//             display: none;
+//             width: em(400);
+//             margin-top: -4em;
+//             margin-left: -8em;
+//         }
+//     }
+//     &__images {
+//         margin: 0 auto;
+//         text-align: center;
+//         &__image {
+//             border-radius: .5em;
+//             margin-bottom: 1em;
+//         }
+//     }
+//     @include mq($from: screen-sm) {
+//         &__images {
+//             &__image {
+//                 display: inline;
+//                 margin-left: 1em;
+//             }
+//         }
+//     }
+//     @include mq($from: screen-lg) {
+//         &__text {
+//             float: left;
+//             margin: 0;
+//             text-align: left;
+//             max-width: 50%;
+//             &__title {
+//                 text-align: left;
+//             }
+//             &__description {
+//                 max-width: 45em;
+//                 margin-left: 0;
+//                 margin-right: 0;
+//                 width: 80%;
+//             }
+//         }
+//         &__images {
+//             width: 50%;
+//             float: left;
+//             text-align: right;
+//             &__image {
+//                 width: 30%;
+//                 display: inline;
+//                 margin-left: .5em;
+//             }
+//         }
+//     }
+// }
