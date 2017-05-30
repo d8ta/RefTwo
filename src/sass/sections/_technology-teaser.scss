@@ -26,10 +26,10 @@ $box-padding: 1%;
     margin-right: -$box-padding;
     margin-left: -$box-padding;
     &__box {
-        width: 31% - 2 * $box-padding;
+        width: 49% - 2 * $box-padding; // needs to be width: 47%;
         margin-right: $box-padding;
         margin-left: $box-padding;
-        max-width: em(300);
+        max-width: em(316); // needs to be max-width: 19.75em;
         display: inline-block;
         margin-bottom: em(20);
         vertical-align: top;
