@@ -29,7 +29,7 @@ $block: '.site-footer';
         &__linkedin,
         &__xing {
             float: left;
-            width: 7%;
+            width: 1.5em;
             &::before {
                 @extend %icon;
                 font-size: 1.2em;
