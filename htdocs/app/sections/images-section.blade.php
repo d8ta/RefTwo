@@ -22,7 +22,7 @@
 					<div class="images-section__images__right__img">
 						<img src="{{$image3}}" alt="Image" class="" />
 					</div>				
-					<div class="images-section__images__right__img">
+					<div class="images-section__images__right__img images-section__images__right__img--last">
 						<img src="{{$image4}}" alt="Image" class="" />
 					</div>
 				</div>

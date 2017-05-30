@@ -5,7 +5,7 @@ $block: '.images-section';
         &__right {
             &__img {
                 text-align: center;
-                padding-left: em(10);
+                // padding-right: em(5);
                 padding-bottom: em(10);
                 img {
                     border-radius: em(5);
@@ -25,7 +25,7 @@ $block: '.images-section';
                 vertical-align: top;
                 &__img {
                     img {
-                        width: 97.75%;
+                        width: 95.5%;
                         max-width: 32em;
                     }
                 }
@@ -35,9 +35,27 @@ $block: '.images-section';
                 width: 66.6666%;
                 &__img {
                     display: inline;
+                    padding-left: em(0);
                     img {
-                        width: 48.25%;
+                        width: 48.5%;
                         max-width: 32em;
+                    }
+                    &--last {
+                        padding-left: em(5);
+                    }
+                }
+            }
+        }
+    }
+    @include mq($from: screen-lg) {
+        &__images {
+            &__right {
+                &__img {
+                    img {
+                        width: 48%;
+                    }
+                    &--last {
+                        padding-left: em(7);
                     }
                 }
             }
