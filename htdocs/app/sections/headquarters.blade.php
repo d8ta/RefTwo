@@ -4,7 +4,7 @@ $locations = \Project\Models\Location::allPublished();
 
 <div class="section section--headquarters section--margin">
 	<div class="section__content">
-		<h1 class="headquarters__headline">Siconnex Standorte</h1>
+		<h2 class="headquarters__headline">Siconnex Standorte</h2>
 		<div class="headquarters__locations">
 			@foreach($locations as $location)
 					@if (isset($location))

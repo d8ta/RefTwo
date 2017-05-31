@@ -20,8 +20,8 @@
 							<div class="welcome-slider__slide__text__table">
 								<div class="welcome-slider__slide__text__td">
 									<div class="welcome-slider__slide__text__inner">
-										<h1 class="welcome-slider__slide__text__pretitle">{{$pretitle}}</h1>
-										<h2 class="welcome-slider__slide__text__title">{{$title}}</h2>
+										<h2 class="welcome-slider__slide__text__pretitle">{{$pretitle}}</h2>
+										<h3 class="welcome-slider__slide__text__title">{{$title}}</h3>
 										<p class="welcome-slider__slide__text__description">{{$description}}</p>
 									</div>
 									<a class="btn" href="{{$button_url}}">
