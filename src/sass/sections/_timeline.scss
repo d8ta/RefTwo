@@ -29,7 +29,6 @@ $block: '.timeline';
                 &.active {
                     display: block;
                     opacity: 1;
-
                 }
             }
             &__inner {
@@ -41,13 +40,6 @@ $block: '.timeline';
                 }
                 &--left {
                     text-align: right;
-                    // .h2 {
-                    //     font-size: em(48);
-                    //     color: white;
-                    //     text-transform: uppercase;
-                    //     line-height: 1em;
-                    //     font-family: $font-headline;
-                    // }
                 }
                 &--right {
                     padding-left: em(65);
@@ -81,7 +73,7 @@ $block: '.timeline';
                             height: em(9);
                             border: 1px solid white;
                             border-radius: 50%;
-                            margin:0 auto;
+                            margin: 0 auto;
                             background: $brand-primary;
                             content: '';
                             display: block;
@@ -96,7 +88,7 @@ $block: '.timeline';
                     }
                     &__dot {
                         margin-top: em(40);
-                        &::after, 
+                        &::after,
                         &::before {
                             position: absolute;
                             content: '';
@@ -104,7 +96,6 @@ $block: '.timeline';
                             height: 1px;
                             background-color: rgba(white, 0.3);
                             display: block;
-
                         }
                         &::before {
                             left: 0;
@@ -142,7 +133,7 @@ $block: '.timeline';
                     }
                     &.active,
                     &:hover {
-                        #{$block}{
+                        #{$block} {
                             &__horizontal {
                                 &__line {
                                     &__content {
@@ -166,9 +157,8 @@ $block: '.timeline';
                                                     height: em(50);
                                                 }
                                                 .h3 {
-                                                   // transform: scale(1.5);
+                                                    // transform: scale(1.5);
                                                 }
-
                                             }
                                         }
                                     }
@@ -180,7 +170,7 @@ $block: '.timeline';
             }
         }
     }
-    @include mq($until: screen-sm){
+    @include mq($until: screen-sm) {
         &__horizontal {
             &__content {
                 &__inner {
@@ -197,5 +187,3 @@ $block: '.timeline';
         }
     }
 }
-
-
