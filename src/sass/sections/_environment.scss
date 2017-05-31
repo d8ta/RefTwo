@@ -8,7 +8,12 @@ $block: '.environment';
             }
         }
     }
+    overflow: hidden;
     &__image {
+        transition: all 3s;
+        &:hover {
+            transform: scale(1.05);
+        }
         padding-bottom: 42%;
         position: relative;
     }

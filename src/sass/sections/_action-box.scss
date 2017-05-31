@@ -15,6 +15,7 @@
             padding: em(29);
             position: relative;
             margin-bottom: 3rem;
+            overflow: hidden;
             &__image {
                 border-top-right-radius: .5em;
                 border-bottom-right-radius: .5em;
@@ -24,6 +25,10 @@
                 position: absolute;
                 right: 0;
                 top: 0;
+                transition: all 3s;
+                &:hover {
+                    transform: scale(1.05);
+                }
                 &--icon {
                     width: 3.125em;
                     position: absolute;
@@ -34,10 +39,9 @@
                 }
             }
             &__text {
-                width: 65%;
+                width: 58%;
                 height: 100%;
                 position: relative;
-                z-index: 2;
                 &__wrapper {
                     margin-bottom: .8em;
                 }

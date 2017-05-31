@@ -4,6 +4,13 @@ $block: '.applications';
         text-align: left;
         margin-bottom: 1em;
         &__text {
+            img {
+                transition: all 3s;
+                &:hover {
+                    transform: scale(1.05);
+                }
+                border-radius: em(5);
+            }
             padding-bottom: 4em;
             &__title {
                 @extend %h1;
@@ -14,11 +21,11 @@ $block: '.applications';
                 padding-bottom: em(10);
             }
             &__image {
-                padding-right: 2em;
-                padding-bottom: 2em;
+                background: green;
             }
             &__editor {
                 @extend %text-base;
+                padding-top: 1em;
                 &__middle {
                     margin-top: -5.75em;
                 }
@@ -39,6 +46,7 @@ $block: '.applications';
                     width: 20%;
                     padding-left: 1em;
                     padding-right: 3em;
+                    padding-top: 0;
                     &__middle {
                         margin-top: 1.9em;
                     }

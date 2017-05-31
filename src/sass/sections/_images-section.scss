@@ -5,9 +5,12 @@ $block: '.images-section';
         &__right {
             &__img {
                 text-align: center;
-                // padding-right: em(5);
                 padding-bottom: em(10);
                 img {
+                    transition: all 3s;
+                    &:hover {
+                        transform: scale(1.025);
+                    }
                     border-radius: em(5);
                     width: 80%;
                     max-width: 20em;

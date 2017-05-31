@@ -21,6 +21,10 @@ $block: '.batchspray';
         }
     }
     &__images {
+        transition: all 3s;
+        &:hover {
+            transform: scale(1.05);
+        }
         max-width: 25em;
         margin: 2em auto 0;
         text-align: right;
@@ -30,11 +34,6 @@ $block: '.batchspray';
             height: auto;
         }
     }
-    // @include mq($from: screen-xs) {
-    //     &__text {
-    //         text-align: left;
-    //     }
-    // }
     @include mq($from: screen-xs) {
         @include clearfix;
         &__text {
