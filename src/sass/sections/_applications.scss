@@ -20,9 +20,6 @@ $block: '.applications';
                 padding-right: 2em;
                 padding-bottom: em(10);
             }
-            &__image {
-                background: green;
-            }
             &__editor {
                 @extend %text-base;
                 padding-top: 1em;
