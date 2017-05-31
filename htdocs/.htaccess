@@ -1,5 +1,7 @@
 # redirectMatch 301 ^/en/contact(.)*.html$ /en/contact/
 
+redirectMatch 301 ^/company.html$ /unternehmen/
+
 <IfModule mod_rewrite.c>
 	RewriteEngine On
 	
