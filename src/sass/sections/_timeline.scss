@@ -32,20 +32,10 @@ $block: '.timeline';
                 }
             }
             &__inner {
-                width: 50%;
-                float: left;
+                text-align: center;
                 &__element-title {
                     @extend %h2;
                     color: $color-white;
-                }
-                &--left {
-                    text-align: right;
-                }
-                &--right {
-                    padding-left: em(65);
-                    p {
-                        max-width: em(480);
-                    }
                 }
             }
         }

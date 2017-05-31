@@ -63,13 +63,22 @@ $block: '.products-overview';
     }
     @include mq($until: 640px) {
         &__listing {
+            // &__content {
+            //     &__info {
+            //         &__logo {
+            //             img {
+            //                 width: 80%;
+            //             }
+            //         }
+            //     }
+            // }
             &__elem {
                 width: 100%;
                 margin: em(5) 0;
             }
         }
     }
-    @include mq($from: 641px, $until: 1024px) {
+    @include mq($from: 641px, $until: 1290px) {
         &__listing {
             &__elem {
                 width: 100%;

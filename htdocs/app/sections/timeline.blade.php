@@ -34,11 +34,11 @@
 				<div class="timeline__horizontal__content">
 					@foreach($timeline as $key => $elem)
 						<div class="timeline__horizontal__content__text js-timeline__content @if($key === $rand_active) active @endif" data-id="{{$key}}">
-							<div class="timeline__horizontal__content__inner timeline__horizontal__content__inner--left">
+							<div class="timeline__horizontal__content__inner timeline__horizontal__content__inner">
 								<h3 class="timeline__horizontal__content__inner__element-title">{{$elem['title']}}</h3>
-							</div>
-							<div class="timeline__horizontal__content__inner timeline__horizontal__content__inner--right">
-								{!!$elem['description']!!}
+								<div class="">
+									{!!$elem['description']!!}
+								</div>
 							</div>
 						</div>
 					@endforeach
