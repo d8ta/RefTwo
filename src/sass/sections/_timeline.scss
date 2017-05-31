@@ -35,15 +35,19 @@ $block: '.timeline';
             &__inner {
                 width: 50%;
                 float: left;
+                &__element-title {
+                    @extend %h2;
+                    color: $color-white;
+                }
                 &--left {
                     text-align: right;
-                    .h2 {
-                        font-size: em(48);
-                        color: white;
-                        text-transform: uppercase;
-                        line-height: 1em;
-                        font-family: $font-headline;
-                    }
+                    // .h2 {
+                    //     font-size: em(48);
+                    //     color: white;
+                    //     text-transform: uppercase;
+                    //     line-height: 1em;
+                    //     font-family: $font-headline;
+                    // }
                 }
                 &--right {
                     padding-left: em(65);
