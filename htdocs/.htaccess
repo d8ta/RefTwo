@@ -1,6 +1,17 @@
 # redirectMatch 301 ^/en/contact(.)*.html$ /en/contact/
 
-redirectMatch 301 ^/company.html$ /unternehmen/
+#redirectMatch 301 ^/home.html$ //
+#redirectMatch 301 ^/products.html$ /produkte/
+#redirectMatch 301 ^/products.html$ /produkte/#roadmap/
+#redirectMatch 301 ^/products/batchspray-acid.html$ /produkte/batchspray-acid/
+#redirectMatch 301 ^/products/batchspray-solvent.html$ /produkte/batchspray-solvent/
+#redirectMatch 301 ^/products/batchspray-autoload.html$ /produkte/batchspray-autoload/
+#redirectMatch 301 ^/technology.html$ /technologie/
+#redirectMatch 301 ^/applications.html$ /technologie/anwendungen/
+#redirectMatch 301 ^/company.html$ /unternehmen/
+#redirectMatch 301 ^/service.html$ /unternehmen/service/
+#redirectMatch 301 ^/certificates.html$ /unternehmen/forschung-entwicklung/
+#redirectMatch 301 ^/contact.html$ /kontakt/
 
 <IfModule mod_rewrite.c>
 	RewriteEngine On
