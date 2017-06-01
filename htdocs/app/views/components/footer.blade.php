@@ -10,12 +10,12 @@
 				</div>	
 
 				<div class="site-footer__socialmedia">
-					<div class="site-footer__socialmedia__facebook">
-					</div>
-					<div class="site-footer__socialmedia__linkedin">
-					</div>				
-					<div class="site-footer__socialmedia__xing">
-					</div>
+					<a href="https://www.facebook.com/Siconnex-Customized-Solutions-GmbH-127255930706487/" target="_blank" class="site-footer__socialmedia__facebook">
+					</a>
+					<a href="https://www.linkedin.com/company/siconnex/" target="_blank" class="site-footer__socialmedia__linkedin">
+					</a>				
+					<a href="https://www.xing.com/companies/siconnexcustomizedsolutionsgmbh" target="_blank" class="site-footer__socialmedia__xing">
+					</a>
 				</div>
 
 			</div>
