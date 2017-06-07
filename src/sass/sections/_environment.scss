@@ -78,4 +78,98 @@ $block: '.environment';
             max-height: 30em;
         }
     }
+    .owl-dots {
+        margin: em(12) 0 em(20);
+        text-align: center;
+        // @include mq($from: $screen-xxl - 20) {
+        // display: none;
+        // }
+    }
+    .owl-dot {
+        display: inline-block;
+        font-size: em(18);
+        width: 1em;
+        height: 1em;
+        margin: 0 em(4);
+        border-radius: 50%;
+        background-color: $color-light-grey;
+        transition: background .2s;
+        &.active,
+        &:hover {
+            background-color: $brand-primary;
+        }
+    }
+    .owl-nav {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+    }
+    .owl-prev,
+    .owl-next {
+        height: em(42);
+        width: em(42);
+        margin: auto 0;
+        color: $color-white;
+        position: absolute;
+        right: .5em;
+        top: 0;
+        bottom: 0;
+        background: $color-white;
+        border-radius: em(5);
+        .icon {
+            font-size: em(12);
+            position: absolute;
+            width: 1em;
+            height: 1em;
+            line-height: 1;
+            margin: auto;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            color: $color-text;
+            transition: all .2s;
+            &::before {
+                @extend %icon;
+            }
+        }
+        @include mq($until: screen-sm) {
+            display: none;
+        }
+    }
+    .owl-prev {
+        top: em(-47);
+        .icon {
+            @include icon(arrowleft);
+        }
+        &:hover {
+            .icon {
+                transform: translateX(-.3em);
+            }
+        }
+        @include mq($from: screen-sm) {
+            top: em(-360);
+        }
+        @include mq($from: screen-lg) {
+            top: em(-47);
+        }
+    }
+    .owl-next {
+        top: em(47);
+        .icon {
+            @include icon(arrowright);
+        }
+        &:hover {
+            .icon {
+                transform: translateX(.3em);
+            }
+        }
+        @include mq($from: screen-sm) {
+            top: em(-255);
+        }
+        @include mq($from: screen-lg) {
+            top: em(47);
+        }
+    }
 }

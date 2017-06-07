@@ -1,9 +1,9 @@
 .owl-dots {
     margin: em(12) 0 em(20);
     text-align: center;
-    @include mq($from: $screen-xxl - 20) {
-        display: none;
-    }
+    // @include mq($from: $screen-xxl - 20) {
+    // display: none;
+    // }
 }
 
 .owl-dot {
@@ -26,10 +26,6 @@
     top: 0;
     right: 0;
     height: 100%;
-    display: none;
-    @include mq($from: $screen-xxl - 20) {
-        display: block;
-    }
 }
 
 .owl-prev,
@@ -61,6 +57,9 @@
             @extend %icon;
         }
     }
+    @include mq($until: screen-sm) {
+        display: none;
+    }
 }
 
 .owl-prev {
@@ -73,6 +72,9 @@
             transform: translateX(-.3em);
         }
     }
+    // @include mq($until: screen-sm) {
+    //     top: em(-360);
+    // }
 }
 
 .owl-next {
@@ -85,4 +87,7 @@
             transform: translateX(.3em);
         }
     }
+    // @include mq($until: screen-sm) {
+    //     top: em(-255);
+    // }
 }
