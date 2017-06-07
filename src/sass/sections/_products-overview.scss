@@ -21,9 +21,10 @@ $block: '.products-overview';
     }
     &__listing {
         &__elem {
-            width: 33.333%;
+            margin: 0 auto;
+            width: 100%;
+            max-width: 22em;
             padding: 0 em(5);
-            float: left;
         }
         &__content {
             overflow: hidden;
@@ -62,38 +63,82 @@ $block: '.products-overview';
             }
         }
     }
-    @include mq($until: 640px) {
-        &__listing {
-            // &__content {
-            //     &__info {
-            //         &__logo {
-            //             img {
-            //                 width: 80%;
-            //             }
-            //         }
-            //     }
-            // }
-            &__elem {
-                width: 100%;
-                margin: em(5) 0;
-            }
-        }
-    }
-    @include mq($from: 641px, $until: 1290px) {
+    @include mq($from: 992px) {
         &__listing {
             &__elem {
-                width: 100%;
-                margin: em(5) 0;
+                float: left;
+                width: 33.3333%;
+                max-width: 100%;
             }
             &__content {
-                &__all {
-                    width: 50%;
-                    float: left;
-                }
+                overflow: hidden;
+                display: block;
                 &__image {
-                    padding-bottom: 40%;
+                    width: 100%;
+                    padding-bottom: 81.22%;
+                    transition: all 3s;
+                    &:hover {
+                        transform: scale(1.05);
+                    }
+                }
+                &__info {
+                    display: block;
+                    background-color: $color-product-grey;
+                    padding: rem(111) rem(68);
+                    transition: background .3s;
+                    border-radius: .5em;
+                    &:hover {
+                        background: $color-product-grey - 10%;
+                    }
+                    &__logo {
+                        margin-bottom: em(15);
+                        width: 90%;
+                        img {
+                            width: 100%;
+                            max-width: em(280);
+                        }
+                    }
+                    &__description {
+                        margin-bottom: em(40);
+                        max-width: em(456);
+                        min-height: em(120);
+                    }
                 }
             }
         }
     }
+    // @include mq($until: 640px) {
+    //     &__listing {
+    //         // &__content {
+    //         //     &__info {
+    //         //         &__logo {
+    //         //             img {
+    //         //                 width: 80%;
+    //         //             }
+    //         //         }
+    //         //     }
+    //         // }
+    //         &__elem {
+    //             width: 100%;
+    //             margin: em(5) 0;
+    //         }
+    //     }
+    // }
+    // @include mq($from: 641px, $until: 1290px) {
+    //     &__listing {
+    //         &__elem {
+    //             width: 100%;
+    //             margin: em(5) 0;
+    //         }
+    //         &__content {
+    //             &__all {
+    //                 width: 50%;
+    //                 float: left;
+    //             }
+    //             &__image {
+    //                 padding-bottom: 40%;
+    //             }
+    //         }
+    //     }
+    // }
 }
