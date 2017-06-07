@@ -54,8 +54,8 @@ class MenuHelper extends \A365\Wordpress\Helpers\MenuHelper
                 $menuElement = MenuElement::create($element->ID, $level, $config);
 
                 if ($level < $this->_depth) {
-                    $menuElement->addHashSections($menuElement->page->getHashSections(), $level, $element->object_id);
                     $menuElement->addSubmenuPages($this->_buildTree($menuElement, $level ));
+                    $menuElement->addHashSections($menuElement->page->getHashSections(), $level, $element->object_id);
                 }
 
                 $element = $menuElement;
