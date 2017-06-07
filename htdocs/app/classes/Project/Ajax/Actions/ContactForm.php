@@ -42,7 +42,7 @@ class ContactForm extends Action
 
 			$v = new Validator( $data );
 
-			$v->rule('required', ['firstname', 'lastname', 'company', 'email', 'message']);
+			$v->rule('required', ['firstname', 'lastname', 'company', 'email', 'phone', 'message']);
 			$v->rule('email', 'email');
 
 
