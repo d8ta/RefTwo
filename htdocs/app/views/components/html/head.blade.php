@@ -28,7 +28,7 @@ if (is_readable($css)) {
     {{-- Scripts --}}
     <script type="text/javascript" src="assets/js/vendor/modernizr.min.js?{!!filemtime('assets/js/vendor/modernizr.min.js')!!}"></script>
     <script src="https://use.typekit.net/bzd4uum.js"></script>
-    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+    <script>try{Typekit.load({ async: false });}catch(e){}</script>
 
     <?php wp_head(); ?>
 
