@@ -63,7 +63,7 @@ $block: '.products-overview';
             }
         }
     }
-    @include mq($from: 992px) {
+        @include mq($from: 1030px) {
         &__listing {
             &__elem {
                 float: left;
@@ -107,38 +107,4 @@ $block: '.products-overview';
             }
         }
     }
-    // @include mq($until: 640px) {
-    //     &__listing {
-    //         // &__content {
-    //         //     &__info {
-    //         //         &__logo {
-    //         //             img {
-    //         //                 width: 80%;
-    //         //             }
-    //         //         }
-    //         //     }
-    //         // }
-    //         &__elem {
-    //             width: 100%;
-    //             margin: em(5) 0;
-    //         }
-    //     }
-    // }
-    // @include mq($from: 641px, $until: 1290px) {
-    //     &__listing {
-    //         &__elem {
-    //             width: 100%;
-    //             margin: em(5) 0;
-    //         }
-    //         &__content {
-    //             &__all {
-    //                 width: 50%;
-    //                 float: left;
-    //             }
-    //             &__image {
-    //                 padding-bottom: 40%;
-    //             }
-    //         }
-    //     }
-    // }
 }
