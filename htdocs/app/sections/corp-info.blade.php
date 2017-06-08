@@ -24,7 +24,7 @@
 			<div class="corp-info__images">	
 				@foreach ($sectionimg as $image)
 					<div class="corp-info__images__image">
-						<img src="{{$image['image']}}" alt="Section Image" />
+						<img src="{{$image['image']}}" alt="Section Image" class="corp-info__images__image" />
 					</div>
 				@endforeach
 			</div>

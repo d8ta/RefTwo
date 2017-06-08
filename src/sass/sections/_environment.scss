@@ -43,7 +43,7 @@ $block: '.environment';
             }
         }
     }
-    @include mq($from: $screen-lg + 15) {
+    @include mq($from: 1300px) {
         &__box {
             background: $color-white;
             max-width: 40%;
