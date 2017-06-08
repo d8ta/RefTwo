@@ -1,7 +1,6 @@
 <?php
 $has_submenu_div = $nav_item->level == 1 && $nav_item->with_submenu_div;
 $nav_link = get_permalink(pll_get_post($nav_item->page->getId()));
-
 if (isset($nav_item->hash)) {
 	$nav_link .= $nav_item->hash;
 }
