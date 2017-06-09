@@ -1,7 +1,7 @@
 <?php 
 $sections = $block->getSections();
 ?>
-<div class="section section--margin-xl">
+<div class="section">
 	<div class="section__content">
 		<div class="applications">
 			@foreach ($sections as $section)
