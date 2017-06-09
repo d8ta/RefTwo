@@ -33,8 +33,15 @@ $block: '.download';
             transition: background-color .3s;
             @include clearfix;
             &:hover {
-            background-color: $brand-primary + 10%;
-
+                background-color: $brand-primary + 10%;
+                .btn {
+                    background: $brand-primary;
+                    border: em(2) solid $color-white;
+                    color: $color-white;
+                    &::before {
+                        color: $color-white;
+                    }
+                }
             }
             &__content {
                 float: left;

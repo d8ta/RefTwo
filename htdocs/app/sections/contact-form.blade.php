@@ -13,7 +13,6 @@ $formHelper = Project\Helpers\FormHelper::getInstance();
 ?>
 
 <section class="section section--margin contact-locations">
-
     <div class="section__content">
         <h2 class="h1">{{$headline}}</h2>
         <div class="contact-form__content">
@@ -24,6 +23,8 @@ $formHelper = Project\Helpers\FormHelper::getInstance();
                     echo $formHelper->getFormField("firstname", __('First Name'));
                     echo $formHelper->getFormField("lastname", __('Last Name'));
                     echo $formHelper->getFormField("company", __('Company'));
+                    echo $formHelper->getFormField("phone", __('Telefon'));
+                    echo $formHelper->getFormField("dropdown", __('dropdown_placeholder'));
                     echo $formHelper->getFormField("email", __('E-Mail'), ["type" => "email"]);
                     echo $formHelper->getFormField("message", __('Message'), ["type" => "textarea", "size" => "full"]);
                     echo $formHelper->getHoneyField();
@@ -42,7 +43,5 @@ $formHelper = Project\Helpers\FormHelper::getInstance();
                 </div>
             </form>
         </div>
-
-
     </div>
 </section>

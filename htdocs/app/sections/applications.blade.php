@@ -8,6 +8,7 @@ $sections = $block->getSections();
 			<?php 
 			$image = $section['image'];
 			$title = $section['title'];
+			// $id_link = $section['id'];
 			$description = $section['description'];
 			$left = $section['left'];
 			$middle = $section['middle'];

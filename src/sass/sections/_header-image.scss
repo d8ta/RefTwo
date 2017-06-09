@@ -1,5 +1,6 @@
 $block: '.header-image';
 #{$block} {
+	overflow: hidden;
     &__image {
         transition: all 3s;
         &:hover {

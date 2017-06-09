@@ -6,11 +6,12 @@ $block: '.images-section';
             &__img {
                 text-align: center;
                 padding-bottom: em(10);
+                // overflow: hidden;
                 img {
-                    transition: all 3s;
-                    &:hover {
-                        transform: scale(1.025);
-                    }
+                    // transition: all 3s;
+                    // &:hover {
+                    //     transform: scale(1.025);
+                    // }
                     border-radius: em(5);
                     width: 80%;
                     max-width: 20em;

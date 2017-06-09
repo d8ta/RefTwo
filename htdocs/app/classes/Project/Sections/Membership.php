@@ -18,7 +18,7 @@ class Membership extends \A365\Wordpress\Block\AcfBlock {
 			FieldHelper::createText('subtitle', 'Unterüberschrift')->setRequired(),
 			FieldHelper::createRepeater('logo', 'Logo', ["min" => 1, "max" => 5])
 				->addSubfields([
-					FieldHelper::createImageCrop('image', 'Logo', ["crop_type" => "hard", 'target_size' => 'custom', 'force_crop' => 'no', 'save_format' => 'url', "width" => 120, "height" => 120])->setRequired(),
+					FieldHelper::createImageCrop('image', 'Logo', ["crop_type" => "hard", 'target_size' => 'custom', 'force_crop' => 'no', 'save_format' => 'url', "width" => 200, "height" => 100])->setRequired(),
 
 			]),
 
