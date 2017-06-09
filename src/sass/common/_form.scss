@@ -12,6 +12,15 @@ $form-padding: em(30);
         margin-left: -$form-padding;
         margin-right: -$form-padding;
         @include clearfix;
+        &__table {
+            display: table;
+            width: 30em;
+            &__row {
+                display: table-cell;
+                vertical-align: middle;
+                padding-right: 1em;
+            }
+        }
         &__row {
             width: 50%;
             float: left;
