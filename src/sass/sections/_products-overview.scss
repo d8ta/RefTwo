@@ -32,9 +32,9 @@ $block: '.products-overview';
             &__image {
                 width: 100%;
                 padding-bottom: 81.22%;
-                transition: all 3s;
+                transition: all $transition-speed;
                 &:hover {
-                    transform: scale(1.05);
+                    transform: scale($scale);
                 }
             }
             &__info {

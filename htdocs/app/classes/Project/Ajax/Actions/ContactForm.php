@@ -19,7 +19,9 @@ class ContactForm extends Action
 
 	protected function _action()
 	{
+
 		$data     = $_POST['form'];
+		var_dump($data);
 		$response = new \stdClass;
 
 		if (strlen($data[self::KEY_HONEYPOT]) > 0) {
@@ -46,11 +48,16 @@ class ContactForm extends Action
 			$v->rule('email', 'email');
 
 
+			// if ($data['mail'] = "sales") {
+			// 	$sendto = $_config->getItem('mail.to_sales');
+			// }
+
+
 			if (!$v->validate()) {throw new Exception('Form not correct', 10);}
 
 
 			$customer_name = $data['firstname'] . ' ' . $data['lastname'];
-			
+
 
 			$templateEngine = TemplateEngine::getInstance();
 			$email = Email::getInstance();

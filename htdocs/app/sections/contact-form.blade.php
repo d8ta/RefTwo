@@ -29,21 +29,17 @@ $formHelper = Project\Helpers\FormHelper::getInstance();
                     echo $formHelper->getHoneyField();
                     ?>
                     <input type="hidden" name="form[lang]" value="<?php echo get_locale(); ?>">
-{{--                     <div class="form__fields__row">
-                    <div class="form__fields__row__input"> --}}
-                        <div class="form__fields__table">  
-                                <select class="js-selectize form__fields__table__select">
-                                    <option value="sales@siconnex.com">Produkte/Verkauf</option>
-                                    <option value="purchasing@siconnex.com">Einkauf</option>
-                                    <option value="service@siconnex.com">Service</option>
-                                    <option value="career@siconnex.com">Karriere</option>
-                                </select>
-                                <button class="btn btn--yellow form__fields__table__btn" type="submit">
-                                    <?php echo __('Send Form'); ?>
-                                </button>
-                        </div>
-{{--                     </div>
-                    </div> --}}
+                    <div class="form__fields__table"> 
+                        <select name="form[mail]" class="js-selectize form__fields__table__select">
+                            <option value="sales">Produkte/Verkauf</option>
+                            <option value="purchase">Einkauf</option>
+                            <option value="service">Service</option>
+                            <option value="career">Karriere</option>
+                        </select>
+                        <button class="btn btn--yellow form__fields__table__btn" type="submit">
+                            <?php echo __('Send Form'); ?>
+                       </button>
+                    </div>
                 </div>
                 <div class="form__success">
                     <h3 class="h3"><?php echo __('Thank you for your message.'); ?></h3>

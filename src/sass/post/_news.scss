@@ -1,0 +1,9 @@
+$block: '.news';
+#{$block} {
+    &__headline {
+        @extend %h1;
+    }
+    &__intro {
+        @extend %text-base;
+    }
+}
