@@ -224,7 +224,7 @@ $config = [
 				'fields' => array (
 					array (
 						'key' => 'field_570e1f1db47e6',
-						'label' => 'Header Image',
+						'label' => 'Newsbild',
 						'name' => 'header_image',
 						'type' => 'image',
 						'instructions' => '',
@@ -248,7 +248,7 @@ $config = [
 					),
 					array (
 						'key' => 'field_592400bf2e8d5',
-						'label' => 'Home Image',
+						'label' => 'Teaserbild',
 						'name' => 'home_image',
 						'type' => 'image_crop',
 						'instructions' => '',
@@ -272,7 +272,7 @@ $config = [
 					),
 					array (
 						'key' => 'field_570e1edbb47e5',
-						'label' => 'Intro Home',
+						'label' => 'Teaser Intro',
 						'name' => 'intro_home',
 						'type' => 'textarea',
 						'instructions' => '',
@@ -293,7 +293,7 @@ $config = [
 					),
 					array (
 						'key' => 'field_570e1e80b47e4',
-						'label' => 'Intro',
+						'label' => 'Introtext',
 						'name' => 'intro',
 						'type' => 'textarea',
 						'instructions' => '',
@@ -313,8 +313,29 @@ $config = [
 						'disabled' => 0,
 					),
 					array (
+						'key' => 'field_570e1e80b47e4',
+						'label' => 'Unterüberschrift',
+						'name' => 'subline',
+						'type' => 'textarea',
+						'instructions' => '',
+						'required' => 0,
+						'conditional_logic' => 0,
+						'wrapper' => array (
+							'width' => '',
+							'class' => '',
+							'id' => '',
+						),
+						'default_value' => '',
+						'placeholder' => '',
+						'maxlength' => '',
+						'rows' => '',
+						'new_lines' => 'wpautop',
+						'readonly' => 0,
+						'disabled' => 0,
+					),
+					array (
 						'key' => 'field_570e1de4b47e3',
-						'label' => 'Content',
+						'label' => 'Artikel',
 						'name' => 'content',
 						'type' => 'wysiwyg',
 						'instructions' => '',
