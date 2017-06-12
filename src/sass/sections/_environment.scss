@@ -10,9 +10,9 @@ $block: '.environment';
     }
     overflow: hidden;
     &__image {
-        transition: all 3s;
+        transition: all $transition-speed;
         &:hover {
-            transform: scale(1.05);
+            transform: scale($scale);
         }
         padding-bottom: 42%;
         position: relative;
@@ -81,9 +81,6 @@ $block: '.environment';
     .owl-dots {
         margin: em(12) 0 em(20);
         text-align: center;
-        // @include mq($from: $screen-xxl - 20) {
-        // display: none;
-        // }
     }
     .owl-dot {
         display: inline-block;

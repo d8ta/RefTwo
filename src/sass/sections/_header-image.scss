@@ -2,9 +2,9 @@ $block: '.header-image';
 #{$block} {
 	overflow: hidden;
     &__image {
-        transition: all 3s;
+        transition: all $transition-speed;
         &:hover {
-            transform: scale(1.05);
+            transform: scale($scale);
         }
         height: 0;
         padding-bottom: 21%;
