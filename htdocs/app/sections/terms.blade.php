@@ -3,7 +3,7 @@ $title = $block->getTitle();
 $left = $block->getLeft();
 $right = $block->getRight();
 ?>
-<div class="section section--margin-xl">
+<div class="section section--margin-xxxl">
 	<div class="section__content">
 		<div class="terms">
 			<div class="terms__info">
