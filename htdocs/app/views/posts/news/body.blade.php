@@ -13,8 +13,8 @@
 				<div class="news__text__content editor-content">{!!$news->getContent()!!}</div>	
 			</div>
 			<div class="news__images">
-				<img data-src="{{$image[0]}}" alt="{{$imagge_meta['image_meta']['caption']}}" class="responsive news__images__img" />	
-				<img data-src="{{$image[0]}}" alt="{{$imagge_meta['image_meta']['caption']}}" class="responsive news__images__img" />	
+				<img src="assets/images/layout/newsimg1.png" alt="News Bild" class="responsive news__images__img" />	
+				<img src="assets/images/layout/newsimg2.png" alt="News Bild" class="responsive news__images__img" />	
 				<img data-src="{{$image[0]}}" alt="{{$imagge_meta['image_meta']['caption']}}" class="responsive news__images__img" />	
 			</div>
 		</div>
