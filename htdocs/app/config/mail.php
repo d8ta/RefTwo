@@ -1,16 +1,12 @@
 <?php
-
-
-$service = 'MAIL_TO_SERVICE';
-$sales = 'MAIL_TO_SALES';
-$purchase = 'MAIL_TO_PURCHASE';
-$career = 'MAIL_TO_CAREER';
-
-
 $config = [
 	"mail" => [
 		"from" => getenv('MAIL_FROM'),
-		"to" => getenv($career),
+		"to_service" => getenv('MAIL_TO_SERVICE'),
+		"to_sales" => getenv('MAIL_TO_SALES'),
+		"to_purchase" => getenv('MAIL_TO_PURCHASE'),
+		"to_career" => getenv('MAIL_TO_CAREER'),
+		// "to" => getenv(),
 		"transport" => getenv('MAIL_TRANSPORT')?:'smtp',
 		'smtp' => [
 			'host' => getenv('SMTP_HOST'),

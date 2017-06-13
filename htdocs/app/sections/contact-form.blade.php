@@ -30,7 +30,7 @@ $formHelper = Project\Helpers\FormHelper::getInstance();
                     ?>
                     <input type="hidden" name="form[lang]" value="<?php echo get_locale(); ?>">
                     <div class="form__fields__table"> 
-                        <select name="form[mail]" class="js-selectize form__fields__table__select">
+                        <select name="form[recipient]" class="js-selectize form__fields__table__select">
                             <option value="sales">Produkte/Verkauf</option>
                             <option value="purchase">Einkauf</option>
                             <option value="service">Service</option>

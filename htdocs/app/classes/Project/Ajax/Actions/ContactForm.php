@@ -20,14 +20,15 @@ class ContactForm extends Action
 	protected function _action()
 	{
 
-		$data     = $_POST['form'];
-		var_dump($data);
+		$data = $_POST['form'];
 		$response = new \stdClass;
 
 		if (strlen($data[self::KEY_HONEYPOT]) > 0) {
 			$response->code = 1;
 			return $response;
 		}
+
+		
 
 		load_theme_textdomain( 'default', ABSPATH . 'app/langs' );
 		
@@ -48,24 +49,39 @@ class ContactForm extends Action
 			$v->rule('email', 'email');
 
 
-			// if ($data['mail'] = "sales") {
-			// 	$sendto = $_config->getItem('mail.to_sales');
-			// }
-
-
 			if (!$v->validate()) {throw new Exception('Form not correct', 10);}
 
 
 			$customer_name = $data['firstname'] . ' ' . $data['lastname'];
 
 
+
+
 			$templateEngine = TemplateEngine::getInstance();
 			$email = Email::getInstance();
-			$sendto = $_config->getItem('mail.to');
+			
+			if ($data['recipient'] == 'sales') {
+				$sendto = $_config->getItem('mail.to_sales');
+			}
+			if ($data['recipient'] == 'service') {
+				$sendto = $_config->getItem('mail.to_service');
+
+			}
+			if ($data['recipient'] == 'purchase') {
+			 	$sendto = $_config->getItem('mail.to_purchase');
+
+			}
+			if ($data['recipient'] == 'career') {
+				$sendto = $_config->getItem('mail.to_career');
+			}
+
+			$data['sendto'] = $sendto;
 
 			if (preg_match("/\@a365\.at$/", $data['email'])) {
 				$sendto = array($data['email'] => $customer_name);
 			}
+
+
 
 			$response->sent = $email->send(
 				$sendto,
