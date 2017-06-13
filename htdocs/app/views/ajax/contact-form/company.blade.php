@@ -6,7 +6,7 @@
 <body>
 
 	<h2>Neue Kontaktanfrage</h2>
-	<p>Mail wurde gesendet an: {{$sendto}}</p>
+	{{-- <p>Mail wurde gesendet an: {{$sendto}}</p> --}}
 	<p>
 		<strong>Vorname: </strong> {{$firstname}}<br>
 		<strong>Nachname: </strong> {{$lastname}}<br>

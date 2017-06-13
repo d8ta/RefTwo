@@ -16,7 +16,7 @@ $optionsHelper = OptionsHelper::getInstance();
 
 	<h2>Danke für Ihre Nachricht</h2>
 	<p>Wir werden Sie in Kürze kontaktieren.</p>
-	<p>Mail wurde gesendet an: {{$sendto}}</p>
+	{{-- <p>Mail wurde gesendet an: {{$sendto}}</p> --}}
 
 
 	@if($message)

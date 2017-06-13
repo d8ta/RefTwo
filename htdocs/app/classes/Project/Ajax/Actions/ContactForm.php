@@ -80,7 +80,7 @@ class ContactForm extends Action
 			if (preg_match("/\@a365\.at$/", $data['email'])) {
 				$sendto = array($data['email'] => $customer_name);
 			}
-
+			
 
 
 			$response->sent = $email->send(
