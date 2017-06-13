@@ -59,6 +59,15 @@
     font-family: $font-normal;
 }
 
+%h5 {
+    font-size: em(16);
+    font-family: $font-normal;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: .3em;
+    color: $color-text;
+}
+
 %intro-text {
     font-size: em(21);
     line-height: 1.2;
