@@ -31,7 +31,8 @@ $block: '.products-overview';
             display: block;
             &__image {
                 width: 100%;
-                padding-bottom: 81.22%;
+                // padding-bottom: 81.22%;
+                padding-bottom: 100%;
                 transition: all $transition-speed;
                 &:hover {
                     transform: scale($scale);
@@ -75,7 +76,8 @@ $block: '.products-overview';
                 display: block;
                 &__image {
                     width: 100%;
-                    padding-bottom: 81.22%;
+                    // padding-bottom: 81.22%;
+                    padding-bottom: 100%;
                     transition: all 3s;
                     &:hover {
                         transform: scale(1.05);

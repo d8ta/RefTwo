@@ -23,10 +23,10 @@
 										<h2 class="welcome-slider__slide__text__pretitle">{{$pretitle}}</h2>
 										<h3 class="welcome-slider__slide__text__title">{{$title}}</h3>
 										<p class="welcome-slider__slide__text__description">{{$description}}</p>
-									</div>
-									<a class="btn" href="{{$button_url}}">
+										<a class="btn" href="{{$button_url}}">
 										{{$buttontext}}
-									</a>
+										</a>	
+									</div>
 								</div>
 							</div>
 						</div>
