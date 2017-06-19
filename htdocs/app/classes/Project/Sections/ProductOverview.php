@@ -6,7 +6,7 @@ use A365\Wordpress\Helpers\Acf\FieldHelper;
 class ProductOverview extends \A365\Wordpress\Block\AcfBlock {
 
 	protected $_template = 'product-overview';
-	protected static $_label = 'Bild + Logo / Text + Button';
+	protected static $_label = 'Einleitungstext und Produktbilder';
 
 	/**
 	 * @inheritdoc

@@ -1,5 +1,8 @@
 <footer class="section site-footer">
 	<div class="section__content">
+		<div class="site-footer__headline">
+			Know-how aus Österreich. Im Einsatz auf der ganzen Welt.
+		</div>
 		<div class="site-footer__table">
 			<div class="site-footer__table__col site-footer__table__col--address">
 				<div class="site-footer__address">
@@ -7,13 +10,13 @@
 				</div>
 				<div class="site-footer__copy">
 					&copy; {{date("Y")}} Siconnex GmbH
-				</div>	
+				</div>
 
 				<div class="site-footer__socialmedia">
 					<a href="https://www.facebook.com/Siconnex-Customized-Solutions-GmbH-127255930706487/" target="_blank" class="site-footer__socialmedia__facebook">
 					</a>
 					<a href="https://www.linkedin.com/company/siconnex/" target="_blank" class="site-footer__socialmedia__linkedin">
-					</a>				
+					</a>
 					<a href="https://www.xing.com/companies/siconnexcustomizedsolutionsgmbh" target="_blank" class="site-footer__socialmedia__xing">
 					</a>
 				</div>

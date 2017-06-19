@@ -3,6 +3,9 @@ $block: '.headquarters';
     &__headline {
         @extend %h1;
     }
+    &__subline {
+        @extend %h2;
+    }
     &__locations {
         &__location {
             text-align: left;
