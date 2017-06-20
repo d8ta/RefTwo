@@ -2,21 +2,21 @@
 $products = array();
 
 $products[] = array(
-	"text" => __("Batchspray Acid"),
-	"page-id" => 344,
-	"image" => "batch_acid.png"
+    "text" => __("Batchspray Acid"),
+    "page-id" => 344,
+    "image" => "batch_acid.png"
 );
 
 $products[] = array(
-	"text" => __("Batchspray Solvent"),
-	"page-id" => 346,
-	"image" => "batch_solvent.png"
+    "text" => __("Batchspray Solvent"),
+    "page-id" => 346,
+    "image" => "batch_solvent.png"
 );
 
 $products[] = array(
-	"text" => __("Batchspray Autoload"),
-	"page-id" => 348,
-	"image" => "batch_auto.png"
+    "text" => __("Batchspray Autoload"),
+    "page-id" => 348,
+    "image" => "batch_auto.png"
 );
 
 ?>
