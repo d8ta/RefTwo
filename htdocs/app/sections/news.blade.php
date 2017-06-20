@@ -32,9 +32,12 @@ $news_items = Project\Models\News::allPublished();
 			<div class="news__text">
 				<h2 class="news__text__title">{{$title}}</h2>
 				<h3 class="news__text__subtitle">{!!$subtitle!!}</h3>
-				<div class="news__text__description editor-content">{!!$description!!}</div>
-
+				<div class="news__text__description editor-content">
+            <div class="news__text__description__clamp editor-content">
+              {!!$description!!}
+            </div>
 			</div>
+    </div>
 
 			{{-- right --}}
 			<div class="news__image">
@@ -42,7 +45,7 @@ $news_items = Project\Models\News::allPublished();
 						<img src="{{$sectionimg}}" alt="Section Image" class="news__image__img" />
 					</div>
 			</div>
-		</div>
 	</div>
+</div>
 </div>
 @endforeach

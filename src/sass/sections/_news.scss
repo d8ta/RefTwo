@@ -16,24 +16,31 @@ $block: '.news';
     &__description {
       @extend %text-base;
       margin-bottom: 1.8em;
+      overflow: hidden;
+      height: 5.25em;
+
+      &__clamp {
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+      }
     }
   }
 
   &__image {
     text-align: center;
     max-width: 30em;
+    margin: 0 auto;
 
     &__img {
       display: inline-block;
       border-radius: 0.5em;
-      margin-left: em(10);
-      margin-bottom: em(10);
+      width: 100%;
+      max-width: 20em;
     }
   }
   @include mq($from: screen-sm) {
-    &__image {
-      max-width: 47em;
-    }
+    &__image {}
   }
   @include mq($from: screen-lg) {
     &__text {
@@ -55,11 +62,11 @@ $block: '.news';
     &__image {
       width: 50%;
       float: left;
-      text-align: right;
+      text-align: left;
+      padding-left: 10em;
 
       &__img {
         width: 20em;
-        display: inline;
       }
     }
   }
