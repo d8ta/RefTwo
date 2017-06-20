@@ -2,6 +2,8 @@
 $news_items = Project\Models\News::allPublished();
 ?>
 
+
+
 @foreach ($news_items as $item)
 <?php
     $image_id = $item->getHomeImage();
@@ -21,8 +23,9 @@ $news_items = Project\Models\News::allPublished();
     $sectionimg = $news_item['background'];
     ?>
 
-<div class="section section--news section--margin">
+<div class="section section--news section--margin-xxl">
 	<div class="section__content">
+
 		<div class="news">
 
 			{{-- left --}}
@@ -34,9 +37,9 @@ $news_items = Project\Models\News::allPublished();
 			</div>
 
 			{{-- right --}}
-			<div class="news__images">
-					<div class="news__images__image">
-						<img src="{{$sectionimg}}" alt="Section Image" class="news__images__image" />
+			<div class="news__image">
+					<div class="news__image__img">
+						<img src="{{$sectionimg}}" alt="Section Image" class="news__image__img" />
 					</div>
 			</div>
 		</div>
