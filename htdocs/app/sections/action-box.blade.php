@@ -5,7 +5,8 @@
     $news_items = Project\Models\News::allPublished();
 
     if (!empty($news_items)) {
-        $news_item_src = $news_items[1];
+
+        $news_item_src = array_values(array_slice($news_items, -1))[0];
 
         $image_id = $news_item_src->getHomeImage();
         $image = wp_get_attachment_image_src($image_id, 'full');
