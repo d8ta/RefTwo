@@ -1,15 +1,31 @@
 $block: '.sicozone';
+
 #{$block} {
-    &__text {
-        text-align: left;
-        &__title {
-            @extend %h1;
-        }
-        &__subtitle {
-            @extend %h2;
-        }
-        &__description {
-            @extend %text-base;
-        }
+  &__text {
+    display: table;
+    text-align: left;
+
+    &__left {
+      display: table-cell;
+
+      &__title {
+        @extend %h1;
+      }
+
+      &__subtitle {
+        @extend %h2;
+      }
     }
+
+    &__right {
+      display: table-cell;
+      text-align: left;
+      padding-left: 3em;
+      vertical-align: top;
+
+      &__description {
+        @extend %text-base;
+      }
+    }
+  }
 }
