@@ -1,55 +1,37 @@
 $block: '.customers-teaser';
+
 #{$block} {
+  &__inner {
+    &__title {
+      @extend %h1;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 20em;
+    }
+
+    &__subtitle {
+      @extend %h2;
+      text-align: center;
+    }
+
+    &__description {
+      @extend %text-base;
+      text-align: center;
+      max-width: 47em;
+      margin: 0 auto;
+    }
+
+    &__textbox {
+      width: 100%;
+      text-align: center;
+    }
+  }
+  @include mq($from: screen-lg) {
     &__inner {
-        &__title {
-            @extend %h1;
-            text-align: center;
-            margin-left: auto;
-            margin-right: auto;
-            max-width: 20em
-        }
-        &__subtitle {
-            @extend %h2;
-            text-align: center;
-        }
-        &__description {
-            @extend %text-base;
-            text-align: center;
-            max-width: 47em;
-            margin: 0 auto;
-        }
-        &__textbox {
-            &__left {
-                width: 100%;
-                text-align: center;
-            }
-            &__right {
-                width: 100%;
-                text-align: center;
-            }
-        }
+      &__description {
+        max-width: 60em;
+      }
     }
-    @include mq($from: screen-lg) {
-        &__inner {
-            &__description {
-                text-align: left;
-            }
-            &__textbox {
-                margin: 0;
-                display: inline;
-                &__left {
-                    padding: .5em 5em;
-                    float: left;
-                    width: 50%;
-                    text-align: left;
-                }
-                &__right {
-                    padding: .5em 5em;
-                    float: left;
-                    width: 50%;
-                    text-align: left;
-                }
-            }
-        }
-    }
+  }
 }
