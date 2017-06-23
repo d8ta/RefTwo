@@ -25,12 +25,12 @@ $block: '.welcome-slider';
             }
             &__title {
                 @extend %h1;
-                max-width: em(220);
+                // max-width: em(220);
                 color: $color-white;
             }
             &__description {
                 @extend %intro-text;
-                max-width: em(400);
+                // max-width: em(400);
             }
         }
         &__image {
@@ -52,12 +52,12 @@ $block: '.welcome-slider';
                 &__table {
                     width: 50%;
                     padding-right: em(50);
-                    max-width: em(410);
+                    // max-width: em(410);
                 }
             }
             &__image {
                 padding-bottom: 0;
-                width: 70%;
+                width: 50%;
                 position: absolute;
                 height: 100%;
                 right: 0;
@@ -68,16 +68,16 @@ $block: '.welcome-slider';
             padding-bottom: 40%;
             &__text {
                 &__table {
-                    width: 38%;
+                    width: 40%;
                 }
             }
             &__image {
-                width: 70%;
+                width: 60%;
             }
         }
         @include mq($from: screen-xl) {
             height: em(600);
-            max-height: 70vh;
+            // max-height: 70vh;
             padding-bottom: 0;
             &__text {
                 &__table {

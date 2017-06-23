@@ -71,11 +71,11 @@ msgstr "Nachricht"
 
 #: app/sections/contact-form.blade.php:47
 msgid "Send Form"
-msgstr "Formular absenden"
+msgstr "Formular"
 
 #: app/sections/contact-form.blade.php:52
 msgid "Thank you for your message."
-msgstr "Danke für Ihre Nachricht."
+msgstr "Vielen Dank für Ihre Nachricht!"
 
 #: app/views/components/alerts/browser-incompatible.blade.php:5
 msgid "You are using an incompatible browser."

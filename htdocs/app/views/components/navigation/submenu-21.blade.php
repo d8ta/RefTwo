@@ -1,6 +1,6 @@
 <?php
 $title = __('Siconnex');
-$description = __('Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id praesentium eum.');
+$description = __('Als erfolgreicher Hersteller von Anlagen für die Halbleiterindustrie sind wir weltweit tätig.');
 $linktext = __('Mehr erfahren');
 $link_page_id = 21;
 ?>

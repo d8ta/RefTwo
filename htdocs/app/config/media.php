@@ -7,6 +7,7 @@ $config = [
                 'height' => 450,
             ],
         ],
-        "logo" => "assets/images/layout/siconnex_logo.png",
+        // "logo" => "assets/images/layout/siconnex_logo.png",
+        "logo" => "assets/images/layout/batchspray.jpg",
     ],
 ];

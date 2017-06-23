@@ -218,6 +218,8 @@ $config = [
 					'description' => '',
 			],
 
+
+
 			'news-settings' => array (
 				'key' => 'group_570e1db7a5aa9',
 				'title' => 'News Settings',
@@ -323,7 +325,7 @@ $config = [
 									'max_size' => '',
 									'mime_types' => '',
 								),
-								
+
 								array (
 									'key' => 'field_570e1e80b47e4',
 									'label' => 'Introtext',
@@ -384,8 +386,8 @@ $config = [
 									'toolbar' => 'full',
 									'media_upload' => 0,
 								),
-								
-					
+
+
 				),
 				'location' => array (
 					array (
@@ -557,7 +559,7 @@ $config = [
 						'readonly' => 0,
 						'disabled' => 0,
 					),
-					
+
 					array (
 						'key' => 'field_5718c765f246d',
 						'label' => 'Telefon',
@@ -579,7 +581,7 @@ $config = [
 						'readonly' => 0,
 						'disabled' => 0,
 					),
-					
+
 					array (
 						'key' => 'field_5718c790f246f',
 						'label' => 'E-Mail',
@@ -636,8 +638,8 @@ $config = [
 				'description' => '',
 			),
 
-			
-			
+
+
 		],
 	]
 ];

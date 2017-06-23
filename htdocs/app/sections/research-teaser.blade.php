@@ -1,4 +1,4 @@
-<?php 
+<?php
 $researchimg = $block->getResearchImg();
 $bigimage = $block->getBigImage();
 $title = $block->getTitle();
@@ -41,9 +41,9 @@ $button_url = $block->getButtonUrl();
 					<div class="research-teaser__icon">
 						<i class="icon"></i>
 					</div>
-				</div>	
+				</div>
 			</div>
-			
+
 		</div>
 		<div class="research-teaser__whitebox-top">
 			<div class="research-teaser__whitebox-helper"></div>
@@ -52,12 +52,5 @@ $button_url = $block->getButtonUrl();
 			<div class="research-teaser__whitebox-helper"></div>
 		</div>
 	</div>
-	
+
 </div>
-
-
-
-
-
-
-				

@@ -29,7 +29,7 @@ $formHelper = Project\Helpers\FormHelper::getInstance();
                     echo $formHelper->getHoneyField();
                     ?>
                     <input type="hidden" name="form[lang]" value="<?php echo get_locale(); ?>">
-                    <div class="form__fields__table"> 
+                    <div class="form__fields__table">
                         <select name="form[recipient]" class="js-selectize form__fields__table__select">
                             <option value="sales">Produkte/Verkauf</option>
                             <option value="purchase">Einkauf</option>

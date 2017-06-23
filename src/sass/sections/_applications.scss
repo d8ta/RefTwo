@@ -11,9 +11,10 @@ $block: '.applications';
                 }
                 border-radius: em(5);
             }
-            padding-bottom: 4em;      
+            padding-bottom: 4em;
             &__title {
                 @extend %h1;
+                min-width: 30em;
             }
             &__description {
                 @extend %text-base;

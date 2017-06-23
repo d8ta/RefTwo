@@ -6,7 +6,7 @@ use A365\Wordpress\Helpers\Acf\FieldHelper;
 class ResearchTeaser extends \A365\Wordpress\Block\AcfBlock {
 
 	protected $_template = 'research-teaser';
-	protected static $_label = 'Fullwidth Hintergrund + Textbox/Bilder';
+	protected static $_label = 'Fullwidth Hintergrund + Slider/Textbox/Bilder';
 
 	/**
 	 * @inheritdoc
