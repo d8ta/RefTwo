@@ -1,12 +1,10 @@
 <?php
     $boxes = $block->getBox();
-    $newsbox = $block->getHidebox();
-
+    $shownewsbox = $block->getShownews();
     $mh_group = "technology-boxes-" . rand();
-
     $news_items = Project\Models\News::allPublished();
 
-    if (!empty($news_items)) {
+    if ($shownewsbox) {
         $news_item_src = array_values(array_slice($news_items, -1))[0];
 
         $image_id = $news_item_src->getHomeImage();
