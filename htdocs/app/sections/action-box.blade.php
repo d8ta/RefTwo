@@ -5,7 +5,6 @@
     $news_items = Project\Models\News::allPublished();
 
     if (!empty($news_items)) {
-
         $news_item_src = array_values(array_slice($news_items, -1))[0];
 
         $image_id = $news_item_src->getHomeImage();
@@ -18,6 +17,18 @@
         $news_item['icon'] = "vorteile";
         $news_item['button_url'] = get_permalink(pll_get_post($news_item_src->getId()));
         $news_item['background'] = $image[0];
+        $boxes[0] = $news_item;
+    }
+
+    // Fallback Box to Roadmap section
+    if (empty($news_item)) {
+        $news_item = array();
+        $news_item['title'] = __("Evolution");
+        $news_item['description'] = __("Wir entwickeln uns permanent weiter.");
+        $news_item['button_text'] = __("Mehr erfahren");
+        $news_item['icon'] = "vorteile";
+        $news_item['button_url'] = "siconnex.test.a365.at/de/produkte/#roadmap";
+        $news_item['background'] = $boxes[0]['background'];
         $boxes[0] = $news_item;
     }
 ?>
