@@ -1,16 +1,20 @@
 <?php
     $slides = $block->getSlides();
     $customerimg = $block->getCustomerImg();
+    $bigimage = $block->getBigImage();
 ?>
 <div class="section section--margin-sm section--yellow">
 	<div class="section__content">
 		<div class="research-teaser">
+      <div class="@if(count($slides) > 1) js-owl-carousel owl-carousel @endif">
+
+      @foreach ($slides as $slide)
 			<?php
-            $bigimage = $block->getBigImage();
-            $title = $block->getTitle();
-            $description = $block->getDescription();
-            $signature = $block->getSignature();
+            $title = $slide['title'];
+            $description = $slide['description'];
+            $signature = $slide['signature'];
             ?>
+
 			{{-- left --}}
 			<div class="research-teaser__content research-teaser__content--left">
 				<div class="research-teaser__text research-teaser__text--quote">
@@ -24,6 +28,9 @@
 					</div>
 				</div>
 			</div>
+      @endforeach
+    </div>
+
 			{{-- right --}}
 			<div class="research-teaser__content research-teaser__content--right">
 				<div class="research-teaser__images">
