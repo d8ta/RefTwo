@@ -1,15 +1,18 @@
-<?php 
-$customerimg = $block->getCustomerImg();
+<?php
+    $slides = $block->getSlides();
+    $customerimg = $block->getCustomerImg();
+    $bigimage = $block->getBigImage();
 ?>
 <div class="section section--margin-sm section--yellow">
 	<div class="section__content">
-		<div class="research-teaser">
-			<?php 
-			$bigimage = $block->getBigImage();
-			$title = $block->getTitle();
-			$description = $block->getDescription();
-			$signature = $block->getSignature();
-			?>
+
+		<div class="research-teaser js-owl-carousel owl-carousel">
+			@foreach ($slides as $slide)
+			<?php
+            $title = $slide['title'];
+            $description = $slide['description'];
+            $signature = $slide['signature'];
+            ?>
 			{{-- left --}}
 			<div class="research-teaser__content research-teaser__content--left">
 				<div class="research-teaser__text research-teaser__text--quote">
@@ -23,6 +26,7 @@ $customerimg = $block->getCustomerImg();
 					</div>
 				</div>
 			</div>
+			@endforeach
 			{{-- right --}}
 			<div class="research-teaser__content research-teaser__content--right">
 				<div class="research-teaser__images">
@@ -32,11 +36,12 @@ $customerimg = $block->getCustomerImg();
 					</div>
 					<div class="research-teaser__images__small">
 						<img src="{{$img['image']}}" class="research-teaser__images__img" alt="{{$title}}">
-						@endforeach
 					</div>
-				</div>	
+				</div>
 			</div>
 		</div>
+		@endforeach
+
 		<div class="research-teaser__whitebox-top">
 			<div class="research-teaser__whitebox-helper"></div>
 		</div>
@@ -45,4 +50,3 @@ $customerimg = $block->getCustomerImg();
 		</div>
 	</div>
 </div>
-				
