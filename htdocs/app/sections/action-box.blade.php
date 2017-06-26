@@ -23,10 +23,10 @@
     // Fallback Box to Roadmap section
     if (empty($news_item)) {
         $news_item = array();
-        $news_item['title'] = __("Evolution");
-        $news_item['description'] = __("Wir entwickeln uns permanent weiter.");
-        $news_item['button_text'] = __("Mehr erfahren");
-        $news_item['icon'] = "vorteile";
+        $news_item['title'] = $boxes[0]['title'];;
+        $news_item['description'] = $boxes[0]['description'];
+        $news_item['button_text'] = $boxes[0]['button_text'];
+        $news_item['icon'] = $boxes[0]['icon'];;
         $news_item['button_url'] = "siconnex.test.a365.at/de/produkte/#roadmap";
         $news_item['background'] = $boxes[0]['background'];
         $boxes[0] = $news_item;
