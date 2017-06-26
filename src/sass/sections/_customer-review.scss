@@ -1,164 +1,293 @@
-$block: '.research-teaser';
+$block: '.customer-review';
 $block-padding: em(80);
+
 #{$block} {
-    color: $color-white;
+  color: $color-white;
+  position: relative;
+  padding: $block-padding 0;
+  z-index: 3;
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  &__content {
+    &--left {
+      margin-bottom: em(50);
+    }
+  }
+
+  &__text {
+    max-width: em(650);
+
+    &--quote {
+      margin-left: em(30);
+
+      #{$block}__text__description {
+        margin-top: em(20);
+        @include icon( 'quote');
+
+        &::before {
+          @extend %icon;
+          position: absolute;
+          top: -.2em;
+          left: -1.3em;
+          font-size: em(30);
+          line-height: 1;
+          display: block;
+          opacity: 0.3;
+        }
+      }
+    }
+
+    &__inner {
+      position: relative;
+    }
+
+    &__title {
+      @extend %h1;
+      color: $color-white;
+    }
+
+    &__description {
+      @extend %intro-text;
+      color: $color-white;
+      position: relative;
+    }
+
+    &__author {
+      @extend %intro-text;
+      color: $color-white;
+      font-weight: bold;
+    }
+  }
+
+  &__images {
+    @include clearfix;
+    margin-left: em(-5);
+    margin-right: em(-5);
     position: relative;
-    padding: $block-padding 0;
-    z-index: 3;
+
+    &__big {
+      float: left;
+      width: 75%;
+    }
+
+    &__small {
+      float: right;
+      width: 25%;
+    }
+
+    &__img {
+      padding: em(5);
+    }
+
     img {
-        width: 100%;
-        height: auto;
-        display: block;
+      border-radius: em(10);
     }
+  }
+
+  &__icon {
+    position: absolute;
+    background: $brand-primary;
+    font-size: em(80);
+    height: 1em;
+    width: 1em;
+    border-radius: em(2);
+    left: em(4);
+    top: em(4);
+
+    .icon {
+      @include icon( 'box-idea');
+      line-height: 1;
+      display: block;
+      font-size: 1em;
+      height: 1em;
+      width: 1em;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+    }
+  }
+
+  &__whitebox-bottom,
+  &__whitebox-top {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    background: $color-white;
+    padding-top: 10%;
+    z-index: 2;
+    display: none;
+  }
+
+  &__whitebox-top {
+    top: 0;
+  }
+
+  &__whitebox-bottom {
+    bottom: 0;
+    display: block;
+  }
+
+  &__whitebox-helper {
+    height: $block-padding;
+  }
+  @include mq($from: screen-md) {
+     @include clearfix;
+
+     &__slider {
+       width: 45%;
+     }
+     .owl-carousel.owl-loaded {
+       display: inline-block;
+     }
+
     &__content {
-        &--left {
-            margin-bottom: em(50);
-        }
+      &--left {
+        float: left;
+        width: 45%;
+        margin-bottom: 0;
+      }
+
+      &--right {
+        float: right;
+        width: 50%;
+      }
     }
+
+    &__whitebox-bottom {
+      display: none;
+    }
+  }
+  @include mq($from: screen-lg) {
+    padding-top: 0;
+    padding-bottom: 0;
+
+    &__content {
+      &--right {
+        position: absolute;
+        right: 0;
+        height: 100%;
+        float: none;
+      }
+    }
+
     &__text {
-        max-width: em(650);
-        &--quote {
-            margin-left: em(30);
-            #{$block}__text__description {
-                margin-top: em(20);
-                @include icon('quote');
-                &::before {
-                    @extend %icon;
-                    position: absolute;
-                    top: -.2em;
-                    left: -1.3em;
-                    font-size: em(30);
-                    line-height: 1;
-                    display: block;
-                    opacity: .3;
-                }
-            }
-        }
-        &__inner {
-            position: relative;
-        }
-        &__title {
-            @extend %h1;
-            color: $color-white;
-        }
-        &__description {
-            @extend %intro-text;
-            color: $color-white;
-            position: relative;
-        }
-        &__author {
-            @extend %intro-text;
-            color: $color-white;
-            font-weight: bold;
-        }
+      padding: ($block-padding * 2) 0;
     }
+
     &__images {
-        @include clearfix;
-        margin-left: em(-5);
-        margin-right: em(-5);
-        position: relative;
-        &__big {
-            float: left;
-            width: 75%;
-        }
-        &__small {
-            float: right;
-            width: 25%;
-        }
-        &__img {
-            padding: em(5);
-        }
-        img {
-            border-radius: em(10);
-        }
+      position: absolute;
+      top: -67em;
+      bottom: 0;
+      margin: auto 0;
+      padding-bottom: 75%;
+      height: 0;
     }
-    &__icon {
-        position: absolute;
-        background: $brand-primary;
-        font-size: em(80);
-        height: 1em;
-        width: 1em;
-        border-radius: em(2);
-        left: em(4);
-        top: em(4);
-        .icon {
-            @include icon('box-idea');
-            line-height: 1;
-            display: block;
-            font-size: 1em;
-            height: 1em;
-            width: 1em;
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            margin: auto;
-        }
-    }
-    &__whitebox-top,
-    &__whitebox-bottom {
-        position: absolute;
-        width: 100%;
-        left: 0;
-        background: $color-white;
-        padding-top: 10%;
-        z-index: 2;
-        display: none;
-    }
+
+    &__whitebox-bottom,
     &__whitebox-top {
-        top: 0;
+      display: block;
+      padding: 0;
     }
-    &__whitebox-bottom {
-        bottom: 0;
-        display: block;
+  }
+
+  .owl-dots {
+    margin: em(12) 0 em(20);
+    text-align: center;
+  }
+
+  .owl-dot {
+    display: inline-block;
+    font-size: em(18);
+    width: 1em;
+    height: 1em;
+    margin: 0 em(4);
+    border-radius: 50%;
+    background-color: $color-light-grey;
+    transition: background 0.2s;
+
+    &.active,
+    &:hover {
+      background-color: $brand-primary;
+      border: 1px solid $color-white;
     }
-    &__whitebox-helper {
-        height: $block-padding;
+  }
+
+  .owl-nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+  }
+
+  .owl-next,
+  .owl-prev {
+    height: em(42);
+    width: em(42);
+    margin: auto 0;
+    color: $color-white;
+    position: absolute;
+    right: 0.5em;
+    top: 0;
+    bottom: 0;
+    background: $color-white;
+    border-radius: em(5);
+
+    .icon {
+      font-size: em(12);
+      position: absolute;
+      width: 1em;
+      height: 1em;
+      line-height: 1;
+      margin: auto;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      color: $color-text;
+      transition: all 0.2s;
+
+      &::before {
+        @extend %icon;
+      }
     }
-    @include mq($from: screen-md) {
-        @include clearfix;
-        &__content {
-            &--left {
-                float: left;
-                width: 45%;
-                margin-bottom: 0;
-            }
-            &--right {
-                float: right;
-                width: 50%;
-            }
-        }
-        &__whitebox-bottom {
-            display: none;
-        }
+    @include mq($until: screen-sm) {
+      display: none;
     }
-    @include mq($from: screen-lg) {
-        padding-top: 0;
-        padding-bottom: 0;
-        &__content {
-            &--right {
-                position: absolute;
-                right: 0;
-                height: 100%;
-                float: none;
-            }
-        }
-        &__text {
-            padding: ($block-padding * 2) 0;
-        }
-        &__images {
-            position: absolute;
-            top:-67em;
-            bottom: 0;
-            margin: auto 0;
-            padding-bottom: 75%;
-            height: 0;
-        }
-        &__whitebox-top,
-        &__whitebox-bottom {
-            display: block;
-            padding: 0;
-        }
+  }
+
+  .owl-prev {
+    top: em(-47);
+
+    .icon {
+      @include icon(arrowleft);
     }
+
+    &:hover {
+      .icon {
+        transform: translateX(-.3em);
+      }
+    }
+  }
+
+  .owl-next {
+    top: em(47);
+
+    .icon {
+      @include icon(arrowright);
+    }
+
+    &:hover {
+      .icon {
+        transform: translateX(.3em);
+      }
+    }
+  }
 }
