@@ -14,7 +14,7 @@ class CustomerReview extends \A365\Wordpress\Block\AcfBlock
     public static function getAcfSubfields()
     {
         return [
-      FieldHelper::createRepeater('slides', 'Slides', ["min" => 1, "max" => 6])
+      FieldHelper::createRepeater('slides', 'Slides', ["min" => 1, "max" => 10])
         ->addSubfields([
           FieldHelper::createText('title', 'Überschrift')->setRequired(),
           FieldHelper::createText('description', 'Beschreibung')->setRequired(),

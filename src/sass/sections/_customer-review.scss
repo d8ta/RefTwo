@@ -141,17 +141,18 @@ $block-padding: em(80);
   @include mq($from: screen-md) {
      @include clearfix;
 
-     &__slider {
-       width: 45%;
-     }
-     .owl-carousel.owl-loaded {
-       display: inline-block;
-     }
+    &__slider {
+      width: 45%;
+    }
+
+    .owl-carousel.owl-loaded {
+      display: inline-block;
+    }
 
     &__content {
       &--left {
         float: left;
-        width: 45%;
+        width: 85%;
         margin-bottom: 0;
       }
 
@@ -165,30 +166,12 @@ $block-padding: em(80);
       display: none;
     }
   }
-  @include mq($from: screen-lg) {
+  @include mq($from: screen-xl) {
     padding-top: 0;
     padding-bottom: 0;
 
-    &__content {
-      &--right {
-        position: absolute;
-        right: 0;
-        height: 100%;
-        float: none;
-      }
-    }
-
     &__text {
-      padding: ($block-padding * 2) 0;
-    }
-
-    &__images {
-      position: absolute;
-      top: -67em;
-      bottom: 0;
-      margin: auto 0;
-      padding-bottom: 75%;
-      height: 0;
+      padding-top: 6em;
     }
 
     &__whitebox-bottom,
