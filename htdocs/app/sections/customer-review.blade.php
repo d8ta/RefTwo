@@ -22,7 +22,7 @@
 						<h2 class="customer-review__text__title">{{$title}}</h2>
 						<div class="customer-review__text__description">
 							{{$description}}
-							<div class="customer-review__text__description__quote"></div>
+							<!-- <div class="customer-review__text__description__quote"></div> -->
 						</div>
 						<div class="customer-review__text__author">{{$signature}}</div>
 					</div>
