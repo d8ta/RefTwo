@@ -1,5 +1,7 @@
 <?php
     $boxes = $block->getBox();
+    $newsbox = $block->getHidebox();
+
     $mh_group = "technology-boxes-" . rand();
 
     $news_items = Project\Models\News::allPublished();
@@ -18,15 +20,14 @@
         $news_item['button_url'] = get_permalink(pll_get_post($news_item_src->getId()));
         $news_item['background'] = $image[0];
         $boxes[0] = $news_item;
-    }
-
-    // Fallback Box to Roadmap section
-    if (empty($news_item)) {
+    } else {
         $news_item = array();
-        $news_item['title'] = $boxes[0]['title'];;
+        $news_item['title'] = $boxes[0]['title'];
+
         $news_item['description'] = $boxes[0]['description'];
         $news_item['button_text'] = $boxes[0]['button_text'];
-        $news_item['icon'] = $boxes[0]['icon'];;
+        $news_item['icon'] = $boxes[0]['icon'];
+
         $news_item['button_url'] = "siconnex.test.a365.at/de/produkte/#roadmap";
         $news_item['background'] = $boxes[0]['background'];
         $boxes[0] = $news_item;
@@ -45,7 +46,7 @@
                 $button_url = $box['button_url'];
                 ?>
 				<a href="{{$button_url}}">
-				<div class="action-box__box ">
+				<div class="action-box__box">
 					<div class="action-box__box__image bg-image" style="background-image: url({{$box['background']}})">
 						<img src="assets/images/icons/{{$icon}}.svg" class="action-box__box__image--icon" alt="Icon" />
 					</div>
