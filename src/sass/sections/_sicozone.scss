@@ -5,19 +5,29 @@ $block: '.sicozone';
     text-align: center;
 
     &__left {
+      border-top-left-radius: 0.5em;
+      border-bottom-left-radius: 0.5em;
+      padding: 1em;
+      background: $brand-primary;
 
       &__title {
         @extend %h1;
+        color: $color-white;
       }
 
       &__subtitle {
         @extend %h2;
+        color: $color-white;
       }
     }
 
     &__right {
+      border-top-right-radius: 0.5em;
+      border-bottom-right-radius: 0.5em;
+      padding: 1em;
       text-align: center;
       vertical-align: top;
+      border: em(1) solid $brand-primary;
 
       &__description {
         @extend %text-base;
