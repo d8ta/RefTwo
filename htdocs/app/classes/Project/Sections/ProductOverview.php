@@ -20,7 +20,7 @@ class ProductOverview extends \A365\Wordpress\Block\AcfBlock {
 
 			FieldHelper::createRepeater('products', 'Produkte', ["min" => 3, "max" => 3])
 				->addSubfields([
-					FieldHelper::createImage('image', 'Produktbild')->setRequired(),
+					FieldHelper::createImage('image', 'Produktbild',["crop_type" => "hard", 'target_size' => 'custom', 'force_crop' => 'no', 'save_format' => 'url', "width" => 554, "height" => 450])->setRequired(),
 					FieldHelper::createImage('logo', 'Produktlogo')->setRequired(),
 					FieldHelper::createTextarea('description', 'Beschreibung')->setRequired(),
 	    			FieldHelper::createPageLink('link', 'Link'),
