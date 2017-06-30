@@ -17,7 +17,7 @@ class ActionBox extends \A365\Wordpress\Block\AcfBlock {
 			FieldHelper::createTrueFalse('shownews', 'News in der ersten Box einblenden'),
 			FieldHelper::createRepeater('box', 'Boxes', ["min" => 3, "max" => 3])
 				->addSubfields([
-					FieldHelper::createImageCrop('background', 'Hintergrund', ["crop_type" => "hard", 'target_size' => 'custom', 'force_crop' => 'no', 'save_format' => 'url', "width" => 600, "height" => 600])->setRequired(),
+					FieldHelper::createImageCrop('background', 'Hintergrund', ["crop_type" => "hard", 'target_size' => 'custom', 'force_crop' => 'no', 'save_format' => 'url', "width" => 200, "height" => 200])->setRequired(),
 					FieldHelper::createText('title', 'Überschrift')->setRequired(),
 					FieldHelper::createText('description', 'Beschreibung')->setRequired(),
 					FieldHelper::createText('icon', 'Icon Name')->setRequired(),
