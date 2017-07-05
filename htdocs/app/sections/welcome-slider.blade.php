@@ -1,17 +1,17 @@
-<?php 
-	$slides = $block->getSlides();
+<?php
+    $slides = $block->getSlides();
 ?>
 <div class="section section--fullwidth section--margin">
 	<div class="section__content">
 		<div class="welcome-slider @if(count($slides) > 1) js-owl-carousel owl-carousel @endif">
 			@foreach ($slides as $slide)
-				<?php 
-				$title = $slide['title'];
-				$pretitle = $slide['pretitle'];
-				$description = $slide['description'];
-				$buttontext = $slide['button_text'];
-				$button_url = $slide['button_url'];
-				?>
+				<?php
+                $title = $slide['title'];
+                $pretitle = $slide['pretitle'];
+                $description = $slide['description'];
+                $buttontext = $slide['button_text'];
+                $button_url = $slide['button_url'];
+                ?>
 				<div class="welcome-slider__slide">
 					<div class="welcome-slider__slide__image bg-image" style="background-image: url({{$slide['background']}})">
 					</div>
@@ -25,13 +25,13 @@
 										<p class="welcome-slider__slide__text__description">{{$description}}</p>
 										<a class="btn" href="{{$button_url}}">
 										{{$buttontext}}
-										</a>	
+										</a>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-				</div>							
+				</div>
 			@endforeach
 		</div>
 	</div>

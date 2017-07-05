@@ -19,6 +19,7 @@ $news_items = Project\Models\News::allPublished();
     $subtitle = $news_item['subtitle'];
     $description = $news_item['description'];
     $button_url = $news_item['button_url'];
+
     $button_text = $news_item['button_text'];
     $sectionimg = $news_item['background'];
     ?>
