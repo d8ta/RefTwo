@@ -31,7 +31,7 @@
 							<div class="products-overview__listing__content__all products-overview__listing__content__info">
 								<img class="products-overview__listing__content__info__logo" src="{!!$imageHelper->getImageUrl($product['logo'], '')!!}" alt="Produkt Logo">
 								<div class="products-overview__listing__content__info__description js-matchheight" data-mh="{{ $mh_group }}">
-									<div>{{$product['description']}}</div>
+									<div>{!!$product['description']!!}</div>
 								</div>
 								<div class="products-overview__listing__content__info__link btn btn--yellow" href="{{$product['link']}}">{{$product['linktext']}}</div>
 							</div>

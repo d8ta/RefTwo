@@ -14,7 +14,7 @@ $button_url = $block->getButtonUrl();
 			<div class="research-teaser__content research-teaser__content--left">
 				<div class="research-teaser__text">
 					<div class="research-teaser__text__inner">
-						<h2 class="research-teaser__text__title">{{$title}}</h2>
+						<h2 class="research-teaser__text__title">{!!$title!!}</h2>
 						<div class="research-teaser__text__description">{{$description}}</div>
 		         		<a class="btn" href="{{$button_url}}">
 		                    {{$buttontext}}
