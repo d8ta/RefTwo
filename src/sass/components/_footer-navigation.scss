@@ -16,25 +16,25 @@ $nav-side-padding: 1%;
         margin-left: -$nav-side-padding;
         margin-right: -$nav-side-padding;
         @include mq($from: screen-lg) {
-            display: table;
-            width: 100%;
-            table-layout: fixed;
+            // display: table;
+            // width: 100%;
+            // table-layout: fixed;
         }
         > li {
             float: left;
-            width: 33.3333% - 2 * $nav-side-padding;
-            padding-left: $nav-side-padding;
-            padding-right: $nav-side-padding;
+            // width: 33.3333% - 2 * $nav-side-padding;
+            // padding-left: $nav-side-padding;
+            padding-right: $nav-side-padding * 2;
             padding-bottom: em(30);
             @include mq($from: screen-sm) {
-                width: 50% - 2 * $nav-side-padding;
+                // width: 50% - 2 * $nav-side-padding;
             }
             @include mq($from: screen-md) {
-                width: 33.3333% - 2 * $nav-side-padding;
+                // width: 33.3333% - 2 * $nav-side-padding;
             }
             @include mq($from: screen-lg) {
-                float: none;
-                display: table-cell;
+                // float: none;
+                // display: table-cell;
             }
             > a {
                 font-size: em(14);
