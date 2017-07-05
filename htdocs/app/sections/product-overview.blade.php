@@ -26,14 +26,14 @@
 				@foreach($products as $product)
 					<div class="products-overview__listing__elem">
 						<a href="{{$product['link']}}" class="products-overview__listing__content">
-							<div class="products-overview__listing__content__all products-overview__listing__content__image bg-image" style="background-image:url('{!!$imageHelper->getImageUrl($product["image"], "")!!}')">	
+							<div class="products-overview__listing__content__all products-overview__listing__content__image bg-image" style="background-image:url('{!!$imageHelper->getImageUrl($product["image"], "")!!}')">
 							</div>
 							<div class="products-overview__listing__content__all products-overview__listing__content__info">
 								<img class="products-overview__listing__content__info__logo" src="{!!$imageHelper->getImageUrl($product['logo'], '')!!}" alt="Produkt Logo">
 								<div class="products-overview__listing__content__info__description js-matchheight" data-mh="{{ $mh_group }}">
-									<div>{{$product['description']}}</div>
+									<div>{!!$product['description']!!}</div>
 								</div>
-								<a class="products-overview__listing__content__info__link btn btn--yellow" href="{{$product['link']}}">{{$product['linktext']}}</a>
+								<div class="products-overview__listing__content__info__link btn btn--yellow" href="{{$product['link']}}">{{$product['linktext']}}</div>
 							</div>
 						</a>
 					</div>
