@@ -1,0 +1,135 @@
+# Copyright (C) 2016 A365
+# This file is distributed under the same license as the Envimet package.
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Siconnex\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/envimet\n"
+"POT-Creation-Date: 2017-07-06 10:54+0200\n"
+"PO-Revision-Date: 2016-04-26 15:24+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.12\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __\n"
+"X-Poedit-Basepath: ../..\n"
+"X-Poedit-SearchPath-0: app\n"
+"X-Poedit-SearchPath-1: wp-content/themes/siconnex\n"
+
+#: app/classes/Project/Ajax/Actions/ContactForm.php:35
+msgid "Your Request"
+msgstr ""
+
+#: app/classes/Project/Ajax/Actions/LocationNearest.php:40
+msgid "Infrastructure"
+msgstr ""
+
+#: app/classes/Project/Helpers/FormHelper.php:38
+msgid "Text"
+msgstr ""
+
+#: app/sections/action-box.blade.php:16 app/sections/news.blade.php:14
+#: app/views/components/navigation/submenu-21.blade.php:4
+msgid "Mehr erfahren"
+msgstr ""
+
+#: app/sections/contact-form.blade.php:23
+msgid "First Name"
+msgstr ""
+
+#: app/sections/contact-form.blade.php:24
+msgid "Last Name"
+msgstr ""
+
+#: app/sections/contact-form.blade.php:25
+msgid "Company"
+msgstr ""
+
+#: app/sections/contact-form.blade.php:26
+msgid "Telefon"
+msgstr ""
+
+#: app/sections/contact-form.blade.php:27
+msgid "E-Mail"
+msgstr ""
+
+#: app/sections/contact-form.blade.php:28
+msgid "Message"
+msgstr ""
+
+#: app/sections/contact-form.blade.php:40
+msgid "Send Form"
+msgstr ""
+
+#: app/sections/contact-form.blade.php:45
+msgid "Thank you for your message."
+msgstr ""
+
+#: app/views/components/alerts/browser-incompatible.blade.php:5
+msgid "You are using an incompatible browser."
+msgstr ""
+
+#: app/views/components/alerts/browser-incompatible.blade.php:6
+msgid "Modern Browsers are"
+msgstr ""
+
+#: app/views/components/alerts/browser-outdated.blade.php:5
+msgid "You are using an outdated browser."
+msgstr ""
+
+#: app/views/components/alerts/cookie.blade.php:5
+msgid "This website uses cookies to ensure you get the best experience on our website. If you continue to use this site we will assume that you are happy with it."
+msgstr ""
+
+#: app/views/components/alerts/no-js.blade.php:2
+msgid "JavaScript inactive"
+msgstr ""
+
+#: app/views/components/alerts/no-js.blade.php:3
+msgid "Please activate JavaScript."
+msgstr ""
+
+#: app/views/components/alerts/no-js.blade.php:4
+msgid "I understand"
+msgstr ""
+
+#: app/views/components/navigation/submenu-21.blade.php:2
+msgid "Siconnex"
+msgstr ""
+
+#: app/views/components/navigation/submenu-21.blade.php:3
+msgid "Als erfolgreicher Hersteller von Anlagen für die Halbleiterindustrie sind wir weltweit tätig."
+msgstr ""
+
+#: app/views/components/navigation/submenu-23.blade.php:5
+msgid "Batchspray Acid"
+msgstr ""
+
+#: app/views/components/navigation/submenu-23.blade.php:11
+msgid "Batchspray Solvent"
+msgstr ""
+
+#: app/views/components/navigation/submenu-23.blade.php:17
+msgid "Batchspray Autoload"
+msgstr ""
+
+#: app/views/components/navigation/submenu-38.blade.php:2
+msgid "Karriere bei Siconnex"
+msgstr ""
+
+#: app/views/components/navigation/submenu-38.blade.php:3
+msgid "Verlassen Sie ausgetretene Pfade und gehen Sie mit uns neue Wege!"
+msgstr ""
+
+#: app/views/components/navigation/submenu-38.blade.php:4
+msgid "Jetzt bewerben"
+msgstr ""
+
+#: wp-content/themes/siconnex/searchform.php:2
+msgid "Search ..."
+msgstr ""
