@@ -13,7 +13,7 @@
         $news_item = array();
         $news_item['title'] = $news_item_src->getPostTitle();
         $news_item['description'] = $news_item_src->getIntroHome();
-        $news_item['button_text'] = __("Mehr erfahren");
+        $news_item['button_text'] = __("Find out more");
         $news_item['icon'] = "vorteile";
         $news_item['button_url'] = get_permalink(pll_get_post($news_item_src->getId()));
         $news_item['background'] = $image[0];

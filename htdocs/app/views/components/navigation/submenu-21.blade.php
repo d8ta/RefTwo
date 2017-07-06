@@ -1,7 +1,7 @@
 <?php
 $title = __('Siconnex');
 $description = __('Als erfolgreicher Hersteller von Anlagen für die Halbleiterindustrie sind wir weltweit tätig.');
-$linktext = __('Mehr erfahren');
+$linktext = __('Find out more');
 $link_page_id = 21;
 ?>
 <div class="nav-content">

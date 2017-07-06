@@ -51,7 +51,7 @@ msgid "Company"
 msgstr ""
 
 #: app/sections/contact-form.blade.php:26
-msgid "Telefon"
+msgid "Phone"
 msgstr ""
 
 #: app/sections/contact-form.blade.php:27
@@ -60,6 +60,10 @@ msgstr ""
 
 #: app/sections/contact-form.blade.php:28
 msgid "Message"
+msgstr ""
+
+#: app/sections/contact-form.blade.php:34
+msgid "Sales"
 msgstr ""
 
 #: app/sections/contact-form.blade.php:40

@@ -11,7 +11,7 @@ $news_items = Project\Models\News::allPublished();
     $news_item['subtitle'] = $item->getSubline();
     $news_item['description'] = $item->getContent();
     $news_item['icon'] = "vorteile";
-    $news_item['button_text'] = __("Mehr erfahren");
+    $news_item['button_text'] = __("Find out more");
     $news_item['button_url'] = get_permalink(pll_get_post($item->getId()));
     $news_item['background'] = $image[0];
 
