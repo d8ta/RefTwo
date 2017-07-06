@@ -23,6 +23,7 @@ class TechnologyTeaser extends \A365\Wordpress\Block\AcfBlock {
 					FieldHelper::createText('title', 'Überschrift')->setRequired(),
 					FieldHelper::createText('description', 'Beschreibung')->setRequired(),
 					FieldHelper::createText('link', 'Link'),
+					FieldHelper::createText('text', 'Text')->setRequired(),
 			]),
 
 		];

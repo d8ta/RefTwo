@@ -1,4 +1,4 @@
-<?php 
+<?php
 	$techboxes = $block->getBox();
 	$mh_group = "technology-boxes-" . rand();
 	global $wp;
@@ -19,10 +19,11 @@
 
 		<div class="technology-teaser__boxes">
 			@foreach ($techboxes as $techbox)
-			<?php 
+			<?php
 			$title = $techbox['title'];
 			$description = $techbox['description'];
 			$link = $techbox['link'];
+			$text = $techbox['text'];
 			?>
 			<a href="{{$site_url}}{{$link}}" class="technology-teaser__boxes__box">
 				<div class="technology-teaser__boxes__box__image bg-image" style="background-image: url({{$techbox['background']}})">
@@ -38,7 +39,7 @@
 				</div>
 				<div class="technology-teaser__boxes__box__text__link btn btn--yellow">
 					<i class="btn__icon white-icon"></i>
-					<span class="btn__text">mehr erfahren</span>
+					<span class="btn__text">{{$text}}</span>
 				</div>
 			</a>
 			@endforeach

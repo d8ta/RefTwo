@@ -1,7 +1,8 @@
 <footer class="section site-footer">
 	<div class="section__content">
 		<div class="site-footer__headline">
-			Know-how aus Österreich. Im Einsatz auf der ganzen Welt.
+			{{-- Know-how aus Österreich. Im Einsatz auf der ganzen Welt. --}}
+			Expertise from Austria applied around the world.
 		</div>
 		<div class="site-footer__table">
 			<div class="site-footer__table__col site-footer__table__col--address">

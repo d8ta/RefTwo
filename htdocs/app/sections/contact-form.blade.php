@@ -23,7 +23,7 @@ $formHelper = Project\Helpers\FormHelper::getInstance();
                     echo $formHelper->getFormField("firstname", __('First Name'));
                     echo $formHelper->getFormField("lastname", __('Last Name'));
                     echo $formHelper->getFormField("company", __('Company'));
-                    echo $formHelper->getFormField("phone", __('Telefon'));
+                    echo $formHelper->getFormField("phone", __('Phone'));
                     echo $formHelper->getFormField("email", __('E-Mail'), ["type" => "email"]);
                     echo $formHelper->getFormField("message", __('Message'), ["type" => "textarea", "size" => "full"]);
                     echo $formHelper->getHoneyField();

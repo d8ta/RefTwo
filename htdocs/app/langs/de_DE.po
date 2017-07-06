@@ -14,7 +14,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-KeywordsList: __\n"
 "X-Poedit-SearchPath-0: app\n"
-"X-Poedit-SearchPath-1: wp-content/themes/rieder\n"
+"X-Poedit-SearchPath-1: wp-content/themes/siconnex\n"
 
 #: app/classes/Project/Ajax/Actions/ContactForm.php:32
 msgid "Your Request"

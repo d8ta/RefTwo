@@ -54,7 +54,7 @@
 								<div class="action-box__box__text__wrapper js-matchheight" data-mh="{{ $mh_group }}">
 									<h2 class="action-box__box__text__headline">{{$title}}</h2>
 									<div class="action-box__box__text__description">
-										<div class="action-box__box__text__description__clamp">{{$description}}</div>
+										<div class="action-box__box__text__description__clamp">{!!$description!!}</div>
 									</div>
 								</div>
 								<div class="action-box__box__text__button">
