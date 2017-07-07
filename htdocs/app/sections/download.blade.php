@@ -23,7 +23,11 @@
 		 						<div class="download__list__elem__content download__list__elem__content--link ">
 		 							<div class="table table--fullheight">
 		 								<div class="table__td">
-		 									<div class="btn">PDF herunterladen</div>
+		 									<div class="btn">
+												<?php
+												echo __('PDF Download');
+												?>
+											</div>
 		 								</div>
 		 							</div>
 		 						</div>
@@ -36,4 +40,3 @@
 		</div>
 	</div>
 </div>
-

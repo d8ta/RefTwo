@@ -135,5 +135,5 @@ msgid "Jetzt bewerben"
 msgstr ""
 
 #: wp-content/themes/siconnex/searchform.php:2
-msgid "Search ..."
+msgid "Search"
 msgstr ""

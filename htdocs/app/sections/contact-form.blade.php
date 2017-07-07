@@ -31,10 +31,10 @@ $formHelper = Project\Helpers\FormHelper::getInstance();
                     <input type="hidden" name="form[lang]" value="<?php echo get_locale(); ?>">
                     <div class="form__fields__table">
                         <select name="form[recipient]" class="js-selectize form__fields__table__select">
-                            <option value="sales">Sales</option>
-                            <option value="purchase">Purchase</option>
-                            <option value="service">Service</option>
-                            <option value="career">Career</option>
+                            <option value="sales"><?php echo __('Sales'); ?></option>
+                            <option value="purchase"><?php echo __('Purchase'); ?></option>
+                            <option value="service"><?php echo __('Service'); ?></option>
+                            <option value="career"><?php echo __('Career'); ?></option>
                         </select>
                         <button class="btn btn--yellow form__fields__table__btn" type="submit">
                             <?php echo __('Send Form'); ?>

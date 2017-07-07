@@ -23,7 +23,7 @@ $contact_form_id = Project\Application::getInstance()->getConfig('pages.contact-
 
 		<div class="maps__infobox__button">
 			<a class="btn btn--yellow" href="{{get_permalink(pll_get_post($contact_form_id))}}">
-				<?php _e('Kontaktformular'); ?>
+				<?php echo __('Contact'); ?>
 			</a>
 		</div>
 

@@ -1,8 +1,9 @@
 <?php
 $title = __('Siconnex');
-$description = __('Als erfolgreicher Hersteller von Anlagen für die Halbleiterindustrie sind wir weltweit tätig.');
+$description = __('As a successful manufacturer of systems for the semiconductor industry, we are active worldwide.');
+// $description = __('Als erfolgreicher Hersteller von Anlagen für die Halbleiterindustrie sind wir weltweit tätig.');
 $linktext = __('Find out more');
-$link_page_id = 21;
+$link_page_id = 772;
 ?>
 <div class="nav-content">
 	<a class="nav-content__image-box" href="{{get_permalink($link_page_id)}}">
