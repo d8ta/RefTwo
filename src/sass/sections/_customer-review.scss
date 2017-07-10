@@ -127,7 +127,8 @@ $block-padding: em(80);
   }
 
   &__whitebox-top {
-    top: 0;
+    top: -2em;
+    // background: red;
   }
 
   &__whitebox-bottom {
@@ -154,6 +155,7 @@ $block-padding: em(80);
         float: left;
         width: 85%;
         margin-bottom: 0;
+        padding-top: 2em;
       }
 
       &--right {
@@ -163,15 +165,24 @@ $block-padding: em(80);
     }
 
     &__whitebox-bottom {
-      display: none;
+      display: block;
+      // background: teal;
+      height: 3em;
+    }
+
+    &__whitebox-top {
+      display: block;
+      // background: red;
+      height: 4.5em;
     }
   }
+  @include mq($from: screen-lg) {}
   @include mq($from: screen-xl) {
     padding-top: 0;
     padding-bottom: 0;
 
     &__text {
-      padding-top: 6em;
+      padding-top: 3em;
     }
 
     &__whitebox-bottom,
@@ -182,8 +193,9 @@ $block-padding: em(80);
   }
 
   .owl-dots {
-    margin: em(12) 0 em(20);
+    margin: -2em 0 1.25em;
     text-align: center;
+    padding-bottom: 2em;
   }
 
   .owl-dot {
