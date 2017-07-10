@@ -1,73 +1,84 @@
-            $block: '.process';
-            #{$block} {
-                &__info {
-                    text-align: left;
-                    margin-bottom: 1em;
-                    &__text {
-                        img {
-                            transition: all 3s;
-                            &:hover {
-                                transform: scale(1.05);
-                            }
-                            border-radius: em(5);
-                        }
-                        padding-bottom: 2em;
-                        &__title {
-                            @extend %h1;
-                        }
-                        &__editor {
-                            @extend %text-base;
-                            &__left {
-                                padding-top: 2em;
-                            }
-                            &__middle {}
-                            &__right {}
-                        }
-                    }
-                }
-                @include mq($from: screen-md) {
-                    &__info {
-                        &__text {
-                            img {
-                                vertical-align: top;
-                            }
-                            display: table;
-                            &__editor {
-                                &__left {
-                                    padding-left: em(20);
-                                    padding-right: em(20);
-                                    display: table-cell;
-                                    width: 33%;
-                                }
-                                &__middle {
-                                    display: table-cell;
-                                    width: 33%;
-                                }
-                                &__right {
-                                    display: table-cell;
-                                    width: 33%;
-                                }
-                            }
-                        }
-                    }
-                }
-                // @include mq($from: screen-lg) {
-                //     &__info {
-                //         &__text {
-                //             float: left;
-                //             &__image {
-                //                 float: left;
-                //             }
-                //             &__description {
-                //                 max-width: 80em;
-                //             }
-                //             &__editor {
-                //                 width: 25%;
-                //                 &__middle {
-                //                     width: 25%;
-                //                 }
-                //             }
-                //         }
-                //     }
-                // }
-            }
+$block: '.process';
+
+#{$block} {
+  &__info {
+    text-align: left;
+    margin-bottom: 1em;
+
+    &__text {
+      img {
+        transition: all 3s;
+
+        &:hover {
+          transform: scale(1.05);
+        }
+        border-radius: em(5);
+      }
+      padding-bottom: 2em;
+
+      &__title {
+        @extend %h1;
+      }
+
+      &__editor {
+        @extend %text-base;
+
+        &__left {
+          padding-top: 2em;
+        }
+
+        &__middle {}
+
+        &__right {}
+      }
+    }
+  }
+  @include mq($from: screen-sm) {
+    &__info {
+      &__text {
+        img {
+          vertical-align: top;
+        }
+        display: table;
+
+        &__editor {
+          &__left {
+            padding-left: em(20);
+            padding-right: em(20);
+            display: table-cell;
+            width: 33%;
+          }
+
+          &__middle {
+            display: table-cell;
+            width: 33%;
+          }
+
+          &__right {
+            display: table-cell;
+            width: 33%;
+          }
+        }
+      }
+    }
+  }
+  // @include mq($from: screen-lg) {
+  //     &__info {
+  //         &__text {
+  //             float: left;
+  //             &__image {
+  //                 float: left;
+  //             }
+  //             &__description {
+  //                 max-width: 80em;
+  //             }
+  //             &__editor {
+  //                 width: 25%;
+  //                 &__middle {
+  //                     width: 25%;
+  //                 }
+  //             }
+  //         }
+  //     }
+  // }
+}
