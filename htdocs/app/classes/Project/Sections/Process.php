@@ -13,13 +13,14 @@ class Process extends \A365\Wordpress\Block\AcfBlock {
 	public static function getAcfSubfields()
 	{
 		return [
-				FieldHelper::createText('title', 'Titel')->setRequired(), 	
+				FieldHelper::createText('title', 'Titel')->setRequired(),
 				FieldHelper::createRepeater('sections', 'Sektionen', ["min" => 1, "max" => 3])
 				->addSubfields([
 					FieldHelper::createImageCrop('image', 'Anwendungsbild', ["crop_type" => "hard", 'target_size' => 'custom', 'force_crop' => 'no', 'save_format' => 'url', "width" => 280, "height" => 60])->setRequired(),
-					FieldHelper::createWYSIWYG('left', 'Editor links'), 
-					FieldHelper::createWYSIWYG('middle', 'Editor mitte'), 
-					FieldHelper::createWYSIWYG('right', 'Editor rechts'), 
+					FieldHelper::createPageLink('url', 'Link'),
+					FieldHelper::createWYSIWYG('left', 'Editor links'),
+					FieldHelper::createWYSIWYG('middle', 'Editor mitte'),
+					FieldHelper::createWYSIWYG('right', 'Editor rechts'),
 				])
 		];
 	}
