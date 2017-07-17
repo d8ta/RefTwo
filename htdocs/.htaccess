@@ -82,3 +82,8 @@ AddOutputFilterByType DEFLATE application/x-font-ttf font/opentype
 
 </IfModule>
 ## EXPIRES CACHING ##
+
+php_value upload_max_filesize 8M
+php_value post_max_size 8M
+php_value max_execution_time 300
+php_value max_input_time 300
