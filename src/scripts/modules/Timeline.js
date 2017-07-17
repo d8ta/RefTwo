@@ -22,7 +22,7 @@ Timeline.prototype.init = function() {
 
     if(this.selectors.timelines.length == 0) return;
     
-    jQuery('.js-timeline__nav').on('click', function(){
+    jQuery('.js-timeline__nav').on('click mouseover hover', function(){
         var id = jQuery(this).data("id");
         console.log(id);
         jQuery('.js-timeline__nav').removeClass('active');

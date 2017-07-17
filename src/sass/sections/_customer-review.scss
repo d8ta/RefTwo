@@ -39,6 +39,16 @@ $block-padding: em(80);
           display: block;
           opacity: 0.3;
         }
+        @include icon( 'quote', 'after');
+        &::after {
+          @extend %icon;
+          position: absolute;
+          bottom: 0;
+          right:0;
+          display: block;
+          opacity: 0.3;
+          font-size: em(20);
+        }
       }
     }
 

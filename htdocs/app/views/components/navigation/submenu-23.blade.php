@@ -2,19 +2,19 @@
 $products = array();
 
 $products[] = array(
-    "text" => __("Batchspray Acid"),
+    "text" => __("BATCHSPRAY Acid"),
     "page-id" => 344,
     "image" => "batch_acid.png"
 );
 
 $products[] = array(
-    "text" => __("Batchspray Solvent"),
+    "text" => __("BATCHSPRAY Solvent"),
     "page-id" => 346,
     "image" => "batch_solvent.png"
 );
 
 $products[] = array(
-    "text" => __("Batchspray Autoload"),
+    "text" => __("BATCHSPRAY Autoload"),
     "page-id" => 348,
     "image" => "batch_auto.png"
 );

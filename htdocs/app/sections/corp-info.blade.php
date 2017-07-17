@@ -6,6 +6,7 @@
 		$description = $block->getDescription();
 		$logo = $block->getLogo();
 		$sectionimg = $block->getSectionimg();
+		$file = $block->getFile();
 		?>
 		<div class="corp-info">
 
@@ -14,9 +15,9 @@
 				<h2 class="corp-info__text__title">{{$title}}</h2>
 				<h3 class="corp-info__text__subtitle">{!!$subtitle!!}</h3>
 				<div class="corp-info__text__description editor-content">{!!$description!!}</div>
-				<?php if ($logo) { ?>
-					<img src="assets/images/icons/{{$logo}}.svg" class="corp-info__text__logo" alt="{{$logo}}" />
-				<?php } ?>
+				@if(!empty($logo))
+					<a target="_blank" alt="{{$file['title']}}" href="{{$file['url']}}"><img src="assets/images/icons/{{$logo}}.svg" class="corp-info__text__logo" alt="{{$logo}}" /></a>
+				@endif
 
 			</div>
 

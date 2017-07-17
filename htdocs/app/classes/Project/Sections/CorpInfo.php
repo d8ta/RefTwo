@@ -16,7 +16,26 @@ class CorpInfo extends \A365\Wordpress\Block\AcfBlock {
 			FieldHelper::createText('title', 'Überschrift')->setRequired(),
 			FieldHelper::createText('subtitle', 'Unterüberschrift')->setRequired(),  
 			FieldHelper::createWYSIWYG('description', 'Beschreibung')->setRequired(),
-			FieldHelper::createText('logo', 'Logo'),  
+			FieldHelper::createText('logo', 'Logo SVG', ['wrapper' => array('width' => 50,)]),
+			array (
+				'key' => 'field_596cc87f3f536',
+				'label' => 'Datei',
+				'name' => 'file',
+				'type' => 'file',
+				'instructions' => '',
+				'required' => 0,
+				'conditional_logic' => 0,
+				'wrapper' => array (
+					'width' => 50,
+					'class' => '',
+					'id' => '',
+				),
+				'return_format' => 'array',
+				'library' => 'all',
+				'min_size' => '',
+				'max_size' => '',
+				'mime_types' => '',
+			),  
 			FieldHelper::createRepeater('sectionimg', 'Sectionimg', ["min" => 3, "max" => 3]) 
 				->addSubfields([
 					FieldHelper::createImageCrop('image', 'Bild', ["crop_type" => "hard", 'target_size' => 'custom', 'force_crop' => 'no', 'save_format' => 'url', "width" => 200, "height" => 200])->setRequired(),

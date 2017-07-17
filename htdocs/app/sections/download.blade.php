@@ -15,7 +15,7 @@
 		 		<div class="download__content">
 		 			<div class="download__list">
 						@foreach($downloads as $download)
-		 					<a class="download__list__elem" href="{{$download['file']['url']}}">
+		 					<a class="download__list__elem" target="_blank" href="{{$download['file']['url']}}">
 		 						<div class="download__list__elem__content download__list__elem__content--info ">
 		 							<h2 class="h2">{{$download["title"]}}</h2>
 		 							<p>{{$download["info"]}}<p>
