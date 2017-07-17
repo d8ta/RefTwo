@@ -39,7 +39,7 @@ Owlcarousel.prototype.options = {
     dots: true,
     dotsData: false,
     lazyLoad: true,
-    autoplay: false,
+    autoplay: true,
     autoplayHoverPause: true,
     responsiveClass: true,
     responsivetype: 0,
