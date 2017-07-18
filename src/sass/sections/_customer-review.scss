@@ -154,10 +154,7 @@ $block-padding: em(80);
 
     &__slider {
       width: 45%;
-    }
-
-    .owl-carousel.owl-loaded {
-      display: inline-block;
+      float: left;
     }
 
     &__content {
