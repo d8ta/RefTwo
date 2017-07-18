@@ -22,32 +22,29 @@ $news_items = Project\Models\News::allPublished();
 
     $button_text = $news_item['button_text'];
     $sectionimg = $news_item['background'];
+    $images = $item->getImages();
     ?>
 
 <div class="section section--news section--margin-xxl">
 	<div class="section__content">
-
-		<div class="news">
-
-		{{-- left --}}
-		<div class="news__text">
-			<h2 class="news__text__title">{{$title}}</h2>
-			<h3 class="news__text__subtitle">{!!$subtitle!!}</h3>
-			<div class="news__text__description editor-content">
-        <div class="news__text__description__clamp editor-content">
-          {!!$description!!}
-        </div>
+        <div class="news">
+		  <div class="news__text">
+			 <h2 class="news__text__title">{{$title}}</h2>
+			 <h3 class="news__text__subtitle">{!!$subtitle!!}</h3>
+			 <div class="news__text__description editor-content">
+                <div class="news__text__description__clamp editor-content">
+                    {!!$description!!}
+                </div>
 			</div>
-      <a class="news__btn btn btn--yellow" href="{{$button_url}}">{{$button_text}}</a>
-    </div>
-
+            <a class="news__btn btn btn--yellow" href="{{$button_url}}">{{$button_text}}</a>
+            </div>
 			{{-- right --}}
-		<div class="news__image">
-				<div class="news__image__img">
-					<img src="{{$sectionimg}}" alt="Section Image" class="news__image__img" />
-				</div>
-		</div>
-	</div>
-</div>
+    		<div class="news__images">
+                @foreach($images as $img)
+                    <img src="{{$img['url']}}" class="responsive news__images__img" />  
+                @endforeach
+    		</div>
+       </div>
+    </div>
 </div>
 @endforeach
