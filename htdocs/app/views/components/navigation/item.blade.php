@@ -21,7 +21,8 @@ if (isset($nav_item->hash)) {
 		@if ($has_submenu_div)
 				</div>
 				<div class="nav-submenu__content">
-					@includeIf("components.navigation.submenu-" . $nav_item->page_id)
+					<?php $page_id = pll_get_post($nav_item->page_id, 'de'); ?>
+					@includeIf("components.navigation.submenu-" . $page_id)
 				</div>
 			</div>
 			</div>

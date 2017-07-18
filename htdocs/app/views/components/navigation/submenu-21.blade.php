@@ -1,11 +1,11 @@
 <?php
-$title = __('Siconnex');
-$description = __('Als erfolgreicher Hersteller von Anlagen für die Halbleiterindustrie sind wir weltweit tätig.');
+$title = 'Siconnex';
+$description = __('As a successful manufacturer of systems for the semiconductor industry, we are active worldwide.');
 $linktext = __('Find out more');
 $link_page_id = 21;
 ?>
 <div class="nav-content">
-	<a class="nav-content__image-box" href="{{get_permalink($link_page_id)}}">
+	<a class="nav-content__image-box" href="{{get_permalink(pll_get_post($link_page_id))}}">
 		<div class="nav-content__image-box__image">
 			<div class="nav-content__image-box__image__img bg-image" style="background-image: url('assets/images/nav-menu/siconnex.jpg'); border-radius: .5em"></div>
 		</div>

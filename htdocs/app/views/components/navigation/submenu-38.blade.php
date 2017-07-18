@@ -1,7 +1,7 @@
 <?php
-$title = __('Karriere bei Siconnex');
-$description = __('Verlassen Sie ausgetretene Pfade und gehen Sie mit uns neue Wege!');
-$linktext = __('Jetzt bewerben');
+$title = __('Career at Siconnex');
+$description = __('Leave abandoned paths and go new ways with us!');
+$linktext = __('Apply now');
 $link_page_id = 38;
 ?>
 <div class="nav-content">
