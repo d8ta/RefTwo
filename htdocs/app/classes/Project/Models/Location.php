@@ -97,7 +97,12 @@ class Location extends \A365\Wordpress\Models\Post {
                 }
             }
             if ($nearestLocID > 0) {
-                setcookie($nearestLocCookieName, $nearestLocID, time() + 3600 * 24, '/');
+                $url = '/';
+                $lang = pll_current_language('slug');
+                if ($lang) {
+                    $url .= $lang . '/';
+                }
+                setcookie($nearestLocCookieName, $nearestLocID, time() + 3600 * 24, $url );
             }
         } else {
             $nearestLocID = $_COOKIE[$nearestLocCookieName];
