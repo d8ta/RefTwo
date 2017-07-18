@@ -4,19 +4,19 @@ $products = array();
 $products[] = array(
     "text" => __("BATCHSPRAY<span class='symbols'>®</span> Acid"),
     "page-id" => 344,
-    "image" => "batch_acid.png"
+    "image" => "batch_acid.jpg"
 );
 
 $products[] = array(
     "text" => __("BATCHSPRAY<span class='symbols'>®</span> Solvent"),
     "page-id" => 346,
-    "image" => "batch_solvent.png"
+    "image" => "batch_solvent.jpg"
 );
 
 $products[] = array(
     "text" => __("BATCHSPRAY<span class='symbols'>®</span> Autoload"),
     "page-id" => 348,
-    "image" => "batch_auto.png"
+    "image" => "batch_auto.jpg"
 );
 
 ?>
