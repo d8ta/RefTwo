@@ -39,7 +39,7 @@ $news_items = Project\Models\News::allPublished();
             <a class="news__btn btn btn--yellow" href="{{$button_url}}">{{$button_text}}</a>
             </div>
 			{{-- right --}}
-    		<div class="news__images">
+    		<div class="news__images news__images--section">
                 @foreach($images as $img)
                     <img src="{{$img['url']}}" class="responsive news__images__img" />  
                 @endforeach

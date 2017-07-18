@@ -53,7 +53,6 @@ $block: '.news';
       }
 
       &__content {
-        max-width: 45em;
         margin-left: 0;
         margin-right: 0;
         width: 100%;
@@ -62,7 +61,7 @@ $block: '.news';
 
     &__images {
       width: 50%;
-      float: right;
+      float: left;
       text-align: right;
 
       &__img {
