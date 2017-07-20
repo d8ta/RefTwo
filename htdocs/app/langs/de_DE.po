@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Siconnex\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/envimet\n"
-"POT-Creation-Date: 2017-07-18 11:31+0200\n"
-"PO-Revision-Date: 2017-07-18 11:32+0200\n"
+"POT-Creation-Date: 2017-07-20 15:47+0200\n"
+"PO-Revision-Date: 2017-07-20 15:47+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -37,51 +37,55 @@ msgstr "Text"
 msgid "Find out more"
 msgstr "Mehr erfahren"
 
-#: app/sections/contact-form.blade.php:23
+#: app/sections/contact-form.blade.php:24
 msgid "First Name"
 msgstr "Vorname"
 
-#: app/sections/contact-form.blade.php:24
+#: app/sections/contact-form.blade.php:25
 msgid "Last Name"
 msgstr "Nachname"
 
-#: app/sections/contact-form.blade.php:25
+#: app/sections/contact-form.blade.php:26
 msgid "Company"
 msgstr "Firma"
 
-#: app/sections/contact-form.blade.php:26
+#: app/sections/contact-form.blade.php:27
 msgid "Phone"
 msgstr "Telefon"
 
-#: app/sections/contact-form.blade.php:27
+#: app/sections/contact-form.blade.php:28
 msgid "E-Mail"
 msgstr "E-Mail"
 
-#: app/sections/contact-form.blade.php:28
+#: app/sections/contact-form.blade.php:29
 msgid "Message"
 msgstr "Nachricht"
 
-#: app/sections/contact-form.blade.php:34
+#: app/sections/contact-form.blade.php:35
 msgid "Sales"
 msgstr "Verkauf/Produkte"
 
-#: app/sections/contact-form.blade.php:35
+#: app/sections/contact-form.blade.php:36
 msgid "Purchase"
 msgstr "Einkauf"
 
-#: app/sections/contact-form.blade.php:36
+#: app/sections/contact-form.blade.php:37
 msgid "Service"
 msgstr "Service"
 
-#: app/sections/contact-form.blade.php:37
+#: app/sections/contact-form.blade.php:38
 msgid "Career"
 msgstr "Karriere"
 
-#: app/sections/contact-form.blade.php:40
+#: app/sections/contact-form.blade.php:41
 msgid "Send Form"
 msgstr "Formular absenden"
 
-#: app/sections/contact-form.blade.php:45
+#: app/sections/contact-form.blade.php:46
+msgid "Required"
+msgstr "Pflichtfeld"
+
+#: app/sections/contact-form.blade.php:51
 msgid "Thank you for your message."
 msgstr "Vielen Dank für Ihre Nachricht."
 
@@ -152,23 +156,23 @@ msgid "BATCHSPRAY<span class='symbols'>®</span> Autoload"
 msgstr "BATCHSPRAY<span class='symbols'>®</span> Autoload"
 
 #: app/views/components/navigation/submenu-38.blade.php:2
-#: app/views/components/navigation/submenu-774.blade.php:2
 msgid "Career at Siconnex"
 msgstr "Karriere bei Siconnex"
 
 #: app/views/components/navigation/submenu-38.blade.php:3
-#: app/views/components/navigation/submenu-774.blade.php:3
 msgid "Leave abandoned paths and go new ways with us!"
 msgstr "Verlassen Sie ausgetretene Pfade und gehen Sie mit uns neue Wege!"
 
 #: app/views/components/navigation/submenu-38.blade.php:4
-#: app/views/components/navigation/submenu-774.blade.php:5
 msgid "Apply now"
 msgstr "Jetzt bewerben"
 
 #: wp-content/themes/siconnex/searchform.php:2
 msgid "Search"
 msgstr "Suche"
+
+#~ msgid "Required Field"
+#~ msgstr "Pflichtfeld"
 
 #~ msgid "Karriere bei Siconnex"
 #~ msgstr "Karriere bei Siconnex"

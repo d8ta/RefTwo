@@ -17,7 +17,7 @@ class CoreValues extends \A365\Wordpress\Block\AcfBlock {
 				->addSubfields([
 					FieldHelper::createImageCrop('image', 'Bild', ["crop_type" => "hard", 'target_size' => 'custom', 'force_crop' => 'no', 'save_format' => 'url', "width" => 120, "height" => 120])->setRequired(),
 					FieldHelper::createText('title', 'Überschrift')->setRequired(), 
-					FieldHelper::createWYSIWYG('description', 'Beschreibung')->setRequired(), 
+					FieldHelper::createWysiwyg('description', 'Beschreibung')->setRequired(), 
 					]),
 		];
 	}

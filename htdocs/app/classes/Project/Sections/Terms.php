@@ -14,8 +14,8 @@ class Terms extends \A365\Wordpress\Block\AcfBlock {
 	{
 		return [
 				FieldHelper::createText('title', 'Titel')->setRequired(), 	
-				FieldHelper::createWYSIWYG('left', 'Editor links')->setRequired(), 
-				FieldHelper::createWYSIWYG('right', 'Editor rechts')->setRequired(), 
+				FieldHelper::createWysiwyg('left', 'Editor links')->setRequired(), 
+				FieldHelper::createWysiwyg('right', 'Editor rechts')->setRequired(), 
 		];
 	}
 }

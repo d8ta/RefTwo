@@ -15,7 +15,7 @@ class EvolutionTeaser extends \A365\Wordpress\Block\AcfBlock {
 	{
 		return [
 				FieldHelper::createText('title', 'Überschrift')->setRequired(),
-				FieldHelper::createWYSIWYG('description', 'Beschreibung')->setRequired(),
+				FieldHelper::createWysiwyg('description', 'Beschreibung')->setRequired(),
 		];
 	}
 }

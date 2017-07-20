@@ -16,7 +16,7 @@ class CustomersTeaser extends \A365\Wordpress\Block\AcfBlock {
 		return [
 				FieldHelper::createText('title', 'Überschrift')->setRequired(),
 				FieldHelper::createText('subtitle', 'Unterüberschrift')->setRequired(),
-				FieldHelper::createWYSIWYG('description', 'Beschreibung')->setRequired(),
+				FieldHelper::createWysiwyg('description', 'Beschreibung')->setRequired(),
 		];
 	}
 }

@@ -18,6 +18,7 @@ $formHelper = Project\Helpers\FormHelper::getInstance();
         <div class="contact-form__content">
             <form class="form js-ajax-form js-validate" action="{!!$_ajaxHelper->getUrl('contact-form')!!}"
                   method="POST" data-name='Kontaktformular'>
+
                 <div class="form__fields">
                     <?php
                     echo $formHelper->getFormField("firstname", __('First Name'));
@@ -39,6 +40,11 @@ $formHelper = Project\Helpers\FormHelper::getInstance();
                         <button class="btn btn--yellow form__fields__table__btn" type="submit">
                             <?php echo __('Send Form'); ?>
                        </button>
+                    </div>
+                    <div class="form__fields__row form__fields__row--full">
+                        <div class="form__info">
+                            * <?php echo __('Required'); ?>
+                          </div>
                     </div>
                 </div>
                 <div class="form__success">

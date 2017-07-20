@@ -18,9 +18,9 @@ class Applications extends \A365\Wordpress\Block\AcfBlock {
 					FieldHelper::createText('title', 'Titel')->setRequired(), 	
 					FieldHelper::createText('description', 'Text')->setRequired(), 	
 					FieldHelper::createImageCrop('image', 'Anwendungsbild', ["crop_type" => "hard", 'target_size' => 'custom', 'force_crop' => 'no', 'save_format' => 'url', "width" => 200, "height" => 200])->setRequired(),
-					FieldHelper::createWYSIWYG('left', 'Editor links'), 
-					FieldHelper::createWYSIWYG('middle', 'Editor mitte'), 
-					FieldHelper::createWYSIWYG('right', 'Editor rechts'), 
+					FieldHelper::createWysiwyg('left', 'Editor links'), 
+					FieldHelper::createWysiwyg('middle', 'Editor mitte'), 
+					FieldHelper::createWysiwyg('right', 'Editor rechts'), 
 				])
 		];
 	}

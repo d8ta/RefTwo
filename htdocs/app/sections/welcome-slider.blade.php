@@ -25,9 +25,11 @@
 										@if($description)
 											<div class="welcome-slider__slide__text__description">{{$description}}</div>
 										@endif
-										<a class="btn" href="{{$button_url}}">
-										{{$buttontext}}
-										</a>
+										@if($button_url)
+											<a class="btn" href="{{$button_url}}">
+											{{$buttontext}}
+											</a>
+										@endif
 									</div>
 								</div>
 							</div>

@@ -63,11 +63,11 @@
         },
         {
             "name": "a365/wordpress",
-            "version": "v0.9.1",
+            "version": "v0.9.3",
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:a365/wordpress.git",
-                "reference": "6caa32e4ed4055aab4e0d4b9fcb4044770276adb"
+                "reference": "f8a09b999c765aec4d3ea1b120189b47b73189a8"
             },
             "require": {
                 "vlucas/phpdotenv": "^2.2"
@@ -84,7 +84,7 @@
                     "email": "peter.schwab@a365.at"
                 }
             ],
-            "time": "2017-04-20 13:04:26"
+            "time": "2017-07-20 09:12:02"
         },
         {
             "name": "caseyamcl/configula",
