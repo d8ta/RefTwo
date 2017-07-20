@@ -38,11 +38,11 @@
         },
         {
             "name": "a365/customizr",
-            "version": "v0.2.5",
+            "version": "v0.2.8",
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:a365/a365-customizr.git",
-                "reference": "6ad18b99abd1ef205ae85757e3c16c0efabda212"
+                "reference": "94d3616f3de1452fba9025fe1a79d451a060150b"
             },
             "require": {
                 "composer/installers": "^1.0",
@@ -59,7 +59,7 @@
                 "plugin",
                 "wordpress"
             ],
-            "time": "2017-05-18 06:20:43"
+            "time": "2017-07-20 13:52:28"
         },
         {
             "name": "a365/wordpress",
