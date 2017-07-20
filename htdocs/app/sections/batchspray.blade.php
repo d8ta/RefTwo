@@ -18,9 +18,11 @@
 				<h3 class="batchspray__text__subtitle">{{$subtitle}}</h3>
 				<div class="batchspray__text__description editor-content">{!!$description!!}</div>
 				<div class="batchspray__text__footer">
-					<a class="btn btn--yellow" href="{{$button_url}}">
-						{{$buttontext}}
-					</a>
+					@if($button_url)
+						<a class="btn btn--yellow" href="{{$button_url['url']}}" target="_blank">
+							{{$buttontext}}
+						</a>
+					@endif
 					<img src="{{$logo}}" alt="Logo" class="batchspray__text__logo" />
 				</div>
 			{{-- right --}}
