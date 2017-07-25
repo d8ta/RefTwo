@@ -10,29 +10,38 @@ $block: '.headquarters';
         &__location {
             text-align: left;
             margin-top: 3em;
+            position: relative;
+            padding-left: em(50);
             &__headline {
                 @extend %h4;
             }
             &__text {
                 @extend %text-base;
             }
+            &::before {
+                position: absolute;
+                width: em(36);
+                height: em(36);
+                left: 0;
+                top: em(3);
+                content: '';
+                display: block;
+                background-image: url('../images/layout/pin.png');
+                background-size: 100% 100%;
+            }
         }
     }
-    @include mq($from: screen-sm) {
+    @include mq($from: 590px) {
         &__locations {
             &__location {
-                float: left;
-                width: 50%;
+                display: inline-block;
+                vertical-align: top;
+                width: 43%;
+                margin-right: 6%;
+                max-width: em(450);
                 text-align: left;
             }
         }
     }
-    @include mq($from: screen-md) {
-        &__locations {
-            &__location {
-                float: left;
-                width: 33.3333%;
-            }
-        }
-    }
+
 }
