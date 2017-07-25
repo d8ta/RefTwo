@@ -21,7 +21,7 @@
 								<div class="welcome-slider__slide__text__td">
 									<div class="welcome-slider__slide__text__inner">
 										<h2 class="welcome-slider__slide__text__pretitle">{{$pretitle}}</h2>
-										<h3 class="welcome-slider__slide__text__title">{{$title}}</h3>
+										<h3 class="welcome-slider__slide__text__title">{!!$title!!}</h3>
 										@if($description)
 											<div class="welcome-slider__slide__text__description">{{$description}}</div>
 										@endif
