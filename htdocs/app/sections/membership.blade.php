@@ -10,13 +10,21 @@
 			<h2 class="membership__inner__title">{{$title}}</h2>
 		</div>
 
-		<div class="membership__logos">
+		<div class="membership__logo-container">
+			<div class="membership__logos__container">
 			@foreach ($logos as $logo)
-			<?php
-			$logo = $logo['image'];
-			?>
-			<img src="{{$logo}}" alt="Section Image" class="membership__logos__logo"/>
+				<div class="membership__logos">
+					<?php
+					$logo = $logo['image'];
+					?>
+					<div class="membership__logos__pusher">
+						<p>
+							<img src="{{$logo}}">
+						</p>
+					</div>
+				</div>
 			@endforeach
+			</div>
 		</div>
 	</div>
 </div>

@@ -10,6 +10,7 @@
                 $pretitle = $slide['pretitle'];
                 $description = $slide['description'];
                 $buttontext = $slide['button_text'];
+                $button_hash = $slide['hash'];
                 $button_url = $slide['button_url'];
                 ?>
 				<div class="welcome-slider__slide">
@@ -21,12 +22,12 @@
 								<div class="welcome-slider__slide__text__td">
 									<div class="welcome-slider__slide__text__inner">
 										<h2 class="welcome-slider__slide__text__pretitle">{{$pretitle}}</h2>
-										<h3 class="welcome-slider__slide__text__title">{{$title}}</h3>
+										<h3 class="welcome-slider__slide__text__title">{!!$title!!}</h3>
 										@if($description)
 											<div class="welcome-slider__slide__text__description">{{$description}}</div>
 										@endif
 										@if($button_url)
-											<a class="btn" href="{{$button_url}}">
+											<a class="btn" href="{{$button_url}}@if(!empty($button_hash))#{{$button_hash}}@endif">
 											{{$buttontext}}
 											</a>
 										@endif

@@ -20,7 +20,8 @@ class WelcomeSlider extends \A365\Wordpress\Block\AcfBlock {
 					FieldHelper::createText('pretitle', 'Überschrift klein'),
 					FieldHelper::createText('title', 'Überschrift')->setRequired(),
 					FieldHelper::createText('description', 'Beschreibung'),
-					FieldHelper::createPageLink('button_url', 'Button Link'),
+					FieldHelper::createPageLink('button_url', 'Button Link', ["wrapper" => array('width' => 50)]),
+					FieldHelper::createText('hash', 'Hashtag', ["wrapper" => array('width' => 50)]),
 					FieldHelper::createText('button_text', 'Button Text')->setRequired(),
 			])
 		];
