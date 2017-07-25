@@ -28,8 +28,13 @@ class Application extends BaseApplication
 
 		add_filter('acf/settings/google_api_key', [$this, 'googleApiKey']);
 		add_filter('acf/fields/google_map/api', [$this, 'googleApiKey']);
+		add_filter('upload_mimes', [$this, 'cc_mime_types']);
 
+	}
 
+	public function cc_mime_types($mimes) {
+	  $mimes['svg'] = 'image/svg+xml';
+	  return $mimes;
 	}
 
 	/**

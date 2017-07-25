@@ -7,6 +7,9 @@
 		$logo = $block->getLogo();
 		$sectionimg = $block->getSectionimg();
 		$file = $block->getFile();
+		$image = wp_get_attachment_image_src($logo, 'full');
+		$image_mimetype = get_post_mime_type($logo);
+		$image_metadata = wp_get_attachment_metadata($logo);
 		?>
 		<div class="corp-info">
 
@@ -16,7 +19,22 @@
 				<h3 class="corp-info__text__subtitle">{!!$subtitle!!}</h3>
 				<div class="corp-info__text__description editor-content">{!!$description!!}</div>
 				@if(!empty($logo))
-					<a target="_blank" alt="{{$file['title']}}" href="{{$file['url']}}"><img src="assets/images/icons/{{$logo}}.svg" class="corp-info__text__logo" alt="{{$logo}}" /></a>
+					<?php
+						if($image_mimetype == 'image/svg+xml') {
+							$mimetype = 'svg';
+						} else {
+							$mimetype = 'normal';
+						}
+					?>
+					<a target="_blank" alt="{{$file['title']}}" href="{{$file['url']}}">
+						@if($mimetype == 'svg')
+							<img src="{{$image[0]}}" class="corp-info__text__logo corp-info__text__logo--{{$mimetype}}" />
+						@else
+							<div class="corp-info__text__logo-wrapper" style="width: 80%; padding-bottom: {{$image_metadata['height'] / $image_metadata['width'] * 100 * 0.8}}%">
+								<img src="{{$image[0]}}" class="corp-info__text__logo corp-info__text__logo--{{$mimetype}}" />
+							</div>
+						@endif
+					</a>
 				@endif
 
 			</div>

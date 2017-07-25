@@ -13,10 +13,21 @@ $block: '.corp-info';
             @extend %text-base;
             margin-bottom: 1.8em;
         }
+        &__logo-wrapper {
+            position: relative;
+        }
         &__logo {
-            width: em(400);
-            margin-top: -4em;
-            margin-left: -8em;
+            &--svg {
+                width: 10em;
+                height: auto;
+            }
+            &--normal {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+            }
         }
     }
     &__images {
