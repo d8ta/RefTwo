@@ -21,8 +21,12 @@
 
 
 /* @import must be at top of file, otherwise CSS will not work */
+
 @import url("//hello.myfonts.net/count/33dc4b");
 
-  
-@font-face {font-family: 'Tahoma-Bold';src: url('webfonts/33DC4B_0_0.eot');src: url('webfonts/33DC4B_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/33DC4B_0_0.woff2') format('woff2'),url('webfonts/33DC4B_0_0.woff') format('woff'),url('webfonts/33DC4B_0_0.ttf') format('truetype');}
- 
+
+@font-face {
+    font-family: 'Tahoma-Bold';
+    src: url('../fonts/Tahoma/33DC4B_0_0.eot');
+    src: url('../fonts/Tahoma/33DC4B_0_0.eot?#iefix') format('embedded-opentype'), url('../fonts/Tahoma/33DC4B_0_0.woff2') format('woff2'), url('../fonts/Tahoma/33DC4B_0_0.woff') format('woff'), url('../fonts/Tahoma/33DC4B_0_0.ttf') format('truetype');
+}

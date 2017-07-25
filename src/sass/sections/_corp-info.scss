@@ -23,20 +23,29 @@ $block: '.corp-info';
         margin: 0 auto;
         text-align: center;
         max-width: 30em;
+        &__image-wrapper {
+            width: 100%;
+            height: auto;
+        }
         &__image {
-            // transition: all 3s;
-            // &:hover {
-            //     transform: scale(1.05);
-            // }
-            display: inline-block;
             border-radius: .5em;
-            margin-left: em(10);
             margin-bottom: em(10);
+            width: 100%;
+            height: auto;
+            max-width: em(300);
         }
     }
     @include mq($from: screen-sm) {
         &__images {
-            max-width: 47em;
+            width: 100%;
+            max-width: none;
+            @include clearfix;
+            &__image-wrapper {
+                width: 33.333%;
+                float: right;
+                display: block;
+                padding: 0 em(10);
+            }
         }
     }
     @include mq($from: screen-lg) {
@@ -59,10 +68,14 @@ $block: '.corp-info';
             width: 50%;
             float: left;
             text-align: right;
-            &__image {
+            &__image-wrapper {
                 width: 30%;
                 display: inline;
                 margin-left: .5em;
+                padding: 0 0;
+            }
+            &__image {
+                margin-bottom: 0;
             }
         }
     }
