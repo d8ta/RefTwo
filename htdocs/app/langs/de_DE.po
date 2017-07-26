@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Siconnex\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/envimet\n"
-"POT-Creation-Date: 2017-07-20 15:47+0200\n"
-"PO-Revision-Date: 2017-07-20 15:47+0200\n"
+"POT-Creation-Date: 2017-07-26 16:03+0200\n"
+"PO-Revision-Date: 2017-07-26 16:04+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -34,6 +34,7 @@ msgstr "Text"
 
 #: app/sections/action-box.blade.php:16 app/sections/news.blade.php:14
 #: app/views/components/navigation/submenu-21.blade.php:4
+#: app/views/components/navigation/submenu-25.blade.php:4
 msgid "Find out more"
 msgstr "Mehr erfahren"
 
@@ -154,6 +155,28 @@ msgstr "BATCHSPRAY<span class='symbols'>®</span> Solvent"
 #: app/views/components/navigation/submenu-23.blade.php:17
 msgid "BATCHSPRAY<span class='symbols'>®</span> Autoload"
 msgstr "BATCHSPRAY<span class='symbols'>®</span> Autoload"
+
+#: app/views/components/navigation/submenu-25.blade.php:2
+msgid "Technology Infobox Title"
+msgstr "Technologie"
+
+#: app/views/components/navigation/submenu-25.blade.php:3
+msgid "Technology Infobox Text"
+msgstr ""
+"Ressourcendsparend und innovativ: Unsere BATCHSPRAY<span class='symbols'>®</"
+"span>-Technologie ist bahnbrechend."
+
+#: app/views/components/navigation/submenu-29.blade.php:2
+msgid "Contact Infobox Title"
+msgstr "Kontakt"
+
+#: app/views/components/navigation/submenu-29.blade.php:3
+msgid "Contact Infobox Text"
+msgstr "Wir freuen uns darauf, auch für Sie die ideale Lösung zu finden."
+
+#: app/views/components/navigation/submenu-29.blade.php:4
+msgid "Contact now"
+msgstr "Jetzt Kontakt aufnehmen"
 
 #: app/views/components/navigation/submenu-38.blade.php:2
 msgid "Career at Siconnex"
