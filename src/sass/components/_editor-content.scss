@@ -42,4 +42,17 @@ body#tinymce.wp-editor {
             margin-top: 0;
         }
     }
+    &--fake {
+        ul {
+            @extend %ul !optional;
+            margin-bottom: 0;
+            > li {
+                margin-bottom: 0;
+                &::before {
+                    color: white;
+                }
+            }
+
+        }
+    }
 }

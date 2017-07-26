@@ -15,19 +15,17 @@ $block-padding: em(80);
   }
 
   &__text {
-
+    padding: 0;
     &--quote {
 
       #{$block}__text__description {
-        padding: em(20) 0;
         position: relative;
-        z-index: 5;
         @include icon( 'quote');
         &::before {
           @extend %icon;
           position: absolute;
           top: 0;
-          left: -1em;
+          left: -1.5em;
           font-size: em(20);
           line-height: 1;
           display: block;
@@ -37,11 +35,17 @@ $block-padding: em(80);
         &::after {
           @extend %icon;
           position: absolute;
-          bottom: 0;
-          right:-1em;
+          bottom: -1em;
+          right:0;
           display: block;
           opacity: 0.3;
           font-size: em(20);
+        }
+        &--no-quote {
+          &::before,
+          &::after {
+            display: none;
+          }
         }
       }
     }
@@ -154,7 +158,9 @@ $block-padding: em(80);
   }
   @include mq($from: screen-md) {
      @include clearfix;
-
+     &__text {
+        padding: em(20) 0 em(20) em(50);
+     }
     &__content {
       &--left,
       &--right {
@@ -180,10 +186,6 @@ $block-padding: em(80);
   @include mq($from: screen-xl) {
     padding-top: 0;
     padding-bottom: 0;
-
-    &__text {
-      padding: 5em 2em;
-    }
 
   }
 
