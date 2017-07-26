@@ -11,7 +11,7 @@ $link_page_id = 29;
 		</div>
 		<div class="nav-content__image-box__text">
 			<div class="nav-content__image-box__text__headline">{{ $title }}</div>
-			<div class="nav-content__image-box__text__description">{{ $description }}</div>
+			<div class="nav-content__image-box__text__description">{!! $description !!}</div>
 			<div class="nav-content__image-box__text__link">{{ $linktext }}</div>
 		</div>
 	</a>
