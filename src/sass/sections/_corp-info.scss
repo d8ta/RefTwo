@@ -16,6 +16,10 @@ $block: '.corp-info';
         &__logo-wrapper {
             position: relative;
         }
+        &__image {
+            width: 100%;
+            padding: em(30) 0;
+        }
         &__logo {
             &--svg {
                 width: 10em;
@@ -46,7 +50,19 @@ $block: '.corp-info';
             max-width: em(300);
         }
     }
+    @include mq($from: screen-xs) {
+        &__text {
+            &__image {
+                width: 80%;
+            }
+        }
+    }
     @include mq($from: screen-sm) {
+        &__text {
+            &__image {
+                width: 60%;
+            }
+        }
         &__images {
             width: 100%;
             max-width: none;
@@ -61,6 +77,10 @@ $block: '.corp-info';
     }
     @include mq($from: screen-lg) {
         &__text {
+            &__image {
+                width: 80%;
+                margin: 0;
+            }
             float: left;
             margin: 0;
             text-align: left;

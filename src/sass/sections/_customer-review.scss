@@ -6,6 +6,7 @@ $block-padding: em(80);
   position: relative;
   padding: $block-padding 0;
   z-index: 3;
+  height: 100%;
 
   img {
     width: 100%;
@@ -13,27 +14,20 @@ $block-padding: em(80);
     display: block;
   }
 
-  &__content {
-    &--left {
-      margin-bottom: em(50);
-    }
-  }
-
   &__text {
-    max-width: em(650);
 
     &--quote {
-      margin-left: em(30);
 
       #{$block}__text__description {
-        margin-top: em(20);
+        padding: em(20) 0;
+        position: relative;
+        z-index: 5;
         @include icon( 'quote');
-
         &::before {
           @extend %icon;
           position: absolute;
-          top: -.2em;
-          left: -1.1em;
+          top: 0;
+          left: -1em;
           font-size: em(20);
           line-height: 1;
           display: block;
@@ -44,7 +38,7 @@ $block-padding: em(80);
           @extend %icon;
           position: absolute;
           bottom: 0;
-          right:0;
+          right:-1em;
           display: block;
           opacity: 0.3;
           font-size: em(20);
@@ -131,15 +125,11 @@ $block-padding: em(80);
     width: 100%;
     left: 0;
     background: $color-white;
-    padding-top: 10%;
     z-index: 2;
+    height: 15%;
     display: none;
   }
 
-  &__whitebox-top {
-    top: -2em;
-    // background: red;
-  }
 
   &__whitebox-bottom {
     bottom: 0;
@@ -149,38 +139,41 @@ $block-padding: em(80);
   &__whitebox-helper {
     height: $block-padding;
   }
+
+  .owl-stage-outer,
+  .owl-stage,
+  .owl-item {
+    height: 100%;
+  }
+  .owl-dots {
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    bottom: rem(80);
+  }
   @include mq($from: screen-md) {
      @include clearfix;
 
-    &__slider {
-      width: 45%;
-      float: left;
-    }
-
     &__content {
-      &--left {
-        float: left;
-        width: 85%;
-        margin-bottom: 0;
-        padding-top: 2em;
-      }
-
+      &--left,
       &--right {
-        float: right;
+        float: left;
         width: 50%;
       }
+      &--left {
+        padding-right: rem(200);
+      }
+    }
+    &__slider {
+      height: 100%;
+      position: relative;
     }
 
-    &__whitebox-bottom {
-      display: block;
-      // background: teal;
-      height: 3em;
-    }
-
+    &__whitebox-bottom,
     &__whitebox-top {
       display: block;
-      // background: red;
-      height: 4.5em;
+      height: 8%;
     }
   }
   @include mq($from: screen-lg) {}
@@ -189,21 +182,11 @@ $block-padding: em(80);
     padding-bottom: 0;
 
     &__text {
-      padding-top: 3em;
+      padding: 5em 2em;
     }
 
-    &__whitebox-bottom,
-    &__whitebox-top {
-      display: block;
-      padding: 0;
-    }
   }
 
-  .owl-dots {
-    margin: -2em 0 1.25em;
-    text-align: center;
-    padding-bottom: 2em;
-  }
 
   .owl-dot {
     display: inline-block;
@@ -225,7 +208,7 @@ $block-padding: em(80);
   .owl-nav {
     position: absolute;
     top: 0;
-    right: 0;
+    right: -15%;
     height: 100%;
   }
 
