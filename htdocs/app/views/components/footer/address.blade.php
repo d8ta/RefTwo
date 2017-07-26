@@ -8,9 +8,9 @@ $optionsHelper = OptionsHelper::getInstance();
     <div class="address__text">
 	    <span>{{ $optionsHelper->getOption("company_street") }}</span><br>
 	    <span>{{ $optionsHelper->getOption("company_postal_code") }}</span> <span>{{ $optionsHelper->getOption("company_city") }}</span><br>
-	    Tel: <span>{{ $optionsHelper->getOption("company_phone") }}</span><br>
-	    Fax: <span>{{ $optionsHelper->getOption("company_fax") }}</span><br>
-	    E-Mail: <span><a href="mailto:{{ $optionsHelper->getOption("company_email") }}">{{ $optionsHelper->getOption("company_email") }}</a></span>
+	    T: <span>{{ $optionsHelper->getOption("company_phone") }}</span><br>
+	    F: <span>{{ $optionsHelper->getOption("company_fax") }}</span><br>
+	    E: <span><a href="mailto:{{ $optionsHelper->getOption("company_email") }}">{{ $optionsHelper->getOption("company_email") }}</a></span>
     </div>
     
 </address>
