@@ -13,6 +13,7 @@
 		<strong>Firma: </strong> {{$company}}<br>
 		<strong>Telefon: </strong> {{$phone}}<br>
 		<strong>E-Mail: </strong> {{$email}}<br><br>
+		<strong>Thema: </strong> {{$recipient}}<br><br>
 		<strong>Nachricht: </strong><br>
 		{!!nl2br($message)!!}
 	</p>

@@ -6,6 +6,11 @@ $client = Project\Application::getInstance()->getConfig('client');
 use A365\Wordpress\Helpers\Acf\OptionsHelper;
 $optionsHelper = OptionsHelper::getInstance();
 
+$label_message = __('Your Message');
+$label_thank = __('Thank you for your message');
+$label_soon = __('We will respond as soon as possible.');
+$label_greets = __('Best regards,');
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -14,20 +19,19 @@ $optionsHelper = OptionsHelper::getInstance();
 </head>
 <body>
 
-	<h2>Vielen Dank für Ihre Nachricht!</h2>
-	<p>Wir bearbeiten sie so rasch wie möglich.</p>
-	{{-- <p>Mail wurde gesendet an: {{$sendto}}</p> --}}
+	<h2>{{$label_thank}}</h2>	
+	<p>{{$label_soon}}</p>
 
 
 	@if($message)
 		<p>
-			<strong>Ihre Nachricht</strong><br>
+			<strong>{{$label_message}}</strong><br>
 			<span style="font-style: italic">{!!nl2br($message)!!}</span>
 		</p>
 	@endif
 
 	<p>&nbsp;</p>
-	<p>Freundliche Grüße,<br>Siconnex customized solutions GmbH</p>
+	<p>{{$label_greets}}<br>Siconnex customized solutions GmbH</p>
 	<!-- <p style="margin: 0"><img src="{{get_site_url()}}/{{$logo}}" alt="{{get_bloginfo()}}"></p> -->
 	<p style="margin: 0">
 		<address style="font-style: normal">

@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Siconnex\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/envimet\n"
-"POT-Creation-Date: 2017-07-26 16:03+0200\n"
-"PO-Revision-Date: 2017-07-26 16:04+0200\n"
+"POT-Creation-Date: 2017-07-28 11:34+0200\n"
+"PO-Revision-Date: 2017-07-28 11:36+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -93,6 +93,22 @@ msgstr "Vielen Dank für Ihre Nachricht."
 #: app/sections/download.blade.php:28
 msgid "PDF Download"
 msgstr "PDF herunterladen"
+
+#: app/views/ajax/contact-form/feedback.blade.php:9
+msgid "Your Message"
+msgstr "Ihre Nachricht"
+
+#: app/views/ajax/contact-form/feedback.blade.php:10
+msgid "Thank you for your message"
+msgstr "Vielen Dank für Ihre Nachricht"
+
+#: app/views/ajax/contact-form/feedback.blade.php:11
+msgid "We will respond as soon as possible."
+msgstr "Wir werden uns in Kürze mit Ihnen in Verbindung setzen."
+
+#: app/views/ajax/contact-form/feedback.blade.php:12
+msgid "Best regards,"
+msgstr "Freundliche Grüße,"
 
 #: app/views/components/alerts/browser-incompatible.blade.php:5
 msgid "You are using an incompatible browser."
