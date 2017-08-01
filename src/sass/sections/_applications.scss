@@ -1,73 +1,69 @@
 $block: '.applications';
 #{$block} {
     &__info {
-        text-align: left;
-        margin-bottom: 1em;
-        &__text {
-            img {
-                transition: all 3s;
-                &:hover {
-                    transform: scale(1.05);
-                }
+        margin: 1.5rem 0;
+        &__description {
+            max-width: em(700);
+        }
+        &__wrapper {
+            margin-top: em(30);
+        }
+        &__content {
+            @include clearfix;
+
+            &__text {
+                display: inline-block;
+                width: 100%;
+                vertical-align: top;
+            }
+        }
+        &__image {
+            width: em(250);
+            margin-bottom: em(20);
+            &__img {
                 border-radius: em(5);
+                width: 80%;
+                height: auto;
             }
-            padding-bottom: 4em;
-            &__title {
-                @extend %h1;
-                min-width: 30em;
+        }
+    }
+    @include mq($from: screen-xs) {
+        &__info {
+
+            &__content {
+
+                &__text {
+                    width: 49%;
+                }
             }
-            &__description {
-                @extend %text-base;
-                padding-right: 2em;
-                padding-bottom: em(10);
-            }
-            &__editor {
-                @extend %text-base;
-                padding-top: 1em;
-                &__middle {
-                    margin-top: -5.75em;
+        }
+    }
+    @include mq($from: screen-sm) {
+        &__info {
+
+            &__content {
+                &__text {
+                    float: left;
+                    display: block;
+                    width: 29.3333%;
+                    margin-right: 4%;
                 }
             }
         }
     }
     @include mq($from: screen-md) {
         &__info {
-            &__text {
-                float: left;
-                &__image {
-                    float: left;
-                }
-                &__description {
-                    max-width: 80em;
-                }
-                &__editor {
-                    width: 20%;
-                    padding-left: 1em;
-                    padding-right: 3em;
-                    padding-top: 0;
-                    &__middle {
-                        margin-top: 1.9em;
-                    }
-                }
+            &__wrapper {
+                display: table;
+                width: 100%;
+                max-width: em(1200);
             }
-        }
-    }
-    @include mq($from: screen-lg) {
-        &__info {
-            &__text {
-                float: left;
-                &__image {
-                    float: left;
-                }
-                &__description {
-                    max-width: 80em;
-                }
-                &__editor {
-                    width: 25%;
-                    &__middle {
-                        width: 25%;
-                    }
-                }
+            &__image {
+                display: table-cell;
+            }
+            &__content {
+
+                display: table-cell;
             }
         }
     }

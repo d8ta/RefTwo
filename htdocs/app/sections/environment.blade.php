@@ -21,7 +21,7 @@
 								<div class="environment__box__text">
 									<h2 class="environment__box__text__title">{!!$title!!}</h2>
 									<h3 class="environment__box__text__subtitle">{{$subtitle}}</h3>
-									<div class="environment__box__text__description">{!!$description!!}</div>
+									<div class="environment__box__text__description editor-content">{!!$description!!}</div>
 								</div>
 							</div>
 						</div>

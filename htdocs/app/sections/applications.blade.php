@@ -14,13 +14,18 @@ $sections = $block->getSections();
 			$right = $section['right'];
 			?>
 			<div class="applications__info">
-				<div class="applications__info__text">
-					<h2 class="applications__info__text__title">{!!$title!!}</h2>
-					<div class="applications__info__text__description">{{$description}}</div>
-					<img src="{{$image}}" alt="application Image" class="applications__info__text__image" />
-					<div class="applications__info__text applications__info__text__editor editor-content">{!!$left!!}</div>
-					<div class="applications__info__text applications__info__text__editor__middle editor-content">{!!$middle!!}</div>
-					<div class="applications__info__text applications__info__text__editor editor-content">{!!$right!!}</div>
+				<h2 class="applications__info__title h1">{!!$title!!}</h2>
+				<div class="applications__info__description editor-content">{!!$description!!}</div>
+
+				<div class="applications__info__wrapper">
+					<div class="applications__info__image">
+						<img src="{{$image}}" alt="application Image" class="applications__info__image__img" />
+					</div>
+					<div class="applications__info__content">
+						<div class="applications__info__content__text editor-content">{!!$left!!}</div>
+						<div class="applications__info__content__text editor-content">{!!$middle!!}</div>
+						<div class="applications__info__content__text editor-content">{!!$right!!}</div>
+					</div>
 				</div>
 			</div>
 			@endforeach

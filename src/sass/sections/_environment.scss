@@ -28,9 +28,6 @@ $block: '.environment';
             &__subtitle {
                 @extend %h2;
             }
-            &__description {
-                @extend %text-base;
-            }
         }
     }
     @include mq($from: screen-sm) {
@@ -56,18 +53,14 @@ $block: '.environment';
             padding: 0;
             &__text {
                 padding: 2em;
+                text-align: left;
                 &__title {
-                    text-align: left;
                     margin-top: 0;
                 }
-                &__subtitle {
-                    text-align: left;
-                }
                 &__description {
-                    text-align: left;
+                    
                     margin-left: 0;
                     max-width: 85%;
-                    display: block;
                 }
             }
         }

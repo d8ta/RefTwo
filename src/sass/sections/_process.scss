@@ -1,19 +1,19 @@
 $block: '.process';
 #{$block} {
     &__info {
-        text-align: left;
-        margin: 1.5em 0;
+        margin: 2.5rem 0;
         @include clearfix;
         &__link {
             display: block;
             margin-bottom: em(20);
-            &__img {
-                transition: all 3s;
+            width: 70%;
+            max-width: em(300);
+            &__image {
                 display: block;
-                border-radius: em(5);
-                &:hover {
-                    transform: scale(1.05);
-                }
+                max-width: 100%;
+                width: auto;
+                height: auto;
+                
             }
         }
         &__text {
