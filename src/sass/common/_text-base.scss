@@ -3,7 +3,7 @@
     font-family: $font-headline;
     font-size: em(33);
     font-weight: bold;
-    line-height: 1.1;
+    line-height: 1.25;
     margin-bottom: .3em;
     color: $brand-primary;
     @include mq($from: screen-sm) {
@@ -25,7 +25,7 @@
 
 %h2 {
     font-size: em(24);
-    line-height: 1.2;
+    line-height: 1.25;
     font-weight: bold;
     margin-bottom: .5em;
     color: $color-grey;
@@ -49,7 +49,7 @@
     font-size: em(20);
     font-family: $font-headline;
     font-weight: bold;
-    line-height: 1.2;
+    line-height: 1.25;
     margin-bottom: .3em;
     color: $brand-primary;
 }
@@ -63,21 +63,21 @@
     font-size: em(16);
     font-family: $font-normal;
     font-weight: bold;
-    line-height: 1.2;
+    line-height: 1.25;
     margin-bottom: .3em;
     color: $color-text;
 }
 
 %intro-text {
     font-size: em(21);
-    line-height: 1.2;
+    line-height: 1.25;
     margin-bottom: .8em;
 }
 
 %text-base {
     font-family: $font-normal;
     font-size: em(16);
-    line-height: 1.65;
+    line-height: 1.6;
     margin-bottom: .8em;
 }
 
@@ -104,7 +104,7 @@
     }
     > li {
         padding-left: em(20);
-        padding-bottom: em(8);
+        padding-bottom: em(5);
         position: relative;
         @include icon('arrowright');
         &::before {
