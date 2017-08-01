@@ -9,13 +9,6 @@ $info-padding: 1%;
         }
         &__text {
             padding-right: 1em;
-            &__title {
-                @extend %h4-alt;
-            }
-            &__description {
-                @extend %text-base;
-                margin: 0;
-            }
         }
     }
     @include mq($from: screen-sm) {

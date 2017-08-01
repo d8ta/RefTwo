@@ -10,9 +10,9 @@
 			$subtitle = $block->getSubtitle();
 			$description = $block->getDescription();
 			?>
-			<h2 class="technology-teaser__inner__title">{!!$title!!}</h2>
-			<h3 class="technology-teaser__inner__subtitle">{{$subtitle}}</h3>
-			<div class="technology-teaser__inner__description">{!!$description!!}</div>
+			<h2 class="technology-teaser__inner__title h1">{!!$title!!}</h2>
+			<div class="technology-teaser__inner__subtitle h2">{{$subtitle}}</div>
+			<div class="technology-teaser__inner__description editor-content">{!!$description!!}</div>
 		</div>
 
 		<div class="technology-teaser__boxes">
@@ -31,10 +31,10 @@
 				</div>
 				<div class="technology-teaser__boxes__box__text">
 					<div class="js-matchheight" data-mh="{{ $mh_group }}">
-						<h2 class="technology-teaser__boxes__box__text__title">{{$title}}</h2>
+						<h3 class="technology-teaser__boxes__box__text__title h4">{{$title}}</h3>
 
-						<div class="technology-teaser__boxes__box__text__description">
-							{{$description}}
+						<div class="technology-teaser__boxes__box__text__description editor-content">
+							{!!$description!!}
 						</div>
 					</div>
 				</div>

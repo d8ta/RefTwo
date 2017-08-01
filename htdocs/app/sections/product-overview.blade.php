@@ -17,9 +17,9 @@
 				$subtitle = $block->getSubtitle();
 				$text = $block->getText();
 				?>
-				<h2 class="products-overview__text__title">{{$title}}</h2>
-				<h3 class="products-overview__text__subtitle">{{$subtitle}}</h3>
-				<div class="products-overview__text__text">{{$text}}</div>
+				<h2 class="products-overview__text__title h1">{{$title}}</h2>
+				<h3 class="products-overview__text__subtitle h2">{{$subtitle}}</h3>
+				<div class="products-overview__text__text editor-content">{{$text}}</div>
 			</div>
 
 			<div class="products-overview__listing">
@@ -31,7 +31,7 @@
 							<div class="products-overview__listing__content__all products-overview__listing__content__info">
 								<img class="products-overview__listing__content__info__logo" src="{!!$imageHelper->getImageUrl($product['logo'], '')!!}" alt="Produkt Logo">
 								<div class="products-overview__listing__content__info__description js-matchheight" data-mh="{{ $mh_group }}">
-									<div>{!!$product['description']!!}</div>
+									<div class="editor-content">{!!$product['description']!!}</div>
 								</div>
 								<div class="products-overview__listing__content__info__link btn btn--yellow">{{$product['linktext']}}</div>
 							</div>

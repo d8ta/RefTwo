@@ -4,16 +4,12 @@ $block: '.products-overview';
     text-align: center;
     &__text {
         &__title {
-            @extend %h1;
             max-width: em(300);
             margin-left: auto;
             margin-right: auto;
         }
-        &__subtitle {
-            @extend %h2;
-        }
+       
         &__text {
-            @extend %text-base;
             max-width: em(650);
             margin-left: auto;
             margin-right: auto;
@@ -56,7 +52,6 @@ $block: '.products-overview';
                     }
                 }
                 &__description {
-                    @extend %text-base;
                     margin-bottom: em(40);
                     max-width: em(456);
                     min-height: em(120);

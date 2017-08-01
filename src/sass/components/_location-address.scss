@@ -6,10 +6,6 @@ $block: '.location-address';
         margin-bottom: em(10);
     }
     &__headline {
-        @extend %h3;
         color: $color-white;
-    }
-    &__text {
-        @extend %text-base;
     }
 }

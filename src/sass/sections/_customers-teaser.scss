@@ -3,7 +3,6 @@ $block: '.customers-teaser';
 #{$block} {
   &__inner {
     &__title {
-      @extend %h1;
       text-align: center;
       margin-left: auto;
       margin-right: auto;
@@ -11,12 +10,10 @@ $block: '.customers-teaser';
     }
 
     &__subtitle {
-      @extend %h2;
       text-align: center;
     }
 
     &__description {
-      @extend %text-base;
       text-align: center;
       max-width: 47em;
       margin: 0 auto;

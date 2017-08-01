@@ -5,16 +5,11 @@ $block: '.news';
     text-align: left;
 
     &__headline {
-      @extend %h1;
       padding-right: 2em;
     }
 
-    &__subline {
-      @extend %h2;
-    }
 
     &__content {
-      @extend %text-base;
       margin-bottom: 1.8em;
     }
   }

@@ -1,23 +1,13 @@
 $block: '.headquarters';
 #{$block} {
-    &__headline {
-        @extend %h1;
-    }
-    &__subline {
-        @extend %h2;
-    }
+
     &__locations {
         &__location {
             text-align: left;
             margin-top: 3em;
             position: relative;
             padding-left: em(50);
-            &__headline {
-                @extend %h4;
-            }
-            &__text {
-                @extend %text-base;
-            }
+            
             &::before {
                 position: absolute;
                 width: em(36);

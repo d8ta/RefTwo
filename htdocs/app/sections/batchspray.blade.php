@@ -14,8 +14,8 @@
 
 			{{-- left --}}
 			<div class="batchspray__text">
-				<h2 class="batchspray__text__title">{!!$title!!}</h2>
-				<h3 class="batchspray__text__subtitle">{{$subtitle}}</h3>
+				<h2 class="batchspray__text__title h1">{!!$title!!}</h2>
+				<h3 class="batchspray__text__subtitle h2">{{$subtitle}}</h3>
 				<div class="batchspray__text__description editor-content">{!!$description!!}</div>
 				<div class="batchspray__text__footer">
 					@if($button_url)

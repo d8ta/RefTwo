@@ -6,8 +6,8 @@
 		?>
 		<div class="news">
 			<div class="news__text">
-				<div class="news__text__headline">{{$news->getPostTitle()}}</div>
-				<div class="news__text__subline">{!!$news->getSubline()!!}</div>
+				<div class="news__text__headline h1">{{$news->getPostTitle()}}</div>
+				<div class="news__text__subline h2">{!!$news->getSubline()!!}</div>
 				<div class="news__text__content editor-content">{!!$news->getContent()!!}</div>	
 			</div>
 			<div class="news__images">

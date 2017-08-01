@@ -4,14 +4,7 @@ $block: '.technology-teaser';
     margin: 0 auto em(50);
     text-align: center;
     &__inner {
-        &__title {
-            @extend %h1;
-        }
-        &__subtitle {
-            @extend %h2;
-        }
         &__description {
-            @extend %text-base;
             max-width: em(650);
             margin-left: auto;
             margin-right: auto;
@@ -46,11 +39,7 @@ $box-padding: 1%;
         }
         &__text {
             padding: em(30) 8%;
-            &__title {
-                @extend %h4;
-            }
             &__description {
-                @extend %text-base;
                 display: none;
             }
             &__link {

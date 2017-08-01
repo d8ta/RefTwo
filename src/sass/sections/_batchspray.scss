@@ -3,15 +3,10 @@ $block: '.batchspray';
     &__text {
         text-align: left;
         &__title {
-            @extend %h1;
             color: $brand-primary;
         }
         &__subtitle {
-            @extend %h2;
             color: $color-grey;
-        }
-        &__description {
-            @extend %text-base;
         }
         &__footer {
             max-width: 15em;

@@ -29,9 +29,9 @@ $news_items = Project\Models\News::allPublished();
 	<div class="section__content">
         <div class="news">
 		  <div class="news__text">
-			 <h2 class="news__text__title">{{$title}}</h2>
-			 <h3 class="news__text__subtitle">{!!$subtitle!!}</h3>
-			 <div class="news__text__description editor-content">
+			 <h2 class="news__text__title h1">{{$title}}</h2>
+			 <h3 class="news__text__subtitle h2">{!!$subtitle!!}</h3>
+			 <div class="news__text__description">
                 <div class="news__text__description__clamp editor-content">
                     {!!$description!!}
                 </div>

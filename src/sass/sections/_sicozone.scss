@@ -29,9 +29,6 @@ $block: '.sicozone';
       vertical-align: top;
       border: em(1) solid $brand-primary;
 
-      &__description {
-        @extend %text-base;
-      }
     }
   }
   @include mq($from: screen-sm) {
