@@ -18,7 +18,7 @@ class CustomerReview extends \A365\Wordpress\Block\AcfBlock
         FieldHelper::createRepeater('slides', 'Slides', ["min" => 1, "max" => 10])
         ->addSubfields([
           FieldHelper::createText('title', 'Überschrift')->setRequired(),
-          FieldHelper::createText('description', 'Beschreibung')->setRequired(),
+          FieldHelper::createWysiwyg('description', 'Beschreibung')->setRequired(),
           FieldHelper::createText('signature', 'Unterschrift'),
         ]),
         FieldHelper::createImageCrop('big_image', 'Kundenbild groß', ["crop_type" => "hard", 'target_size' => 'custom', 'force_crop' => 'no', 'save_format' => 'url', "width" => 620, "height" => 620])->setRequired(),

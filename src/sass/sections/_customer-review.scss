@@ -60,8 +60,6 @@ $block-padding: em(80);
     }
 
     &__description {
-      @extend %intro-text;
-      color: $color-white;
       position: relative;
     }
 

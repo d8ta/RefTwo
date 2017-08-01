@@ -26,7 +26,7 @@
 						<div class="customer-review__text customer-review__text--quote">
 							<div class="customer-review__text__inner">
 								<h2 class="customer-review__text__title">{!!$title!!}</h2>
-								<div class="customer-review__text__description editor-content editor-content--fake @if($noquote)customer-review__text__description--no-quote @endif">
+								<div class="customer-review__text__description editor-content editor-content--white @if($noquote)customer-review__text__description--no-quote @endif">
 									{!!$description!!}
 								</div>
 								<div class="customer-review__text__author">{{$signature}}</div>

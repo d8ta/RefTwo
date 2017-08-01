@@ -103,13 +103,13 @@
         }
     }
     > li {
-        line-height: 1.45;
-        margin-bottom: .4em;
         padding-left: em(20);
+        padding-bottom: em(8);
         position: relative;
         @include icon('arrowright');
         &::before {
             @extend %icon;
+            display: block;
             position: absolute;
             font-size: .8em;
             left: 0;
