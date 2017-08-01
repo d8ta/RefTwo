@@ -1,4 +1,4 @@
-sub, sup {
+sub, sup, .symbols {
   /* Specified in % so that the sup/sup is the
      right size relative to the surrounding text */
   font-size: 75%;
@@ -16,7 +16,7 @@ sub, sup {
   vertical-align: baseline;
 }
 
-sup {
+sup, .symbols {
   /* Move the superscripted text up */
   top: -0.5em;
 }

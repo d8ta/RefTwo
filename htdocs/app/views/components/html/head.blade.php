@@ -30,6 +30,10 @@ if (is_readable($css)) {
     <script type="text/javascript" src="assets/js/vendor/modernizr.min.js?{!!filemtime('assets/js/vendor/modernizr.min.js')!!}"></script>
     <script src="https://use.typekit.net/bzd4uum.js"></script>
     <script>try{Typekit.load({ async: false });}catch(e){}</script>
+    <script type="text/javascript">
+        var config = {};
+        config.lang = '<?php echo pll_current_language(); ?>';
+    </script>
 
     <?php wp_head(); ?>
 

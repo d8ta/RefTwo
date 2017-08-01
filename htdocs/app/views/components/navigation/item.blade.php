@@ -1,12 +1,12 @@
 <?php
 $has_submenu_div = $nav_item->level == 1 && $nav_item->with_submenu_div;
-$nav_link = get_permalink(pll_get_post($nav_item->page->getId()));
-if (isset($nav_item->hash)) {
-	$nav_link .= $nav_item->hash;
-}
+
+
+
+
 ?>
 <li class="{{$nav_item->class}}">
-	<a href="{{ $nav_link }}">{{$nav_item->title}}</a>
+	<a href="{{ $nav_item->link }}">{!!$nav_item->title!!}</a>
 	@if (isset($nav_item->submenu))
 		@if ($has_submenu_div)
 			<div class="nav-submenu">
@@ -21,8 +21,8 @@ if (isset($nav_item->hash)) {
 		@if ($has_submenu_div)
 				</div>
 				<div class="nav-submenu__content">
-					<?php $page_id = pll_get_post($nav_item->page_id, 'de'); ?>
-					@includeIf("components.navigation.submenu-" . $page_id)
+					<?php $post_id = pll_get_post($nav_item->post_id, 'de'); ?>
+					@includeIf("components.navigation.submenu-" . $post_id)
 				</div>
 			</div>
 			</div>

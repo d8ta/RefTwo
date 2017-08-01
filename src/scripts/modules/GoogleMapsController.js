@@ -45,7 +45,7 @@ GoogleMapsController.prototype.loadLibrary = function() {
 
     var script = document.createElement('script');
     script.type = 'text/javascript';
-    script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp&language=de&callback=libraryCallback&key=AIzaSyBkKl8VsPSJFcfqLGHm_pLCMmtVV5QB5lc';
+    script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp&language=' + config.lang + '&callback=libraryCallback&key=AIzaSyBkKl8VsPSJFcfqLGHm_pLCMmtVV5QB5lc';
 
     document.body.appendChild(script);
 };

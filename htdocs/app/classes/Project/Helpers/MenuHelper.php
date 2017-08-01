@@ -1,7 +1,7 @@
 <?php
 namespace Project\Helpers;
 
-
+use A365\Wordpress\Models\Page;
 use Project\Models\MenuElement;
 
 class MenuHelper extends \A365\Wordpress\Helpers\MenuHelper
@@ -43,10 +43,13 @@ class MenuHelper extends \A365\Wordpress\Helpers\MenuHelper
 
             if ( $element->menu_item_parent == $parentMenuElement->menu_item_id )
             {
-
                 $config = array();
+
                 $config["active"] = ($element->object_id == get_the_ID());
-                $config["page_id"] = $element->object_id;
+                $config["type"] = $element->type;
+                $config["link"] = $element->url;
+                $config["post_id"] = $element->object_id;
+                
                 $config["menu_item_parent"] = $element->menu_item_parent;
                 $config["with_submenu_div"] = $this->_with_submenu_div;
                 $config["title"] = $element->title;
@@ -54,8 +57,9 @@ class MenuHelper extends \A365\Wordpress\Helpers\MenuHelper
                 $menuElement = MenuElement::create($element->ID, $level, $config);
 
                 if ($level < $this->_depth) {
+                    $prepend = (pll_get_post($element->object_id, 'de') == 29); // kontaktseite
                     $menuElement->addSubmenuPages($this->_buildTree($menuElement, $level ));
-                    $menuElement->addHashSections($menuElement->page->getHashSections(), $level, $element->object_id);
+                    $menuElement->addHashSections(Page::find($element->object_id)->getHashSections(), $level, $element->object_id, $prepend);
                 }
 
                 $element = $menuElement;
