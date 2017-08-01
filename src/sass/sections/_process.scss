@@ -21,19 +21,19 @@ $block: '.process';
             &__col {
                 display: inline-block;
                 vertical-align: top;
-                width: 49%;
+                width: 100%;
             }
         }
     }
+    @include mq($from: screen-xs) {
+        &__info__text__col {
+            width: 47%;
+            margin-right: 2%;
+        }
+    }
     @include mq($from: screen-sm) {
-        &__info {
-            &__text {
-                @include clearfix;
-                &__col {
-                    width: 32.3333%;
-                    
-                }
-            }
+        &__info__text__col {
+            width: 30.3333%;
         }
     }
 }
