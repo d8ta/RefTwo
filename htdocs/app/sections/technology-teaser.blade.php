@@ -1,8 +1,6 @@
 <?php
 	$techboxes = $block->getBox();
 	$mh_group = "technology-boxes-" . rand();
-	global $wp;
-	$site_url = home_url(add_query_arg(array(),$wp->request)) . '/' . '?p=25/#'; //page id of technologies
 ?>
 <div class="section section--margin-md">
 	<div class="section__content">
@@ -22,10 +20,13 @@
 			<?php
 			$title = $techbox['title'];
 			$description = $techbox['description'];
-			$link = $techbox['link'];
 			$text = $techbox['text'];
+			$pagelink = $techbox['pagelink'];
+			if (isset($techbox['hash']) && strlen($techbox['hash'])) {
+				$pagelink .= '#' . $techbox['hash'];
+			}
 			?>
-			<a href="{{$site_url}}{{$link}}" class="technology-teaser__boxes__box">
+			<a href="{{$pagelink}}" class="technology-teaser__boxes__box">
 				<div class="technology-teaser__boxes__box__image bg-image" style="background-image: url({{$techbox['background']}})">
 				</div>
 				<div class="technology-teaser__boxes__box__text">

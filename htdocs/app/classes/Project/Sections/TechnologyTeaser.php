@@ -22,7 +22,8 @@ class TechnologyTeaser extends \A365\Wordpress\Block\AcfBlock {
 					FieldHelper::createImageCrop('background', 'Hintergrund', ["crop_type" => "hard", 'target_size' => 'custom', 'force_crop' => 'no', 'save_format' => 'url', "width" => 280, "height" => 220])->setRequired(),
 					FieldHelper::createText('title', 'Überschrift')->setRequired(),
 					FieldHelper::createText('description', 'Beschreibung')->setRequired(),
-					FieldHelper::createText('link', 'Link'),
+					FieldHelper::createPageLink('pagelink', 'Link zur Seite')->setRequired(),
+					FieldHelper::createText('hash', 'Hash', ['prepend' => '#']),
 					FieldHelper::createText('text', 'Text')->setRequired(),
 			]),
 
