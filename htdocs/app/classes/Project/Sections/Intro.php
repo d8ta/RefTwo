@@ -62,7 +62,7 @@ class Intro extends \A365\Wordpress\Block\AcfBlock {
 				'return_format' => 'value',
 			),
 			FieldHelper::createText('headline', 'Überschrift')->setRequired(),			
-			FieldHelper::createTextarea('text', 'Beschreibung'),			
+			FieldHelper::createWysiwyg('text', 'Beschreibung'),			
 		];
 	}
 }

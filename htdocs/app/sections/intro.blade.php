@@ -9,7 +9,7 @@ $fontsize = $block->getFontsize();
 		<div class="intro intro--{{$align}} intro--font-{{$fontsize}}">
 			<div class="intro__wrapper">
 				<h2 class="intro__headline">{{$title}}</h2>
-				@if(!empty($text)){{$text}}@endif
+				<div class="editor-content">{!!$text!!}</div>
 			</div>
 		</div>
 	</div>
