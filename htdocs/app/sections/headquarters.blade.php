@@ -9,33 +9,34 @@ $subline = $block->getSubline();
 		<h2 class="headquarters__headline h1">{{$headline}}</h2>
 		<h3 class="headquarters__subline h2">{{$subline}}</h3>
 		<div class="headquarters__locations">
-			<?php $first = true; ?>
+			<?php $i = 0; ?>
 			@foreach($locations as $location)
 				@if (isset($location))
 
+					@if($i == 0)
+						<h4 class="headquarters__locations__headline h4"><?php echo __('Siconnex Headquarter'); ?></h4>
+					@endif
+					@if($i == 1)
+						<h4 class="headquarters__locations__headline h4"><?php echo __('Siconnex Offices'); ?></h4>
+					@endif
+
 					<address class="headquarters__locations__location" data-locationid="{{ $location->getId() }}">
 						<div class="headquarters__locations__location__group">
-							<span class="headquarters__locations__location__headline h4">{{$location->getTitle()}}</span>
+							<span class="headquarters__locations__location__headline">{{$location->getTitle()}}</span>
 						</div>
 						<div class="headquarters__locations__location__group headquarters__locations__location__text editor-content">
 							<p>
 								@if(strlen($location->getDescription()))<span>{!!$location->getDescription()!!}</span><br>@endif
 								<span>{!!$location->getStreet()!!}</span><br>
 								<span class="headquarters__locations__location__zip">{{$location->getZip()}}</span> <span>{{$location->getCity()}}</span><br>
-								<span>{{$location->getCountry()}}</span>
-							</p>
-						</div>
-						<div class="headquarters__locations__location__group headquarters__locations__location__text editor-content">
-							<p>
-								<span>T: {{$location->getTel()}}</span><br>
-								E: <a href="mailto:{{$location->getEmail()}}">{{$location->getEmail()}}</a>
+								<span><?php echo __('Tel'); ?>: {{$location->getTel()}}</span><br>
+								@if($location->getFax() && strlen($location->getFax()))<span><?php echo __('Fax'); ?>: {{$location->getFax()}}</span><br>@endif
+								<?php echo __('E-Mail'); ?>: <a href="mailto:{{$location->getEmail()}}">{{$location->getEmail()}}</a>
 							</p>
 						</div>
 					</address>
-					@if($first)
-						</div><div class="headquarters__locations">
-					@endif
-					<?php $first = false; ?>
+					
+					<?php $i++; ?>
 				@endif
 			@endforeach
 		</div>

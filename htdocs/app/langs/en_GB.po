@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Siconnex\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/envimet\n"
-"POT-Creation-Date: 2017-07-28 11:36+0200\n"
-"PO-Revision-Date: 2017-07-28 11:36+0200\n"
+"POT-Creation-Date: 2017-08-01 17:46+0200\n"
+"PO-Revision-Date: 2017-08-01 17:47+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en_GB\n"
@@ -55,8 +55,10 @@ msgid "Phone"
 msgstr "Phone"
 
 #: app/sections/contact-form.blade.php:28
+#: app/sections/headquarters.blade.php:34
+#: app/views/components/location/address.blade.php:13
 msgid "E-Mail"
-msgstr "E-Mail"
+msgstr "Email"
 
 #: app/sections/contact-form.blade.php:29
 msgid "Message"
@@ -93,6 +95,24 @@ msgstr "Thank you for your message."
 #: app/sections/download.blade.php:28
 msgid "PDF Download"
 msgstr "PDF Download"
+
+#: app/sections/headquarters.blade.php:17
+msgid "Siconnex Headquarter"
+msgstr "Siconnex Headquarter"
+
+#: app/sections/headquarters.blade.php:20
+msgid "Siconnex Offices"
+msgstr "Siconnex Offices"
+
+#: app/sections/headquarters.blade.php:32
+#: app/views/components/location/address.blade.php:11
+msgid "Tel"
+msgstr "Tel"
+
+#: app/sections/headquarters.blade.php:33
+#: app/views/components/location/address.blade.php:12
+msgid "Fax"
+msgstr "Fax"
 
 #: app/views/ajax/contact-form/feedback.blade.php:9
 msgid "Your Message"

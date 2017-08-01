@@ -581,6 +581,27 @@ $config = [
 						'readonly' => 0,
 						'disabled' => 0,
 					),
+					array (
+						'key' => 'field_57bgh6w4fgs',
+						'label' => 'Fax',
+						'name' => 'fax',
+						'type' => 'text',
+						'instructions' => '',
+						'required' => 0,
+						'conditional_logic' => 0,
+						'wrapper' => array (
+							'width' => '',
+							'class' => '',
+							'id' => '',
+						),
+						'default_value' => '',
+						'placeholder' => '',
+						'prepend' => '',
+						'append' => '',
+						'maxlength' => '',
+						'readonly' => 0,
+						'disabled' => 0,
+					),
 
 					array (
 						'key' => 'field_5718c790f246f',

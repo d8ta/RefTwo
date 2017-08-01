@@ -2,11 +2,20 @@ $block: '.headquarters';
 #{$block} {
 
     &__locations {
+        margin: em(80) 0 0;
+        max-width: em(900);
+        &__headline {
+            text-transform: uppercase;
+            margin-bottom: em(10);
+        }
         &__location {
             text-align: left;
-            margin-top: 3em;
+            margin-bottom: 3em;
             position: relative;
             padding-left: em(50);
+            &__headline {
+                font-weight: bold;
+            }
             
             &::before {
                 position: absolute;
