@@ -15,7 +15,7 @@ class ResearchTeaser extends \A365\Wordpress\Block\AcfBlock {
 	{
 		return [
 				FieldHelper::createText('title', 'Überschrift')->setRequired(),
-				FieldHelper::createText('description', 'Beschreibung')->setRequired(),
+				FieldHelper::createWysiwyg('description', 'Beschreibung')->setRequired(),
 				FieldHelper::createPageLink('button_url', 'Button Link'),
                 FieldHelper::createText('button_text', 'Button Text')->setRequired(),
 				FieldHelper::createImageCrop('big_image', 'Forschungsbild groß', ["crop_type" => "hard", 'target_size' => 'custom', 'force_crop' => 'no', 'save_format' => 'url', "width" => 620, "height" => 620])->setRequired(),

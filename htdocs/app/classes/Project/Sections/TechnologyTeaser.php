@@ -16,12 +16,12 @@ class TechnologyTeaser extends \A365\Wordpress\Block\AcfBlock {
 		return [
 			FieldHelper::createText('title', 'Überschrift')->setRequired(),
 			FieldHelper::createText('subtitle', 'Unterüberschrift')->setRequired(),
-			FieldHelper::createText('description', 'Beschreibung')->setRequired(),
+			FieldHelper::createWysiwyg('description', 'Beschreibung')->setRequired(),
 			FieldHelper::createRepeater('box', 'Boxes', ["min" => 5, "max" => 5])
 				->addSubfields([
 					FieldHelper::createImageCrop('background', 'Hintergrund', ["crop_type" => "hard", 'target_size' => 'custom', 'force_crop' => 'no', 'save_format' => 'url', "width" => 280, "height" => 220])->setRequired(),
 					FieldHelper::createText('title', 'Überschrift')->setRequired(),
-					FieldHelper::createText('description', 'Beschreibung')->setRequired(),
+					FieldHelper::createWysiwyg('description', 'Beschreibung')->setRequired(),
 					FieldHelper::createPageLink('pagelink', 'Link zur Seite')->setRequired(),
 					FieldHelper::createText('hash', 'Hash', ['prepend' => '#']),
 					FieldHelper::createText('text', 'Text')->setRequired(),

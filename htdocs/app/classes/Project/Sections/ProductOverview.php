@@ -21,7 +21,7 @@ class ProductOverview extends \A365\Wordpress\Block\AcfBlock {
 				->addSubfields([
 					FieldHelper::createImage('image', 'Produktbild')->setRequired(),
 					FieldHelper::createImage('logo', 'Produktlogo')->setRequired(),
-					FieldHelper::createTextarea('description', 'Beschreibung')->setRequired(),
+					FieldHelper::createWysiwyg('description', 'Beschreibung')->setRequired(),
 	    			FieldHelper::createPageLink('link', 'Link'),
 		            FieldHelper::createText('linktext', 'Link Text'),
 				]),

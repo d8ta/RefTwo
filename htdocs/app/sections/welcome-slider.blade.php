@@ -24,7 +24,7 @@
 										<h2 class="welcome-slider__slide__text__pretitle">{{$pretitle}}</h2>
 										<h3 class="welcome-slider__slide__text__title">{!!$title!!}</h3>
 										@if($description)
-											<div class="welcome-slider__slide__text__description">{{$description}}</div>
+											<div class="welcome-slider__slide__text__description editor-content">{!!$description!!}</div>
 										@endif
 										@if($button_url)
 											<a class="btn" href="{{$button_url}}@if(!empty($button_hash))#{{$button_hash}}@endif">
