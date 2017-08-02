@@ -152,7 +152,7 @@ $block-padding: em(80);
     margin: 0 auto;
     left: 0;
     right: 0;
-    bottom: rem(80);
+    bottom: 10%;
   }
   @include mq($from: screen-md) {
      @include clearfix;

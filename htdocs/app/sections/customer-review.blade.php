@@ -20,7 +20,7 @@
 					    $signature = $slide['signature'];
 					    ?>
 
-					<div class="table table--fullheight">
+					<div class="table table--fullheight js-owl-item">
 						<div class="table__td">
 						{{-- left --}}
 						<div class="customer-review__text customer-review__text--quote">

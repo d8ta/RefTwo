@@ -19,6 +19,7 @@
     //= include common/AjaxForm.js
     //= include common/Application.js
     //= include common/Module.js
+    //= include common/Functions.js
 
     /* ======== Module includes ======== */
     //= include modules/AjaxFormController.js
