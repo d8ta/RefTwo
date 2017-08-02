@@ -15,12 +15,14 @@ $block: '.site-footer';
     }
     @include mq($from: screen-sm) {
         &__table {
-            // display: table;
-            // width: 100%;
+            display: table;
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: em(10) 0;
+            margin: 0 em(-10);
             &__col {
-                // display: table-cell;
+                display: table-cell;
                 &--address {
-                    float: left;
                     width: 20%;
                     min-width: em(240);
                 }
@@ -36,6 +38,7 @@ $block: '.site-footer';
     &__socialmedia {
         width: 100%;
         margin-top: em(10);
+        @include clearfix;
 
         &__facebook,
         &__linkedin,

@@ -1,12 +1,13 @@
 $block: '.footer-navigation';
 $nav-side-padding: 1%;
 #{$block} {
-    @include mq($until: $screen-md + 32) {
+    @include mq($until: screen-sm) {
         display: none;
     }
+
     a {
         display: block;
-                transition: color .2s;
+        transition: color .2s;
         &:hover {
             color: $color-grey;
         }
@@ -15,28 +16,31 @@ $nav-side-padding: 1%;
         @include clearfix;
         margin-left: -$nav-side-padding;
         margin-right: -$nav-side-padding;
-        @include mq($from: screen-lg) {
-            // display: table;
-            // width: 100%;
-            // table-layout: fixed;
+        @include mq($from: screen-xl) {
+            display: table;
+            width: 100%;
+            table-layout: fixed;
         }
-        > li {
+        >li {
             float: left;
-            // width: 33.3333% - 2 * $nav-side-padding;
-            // padding-left: $nav-side-padding;
-            padding-right: $nav-side-padding * 2;
+            width: 33.3333% - 2 * $nav-side-padding;
+            padding-left: $nav-side-padding;
+            padding-right: $nav-side-padding;
             padding-bottom: em(30);
             @include mq($from: screen-sm) {
-                // width: 50% - 2 * $nav-side-padding;
+                width: 50% - 2 * $nav-side-padding;
             }
             @include mq($from: screen-md) {
-                // width: 33.3333% - 2 * $nav-side-padding;
+                width: 33.3333% - 2 * $nav-side-padding;
             }
             @include mq($from: screen-lg) {
-                // float: none;
-                // display: table-cell;
+                width: 25% - 2 * $nav-side-padding;
             }
-            > a {
+            @include mq($from: screen-xl) {
+                float: none;
+                display: table-cell;
+            }
+            >a {
                 font-size: em(14);
                 font-weight: bold;
                 text-transform: uppercase;
@@ -45,8 +49,8 @@ $nav-side-padding: 1%;
         }
     }
     ul.level-2 {
-        > li {
-            > a {
+        >li {
+            >a {
                 @extend %footer-text;
             }
         }
