@@ -11,7 +11,7 @@
 		<div class="timeline js-timeline">
 			<div class="timeline__wrapper">
 				<h2 class="h2">{{$headline}}</h2>
-				<div class="timeline__intro editor-content editor-content--intro">
+				<div class="timeline__intro editor-content">
 					{!!$description!!}
 				</div>
 			</div>
