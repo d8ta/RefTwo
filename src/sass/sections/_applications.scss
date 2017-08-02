@@ -60,10 +60,11 @@ $block: '.applications';
             }
             &__image {
                 display: table-cell;
+                vertical-align: top;
             }
             &__content {
-
                 display: table-cell;
+                vertical-align: top;
             }
         }
     }
