@@ -1,16 +1,20 @@
 <?php
-use A365\Wordpress\Helpers\Acf\OptionsHelper;
-$optionsHelper = OptionsHelper::getInstance();
+$location = \Project\Models\Location::getDefault();
 ?>
 
 <address class="address">
-    <div class="address__headline">{{ $optionsHelper->getOption("company_name") }}</div>
-    <div class="address__text">
-	    <span>{{ $optionsHelper->getOption("company_street") }}</span><br>
-	    <span>{{ $optionsHelper->getOption("company_postal_code") }}</span> <span>{{ $optionsHelper->getOption("company_city") }}</span><br>
-	    T: <span>{{ $optionsHelper->getOption("company_phone") }}</span><br>
-	    F: <span>{{ $optionsHelper->getOption("company_fax") }}</span><br>
-	    E: <span><a href="mailto:{{ $optionsHelper->getOption("company_email") }}">{{ $optionsHelper->getOption("company_email") }}</a></span>
+    <div class="address__headline">{{$location->getTitle()}}</div>
+    <div class="address__text editor-content">
+        <p>
+    	    @if(strlen($location->getDescription()))<span>{!!$location->getDescription()!!}</span><br>@endif
+            <span>{!!$location->getStreet()!!}</span><br>
+            <span class="headquarters__locations__location__zip">{{$location->getZip()}}</span> <span>{{$location->getCity()}}</span><br>
+            <span><?php echo __('Tel'); ?>: {{$location->getTel()}}</span><br>
+            @if($location->getFax() && strlen($location->getFax()))<span><?php echo __('Fax'); ?>: {{$location->getFax()}}</span><br>@endif
+            <?php echo __('E-Mail'); ?>: <a href="mailto:{{$location->getEmail()}}">{{$location->getEmail()}}</a>
+        </p>
     </div>
     
 </address>
+
+

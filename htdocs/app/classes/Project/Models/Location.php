@@ -51,7 +51,7 @@ class Location extends \A365\Wordpress\Models\Post {
 
     public static function getDefault() {
 
-        $location_id = 126;
+        $location_id = 303;
 
         if ($location_id > 0) {
             return self::find($location_id);

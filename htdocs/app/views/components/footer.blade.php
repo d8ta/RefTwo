@@ -12,7 +12,7 @@
 					@include('components.footer.address')
 				</div>
 				<div class="site-footer__copy">
-					&copy; {{date("Y")}} Siconnex GmbH
+					&copy; {{date("Y")}} Siconnex customized solutions GmbH
 				</div>
 
 				<div class="site-footer__socialmedia">
