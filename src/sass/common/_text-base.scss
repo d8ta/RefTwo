@@ -68,11 +68,7 @@
     color: $color-text;
 }
 
-%intro-text {
-    font-size: em(21);
-    line-height: 1.25;
-    margin-bottom: .8em;
-}
+
 
 %text-base {
     font-family: $font-normal;
@@ -81,9 +77,11 @@
     margin-bottom: .8em;
 }
 
-%text-lowline {
+%intro-text {
     @extend %text-base;
+    font-size: em(21);
     line-height: 1.3;
+    margin-bottom: .8em;
 }
 
 %pre-headline {

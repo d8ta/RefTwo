@@ -24,13 +24,7 @@ $block: '.welcome-slider';
                 @extend %pre-headline;
             }
             &__title {
-                @extend %h1;
-                // max-width: em(220);
                 color: $color-white;
-            }
-            &__description {
-                @extend %intro-text;
-                // max-width: em(400);
             }
         }
         &__image {

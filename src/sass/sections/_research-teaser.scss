@@ -42,14 +42,8 @@ $block-padding: em(80);
             color: $color-white;
         }
         &__description {
-            @extend %intro-text;
             color: $color-white;
             position: relative;
-        }
-        &__author {
-            @extend %intro-text;
-            color: $color-white;
-            font-weight: bold;
         }
     }
     &__images {

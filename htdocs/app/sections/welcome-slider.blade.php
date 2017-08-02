@@ -22,9 +22,9 @@
 								<div class="welcome-slider__slide__text__td">
 									<div class="welcome-slider__slide__text__inner">
 										<h2 class="welcome-slider__slide__text__pretitle">{{$pretitle}}</h2>
-										<h3 class="welcome-slider__slide__text__title">{!!$title!!}</h3>
+										<h3 class="welcome-slider__slide__text__title h1">{!!$title!!}</h3>
 										@if($description)
-											<div class="welcome-slider__slide__text__description editor-content editor-content--lowline">{!!$description!!}</div>
+											<div class="welcome-slider__slide__text__description editor-content editor-content--intro">{!!$description!!}</div>
 										@endif
 										@if($button_url)
 											<a class="btn" href="{{$button_url}}@if(!empty($button_hash))#{{$button_hash}}@endif">

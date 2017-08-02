@@ -5,32 +5,26 @@ body#tinymce.wp-editor {
     >ul {
         @extend %text-base;
     }
-    &#{$block}--lowline {
-        >p,
-        >ul {
-            @extend %text-lowline;
-        }
-    }
-    > h1 {
+    >h1 {
         @extend %h1 !optional;
     }
-    > h2 {
+    >h2 {
         @extend %h2 !optional;
     }
-    > h3 {
+    >h3 {
         @extend %h3 !optional;
     }
-    > h4 {
+    >h4 {
         @extend %h4 !optional;
     }
-    > h5 {
+    >h5 {
         @extend %h5 !optional;
     }
-    > h6 {
+    >h6 {
         @extend %h6 !optional;
     }
-   
-    > ul {
+
+    >ul {
         @extend %ul !optional;
     }
     a {
@@ -38,7 +32,7 @@ body#tinymce.wp-editor {
         cursor: pointer;
         &:hover {
             text-decoration: none;
-        } 
+        }
     }
     >h1,
     >h2,
@@ -51,16 +45,23 @@ body#tinymce.wp-editor {
             margin-top: 0;
         }
     }
+}
 
-    &--white {
+#{$block}--intro {
+    >p,
+    >ul {
+        @extend %intro-text;
+    }
+}
+
+#{$block}--white {
+    >p,
+    >ul {
         color: #fff;
-        > ul {
-            li {
-                &::before {
-                    color: #fff;
-                }
+        li {
+            &::before {
+                color: #fff;
             }
         }
     }
-
 }
