@@ -2,9 +2,6 @@ $block: '.applications';
 #{$block} {
     &__info {
         margin: 1.5rem 0;
-        &__description {
-            max-width: em(700);
-        }
         &__wrapper {
             margin-top: em(30);
         }
