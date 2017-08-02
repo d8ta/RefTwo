@@ -11,7 +11,7 @@
 		<div class="timeline js-timeline">
 			<div class="timeline__wrapper">
 				<h2 class="h2">{{$headline}}</h2>
-				<div class="timeline__intro editor-content">
+				<div class="timeline__intro editor-content editor-content--intro">
 					{!!$description!!}
 				</div>
 			</div>
@@ -36,7 +36,7 @@
 						<div class="timeline__horizontal__content__text js-timeline__content @if($key === $rand_active) active @endif" data-id="{{$key}}">
 							<div class="timeline__horizontal__content__inner timeline__horizontal__content__inner">
 								<h3 class="timeline__horizontal__content__inner__element-title">{!!$elem['title']!!}</h3>
-								<div class="">
+								<div class="editor-content">
 									{!!$elem['description']!!}
 								</div>
 							</div>

@@ -1,51 +1,54 @@
 $block: '.sicozone';
 
 #{$block} {
-  &__text {
-    text-align: center;
-
-    &__left {
-      border-top-left-radius: 0.5em;
-      border-bottom-left-radius: 0.5em;
-      padding: 1em;
-      background: $brand-primary;
-
-      &__title {
-        @extend %h1;
-        color: $color-white;
-      }
-
-      &__subtitle {
-        @extend %h2;
-        color: $color-white;
-      }
-    }
-
-    &__right {
-      border-top-right-radius: 0.5em;
-      border-bottom-right-radius: 0.5em;
-      padding: 1em;
-      text-align: center;
-      vertical-align: top;
-      border: em(1) solid $brand-primary;
-
-    }
-  }
-  @include mq($from: screen-sm) {
     &__text {
-      display: table;
-      text-align: left;
+        text-align: center;
 
-      &__left {
-        display: table-cell;
-      }
+        &__left {
+            border-top-left-radius: 0.5em;
+            border-top-right-radius: 0.5em;
+            padding: 1em;
+            background: $brand-primary;
 
-      &__right {
-        display: table-cell;
-        text-align: left;
-        padding-left: 3em;
-        vertical-align: top;
-      }
+            &__title {
+                @extend %h1;
+                color: $color-white;
+            }
+
+            &__subtitle {
+                @extend %h2;
+                color: $color-white;
+            }
+        }
+
+        &__right {
+            border-bottom-left-radius: 0.5em;
+            border-bottom-right-radius: 0.5em;
+            padding: 1em;
+            text-align: center;
+            vertical-align: top;
+            border: em(1) solid $brand-primary;
+        }
     }
-  }
+    @include mq($from: screen-sm) {
+        &__text {
+            display: table;
+            text-align: left;
+
+            &__left {
+                display: table-cell;
+                border-top-right-radius: 0;
+                border-bottom-left-radius: 0.5em;
+            }
+
+            &__right {
+                display: table-cell;
+                text-align: left;
+                padding-left: 3em;
+                vertical-align: top;
+                border-bottom-left-radius: 0;
+                border-top-right-radius: 0.5em;
+            }
+        }
+    }
 }

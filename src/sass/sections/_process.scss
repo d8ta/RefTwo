@@ -27,13 +27,13 @@ $block: '.process';
     }
     @include mq($from: screen-xs) {
         &__info__text__col {
-            width: 47%;
+            width: 47.5%;
             margin-right: 2%;
         }
     }
     @include mq($from: screen-sm) {
         &__info__text__col {
-            width: 30.3333%;
+            width: 30.8333%;
         }
     }
 }
