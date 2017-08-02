@@ -19,7 +19,7 @@
 				?>
 				<h2 class="products-overview__text__title h1">{{$title}}</h2>
 				<h3 class="products-overview__text__subtitle h2">{{$subtitle}}</h3>
-				<div class="products-overview__text__text editor-content">{{$text}}</div>
+				<div class="products-overview__text__text editor-content">{!!$text!!}</div>
 			</div>
 
 			<div class="products-overview__listing">
