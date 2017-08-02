@@ -1,5 +1,16 @@
-.editor-content,
+$block: ".editor-content";
+#{$block},
 body#tinymce.wp-editor {
+    >p,
+    >ul {
+        @extend %text-base;
+    }
+    &#{$block}--lowline {
+        >p,
+        >ul {
+            @extend %text-lowline;
+        }
+    }
     > h1 {
         @extend %h1 !optional;
     }
@@ -18,10 +29,7 @@ body#tinymce.wp-editor {
     > h6 {
         @extend %h6 !optional;
     }
-    >p,
-    >ul {
-        @extend %text-base;
-    }
+   
     > ul {
         @extend %ul !optional;
     }

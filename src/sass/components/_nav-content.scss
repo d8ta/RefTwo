@@ -1,66 +1,64 @@
 $block: '.nav-content';
 
 #{$block} {
-  &__image-box {
-    @include clearfix;
+    &__image-box {
+        @include clearfix;
 
-    &__image {
-      float: left;
-      width: 35%;
+        &__image {
+            float: left;
+            width: 35%;
 
-      &__img {
-        height: 0;
-        padding-bottom: 100%;
-      }
-    }
-
-    &__text {
-      float: right;
-      width: 60%;
-
-      &__headline {
-        @extend %h4;
-      }
-
-      &__description {
-        @extend %text-base;
-        line-height: 1.4;
-      }
-
-      &__link {
-        @extend %arrow-link;
-      }
-    }
-  }
-
-  &__side-boxes {
-    @include clearfix;
-
-    &__box {
-      float: left;
-      width: 33.3333%;
-
-      &__image {
-        width: 70%;
-        margin: 0 auto;
-
-        &__img {
-          height: 0;
-          padding-bottom: 100%;
-          &:hover {
-            opacity: .5;
-          }
+            &__img {
+                height: 0;
+                padding-bottom: 100%;
+            }
         }
-      }
 
-      &__text {
-        @extend %text-base;
-        line-height: 1.4;
-        width: 90%;
-        margin: 0 auto;
-        text-align: center;
-        margin-top: em(5);
-      }
+        &__text {
+            float: right;
+            width: 60%;
+
+            &__headline {
+                @extend %h4;
+            }
+
+            &__description {
+                @extend %text-base;
+            }
+
+            &__link {
+                @extend %arrow-link;
+            }
+        }
     }
-  }
+
+    &__side-boxes {
+        @include clearfix;
+
+        &__box {
+            float: left;
+            width: 33.3333%;
+
+            &__image {
+                width: 70%;
+                margin: 0 auto;
+
+                &__img {
+                    height: 0;
+                    padding-bottom: 100%;
+                    &:hover {
+                        opacity: .5;
+                    }
+                }
+            }
+
+            &__text {
+                @extend %text-base;
+                width: 90%;
+                margin: 0 auto;
+                text-align: center;
+                margin-top: em(5);
+            }
+        }
+    }
 }
