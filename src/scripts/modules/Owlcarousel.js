@@ -83,16 +83,6 @@ Owlcarousel.prototype.init = function() {
         };
     }
 
-    data.onInitialized = function() {
-        console.log("ho");
-        console.log(self.elements.owl.children());
-        self.elements.owl.children().sort(function(){
-            return Math.round(Math.random()) - 0.5;
-        }).each(function(){
-            $(this).appendTo(self.elements.owl);
-        });
-    };
-
     if (typeof data.lazyload !== "undefined") {
         data.lazyLoad = data.lazyload;
     }
