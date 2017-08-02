@@ -1,80 +1,79 @@
 $block: '.site-footer';
 
 #{$block} {
-  margin-top: rem(100);
-  &__headline {
-    @extend %h2;
-    text-align: center;
-    padding-bottom: 2em;
-  }
-
-  &__table {
-    &__col {
-      margin-bottom: em(30);
+    margin-top: rem(100);
+    &__headline {
+        @extend %h2;
+        text-align: center;
+        padding-bottom: 2em;
     }
-  }
-  @include mq($from: screen-sm) {
+
     &__table {
-      // display: table;
-      // width: 100%;
-
-      &__col {
-        // display: table-cell;
-
-        &--address {
-          float: left;
-          width: 20%;
-          min-width: em(240);
+        &__col {
+            margin-bottom: em(30);
         }
-      }
     }
-  }
-
-  &__copy {
-    @extend %footer-text;
-    margin-top: em(20);
-  }
-
-  &__socialmedia {
-    width: 100%;
-
-    &__facebook,
-    &__linkedin,
-    &__xing {
-      float: left;
-      width: 1.5em;
-
-      &::before {
-        @extend %icon;
-        font-size: 1.2em;
-        margin-left: 0;
-        top: 0.6em;
-      }
+    @include mq($from: screen-sm) {
+        &__table {
+            // display: table;
+            // width: 100%;
+            &__col {
+                // display: table-cell;
+                &--address {
+                    float: left;
+                    width: 20%;
+                    min-width: em(240);
+                }
+            }
+        }
     }
 
-    &__facebook {
-      @include icon( 'facebook');
+    &__copy {
+        @extend %footer-text;
+        margin-top: em(20);
     }
 
-    &__linkedin {
-      @include icon( 'linkedin');
+    &__socialmedia {
+        width: 100%;
+        margin-top: em(10);
+
+        &__facebook,
+        &__linkedin,
+        &__xing {
+            float: left;
+            width: 1.5em;
+
+            &::before {
+                @extend %icon;
+                font-size: 1.2em;
+                margin-left: 0;
+                top: 0.6em;
+            }
+        }
+
+        &__facebook {
+            @include icon( 'facebook');
+        }
+
+        &__linkedin {
+            @include icon( 'linkedin');
+        }
+
+        &__xing {
+            @include icon( 'xing');
+        }
     }
 
-    &__xing {
-      @include icon( 'xing');
+    &__img {
+        z-index: 100;
+        position: relative;
+        margin-top: em(30);
+        width: 100%;
+        padding-bottom: 5.42%;
+        height: 0;
+        background-image: url('../images/layout/wave.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
     }
-  }
-
-  &__img {
-    z-index: 100;
-    position: relative;
-    margin-top: em(30);
-    width: 100%;
-    padding-bottom: 5.42%;
-    height: 0;
-    background-image: url('../images/layout/wave.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-  }
 }
