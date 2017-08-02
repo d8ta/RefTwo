@@ -2,277 +2,272 @@ $block: '.customer-review';
 $block-padding: em(80);
 
 #{$block} {
-  color: $color-white;
-  position: relative;
-  padding: $block-padding 0;
-  z-index: 3;
-  height: 100%;
-
-  img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-
-  &__text {
-    padding: 0;
-    &--quote {
-
-      #{$block}__text__description {
-        position: relative;
-        @include icon( 'quote');
-        &::before {
-          @extend %icon;
-          position: absolute;
-          top: 0;
-          left: -1.5em;
-          font-size: em(20);
-          line-height: 1;
-          display: block;
-          opacity: 0.3;
-        }
-        @include icon( 'quote', 'after');
-        &::after {
-          @extend %icon;
-          position: absolute;
-          bottom: -1em;
-          right:0;
-          display: block;
-          opacity: 0.3;
-          font-size: em(20);
-        }
-        &--no-quote {
-          &::before,
-          &::after {
-            display: none;
-          }
-        }
-      }
-    }
-
-    &__inner {
-      position: relative;
-    }
-
-    &__title {
-      @extend %h1;
-      color: $color-white;
-    }
-
-    &__description {
-      position: relative;
-    }
-
-    &__author {
-      @extend %intro-text;
-      color: $color-white;
-      font-weight: bold;
-    }
-  }
-
-  &__images {
-    @include clearfix;
-    margin-left: em(-5);
-    margin-right: em(-5);
+    color: $color-white;
     position: relative;
-
-    &__big {
-      float: left;
-      width: 75%;
-    }
-
-    &__small {
-      float: right;
-      width: 25%;
-    }
-
-    &__img {
-      padding: em(5);
-    }
+    padding: $block-padding 0;
+    z-index: 3;
+    height: 100%;
 
     img {
-      border-radius: em(10);
+        width: 100%;
+        height: auto;
+        display: block;
     }
-  }
 
-  &__icon {
-    position: absolute;
-    background: $brand-primary;
-    font-size: em(80);
-    height: 1em;
-    width: 1em;
-    border-radius: em(2);
-    left: em(4);
-    top: em(4);
+    &__text {
+        padding: em(20) 0 em(40) em(50);
+        &--quote {
 
-    .icon {
-      @include icon( 'box-idea');
-      line-height: 1;
-      display: block;
-      font-size: 1em;
-      height: 1em;
-      width: 1em;
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      margin: auto;
+            #{$block}__text__description {
+                position: relative;
+                @include icon( 'quote');
+                &::before {
+                    @extend %icon;
+                    position: absolute;
+                    top: 0;
+                    left: -1.5em;
+                    font-size: em(20);
+                    line-height: 1;
+                    display: block;
+                    opacity: 0.3;
+                }
+
+                &--no-quote {
+                    &::before {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        &__inner {
+            position: relative;
+        }
+
+        &__title {
+            @extend %h1;
+            color: $color-white;
+        }
+
+        &__description {
+            position: relative;
+        }
+
+        &__author {
+            @extend %intro-text;
+            color: $color-white;
+            font-weight: bold;
+        }
     }
-  }
 
-  &__whitebox-bottom,
-  &__whitebox-top {
-    position: absolute;
-    width: 100%;
-    left: 0;
-    background: $color-white;
-    z-index: 2;
-    height: 15%;
-    display: none;
-  }
+    &__images {
+        @include clearfix;
+        margin-left: em(-5);
+        margin-right: em(-5);
+        position: relative;
 
+        &__big {
+            float: left;
+            width: 75%;
+        }
 
-  &__whitebox-bottom {
-    bottom: 0;
-    display: block;
-  }
+        &__small {
+            float: right;
+            width: 25%;
+        }
 
-  &__whitebox-helper {
-    height: $block-padding;
-  }
+        &__img {
+            padding: em(5);
+        }
 
-  .owl-stage-outer,
-  .owl-stage,
-  .owl-item {
-    height: 100%;
-  }
-  .owl-dots {
-    position: absolute;
-    margin: 0 auto;
-    left: 0;
-    right: 0;
-    bottom: 10%;
-  }
-  @include mq($from: screen-md) {
-     @include clearfix;
-     &__text {
-        padding: em(20) 0 em(20) em(50);
-     }
-    &__content {
-      &--left,
-      &--right {
-        float: left;
-        width: 50%;
-      }
-      &--left {
-        padding-right: rem(200);
-      }
+        img {
+            border-radius: em(10);
+        }
     }
-    &__slider {
-      height: 100%;
-      position: relative;
+
+    &__icon {
+        position: absolute;
+        background: $brand-primary;
+        font-size: em(80);
+        height: 1em;
+        width: 1em;
+        border-radius: em(2);
+        left: em(4);
+        top: em(4);
+
+        .icon {
+            @include icon( 'box-idea');
+            line-height: 1;
+            display: block;
+            font-size: 1em;
+            height: 1em;
+            width: 1em;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+        }
     }
 
     &__whitebox-bottom,
     &__whitebox-top {
-      display: block;
-      height: 8%;
-    }
-  }
-  @include mq($from: screen-lg) {}
-  @include mq($from: screen-xl) {
-    padding-top: 0;
-    padding-bottom: 0;
-
-  }
-
-
-  .owl-dot {
-    display: inline-block;
-    font-size: em(18);
-    width: 1em;
-    height: 1em;
-    margin: 0 em(4);
-    border-radius: 50%;
-    background-color: $color-light-grey;
-    transition: background 0.2s;
-
-    &.active,
-    &:hover {
-      background-color: $brand-primary;
-      border: 1px solid $color-white;
-    }
-  }
-
-  .owl-nav {
-    position: absolute;
-    top: 0;
-    right: -15%;
-    height: 100%;
-  }
-
-  .owl-next,
-  .owl-prev {
-    height: em(42);
-    width: em(42);
-    margin: auto 0;
-    color: $color-white;
-    position: absolute;
-    right: 0.5em;
-    top: 0;
-    bottom: 0;
-    background: $color-white;
-    border-radius: em(5);
-
-    .icon {
-      font-size: em(12);
-      position: absolute;
-      width: 1em;
-      height: 1em;
-      line-height: 1;
-      margin: auto;
-      left: 0;
-      top: 0;
-      bottom: 0;
-      right: 0;
-      color: $color-text;
-      transition: all 0.2s;
-
-      &::before {
-        @extend %icon;
-      }
-    }
-    @include mq($until: screen-sm) {
-      display: none;
-    }
-  }
-
-  .owl-prev {
-    top: em(-47);
-
-    .icon {
-      @include icon(arrowleft);
+        position: absolute;
+        width: 100%;
+        left: 0;
+        background: $color-white;
+        z-index: 2;
+        height: 15%;
+        display: none;
     }
 
-    &:hover {
-      .icon {
-        transform: translateX(-.3em);
-      }
-    }
-  }
 
-  .owl-next {
-    top: em(47);
-
-    .icon {
-      @include icon(arrowright);
+    &__whitebox-bottom {
+        bottom: 0;
+        display: block;
     }
 
-    &:hover {
-      .icon {
-        transform: translateX(.3em);
-      }
+    &__whitebox-helper {
+        height: $block-padding;
     }
-  }
+
+    .owl-stage-outer,
+    .owl-stage,
+    .owl-item {
+        height: 100%;
+    }
+    .owl-dots {
+        position: absolute;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        bottom: em(30);
+        @include mq($from: screen-md) {
+           bottom: 2%;
+        }
+        @include mq($from: screen-xl) {
+           bottom: 10%;
+        }
+    }
+    @include mq($from: screen-md) {
+        @include clearfix;
+        &__text {
+            
+        }
+        &__content {
+            &--left,
+            &--right {
+                float: left;
+                width: 50%;
+            }
+            &--left {
+                padding-right: rem(200);
+            }
+        }
+        &__slider {
+            height: 100%;
+            position: relative;
+        }
+
+        &__whitebox-bottom,
+        &__whitebox-top {
+            display: block;
+            height: 8%;
+        }
+    }
+    @include mq($from: screen-lg) {}
+    @include mq($from: screen-xl) {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+
+    .owl-dot {
+        display: inline-block;
+        font-size: em(18);
+        width: 1em;
+        height: 1em;
+        margin: 0 em(4);
+        border-radius: 50%;
+        background-color: $color-light-grey;
+        transition: background 0.2s;
+
+        &.active,
+        &:hover {
+            background-color: $brand-primary;
+            border: 1px solid $color-white;
+        }
+    }
+
+    .owl-nav {
+        position: absolute;
+        top: 0;
+        right: -15%;
+        height: 100%;
+    }
+
+    .owl-next,
+    .owl-prev {
+        height: em(42);
+        width: em(42);
+        margin: auto 0;
+        color: $color-white;
+        position: absolute;
+        right: 0.5em;
+        top: 0;
+        bottom: 0;
+        background: $color-white;
+        border-radius: em(5);
+
+        .icon {
+            font-size: em(12);
+            position: absolute;
+            width: 1em;
+            height: 1em;
+            line-height: 1;
+            margin: auto;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            color: $color-text;
+            transition: all 0.2s;
+
+            &::before {
+                @extend %icon;
+            }
+        }
+        @include mq($until: screen-sm) {
+            display: none;
+        }
+    }
+
+    .owl-prev {
+        top: em(-47);
+
+        .icon {
+            @include icon(arrowleft);
+        }
+
+        &:hover {
+            .icon {
+                transform: translateX(-.3em);
+            }
+        }
+    }
+
+    .owl-next {
+        top: em(47);
+
+        .icon {
+            @include icon(arrowright);
+        }
+
+        &:hover {
+            .icon {
+                transform: translateX(.3em);
+            }
+        }
+    }
 }
