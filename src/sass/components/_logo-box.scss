@@ -7,4 +7,10 @@ $block: '.logo-box';
         width: 100%;
         height: auto;
     }
+    @include mq($until: header-smaller) {
+        margin: 0;
+        img {
+            max-width: 11em;
+        }
+    }
 }

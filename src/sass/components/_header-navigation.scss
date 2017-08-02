@@ -41,6 +41,10 @@ $submenu: '.nav-submenu';
                 font-size: em(14);
                 font-weight: bold;
                 text-transform: uppercase;
+                @include mq($until: $width-mobile-menu + 50) {
+                    padding-left: em(18, 14);
+                    padding-right: em(18, 14);
+                }
             }
             &:hover {
                 > #{$submenu} {

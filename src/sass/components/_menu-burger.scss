@@ -4,6 +4,9 @@ $padding: 16px;
     padding: $padding;
     width: 20px + 2 * $padding;
     margin: em(30) 0 0 auto;
+    @include mq($until: header-smaller) {
+        margin-top: em(10);
+    }
     transition: all .3s ease;
     @include mq($from: screen-xs) {
         &--main {
