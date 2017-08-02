@@ -3,22 +3,12 @@ $block: '.download';
     &__wrapper {
         width: 100%;
         text-align: center;
-        .h2 {
-            @extend %h1;
-            font-size: em(48);
-            margin: 0;
-        }
-        .h3 {
-            @extend %h2;
-            font-family: $font-normal;
-            margin-bottom: em(40);
-        }
     }
     &__content {
         width: 100%;
         max-width: em(800);
         height: auto;
-        margin: 0 auto;
+        margin: em(40) auto 0;
     }
     &__list {
         &__elem {
@@ -48,16 +38,9 @@ $block: '.download';
                 width: 50%;
                 &--info {
                     color: $color-white;
-                    .h2 {
-                        font-size: em(20);
-                        font-weight: 600;
-                        margin-bottom: em(5);
-                        color: $color-white;
-                    }
-                    p {
-                        font-size: em(16);
-                        margin-bottom: 0;
-                    }
+                }
+                &__headline {
+                    color: $color-white;
                 }
                 &--link {
                     text-align: right;
