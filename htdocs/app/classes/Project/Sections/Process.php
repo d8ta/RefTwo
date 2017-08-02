@@ -18,10 +18,10 @@ class Process extends \A365\Wordpress\Block\AcfBlock {
 				->addSubfields([
 					FieldHelper::createImageCrop('image', 'Anwendungsbild', ["crop_type" => "hard", 'target_size' => 'custom', 'force_crop' => 'no', 'save_format' => 'url', "width" => 280, "height" => 60])->setRequired(),
 					FieldHelper::createPageLink('url', 'Link'),
-					FieldHelper::createWysiwyg('left', 'Editor 1'),
-					FieldHelper::createWysiwyg('middle', 'Editor 2'),
-					FieldHelper::createWysiwyg('right', 'Editor 3'),
-					FieldHelper::createWysiwyg('rightright', 'Editor 4'),
+					FieldHelper::createWysiwyg('left', 'Editor 1', ['media_upload' => 1]),
+					FieldHelper::createWysiwyg('middle', 'Editor 2', ['media_upload' => 1]),
+					FieldHelper::createWysiwyg('right', 'Editor 3', ['media_upload' => 1]),
+					FieldHelper::createWysiwyg('rightright', 'Editor 4', ['media_upload' => 1]),
 				])
 		];
 	}
