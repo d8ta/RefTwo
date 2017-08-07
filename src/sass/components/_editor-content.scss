@@ -45,22 +45,22 @@ body#tinymce.wp-editor {
             margin-top: 0;
         }
     }
-}
 
-#{$block}--intro {
-    >p,
-    >ul {
-        @extend %intro-text;
+    &--intro {
+        >p,
+        >ul {
+            @extend %intro-text;
+        }
     }
-}
 
-#{$block}--white {
-    >p,
-    >ul {
-        color: #fff;
-        li {
-            &::before {
-                color: #fff;
+    &--white {
+        >p,
+        >ul {
+            color: #fff;
+            li {
+                &::before {
+                    color: #fff;
+                }
             }
         }
     }
