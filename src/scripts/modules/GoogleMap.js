@@ -25,7 +25,7 @@ GoogleMap.prototype.selectors = {
 
 GoogleMap.prototype.elements = {
     infobox: undefined,
-    icons: undefined,
+    icon: undefined,
     locations: undefined,
     locations_select: undefined,
 };
@@ -51,7 +51,10 @@ GoogleMap.prototype.init = function() {
         anchor: new google.maps.Point(18, 18),
     };
 
-    this.elements.icon = { default: defaultIcon, active: activeIcon };
+    this.elements.icon = {
+        defaultIcon: defaultIcon,
+        activeIcon: activeIcon
+    };
 
 
     if (this.vars.data.maptype == "locations") {
@@ -201,7 +204,7 @@ GoogleMap.prototype.setMarkers = function() {
         var options = {
             position: new google.maps.LatLng(markerData.lat, markerData.lng),
             map: map,
-            icon: self.elements.icon.default,
+            icon: self.elements.icon.defaultIcon,
             marker_id: markers[i].id
         };
 
@@ -227,9 +230,9 @@ GoogleMap.prototype.activateMarker = function(marker_id) {
 
     for (var j = 0; j < this.vars.markers.length; j++) {
         if (marker_id == this.vars.markers[j].marker_id) {
-            this.vars.markers[j].setIcon(this.elements.icon.active);
+            this.vars.markers[j].setIcon(this.elements.icon.activeIcon);
         } else {
-            this.vars.markers[j].setIcon(this.elements.icon.default);
+            this.vars.markers[j].setIcon(this.elements.icon.defaultIcon);
         }
     }
 };
