@@ -8,7 +8,7 @@ $block: '.products-overview';
             margin-left: auto;
             margin-right: auto;
         }
-       
+
         &__text {
             max-width: em(650);
             margin-left: auto;
@@ -17,17 +17,13 @@ $block: '.products-overview';
     }
     &__listing {
         &__elem {
-            margin: 0 auto;
-            width: 100%;
-            max-width: 22em;
             padding: 0 em(5);
         }
         &__content {
             overflow: hidden;
             display: block;
             &__image {
-                width: 100%;
-                // padding-bottom: 81.22%;
+                width: 100%; // padding-bottom: 81.22%;
                 padding-bottom: 81.22%;
                 transition: all $transition-speed;
                 &:hover {
@@ -41,7 +37,7 @@ $block: '.products-overview';
                 transition: background .3s;
                 border-radius: .5em;
                 &:hover {
-                    background: $color-product-grey - 10%;
+                    background: lighten($color-product-grey, 10);
                 }
                 &__logo {
                     margin-bottom: em(15);
@@ -59,33 +55,20 @@ $block: '.products-overview';
             }
         }
     }
-        @include mq($from: 1030px) {
+    @include mq($from: width-mobile-menu) {
         &__listing {
+            @include clearfix;
             &__elem {
                 float: left;
                 width: 33.3333%;
-                max-width: 100%;
             }
             &__content {
-                overflow: hidden;
-                display: block;
-                &__image {
-                    width: 100%;
-                    padding-bottom: 81.22%;
-                    transition: all 3s;
-                    &:hover {
-                        transform: scale(1.05);
-                    }
-                }
                 &__info {
                     display: block;
                     background-color: $color-product-grey;
                     padding: rem(111) rem(68);
                     transition: background .3s;
                     border-radius: .5em;
-                    &:hover {
-                        background: $color-product-grey - 10%;
-                    }
                     &__logo {
                         margin-bottom: em(15);
                         width: 90%;
