@@ -7,7 +7,6 @@
     /* ======== Common includes ======== */
     //= include common/Application.js
     //= include common/Module.js
-    //= include common/Functions.js
 
     /* ======== Module includes ======== */
     //= include modules/Alert.js
@@ -15,10 +14,9 @@
 
 
     /* ======== Application Setup ======== */
-    var application = new Application();
-    application
+    var comp_application = new Application();
+    comp_application
         .addModule(new AlertController(), 'AlertController')
         .run();
-
 
 })(jQuery);
