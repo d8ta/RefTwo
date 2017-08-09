@@ -1,5 +1,6 @@
 <?php
 
+$batchspray_logo = Project\Application::getInstance()->getConfig('media.batchspray');
 $logo = Project\Application::getInstance()->getConfig('media.logo');
 $client = Project\Application::getInstance()->getConfig('client');
 
@@ -19,7 +20,7 @@ $label_greets = __('Best regards,');
 </head>
 <body>
 
-	<h2>{{$label_thank}}</h2>	
+	<h2>{{$label_thank}}</h2>
 	<p>{{$label_soon}}</p>
 
 
@@ -32,16 +33,17 @@ $label_greets = __('Best regards,');
 
 	<p>&nbsp;</p>
 	<p>{{$label_greets}}</p>
-	<!-- <p style="margin: 0"><img src="{{get_site_url()}}/{{$logo}}" alt="{{get_bloginfo()}}"></p> -->
 	<p style="margin: 0">
 		<address style="font-style: normal">
-            <span>{{ $optionsHelper->getOption("company_name") }}</span><br>
-            <span>{{ $optionsHelper->getOption("company_street") }}</span><br>
-            <span>{{ $optionsHelper->getOption("company_postal_code") }}</span> <span>{{ $optionsHelper->getOption("company_city") }}</span><br>
-            <span>{{ $optionsHelper->getOption("company_country") }}</span><br>
+            <span>{{$optionsHelper->getOption("company_name")}}</span><br>
+            <span>{{$optionsHelper->getOption("company_street")}}</span><br>
+            <span>{{$optionsHelper->getOption("company_postal_code")}}</span> <span>{{optionsHelper->getOption("company_city")}}</span><br>
+            <span>{{$optionsHelper->getOption("company_country")}}</span><br>
             <a href="{{get_site_url()}}" target="_blank">{{get_site_url()}}</a>
-            <p><img src="{{get_site_url()}}/{{$logo}}" alt="{{get_bloginfo()}}"></p>
-
+            <div>
+            	<img src="{{get_site_url()}}/{{$batchspray_logo}}" alt="{{get_bloginfo()}}">
+            	<img src="{{get_site_url()}}/{{$logo}}" alt="{{get_bloginfo()}}">
+            </div>
         </address>
 	</p>
 
