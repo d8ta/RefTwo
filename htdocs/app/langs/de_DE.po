@@ -1,27 +1,30 @@
+# Copyright (C) 2016 A365
+# This file is distributed under the same license as the Envimet package.
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
-"POT-Creation-Date: 2017-01-12 18:28+0100\n"
-"PO-Revision-Date: 2017-01-12 18:28+0100\n"
+"Project-Id-Version: Siconnex\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/envimet\n"
+"POT-Creation-Date: 2017-08-01 17:46+0200\n"
+"PO-Revision-Date: 2017-08-01 17:46+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.11\n"
-"X-Poedit-Basepath: ../..\n"
+"X-Generator: Poedit 1.8.12\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __\n"
+"X-Poedit-Basepath: ../..\n"
 "X-Poedit-SearchPath-0: app\n"
-"X-Poedit-SearchPath-1: wp-content/themes/rieder\n"
+"X-Poedit-SearchPath-1: wp-content/themes/siconnex\n"
 
-#: app/classes/Project/Ajax/Actions/ContactForm.php:32
+#: app/classes/Project/Ajax/Actions/ContactForm.php:35
 msgid "Your Request"
-msgstr "Ihre Kontaktanfrage"
+msgstr "Ihre Anfrage"
 
 #: app/classes/Project/Ajax/Actions/LocationNearest.php:40
-#: app/views/components/location/maps-infobox.blade.php:27
 msgid "Infrastructure"
 msgstr "Infrastruktur"
 
@@ -29,57 +32,107 @@ msgstr "Infrastruktur"
 msgid "Text"
 msgstr "Text"
 
-#: app/sections/contact-form.blade.php:25
-msgid "Salutation"
-msgstr "Anrede"
+#: app/sections/action-box.blade.php:16 app/sections/news.blade.php:14
+#: app/views/components/navigation/submenu-21.blade.php:4
+#: app/views/components/navigation/submenu-25.blade.php:4
+msgid "Find out more"
+msgstr "Mehr erfahren"
 
-#: app/sections/contact-form.blade.php:31
+#: app/sections/contact-form.blade.php:24
 msgid "First Name"
 msgstr "Vorname"
 
-#: app/sections/contact-form.blade.php:32
+#: app/sections/contact-form.blade.php:25
 msgid "Last Name"
 msgstr "Nachname"
 
-#: app/sections/contact-form.blade.php:33
+#: app/sections/contact-form.blade.php:26
 msgid "Company"
-msgstr "Unternehmen"
+msgstr "Firma"
 
-#: app/sections/contact-form.blade.php:34
+#: app/sections/contact-form.blade.php:27
+msgid "Phone"
+msgstr "Telefon"
+
+#: app/sections/contact-form.blade.php:28
+#: app/sections/headquarters.blade.php:34
+#: app/views/components/location/address.blade.php:13
 msgid "E-Mail"
 msgstr "E-Mail"
 
-#: app/sections/contact-form.blade.php:35
-msgid "Street"
-msgstr "Straße"
-
-#: app/sections/contact-form.blade.php:36
-msgid "ZIP"
-msgstr "PLZ"
-
-#: app/sections/contact-form.blade.php:37
-msgid "City"
-msgstr "Stadt"
-
-#: app/sections/contact-form.blade.php:38
-msgid "Country"
-msgstr "Land"
-
-#: app/sections/contact-form.blade.php:39
+#: app/sections/contact-form.blade.php:29
 msgid "Message"
 msgstr "Nachricht"
 
-#: app/sections/contact-form.blade.php:47
+#: app/sections/contact-form.blade.php:35
+msgid "Sales"
+msgstr "Verkauf/Produkte"
+
+#: app/sections/contact-form.blade.php:36
+msgid "Purchase"
+msgstr "Einkauf"
+
+#: app/sections/contact-form.blade.php:37
+msgid "Service"
+msgstr "Service"
+
+#: app/sections/contact-form.blade.php:38
+msgid "Career"
+msgstr "Karriere"
+
+#: app/sections/contact-form.blade.php:41
 msgid "Send Form"
 msgstr "Formular absenden"
 
-#: app/sections/contact-form.blade.php:52
+#: app/sections/contact-form.blade.php:46
+msgid "Required"
+msgstr "Pflichtfeld"
+
+#: app/sections/contact-form.blade.php:51
 msgid "Thank you for your message."
-msgstr "Danke für Ihre Nachricht."
+msgstr "Vielen Dank für Ihre Nachricht."
+
+#: app/sections/download.blade.php:28
+msgid "PDF Download"
+msgstr "PDF herunterladen"
+
+#: app/sections/headquarters.blade.php:17
+msgid "Siconnex Headquarter"
+msgstr "Siconnex Zentrale"
+
+#: app/sections/headquarters.blade.php:20
+msgid "Siconnex Offices"
+msgstr "Siconnex Büros"
+
+#: app/sections/headquarters.blade.php:32
+#: app/views/components/location/address.blade.php:11
+msgid "Tel"
+msgstr "Tel"
+
+#: app/sections/headquarters.blade.php:33
+#: app/views/components/location/address.blade.php:12
+msgid "Fax"
+msgstr "Fax"
+
+#: app/views/ajax/contact-form/feedback.blade.php:9
+msgid "Your Message"
+msgstr "Ihre Nachricht"
+
+#: app/views/ajax/contact-form/feedback.blade.php:10
+msgid "Thank you for your message"
+msgstr "Vielen Dank für Ihre Nachricht"
+
+#: app/views/ajax/contact-form/feedback.blade.php:11
+msgid "We will respond as soon as possible."
+msgstr "Wir werden uns in Kürze mit Ihnen in Verbindung setzen."
+
+#: app/views/ajax/contact-form/feedback.blade.php:12
+msgid "Best regards,"
+msgstr "Freundliche Grüße,"
 
 #: app/views/components/alerts/browser-incompatible.blade.php:5
 msgid "You are using an incompatible browser."
-msgstr "Sie benutzen einen veralteten Browser."
+msgstr "Sie benutzen einen nicht kompatiblen Browser."
 
 #: app/views/components/alerts/browser-incompatible.blade.php:6
 msgid "Modern Browsers are"
@@ -87,7 +140,7 @@ msgstr "Moderne Browser sind"
 
 #: app/views/components/alerts/browser-outdated.blade.php:5
 msgid "You are using an outdated browser."
-msgstr "Sie benutzen einen veralteten Browser."
+msgstr "Sie benutzen einen nicht unterstützten Browser."
 
 #: app/views/components/alerts/cookie.blade.php:5
 msgid ""
@@ -95,102 +148,102 @@ msgid ""
 "website. If you continue to use this site we will assume that you are happy "
 "with it."
 msgstr ""
-"Diese Website verwendet Cookies. Wenn Sie weiter auf dieser Website surfen, "
-"stimmen Sie der Verwendung von Cookies zu."
+"Diese Website nutzt Cookies um Ihnen das beste webseiten Erlebnis zu "
+"liefern. Wenn Sie fortfahren, erklären sie sich mit der Nutzung von Cookies "
+"einverstanden."
 
 #: app/views/components/alerts/no-js.blade.php:2
 msgid "JavaScript inactive"
-msgstr "JavaScript ist deaktiviert"
+msgstr "JavaScript nicht aktiv"
 
 #: app/views/components/alerts/no-js.blade.php:3
 msgid "Please activate JavaScript."
-msgstr "Bitte aktivieren Sie JavaScript."
+msgstr "Bitte aktivieren sie JavaScript."
 
 #: app/views/components/alerts/no-js.blade.php:4
 msgid "I understand"
-msgstr "Ich bin einverstanden"
+msgstr "Verstanden"
 
-#: app/views/components/footer.blade.php:19
-msgid "The Rieder Newsletter - 4x per year!"
-msgstr "Der Rieder Newsletter - 4x pro Jahr!"
+#: app/views/components/footer.blade.php:6
+msgid "Expertise from Austria applied around the world."
+msgstr "Know-how aus Österreich. Im Einsatz auf der ganzen Welt."
 
-#: app/views/components/footer.blade.php:20
-msgid "Subscribe now."
-msgstr "Jetzt anmelden"
+#: app/views/components/location/maps-infobox.blade.php:26
+msgid "Contact"
+msgstr "Kontaktformular"
 
-#: app/views/components/footer.blade.php:21
-msgid "Your E-Mail Address"
-msgstr "Ihre E-Mail-Adresse"
+#: app/views/components/navigation/submenu-21.blade.php:3
+msgid ""
+"As a successful manufacturer of systems for the semiconductor industry, we "
+"are active worldwide."
+msgstr ""
+"Als erfolgreicher Hersteller von Anlagen für die Halbleiterindustrie sind "
+"wir weltweit tätig."
 
-#: app/views/components/footer.blade.php:75
-msgid "Back to top"
-msgstr "Nach oben"
+#: app/views/components/navigation/submenu-23.blade.php:5
+msgid "BATCHSPRAY<span class='symbols'>®</span> Acid"
+msgstr "BATCHSPRAY<span class='symbols'>®</span> Acid"
 
-#: app/views/components/location/maps-infobox.blade.php:17
-msgid "Architecture"
-msgstr "Architektur"
+#: app/views/components/navigation/submenu-23.blade.php:11
+msgid "BATCHSPRAY<span class='symbols'>®</span> Solvent"
+msgstr "BATCHSPRAY<span class='symbols'>®</span> Solvent"
 
-#: app/views/components/project/grid.blade.php:5
-#: app/views/components/project/infobox.blade.php:5
-msgid "To this project"
-msgstr "Projekt ansehen"
+#: app/views/components/navigation/submenu-23.blade.php:17
+msgid "BATCHSPRAY<span class='symbols'>®</span> Autoload"
+msgstr "BATCHSPRAY<span class='symbols'>®</span> Autoload"
 
-#: app/views/project/mysections/main.blade.php:28
-msgid "Product"
-msgstr "Produkt"
+#: app/views/components/navigation/submenu-25.blade.php:2
+msgid "Technology Infobox Title"
+msgstr "Technologie"
 
-#: app/views/project/mysections/main.blade.php:35
-msgid "Scope"
-msgstr "Umfang"
+#: app/views/components/navigation/submenu-25.blade.php:3
+msgid "Technology Infobox Text"
+msgstr ""
+"Ressourcendsparend und innovativ: Unsere BATCHSPRAY<span class='symbols'>®</"
+"span>-Technologie ist bahnbrechend."
 
-#: app/views/project/mysections/main.blade.php:42
-msgid "Color"
-msgstr "Farbe"
+#: app/views/components/navigation/submenu-29.blade.php:2
+msgid "Contact Infobox Title"
+msgstr "Kontakt"
 
-#: app/views/project/mysections/main.blade.php:49
-msgid "Surface"
-msgstr "Oberfläche"
+#: app/views/components/navigation/submenu-29.blade.php:3
+msgid "Contact Infobox Text"
+msgstr "Wir freuen uns darauf, auch für Sie die ideale Lösung zu finden."
 
-#: app/views/project/mysections/main.blade.php:56
-msgid "Fixation"
-msgstr "Befestigung"
+#: app/views/components/navigation/submenu-29.blade.php:4
+msgid "Contact now"
+msgstr "Jetzt Kontakt aufnehmen"
 
-#: app/views/project/mysections/main.blade.php:68
-msgid "Architect"
-msgstr "Architekt"
+#: app/views/components/navigation/submenu-38.blade.php:2
+msgid "Career at Siconnex"
+msgstr "Karriere bei Siconnex"
 
-#: app/views/project/mysections/main.blade.php:75
-msgid "Builder"
-msgstr "Bauherr"
+#: app/views/components/navigation/submenu-38.blade.php:3
+msgid "Leave abandoned paths and go new ways with us!"
+msgstr "Verlassen Sie ausgetretene Pfade und gehen Sie mit uns neue Wege!"
 
-#: app/views/project/mysections/main.blade.php:82
-msgid "Client"
-msgstr "Auftraggeber"
+#: app/views/components/navigation/submenu-38.blade.php:4
+msgid "Apply now"
+msgstr "Jetzt bewerben"
 
-#: app/views/project/mysections/main.blade.php:89
-msgid "Host"
-msgstr "Verarbeiter"
+#: wp-content/themes/siconnex/searchform.php:2
+msgid "Search"
+msgstr "Suche"
 
-#: app/views/project/mysections/main.blade.php:96
-msgid "Year"
-msgstr "Jahr"
+#~ msgid "Required Field"
+#~ msgstr "Pflichtfeld"
 
-#: app/views/project/mysections/main.blade.php:102
-msgid "Location"
-msgstr "Standort"
+#~ msgid "Karriere bei Siconnex"
+#~ msgstr "Karriere bei Siconnex"
 
-#: app/views/project/mysections/main.blade.php:103
-msgid "show"
-msgstr "anzeigen"
+#~ msgid "Batchspray Acid"
+#~ msgstr "Batchspray Acid"
 
-#: app/views/project/mysections/top.blade.php:18
-msgid "Back to Overview"
-msgstr "Zurück zur Übersicht"
+#~ msgid "Batchspray Solvent"
+#~ msgstr "Batchspray Solvent"
 
-#: app/views/project/mysections/top.blade.php:21
-msgid "Next Project"
-msgstr "Nächstes Projekt"
+#~ msgid "Batchspray Autoload"
+#~ msgstr "Batchspray Autoload"
 
-#: wp-content/themes/rieder/searchform.php:2
-msgid "Search ..."
-msgstr "Suche …"
+#~ msgid "Siconnex"
+#~ msgstr "Siconnex"

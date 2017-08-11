@@ -1,0 +1,12 @@
+$block: '.header-image';
+#{$block} {
+	overflow: hidden;
+    &__image {
+        transition: all $transition-speed;
+        &:hover {
+            transform: scale($scale);
+        }
+        height: 0;
+        padding-bottom: 21%;
+    }
+}

@@ -1,0 +1,24 @@
+$block: '.core-values';
+$info-padding: 1%;
+#{$block} {
+    &__info {
+        text-align: left;
+        display: inline-block;
+        vertical-align: top;
+        width: 100%;
+        margin: em(15) 0;
+        &__image {
+            padding-bottom: 1em;
+        }
+        &__text {
+            padding-right: 1em;
+        }
+        @include mq($from: screen-xs) {
+            width: 47.5%;
+            margin-right: 2%;
+        }
+        @include mq($from: screen-sm) {
+            width: 30.8333%;
+        }
+    }
+}

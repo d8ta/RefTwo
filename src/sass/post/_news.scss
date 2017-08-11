@@ -1,0 +1,69 @@
+$block: '.news';
+
+#{$block} {
+  &__text {
+    text-align: left;
+
+    &__headline {
+      padding-right: 2em;
+    }
+
+
+    &__content {
+      margin-bottom: 1.8em;
+    }
+  }
+
+  &__images {
+    margin: 0 auto;
+    text-align: center;
+    max-width: 30em;
+
+    &__img {
+      display: inline-block;
+      border-radius: 0.5em;
+      margin-left: em(10);
+      margin-bottom: em(10);
+    }
+  }
+  @include mq($from: screen-sm) {
+    &__images {
+      margin-top: 1em;
+      max-width: 50em;
+
+      &__img {
+        width: 30%;
+      }
+    }
+  }
+  @include mq($from: screen-lg) {
+    &__text {
+      float: left;
+      margin: 0;
+      text-align: left;
+      max-width: 50%;
+
+      &__headline {
+        text-align: left;
+      }
+
+      &__content {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+      }
+    }
+
+    &__images {
+      width: 50%;
+      float: left;
+      text-align: right;
+
+      &__img {
+        width: 30%;
+        display: inline;
+        margin-left: 0.5em;
+      }
+    }
+  }
+}

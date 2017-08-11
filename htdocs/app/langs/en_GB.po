@@ -1,0 +1,252 @@
+# Copyright (C) 2016 A365
+# This file is distributed under the same license as the Envimet package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Siconnex\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/envimet\n"
+"POT-Creation-Date: 2017-08-01 17:46+0200\n"
+"PO-Revision-Date: 2017-08-01 17:47+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en_GB\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.12\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __\n"
+"X-Poedit-Basepath: ../..\n"
+"X-Poedit-SearchPath-0: app\n"
+"X-Poedit-SearchPath-1: wp-content/themes/siconnex\n"
+
+#: app/classes/Project/Ajax/Actions/ContactForm.php:35
+msgid "Your Request"
+msgstr "Your Request"
+
+#: app/classes/Project/Ajax/Actions/LocationNearest.php:40
+msgid "Infrastructure"
+msgstr "Infrastructure"
+
+#: app/classes/Project/Helpers/FormHelper.php:38
+msgid "Text"
+msgstr "Text"
+
+#: app/sections/action-box.blade.php:16 app/sections/news.blade.php:14
+#: app/views/components/navigation/submenu-21.blade.php:4
+#: app/views/components/navigation/submenu-25.blade.php:4
+msgid "Find out more"
+msgstr "Find out more"
+
+#: app/sections/contact-form.blade.php:24
+msgid "First Name"
+msgstr "First Name"
+
+#: app/sections/contact-form.blade.php:25
+msgid "Last Name"
+msgstr "Last Name"
+
+#: app/sections/contact-form.blade.php:26
+msgid "Company"
+msgstr "Company"
+
+#: app/sections/contact-form.blade.php:27
+msgid "Phone"
+msgstr "Phone"
+
+#: app/sections/contact-form.blade.php:28
+#: app/sections/headquarters.blade.php:34
+#: app/views/components/location/address.blade.php:13
+msgid "E-Mail"
+msgstr "Email"
+
+#: app/sections/contact-form.blade.php:29
+msgid "Message"
+msgstr "Message"
+
+#: app/sections/contact-form.blade.php:35
+msgid "Sales"
+msgstr "Sales"
+
+#: app/sections/contact-form.blade.php:36
+msgid "Purchase"
+msgstr "Purchasing"
+
+#: app/sections/contact-form.blade.php:37
+msgid "Service"
+msgstr "Service"
+
+#: app/sections/contact-form.blade.php:38
+msgid "Career"
+msgstr "Career"
+
+#: app/sections/contact-form.blade.php:41
+msgid "Send Form"
+msgstr "Send Form"
+
+#: app/sections/contact-form.blade.php:46
+msgid "Required"
+msgstr "Required"
+
+#: app/sections/contact-form.blade.php:51
+msgid "Thank you for your message."
+msgstr "Thank you for your message."
+
+#: app/sections/download.blade.php:28
+msgid "PDF Download"
+msgstr "PDF Download"
+
+#: app/sections/headquarters.blade.php:17
+msgid "Siconnex Headquarter"
+msgstr "Siconnex Headquarter"
+
+#: app/sections/headquarters.blade.php:20
+msgid "Siconnex Offices"
+msgstr "Siconnex Offices"
+
+#: app/sections/headquarters.blade.php:32
+#: app/views/components/location/address.blade.php:11
+msgid "Tel"
+msgstr "Tel"
+
+#: app/sections/headquarters.blade.php:33
+#: app/views/components/location/address.blade.php:12
+msgid "Fax"
+msgstr "Fax"
+
+#: app/views/ajax/contact-form/feedback.blade.php:9
+msgid "Your Message"
+msgstr "Your Message"
+
+#: app/views/ajax/contact-form/feedback.blade.php:10
+msgid "Thank you for your message"
+msgstr "Thank you for your message"
+
+#: app/views/ajax/contact-form/feedback.blade.php:11
+msgid "We will respond as soon as possible."
+msgstr "We will respond as soon as possible."
+
+#: app/views/ajax/contact-form/feedback.blade.php:12
+msgid "Best regards,"
+msgstr "Best regards,"
+
+#: app/views/components/alerts/browser-incompatible.blade.php:5
+msgid "You are using an incompatible browser."
+msgstr "You are using an incompatible browser."
+
+#: app/views/components/alerts/browser-incompatible.blade.php:6
+msgid "Modern Browsers are"
+msgstr "Modern Browsers are"
+
+#: app/views/components/alerts/browser-outdated.blade.php:5
+msgid "You are using an outdated browser."
+msgstr "You are using an outdated browser."
+
+#: app/views/components/alerts/cookie.blade.php:5
+msgid ""
+"This website uses cookies to ensure you get the best experience on our "
+"website. If you continue to use this site we will assume that you are happy "
+"with it."
+msgstr ""
+"This website uses cookies to ensure you get the best experience on our "
+"website. If you continue to use this site we will assume that you are happy "
+"with it."
+
+#: app/views/components/alerts/no-js.blade.php:2
+msgid "JavaScript inactive"
+msgstr "JavaScript inactive"
+
+#: app/views/components/alerts/no-js.blade.php:3
+msgid "Please activate JavaScript."
+msgstr "Please activate JavaScript."
+
+#: app/views/components/alerts/no-js.blade.php:4
+msgid "I understand"
+msgstr "I understand"
+
+#: app/views/components/footer.blade.php:6
+msgid "Expertise from Austria applied around the world."
+msgstr "Expertise from Austria applied around the world."
+
+#: app/views/components/location/maps-infobox.blade.php:26
+msgid "Contact"
+msgstr "Contact"
+
+#: app/views/components/navigation/submenu-21.blade.php:3
+msgid ""
+"As a successful manufacturer of systems for the semiconductor industry, we "
+"are active worldwide."
+msgstr ""
+"We are a European manufacturer of wet chemistry equipment for the "
+"semiconductor industry that operates around the globe."
+
+#: app/views/components/navigation/submenu-23.blade.php:5
+msgid "BATCHSPRAY<span class='symbols'>®</span> Acid"
+msgstr "BATCHSPRAY<span class='symbols'>®</span> Acid"
+
+#: app/views/components/navigation/submenu-23.blade.php:11
+msgid "BATCHSPRAY<span class='symbols'>®</span> Solvent"
+msgstr "BATCHSPRAY<span class='symbols'>®</span> Solvent"
+
+#: app/views/components/navigation/submenu-23.blade.php:17
+msgid "BATCHSPRAY<span class='symbols'>®</span> Autoload"
+msgstr "BATCHSPRAY<span class='symbols'>®</span> Autoload"
+
+#: app/views/components/navigation/submenu-25.blade.php:2
+msgid "Technology Infobox Title"
+msgstr "Technology"
+
+#: app/views/components/navigation/submenu-25.blade.php:3
+msgid "Technology Infobox Text"
+msgstr ""
+"Resource-saving and innovative: our ground-breaking BATCHSPRAY<span "
+"class='symbols'>®</span> technology."
+
+#: app/views/components/navigation/submenu-29.blade.php:2
+msgid "Contact Infobox Title"
+msgstr "Contact"
+
+#: app/views/components/navigation/submenu-29.blade.php:3
+msgid "Contact Infobox Text"
+msgstr "We would be delighted to find your ideal solution."
+
+#: app/views/components/navigation/submenu-29.blade.php:4
+msgid "Contact now"
+msgstr "Get in touch now"
+
+#: app/views/components/navigation/submenu-38.blade.php:2
+msgid "Career at Siconnex"
+msgstr "Career at Siconnex"
+
+#: app/views/components/navigation/submenu-38.blade.php:3
+msgid "Leave abandoned paths and go new ways with us!"
+msgstr "Leave abandoned paths and go new ways with us!"
+
+#: app/views/components/navigation/submenu-38.blade.php:4
+msgid "Apply now"
+msgstr "Apply now"
+
+#: wp-content/themes/siconnex/searchform.php:2
+msgid "Search"
+msgstr "Search"
+
+#~ msgid "Karriere bei Siconnex"
+#~ msgstr "Career"
+
+#~ msgid "Batchspray Acid"
+#~ msgstr "Batchspray Acid"
+
+#~ msgid "Batchspray Solvent"
+#~ msgstr "Batchspray Solvent"
+
+#~ msgid "Batchspray Autoload"
+#~ msgstr "Batchspray Autoload"
+
+#~ msgid "Siconnex"
+#~ msgstr "Siconnex"
+
+#~ msgid "Supply now"
+#~ msgstr "Supply now"
+
+#~ msgid "Jetzt bewerben"
+#~ msgstr "Supply now"

@@ -2,7 +2,7 @@
 @import "common/functions";
 @import "common/variables";
 @import "common/mixins";
-//@import "common/iconfont";
+@import "common/iconfont";
 @import "common/webfonts";
 @import "common/reset";
 
@@ -12,10 +12,11 @@
 //scut
 @import "../bower_components/scut/dist/scut";
 
-//@import "../bower_components/owl.carousel/dist/assets/owl.carousel.min";
-//@import "../bower_components/owl.carousel/dist/assets/owl.theme.default.min";
+@import "../bower_components/selectize/dist/css/selectize.default";
 
-
+// Owl Carousel
+@import "../bower_components/owl.carousel/dist/assets/owl.carousel.min";
+@import "../bower_components/owl.carousel/dist/assets/owl.theme.default.min";
 
 //bootstrap
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/variables";
@@ -35,7 +36,60 @@
 @import "common/general";
 @import "common/text-base";
 @import "common/text";
+@import "common/form";
+@import "common/subsup";
 
+/* ======== components ======== */
 @import "components/section";
+@import "components/bg-image";
+@import "components/editor-content";
+@import "components/header-navigation";
+@import "components/footer-navigation";
+@import "components/sidebar-navigation";
+@import "components/btn";
+@import "components/logo-box";
+@import "components/sidebar";
+@import "components/site";
+@import "components/site-header";
+@import "components/site-footer";
+@import "components/menu-burger";
+@import "components/owl-carousel";
+@import "components/maps";
+@import "components/location-address";
+@import "components/address";
+@import "components/selectize";
+@import "components/language-switch";
+@import "components/table";
+@import "components/nav-content";
+@import "components/website-alert";
+@import "components/website-alert-headerline";
 
+/* ======== sections ======== */
 @import "sections/welcome-slider";
+@import "sections/action-box";
+@import "sections/research-teaser";
+@import "sections/customer-review";
+@import "sections/technology-teaser";
+@import "sections/header-image";
+@import "sections/corp-info";
+@import "sections/core-values";
+@import "sections/environment";
+@import "sections/customers-teaser";
+@import "sections/batchspray-detail";
+@import "sections/sicozone";
+@import "sections/evolution-teaser";
+@import "sections/batchspray";
+@import "sections/timeline";
+@import "sections/download";
+@import "sections/images-section";
+@import "sections/products-overview";
+@import "sections/headquarters";
+@import "sections/terms";
+@import "sections/applications";
+@import "sections/membership";
+@import "sections/process";
+@import "sections/news";
+@import "sections/intro";
+
+/* ======== Post ======== */
+@import "post/news";

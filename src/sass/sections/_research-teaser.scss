@@ -1,0 +1,158 @@
+$block: '.research-teaser';
+$block-padding: em(80);
+#{$block} {
+    color: $color-white;
+    position: relative;
+    padding: $block-padding 0;
+    z-index: 3;
+    img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    &__content {
+        &--left {
+            margin-bottom: em(50);
+        }
+    }
+    &__text {
+        max-width: em(650);
+        &--quote {
+            margin-left: em(30);
+            #{$block}__text__description {
+                margin-top: em(20);
+                @include icon('quote');
+                &::before {
+                    @extend %icon;
+                    position: absolute;
+                    top: -.2em;
+                    left: -1.3em;
+                    font-size: em(30);
+                    line-height: 1;
+                    display: block;
+                    opacity: .3;
+                }
+            }
+        }
+        &__inner {
+            position: relative;
+        }
+        &__title {
+            @extend %h1;
+            color: $color-white;
+        }
+        &__description {
+            color: $color-white;
+            position: relative;
+        }
+    }
+    &__images {
+        @include clearfix;
+        margin-left: em(-5);
+        margin-right: em(-5);
+        position: relative;
+        &__big {
+            float: left;
+            width: 75%;
+        }
+        &__small {
+            float: right;
+            width: 25%;
+        }
+        &__img {
+            padding: em(5);
+        }
+        img {
+            border-radius: em(10);
+        }
+    }
+    &__icon {
+        position: absolute;
+        background: $brand-primary;
+        font-size: em(80);
+        height: 1em;
+        width: 1em;
+        border-radius: em(2);
+        left: em(4);
+        top: em(4);
+        .icon {
+            @include icon('box-idea');
+            line-height: 1;
+            display: block;
+            font-size: 1em;
+            height: 1em;
+            width: 1em;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+        }
+    }
+    &__whitebox-top,
+    &__whitebox-bottom {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        background: $color-white;
+        padding-top: 10%;
+        z-index: 2;
+        display: none;
+    }
+    &__whitebox-top {
+        top: 0;
+    }
+    &__whitebox-bottom {
+        bottom: 0;
+        display: block;
+    }
+    &__whitebox-helper {
+        height: $block-padding;
+    }
+    @include mq($from: screen-md) {
+        @include clearfix;
+        &__content {
+            &--left {
+                float: left;
+                width: 45%;
+                margin-bottom: 0;
+            }
+            &--right {
+                float: right;
+                width: 50%;
+            }
+        }
+        &__whitebox-bottom {
+            display: none;
+        }
+    }
+    @include mq($from: screen-lg) {
+        padding-top: 0;
+        padding-bottom: 0;
+        &__content {
+            &--right {
+                position: absolute;
+                right: 0;
+                height: 100%;
+                float: none;
+            }
+        }
+        &__text {
+            padding: ($block-padding * 2) 0;
+        }
+        &__images {
+            position: absolute;
+            top:0;
+            bottom: 0;
+            margin: auto 0;
+            padding-bottom: 75%;
+            height: 0;
+        }
+        &__whitebox-top,
+        &__whitebox-bottom {
+            display: block;
+            padding: 0;
+        }
+    }
+}

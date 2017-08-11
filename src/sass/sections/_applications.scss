@@ -1,0 +1,68 @@
+$block: '.applications';
+#{$block} {
+    &__info {
+        margin: 1.5rem 0;
+        &__wrapper {
+            margin-top: em(30);
+        }
+        &__content {
+            @include clearfix;
+
+            &__text {
+                display: inline-block;
+                width: 100%;
+                vertical-align: top;
+            }
+        }
+        &__image {
+            width: em(250);
+            margin-bottom: em(20);
+            &__img {
+                border-radius: em(5);
+                width: 80%;
+                height: auto;
+            }
+        }
+    }
+    @include mq($from: screen-xs) {
+        &__info {
+
+            &__content {
+
+                &__text {
+                    width: 49%;
+                }
+            }
+        }
+    }
+    @include mq($from: screen-sm) {
+        &__info {
+
+            &__content {
+                &__text {
+                    float: left;
+                    display: block;
+                    width: 29.3333%;
+                    margin-right: 4%;
+                }
+            }
+        }
+    }
+    @include mq($from: screen-md) {
+        &__info {
+            &__wrapper {
+                display: table;
+                width: 100%;
+                max-width: em(1200);
+            }
+            &__image {
+                display: table-cell;
+                vertical-align: top;
+            }
+            &__content {
+                display: table-cell;
+                vertical-align: top;
+            }
+        }
+    }
+}

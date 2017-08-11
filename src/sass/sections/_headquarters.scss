@@ -1,0 +1,46 @@
+$block: '.headquarters';
+#{$block} {
+
+    &__locations {
+        margin: em(80) 0 0;
+        max-width: em(900);
+        &__headline {
+            text-transform: uppercase;
+            margin-bottom: em(10);
+        }
+        &__location {
+            text-align: left;
+            margin-bottom: 3em;
+            position: relative;
+            padding-left: em(50);
+            &__headline {
+                font-weight: bold;
+            }
+            
+            &::before {
+                position: absolute;
+                width: em(36);
+                height: em(36);
+                left: 0;
+                top: em(3);
+                content: '';
+                display: block;
+                background-image: url('../images/layout/pin.png');
+                background-size: 100% 100%;
+            }
+        }
+    }
+    @include mq($from: 590px) {
+        &__locations {
+            &__location {
+                display: inline-block;
+                vertical-align: top;
+                width: 43%;
+                margin-right: 6%;
+                max-width: em(450);
+                text-align: left;
+            }
+        }
+    }
+
+}

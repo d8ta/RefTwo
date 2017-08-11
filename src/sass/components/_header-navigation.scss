@@ -1,0 +1,113 @@
+$block: '.header-navigation';
+$submenu: '.nav-submenu';
+#{$block} {
+    margin-top: em(60);
+    a {
+        display: block;
+        transition: color .2s;
+        &:hover {
+            color: $color-grey;
+        }
+    }
+    ul.level-1 {
+        @include clearfix;
+        position: relative;
+        margin-right: em(-20);
+        > li {
+            float: left;
+            &.active {
+                > a {
+                    color: $color-text-grey;
+                    &:hover {
+                        color: $color-text-base;
+                    }
+                }
+                &::after {
+                    display: block;
+                    content: '';
+                    background: $brand-primary;
+                    height: em(4);
+                    position: relative;
+                    z-index: 10;
+                    margin-left: em(20);
+                    margin-right: em(20);
+                    margin-top: em(-3);
+                }
+            }
+            > a {
+                padding-left: em(25, 14);
+                padding-right: em(25, 14);
+                padding-bottom: em(18);
+                font-size: em(14);
+                font-weight: bold;
+                text-transform: uppercase;
+                @include mq($until: $width-mobile-menu + 50) {
+                    padding-left: em(18, 14);
+                    padding-right: em(18, 14);
+                }
+            }
+            &:hover {
+                > #{$submenu} {
+                    display: block;
+                }
+                &::after {
+                    display: block;
+                }
+            }
+            &::after {
+                display: none;
+                content: '';
+                background: $brand-primary;
+                height: em(4);
+                position: relative;
+                z-index: 10;
+                margin-left: em(20);
+                margin-right: em(20);
+                margin-top: em(-3);
+            }
+        }
+    }
+    ul.level-2 {
+        padding: em(20) 0;
+        > li {
+            > a {
+                padding: em(10) 0;
+            }
+        }
+    }
+    @include mq($until: width-mobile-menu) {
+        display: none;
+    }
+}
+
+#{$submenu} {
+    display: none;
+    position: absolute;
+    width: 100%;
+    background: $color-white;
+
+    left: 0;
+    &__table {
+        display: table;
+        width: 100%;
+        padding-left: em(20);
+        padding-right: em(20);
+        min-height: em(200);
+        padding-top: em(10);
+    }
+    &__nav {
+        display: table-cell;
+        width: 22%;
+        min-width: em(250);
+    }
+    &__content {
+        display: table-cell;
+        vertical-align: top;
+        width: 78%;
+        padding: em(30) 0 em(20);
+    }
+    &__box {
+        width: 100%;
+        padding-bottom: 35%;
+    }
+}

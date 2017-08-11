@@ -1,0 +1,31 @@
+$block: '.btn';
+#{$block} {
+    @extend %arrow-link;
+    padding: em(10) em(20);
+    background-color: $color-white;
+    border: em(2) solid $color-white;
+    border-radius: em(5);
+    display: inline-block;
+    transition: background 0.3s, border 0.3s;
+    &:hover {
+        background: $brand-primary;
+        border: em(2) solid $color-white;
+        color: $color-white;
+        &::before {
+            color: $color-white;
+        }
+    }
+    &--yellow {
+        background-color: $brand-primary;
+        border: em(2) solid $brand-primary;
+        color: $color-white;
+        &::before {
+            color: $color-white;
+        }
+        &:hover {
+            color: $color-white;
+            background: $brand-primary + 10%;
+            border: em(2) solid $brand-primary + 10%;
+        }
+    }
+}

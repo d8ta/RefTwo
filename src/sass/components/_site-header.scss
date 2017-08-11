@@ -1,0 +1,32 @@
+$block: '.site-header';
+#{$block} {
+    position: fixed;
+    z-index: 10;
+    background: $color-white;
+    width: 100%;
+    height: $height-header;
+    @include mq($until: width-mobile-menu) {
+        height: auto;
+    }
+    top: 0;
+    &__inner {
+        position: relative;
+        @include clearfix;
+    }
+    &__left {
+        float: left;
+    }
+    &__right {
+        float: right;
+    }
+    &__lang-switch {
+        position: absolute;
+        right: 0;
+        top: em(10);
+        display: none;
+        font-size: 12px;
+        @include mq($from: width-mobile-menu) {
+            display: block;
+        }
+    }
+}

@@ -1,81 +1,89 @@
-$color-text: #000;
-$color-grey-line: #ededed;
-$brand-primary: #f3e564;
+/* ======== Design Colors ======== */
+
+$brand-primary: #FABB00;
+$color-text: #464A4D;
+$color-grey: #A8AFB3;
+$color-light-grey: #E9ECED;
+$color-product-grey: #FAFAFA;
+$color-text-base: #333333;
+$color-white: #fff;
+$color-white-transparent: rgba($color-white, .7);
+$color-form-control-border: #e7e7e7;
+$blue: blue;
+// $color-text-reverse: #fff;
+// $color-grey-line: #ededed;
+$action-box-bg: #e6e6e6;
 $color-error: red;
+$color-text-grey: #8c8c8c;
+
+/* ======== Zoom Hover Effects ======== */
+
+$transition-speed: 5s;
+$scale: 1.025;
 
 /* ======== Bootstrap ======== */
+
 //$line-height-base:  1.6;
 $font-size-base: 16px;
-//$brand-primary: #fff;
-
 $screen-xs: 480px;
 $screen-sm: 768px;
 $screen-md: 992px;
 $screen-lg: 1200px;
 $screen-xl: 1500px;
-
-
+$screen-xxl: 1900px;
+$screen-xxxl: 2400px;
 $side-padding: 5%;
 $width-max-container: 1600px;
 $width-max-container-text: 1200px;
+$width-break-maps: 620px;
+$height-header: 6em;
+$width-mobile-menu: 950px;
+$header-smaller: 600px;
 
 /* ======== SASS mq ======== */
+
 $mq-base-font-size: $font-size-base;
-$mq-breakpoints: (
-    screen-xs: $screen-xs,
-    screen-sm: $screen-sm,
-    screen-md: $screen-md,
-    screen-lg: $screen-lg,
-    screen-xl: $screen-xl,
-    width-mobile-menu: 900px,
-);
+$mq-breakpoints: ( screen-xs: $screen-xs, screen-sm: $screen-sm, screen-md: $screen-md, screen-lg: $screen-lg, screen-xl: $screen-xl, screen-xxl: $screen-xxl, width-mobile-menu: $width-mobile-menu, width-break-maps: $width-break-maps, header-smaller: $header-smaller);
 
 /* ======== SCUT ======== */
+
 $scut-rem-base: $font-size-base / 1px; // strip units
-
-
-
-$font-normal: Arial;
-
-
+$font-headline: "Tahoma-Bold",
+sans-serif;
+$font-normal: "univia-pro",
+sans-serif;
 
 /* ======== Easing Functions ======== */
+
 // Cubic
-$easeInCubic    : cubic-bezier(0.550, 0.055, 0.675, 0.190);
-$easeOutCubic   : cubic-bezier(0.215, 0.610, 0.355, 1.000);
-$easeInOutCubic : cubic-bezier(0.645, 0.045, 0.355, 1.000);
-
+$ease-in-cubic: cubic-bezier(0.550, .055, .675, .190);
+$ease-out-cubic: cubic-bezier(0.215, .610, .355, 1.000);
+$ease-inOut-cubic: cubic-bezier(0.645, .045, .355, 1.000);
 // Circ
-$easeInCirc     : cubic-bezier(0.600, 0.040, 0.980, 0.335);
-$easeOutCirc    : cubic-bezier(0.075, 0.820, 0.165, 1.000);
-$easeInOutCirc  : cubic-bezier(0.785, 0.135, 0.150, 0.860);
-
+$ease-in-circ: cubic-bezier(0.600, .040, .980, .335);
+$ease-out-circ: cubic-bezier(0.075, .820, .165, 1.000);
+$ease-inOut-circ: cubic-bezier(0.785, .135, .150, .860);
 // Expo
-$easeInExpo     : cubic-bezier(0.950, 0.050, 0.795, 0.035);
-$easeOutExpo    : cubic-bezier(0.190, 1.000, 0.220, 1.000);
-$easeInOutExpo  : cubic-bezier(1.000, 0.000, 0.000, 1.000);
-
+$ease-in-expo: cubic-bezier(0.950, .050, .795, .035);
+$ease-out-expo: cubic-bezier(0.190, 1.000, .220, 1.000);
+$ease-inOut-expo: cubic-bezier(1.000, .000, .000, 1.000);
 // Quad
-$easeInQuad     : cubic-bezier(0.550, 0.085, 0.680, 0.530);
-$easeOutQuad    : cubic-bezier(0.250, 0.460, 0.450, 0.940);
-$easeInOutQuad  : cubic-bezier(0.455, 0.030, 0.515, 0.955);
-
+$ease-in-quad: cubic-bezier(0.550, .085, .680, .530);
+$ease-out-quad: cubic-bezier(0.250, .460, .450, .940);
+$ease-inOut-quad: cubic-bezier(0.455, .030, .515, .955);
 // Quart
-$easeInQuart    : cubic-bezier(0.895, 0.030, 0.685, 0.220);
-$easeOutQuart   : cubic-bezier(0.165, 0.840, 0.440, 1.000);
-$easeInOutQuart : cubic-bezier(0.770, 0.000, 0.175, 1.000);
-
+$ease-in-quart: cubic-bezier(0.895, .030, .685, .220);
+$ease-out-quart: cubic-bezier(0.165, .840, .440, 1.000);
+$ease-inOut-quart: cubic-bezier(0.770, .000, .175, 1.000);
 // Quint
-$easeInQuint    : cubic-bezier(0.755, 0.050, 0.855, 0.060);
-$easeOutQuint   : cubic-bezier(0.230, 1.000, 0.320, 1.000);
-$easeInOutQuint : cubic-bezier(0.860, 0.000, 0.070, 1.000);
-
+$ease-in-quint: cubic-bezier(0.755, .050, .855, .060);
+$ease-out-quint: cubic-bezier(0.230, 1.000, .320, 1.000);
+$ease-inOut-quint: cubic-bezier(0.860, .000, .070, 1.000);
 // Sine
-$easeInSine     : cubic-bezier(0.470, 0.000, 0.745, 0.715);
-$easeOutSine    : cubic-bezier(0.390, 0.575, 0.565, 1.000);
-$easeInOutSine  : cubic-bezier(0.445, 0.050, 0.550, 0.950);
-
+$ease-in-sine: cubic-bezier(0.470, .000, .745, .715);
+$ease-out-sine: cubic-bezier(0.390, .575, .565, 1.000);
+$ease-inOut-sine: cubic-bezier(0.445, .050, .550, .950);
 // Back
-$easeInBack     : cubic-bezier(0.600, -0.280, 0.735, 0.045);
-$easeOutBack    : cubic-bezier(0.175,  0.885, 0.320, 1.275);
-$easeInOutBack  : cubic-bezier(0.680, -0.550, 0.265, 1.550);
+$ease-in-back: cubic-bezier(0.600, -.280, .735, .045);
+$ease-out-back: cubic-bezier(0.175, .885, .320, 1.275);
+$ease-inOut-back: cubic-bezier(0.680, -.550, .265, 1.550);

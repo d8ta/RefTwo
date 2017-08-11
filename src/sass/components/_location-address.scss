@@ -1,0 +1,11 @@
+$block: '.location-address';
+#{$block} {
+    display: block;
+    color: $color-white;
+    &__group {
+        margin-bottom: em(10);
+    }
+    &__headline {
+        color: $color-white;
+    }
+}

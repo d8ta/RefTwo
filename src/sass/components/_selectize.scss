@@ -1,0 +1,46 @@
+$padding-selectize: em(20);
+.selectize-control {
+    input {
+        display: none;
+    }
+    &.single .selectize-input {
+        background: $color-white;
+    }
+    .selectize-input {
+        position: relative;
+        border-radius: em(5);
+    }
+    .option {
+        cursor: pointer;
+        transition: all .3s ease;
+        &.selected {
+            //display: none;
+        }
+        &:hover {
+            background: $brand-primary;
+        }
+    }
+    .selectize-input,
+    .option {
+        font-size: 1em;
+        font-weight: bold;
+        line-height: 1.1;
+        margin-bottom: em(9);
+        background: $color-white;
+        padding-left: $padding-selectize;
+        padding-right: $padding-selectize;
+        padding-top: .75em;
+        padding-bottom: em(16);
+        margin: 0;
+        cursor: pointer;
+    }
+    .selectize-dropdown {
+        font-size: 1em;
+    }
+}
+
+.selectize-control.single .selectize-input.input-active {
+    cursor: default;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}

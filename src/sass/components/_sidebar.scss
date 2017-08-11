@@ -1,0 +1,65 @@
+$block: '.sidebar';
+$sidebar-bg: $color-white;
+$sidebar-fg: $color-text;
+#{$block} {
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    min-height: 100vh;
+    right: 0;
+    z-index: 0;
+    background: $brand-primary;
+    @include mq($from: screen-xs) {
+        padding-left: 30%;
+    }
+    @include mq($from: screen-sm) {
+        padding-left: 50%;
+    }
+    &,
+    &__content {
+        background: $sidebar-bg;
+        color: $sidebar-fg;
+    }
+    &__content {
+        opacity: 0;
+        transition: opacity .3s .6s;
+        margin: 0 auto;
+        padding: $height-header $side-padding em(40);
+        box-sizing: content-box;
+        @include clearfix;
+        body.sidebar-open & {
+            opacity: 1;
+            transition: opacity .3s 0s;
+        }
+    }
+    &__lang-switch {
+        margin-top: em(40);
+        font-size: em(16);
+    }
+    &__page-overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 1000;
+        background: $brand-primary;
+        top: 0;
+        left: 0;
+        visibility: hidden;
+        opacity: 0;
+        transition: (opacity .3s .1s, visibility 0s .4s);
+        body.sidebar-open & {
+            @include mq($until: width-mobile-menu) {
+                visibility: visible;
+                opacity: 1;
+                transition: (opacity .3s, visibility 0s);
+            }
+        }
+    }
+    body.sidebar-open & {
+        position: relative;
+        width: auto;
+    }
+    @include mq($from: width-mobile-menu) {
+        display: none;
+    }
+}

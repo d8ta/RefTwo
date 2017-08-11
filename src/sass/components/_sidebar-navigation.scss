@@ -1,0 +1,33 @@
+$block: '.sidebar-navigation';
+#{$block} {
+    a {
+        display: block;
+    }
+    ul.level-1 {
+        > li {
+            margin-bottom: em(20);
+            > a {
+                font-size: em(22);
+                text-transform: uppercase;
+                font-weight: bold;
+                padding: em(3) 0 em(5);
+            }
+        }
+    }
+    ul.level-2 {
+        > li {
+            > a {
+                font-size: em(18);
+                padding: em(4) 0;
+            }
+        }
+    }
+    li.active {
+        > a {
+            color: $color-text-grey;
+        }
+    }
+    li > ul.level-2 {
+        display: none;
+    }
+}

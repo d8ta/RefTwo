@@ -1,0 +1,84 @@
+$block: '.language-switch';
+#{$block} {
+    position: relative;
+    display: inline-block;
+    text-align: left;
+    line-height: 1.48em;
+    width: em(110);
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 10;
+    &.show {
+        opacity: 1;
+        visibility: visible;
+        transition: opacity .3s, visibility 0s;
+    }
+    @include icon(language, before);
+    &::before {
+        @extend %icon;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 11;
+        color: $color-text-grey;
+        font-size: 1em;
+        line-height: 1.4em;
+        display: inline;
+    }
+    @include icon(menu-arrow-down, after);
+    &::after {
+        @extend %icon;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 11;
+        color: $color-text-grey;
+        font-size: .8em;
+        line-height: 1.5em;
+        transform: rotateZ(0deg);
+        transition: all .2s ease;
+    }
+    &.opened {
+        &::after {
+            transform: rotateZ(180deg);
+        }
+    }
+    #{$block}__current,
+    .lang-item a {
+        color: $color-text-grey;
+        line-height: 1.2em;
+        vertical-align: middle;
+        font-family: $font-normal;
+        padding: em(6) 0 em(6) em(25);
+        background: $color-white;
+        display: block;
+        width: 100%;
+        text-align: left;
+        transition: color .3s;
+        html.no-touchevents &:hover {
+            color: darken($color-text-grey, 20);
+        }
+        img {
+            width: em(25);
+            vertical-align: top;
+            margin-bottom: 0;
+            margin-right: em(5);
+        }
+    }
+    #{$block}__current {
+        position: relative;
+        z-index: 1;
+        padding-top: 0;
+    }
+    ul {
+        display: none;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        li {
+            display: block;
+            width: 100%;
+        }
+    }
+}

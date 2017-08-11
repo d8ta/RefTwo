@@ -1,0 +1,86 @@
+$block: '.technology-teaser';
+#{$block} {
+    max-width: em(850);
+    margin: 0 auto em(50);
+    text-align: center;
+    &__inner {
+        &__description {
+            max-width: em(650);
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
+
+$block2: '.technology-teaser__boxes';
+$box-padding: 1%;
+#{$block2} {
+    text-align: center;
+    margin-right: -$box-padding;
+    margin-left: -$box-padding;
+    &__box {
+        width: 49% - 2 * $box-padding; // needs to be width: 47%;
+        margin-right: $box-padding;
+        margin-left: $box-padding;
+        max-width: em(316); // needs to be max-width: 19.75em;
+        display: inline-block;
+        margin-bottom: em(20);
+        vertical-align: top;
+        border-radius: .5em;
+        overflow: hidden;
+        background: $color-light-grey;
+        &__image {
+            height: 0;
+            padding-bottom: 100%;
+            // transition: all 3s;
+            // &:hover {
+            //     transform: scale(1.05);
+            // }
+        }
+        &__text {
+            padding: em(30) 8%;
+            &__description {
+                display: none;
+            }
+            &__link {
+                visibility: hidden;
+                border: em(2) solid $brand-primary;
+                opacity: 0;
+                display: none;
+                background: $brand-primary;
+                color: $color-white;
+                width: 100%;
+                transition: visibility 0s .2s, opacity .2s;
+                border-radius: 0;
+            }
+        }
+    }
+    @include mq($from: screen-xs) {
+        &__box {
+            &__text {
+                &__description {
+                    display: block;
+                }
+            }
+        }
+    }
+    @include mq($from: screen-md) {
+        &__box {
+            width: 19% - 2 * $box-padding;
+            &__text__link {
+                display: block;
+            }
+            &:hover {
+                transition: background .3s;
+                background: $color-text;
+                color: $color-white;
+                #{$block2}__box__text__link {
+                    visibility: visible;
+                    border: em(2) solid $brand-primary;
+                    opacity: 1;
+                    transition: visibility 0s, opacity .2s;
+                }
+            }
+        }
+    }
+}

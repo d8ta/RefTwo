@@ -15,11 +15,12 @@ use Valitron\Validator;
 class ContactForm extends Action
 {
 
-	const KEY_HONEYPOT = 't_NT2GxLPEkcNmV';
+	const KEY_HONEYPOT = 't_NT2GxLPEkcNmZ';
 
 	protected function _action()
 	{
-		$data     = $_POST['form'];
+
+		$data = $_POST['form'];
 		$response = new \stdClass;
 
 		if (strlen($data[self::KEY_HONEYPOT]) > 0) {
@@ -27,15 +28,16 @@ class ContactForm extends Action
 			return $response;
 		}
 
+		
+
 		load_theme_textdomain( 'default', ABSPATH . 'app/langs' );
 		
 		$label_subject = __('Your Request');
 
-		$companySubject = 'EAS - Neue Kontaktanfrage';
+		$companySubject = 'Siconnex - Neue Kontaktanfrage';
 		$companyView = 'ajax.contact-form.company';
-		$feedbackSubject = 'EAS - ' . $label_subject;
+		$feedbackSubject = 'Siconnex - ' . $label_subject;
 		$feedbackView = 'ajax.contact-form.feedback';
-		
 
 		try {
 
@@ -43,19 +45,43 @@ class ContactForm extends Action
 
 			$v = new Validator( $data );
 
-			$v->rule('required', ['name', 'email', 'message']);
+			$v->rule('required', ['firstname', 'lastname', 'company', 'email', 'phone', 'message']);
 			$v->rule('email', 'email');
 
+
 			if (!$v->validate()) {throw new Exception('Form not correct', 10);}
-			
+
+
+			$customer_name = $data['firstname'] . ' ' . $data['lastname'];
+
+
+
 
 			$templateEngine = TemplateEngine::getInstance();
 			$email = Email::getInstance();
-			$sendto = $_config->getItem('mail.to');
+			
+			if ($data['recipient'] == 'sales') {
+				$sendto = $_config->getItem('mail.to_sales');
+			}
+			if ($data['recipient'] == 'service') {
+				$sendto = $_config->getItem('mail.to_service');
+
+			}
+			if ($data['recipient'] == 'purchase') {
+			 	$sendto = $_config->getItem('mail.to_purchase');
+
+			}
+			if ($data['recipient'] == 'career') {
+				$sendto = $_config->getItem('mail.to_career');
+			}
+
+			$data['sendto'] = $sendto;
 
 			if (preg_match("/\@a365\.at$/", $data['email'])) {
-				$sendto = array($data['email'] => $data['name']);
+				$sendto = array($data['email'] => $customer_name);
 			}
+			
+
 
 			$response->sent = $email->send(
 				$sendto,
@@ -66,7 +92,7 @@ class ContactForm extends Action
 			if (isset($data['email']) && strlen($data['email'])) {
 				$response->feedback = new stdClass;
 				$response->feedback->sent = $email->send(
-					array($data['email'] => $data['name']),
+					array($data['email'] => $customer_name),
 					$feedbackSubject,
 					$templateEngine->renderView( $feedbackView , $data)
 				);

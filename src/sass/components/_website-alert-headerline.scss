@@ -1,0 +1,73 @@
+$block: '.website-alert-headerline';
+// COLORS
+$cookie_fg: $brand-primary;
+$cookie_bg: #000;
+$cookie_btn_bg: $brand-primary;
+$cookie_btn_fg: #000;
+$cookie_size: 0.9em;
+$cookie_opacity: 0.8;
+$cookie_responsive: em(735);
+
+#{$block} {
+    &__container {
+        display: block;
+        position: fixed;
+        z-index: 10000;
+        width: 100%;
+        bottom: 0;
+        overflow: hidden;
+        background-color: rgba($cookie_bg, $cookie_opacity);
+        visibility: hidden;
+        transform: translateY(em(200));
+        transition: all 0.5s, visibility 0s 0.5s;
+        html.show-cookie-alert &--cookies, html.show-outdated_browser-alert &--browser {
+            visibility: visible;
+            transform: translateY(0);
+            transition: all 0.5s, visibility 0s;
+        }
+    }
+
+    padding: em(8) em(15);
+    font-size: 14px;
+    line-height: 1.5em;
+    margin: 0 auto;
+    text-align: center;
+    color: $cookie_fg;
+
+    &,
+    * {
+        box-sizing: border-box;
+    }
+
+
+    &__btn {
+        padding: em(4) em(15);
+        display: inline-block;
+        transition: all 0.3s ease;
+        background-color: $cookie_btn_bg;
+        color: $cookie_btn_fg;
+        margin: 0 em(20);
+        cursor: pointer;
+        border: none;
+        appearance: none;
+        font-size: 1em;
+        line-height: 1em;
+        &:hover {
+            background-color: $cookie_fg;
+            color: $cookie_bg;
+        }
+    }
+
+    @include mq($until: $cookie_responsive) {
+        &__btn {
+            margin-top: em(10);
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        &__text {
+            display: block;
+        }
+    }
+
+}

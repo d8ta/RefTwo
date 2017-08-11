@@ -12,6 +12,7 @@ class Application extends BaseApplication
 
 		add_action('after_setup_theme', [$this, 'loadTextdomain']);
 		add_filter('wp_get_attachment_url', [$this, 'ssl_post_thumbnail_urls'], 10, 2);
+		remove_action('wp_head', 'wp_generator');
 		
 	}
 
@@ -27,10 +28,13 @@ class Application extends BaseApplication
 
 		add_filter('acf/settings/google_api_key', [$this, 'googleApiKey']);
 		add_filter('acf/fields/google_map/api', [$this, 'googleApiKey']);
-		add_filter('acf/load_value/name=shortlink', [$this, 'acf_generate_shortlink'], 10, 3);
-		add_filter('acf/validate_value/name=shortlink', [$this, 'require_unique'], 10, 4);
+		add_filter('upload_mimes', [$this, 'cc_mime_types']);
 
+	}
 
+	public function cc_mime_types($mimes) {
+	  $mimes['svg'] = 'image/svg+xml';
+	  return $mimes;
 	}
 
 	/**

@@ -1,0 +1,13 @@
+$block: '.address';
+#{$block} {
+    display: block;
+    &__headline {
+        display: block;
+        font-weight: bold;
+        color: $brand-primary;
+        margin-bottom: .5em;
+    }
+    &__text {
+        @extend %footer-text;
+    }
+}

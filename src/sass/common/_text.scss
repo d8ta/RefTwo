@@ -7,12 +7,20 @@
     @extend %h2 !optional;
 }
 
+.h2-alt {
+    @extend %h2-alt !optional;
+}
+
 .h3 {
     @extend %h3 !optional;
 }
 
 .h4 {
     @extend %h4 !optional;
+}
+
+.h4-alt {
+    @extend %h4-alt !optional;
 }
 
 .h5 {

@@ -2,13 +2,13 @@
 namespace Project\Models;
 
 class Location extends \A365\Wordpress\Models\Post {
-	protected static $order = 'ASC';
-	protected static $orderby = 'menu_order';
+    protected static $order = 'ASC';
+    protected static $orderby = 'menu_order';
 
 
-	public static function allPublishedByType($type) {
+    public static function allPublishedByType($type) {
 
-		$args = array(
+        $args = array(
             'posts_per_page' => -1,
             'post_type'     => 'location',
             'orderby'     => 'menu_order',
@@ -24,12 +24,12 @@ class Location extends \A365\Wordpress\Models\Post {
         $locations = $the_query->get_posts();
 
         foreach($locations as &$location) {
-        	$location = self::find($location->ID);
+            $location = self::find($location->ID);
         }
 
         return $locations;
 
-	}
+    }
 
     public function toArray() {
 
@@ -51,17 +51,7 @@ class Location extends \A365\Wordpress\Models\Post {
 
     public static function getDefault() {
 
-        /*$args = array(
-            'posts_per_page' => -1,
-            'post_type'     => 'location'
-        );
-
-        $the_query = new \WP_Query($args);
-        $locations = $the_query->get_posts();
-
-        $location_id = $locations[0]->ID;*/
-
-        $location_id = 126;
+        $location_id = pll_get_post(303);
 
         if ($location_id > 0) {
             return self::find($location_id);
@@ -107,7 +97,12 @@ class Location extends \A365\Wordpress\Models\Post {
                 }
             }
             if ($nearestLocID > 0) {
-                setcookie($nearestLocCookieName, $nearestLocID, time() + 3600 * 24, '/');
+                $url = '/';
+                $lang = pll_current_language('slug');
+                if ($lang) {
+                    $url .= $lang . '/';
+                }
+                setcookie($nearestLocCookieName, $nearestLocID, time() + 3600 * 24, $url );
             }
         } else {
             $nearestLocID = $_COOKIE[$nearestLocCookieName];

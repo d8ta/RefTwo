@@ -1,0 +1,45 @@
+$block: '.menu-burger';
+$padding: 16px;
+#{$block} {
+    padding: $padding;
+    width: 20px + 2 * $padding;
+    margin: em(30) 0 0 auto;
+    @include mq($until: header-smaller) {
+        margin-top: em(10);
+    }
+    transition: all .3s ease;
+    @include mq($from: screen-xs) {
+        &--main {
+            transform: translateX($padding);
+        }
+    }
+    cursor: pointer;
+    &__bar {
+        position: relative;
+        top: -.3em;
+        height: 3px;
+        margin-bottom: 3px;
+        background-color: $color-grey;
+        transition: top 250ms 250ms, transform 150ms, opacity 200ms;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        body.sidebar-open & {
+            transition: top 250ms, transform 250ms 200ms, opacity 200ms;
+            &:first-child {
+                top: 6px;
+                transform: rotate(45deg);
+            }
+            &:nth-child(2) {
+                opacity: 0;
+            }
+            &:last-child {
+                top: -6px;
+                transform: rotate(-45deg);
+            }
+        }
+    }
+    @include mq($from: width-mobile-menu) {
+        display: none;
+    }
+}

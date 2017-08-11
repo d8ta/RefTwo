@@ -1,0 +1,52 @@
+$block: '.batchspray';
+#{$block} {
+    &__text {
+        text-align: left;
+        &__title {
+            color: $brand-primary;
+        }
+        &__subtitle {
+            color: $color-grey;
+        }
+        &__footer {
+            max-width: 15em;
+        }
+        &__logo {
+            padding-top: 3em;
+        }
+    }
+    &__images {
+        transition: all $transition-speed;
+        &:hover {
+            transform: scale($scale);
+        }
+        max-width: 25em;
+        margin: 2em auto 0;
+        text-align: right;
+        &__image {
+            max-width: 100%;
+            width: auto;
+            height: auto;
+        }
+    }
+    @include mq($from: screen-xs) {
+        @include clearfix;
+        &__text {
+            width: 40%;
+            float: left;
+            &__logolink {
+                max-width: 20em;
+            }
+        }
+        &__images {
+            width: 60%;
+            float: right;
+            padding-left: 2em;
+            max-width: 60em;
+            margin-right: 0;
+            &__logo {
+                padding-top: 2em;
+            }
+        }
+    }
+}

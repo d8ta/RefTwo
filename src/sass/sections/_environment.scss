@@ -1,0 +1,165 @@
+$block: '.environment';
+#{$block} {
+    &__slide {
+        &--text-right {
+            #{$block}__box {
+                right: 5%;
+                left: auto;
+            }
+        }
+    }
+    overflow: hidden;
+    &__image {
+        transition: all $transition-speed;
+        &:hover {
+            transform: scale($scale);
+        }
+        padding-bottom: 42%;
+        position: relative;
+    }
+    &__box {
+        @extend %section-content;
+        &__text {
+            text-align: center;
+            &__title {
+                @extend %h1;
+                margin-top: 1em;
+            }
+            &__subtitle {
+                @extend %h2;
+            }
+        }
+    }
+    @include mq($from: screen-sm) {
+        &__box {
+            &__text {
+                &__description {
+                    margin: 0 auto;
+                    max-width: 47em;
+                }
+            }
+        }
+    }
+    @include mq($from: 1300px) {
+        &__box {
+            background: $color-white;
+            max-width: 40%;
+            max-height: 75%;
+            border-radius: .5em;
+            position: absolute;
+            top: 5%;
+            bottom: 5%;
+            left: 5%;
+            padding: 0;
+            &__text {
+                padding: 2em;
+                text-align: left;
+                &__title {
+                    margin-top: 0;
+                }
+                &__description {
+                    
+                    margin-left: 0;
+                    max-width: 85%;
+                }
+            }
+        }
+    }
+    @include mq($from: $screen-lg + 100) {
+        &__box {
+            max-width: 35em;
+            max-height: 30em;
+        }
+    }
+    .owl-dots {
+        margin: em(12) 0 em(20);
+        text-align: center;
+    }
+    .owl-dot {
+        display: inline-block;
+        font-size: em(18);
+        width: 1em;
+        height: 1em;
+        margin: 0 em(4);
+        border-radius: 50%;
+        background-color: $color-light-grey;
+        transition: background .2s;
+        &.active,
+        &:hover {
+            background-color: $brand-primary;
+        }
+    }
+    .owl-nav {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+    }
+    .owl-prev,
+    .owl-next {
+        height: em(42);
+        width: em(42);
+        margin: auto 0;
+        color: $color-white;
+        position: absolute;
+        right: 1em;
+        top: 0;
+        bottom: 0;
+        background: $color-white;
+        border-radius: em(5);
+        .icon {
+            font-size: em(12);
+            position: absolute;
+            width: 1em;
+            height: 1em;
+            line-height: 1;
+            margin: auto;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            color: $color-text;
+            transition: all .2s;
+            &::before {
+                @extend %icon;
+            }
+        }
+        @include mq($until: screen-sm) {
+            display: none;
+        }
+    }
+    .owl-prev {
+        top: em(-47);
+        .icon {
+            @include icon(arrowleft);
+        }
+        &:hover {
+            .icon {
+                transform: translateX(-.3em);
+            }
+        }
+        @include mq($from: screen-sm) {
+            top: em(-360);
+        }
+        @include mq($from: screen-lg) {
+            top: em(-47);
+        }
+    }
+    .owl-next {
+        top: em(47);
+        .icon {
+            @include icon(arrowright);
+        }
+        &:hover {
+            .icon {
+                transform: translateX(.3em);
+            }
+        }
+        @include mq($from: screen-sm) {
+            top: em(-255);
+        }
+        @include mq($from: screen-lg) {
+            top: em(47);
+        }
+    }
+}

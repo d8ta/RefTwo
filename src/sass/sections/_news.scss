@@ -1,0 +1,82 @@
+$block: '.news';
+
+#{$block} {
+  &__text {
+    text-align: left;
+
+    &__title {
+      padding-right: 2em;
+    }
+
+
+    &__description {
+      margin-bottom: 1.8em;
+      overflow: hidden;
+      height: 5.25em;
+
+      &__clamp {
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+      }
+    }
+  }
+
+  &__image {
+    text-align: center;
+    max-width: 30em;
+    margin: 0 auto;
+    &__img {
+      display: inline-block;
+      border-radius: 0.5em;
+      width: 100%;
+      max-width: 20em;
+    }
+  }
+  @include mq($until: screen-xs) {
+      &__images {
+      &--section {
+        margin-top: em(20) !important;
+        margin-left: em(-5) !important;
+        margin-right: em(-5) !important;
+        max-width: none !important;
+        img {
+          padding: em(5);
+          margin: 0;
+          width: 100%;
+          display: block;
+        }
+      }
+    }
+  }
+  @include mq($from: screen-sm) {
+    &__image {}
+  }
+  @include mq($from: screen-lg) {
+    &__text {
+      float: left;
+      margin: 0;
+      text-align: left;
+      max-width: 50%;
+
+      &__title {
+        text-align: left;
+      }
+
+      &__description {
+        max-width: 45em;
+      }
+    }
+
+    &__image {
+      width: 50%;
+      float: left;
+      text-align: left;
+      padding-left: 10em;
+
+      &__img {
+        width: 20em;
+      }
+    }
+  }
+}

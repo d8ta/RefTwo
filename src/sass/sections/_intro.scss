@@ -1,0 +1,20 @@
+$block: '.intro';
+#{$block} {
+	&--left {
+		text-align: left;
+	}
+	&--center {
+		text-align: center;
+	}
+	&--font-big {
+		#{$block}__headline {
+			@extend %h1;
+		}
+	}
+	&--font-medium {
+		#{$block}__headline {
+			@extend %h3;
+		}
+	}
+
+}

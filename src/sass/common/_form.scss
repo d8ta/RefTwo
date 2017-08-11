@@ -1,0 +1,131 @@
+$block: '.form';
+$form-padding: em(30);
+#{$block} {
+    position: relative;
+    text-align: left;
+    max-width: em(650);
+    margin-top: em(80);
+    &__fields {
+        position: relative;
+        z-index: 10;
+        transition: transform 350ms $ease-in-cubic, opacity 300ms;
+        margin-left: -$form-padding;
+        margin-right: -$form-padding;
+        @include clearfix;
+        &__table {
+            padding-left: $form-padding;
+            padding-right: $form-padding;
+            display: table;
+            width: 100%;
+            &__select {
+                display: table-cell;
+                vertical-align: middle;
+                min-width: 12em;
+            }
+            &__btn {
+                display: table-cell;
+                vertical-align: middle;
+                margin-left: 1em;
+            }
+            @include mq($until: 453px) {
+                display: block;
+                &__select {
+                    min-width: 13em;
+                }
+                &__btn {
+                    margin-top: 1em;
+                    margin-left: 0;
+                }
+            }
+        }
+        &__row {
+            width: 50%;
+            float: left;
+            margin-bottom: 1.3em;
+            padding-left: $form-padding;
+            padding-right: $form-padding;
+            position: relative;
+            &--full {
+                width: 100%;
+            }
+            @include mq($until: screen-xs) {
+                width: 100%;
+            }
+            &--honey {
+                position: absolute;
+                top: -9999px;
+                left: -9999px;
+            }
+            &__label {
+                font-weight: bold;
+                text-transform: uppercase;
+                line-height: 1.2em;
+                letter-spacing: .1em;
+                display: block;
+                margin: 0;
+                font-size: em(13);
+                margin-bottom: em(6);
+                &--hidden {
+                    visibility: hidden;
+                }
+            }
+        }
+    }
+    &__success {
+        position: absolute;
+        width: 100%;
+        z-index: 5;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transform: translateY(-2em);
+        text-align: center;
+        $delay: 350ms;
+        transition: transform 300ms $delay $ease-out-cubic, opacity 180ms $delay;
+    }
+    &--in-progress {
+        pointer-events: none;
+        #{$block} {
+            &__fields {
+                opacity: .6;
+            }
+        }
+    }
+    &--sent {
+        #{$block}__fields {
+            transform: translateY(-2em);
+            opacity: 0;
+        }
+        #{$block} {
+            &__success {
+                z-index: 20;
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    }
+    &__info {
+        font-weight: bold;
+        margin-top: em(30);
+        margin-bottom: em(30);
+        font-size: em(14);
+    }
+}
+
+.parsley-errors-list {
+    color: $color-error;
+}
+
+$formcontrol: '.form-control';
+#{$formcontrol} {
+    background-color: $color-white;
+    border: 1px solid $color-form-control-border;
+    border-radius: 0;
+    width: 100%;
+    padding: em(10) em(12) em(8);
+    line-height: 1.5em;
+}
+
+textarea#{$formcontrol} {
+    min-height: scut-em(150);
+}

@@ -1,0 +1,89 @@
+$block: '.products-overview';
+#{$block} {
+    margin: 0 auto em(50);
+    text-align: center;
+    &__text {
+        &__title {
+            max-width: em(300);
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        &__text {
+            max-width: em(650);
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    &__listing {
+        &__elem {
+            padding: 0 em(5);
+        }
+        &__content {
+            overflow: hidden;
+            display: block;
+            &__image {
+                width: 100%; // padding-bottom: 81.22%;
+                padding-bottom: 81.22%;
+                transition: all $transition-speed;
+                &:hover {
+                    transform: scale($scale);
+                }
+            }
+            &__info {
+                display: block;
+                background-color: $color-product-grey;
+                padding: rem(111) rem(68);
+                transition: background .3s;
+                border-radius: .5em;
+                &:hover {
+                    background: lighten($color-product-grey, 10);
+                }
+                &__logo {
+                    margin-bottom: em(15);
+                    width: 90%;
+                    img {
+                        width: 100%;
+                        max-width: em(280);
+                    }
+                }
+                &__description {
+                    margin-bottom: em(40);
+                    max-width: em(456);
+                    min-height: em(120);
+                }
+            }
+        }
+    }
+    @include mq($from: width-mobile-menu) {
+        &__listing {
+            @include clearfix;
+            &__elem {
+                float: left;
+                width: 33.3333%;
+            }
+            &__content {
+                &__info {
+                    display: block;
+                    background-color: $color-product-grey;
+                    padding: rem(111) rem(68);
+                    transition: background .3s;
+                    border-radius: .5em;
+                    &__logo {
+                        margin-bottom: em(15);
+                        width: 90%;
+                        img {
+                            width: 100%;
+                            max-width: em(280);
+                        }
+                    }
+                    &__description {
+                        margin-bottom: em(40);
+                        max-width: em(456);
+                        min-height: em(120);
+                    }
+                }
+            }
+        }
+    }
+}
