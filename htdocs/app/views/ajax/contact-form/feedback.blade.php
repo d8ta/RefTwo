@@ -37,7 +37,7 @@ $label_greets = __('Best regards,');
 		<address style="font-style: normal">
             <span>{{$optionsHelper->getOption("company_name")}}</span><br>
             <span>{{$optionsHelper->getOption("company_street")}}</span><br>
-            <span>{{$optionsHelper->getOption("company_postal_code")}}</span> <span>{{optionsHelper->getOption("company_city")}}</span><br>
+            <span>{{$optionsHelper->getOption("company_postal_code")}}</span> <span>{{$optionsHelper->getOption("company_city")}}</span><br>
             <span>{{$optionsHelper->getOption("company_country")}}</span><br>
             <a href="{{get_site_url()}}" target="_blank">{{get_site_url()}}</a>
             <div>
