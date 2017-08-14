@@ -22,8 +22,9 @@ $block: '.news';
     &__img {
       display: inline-block;
       border-radius: 0.5em;
-      margin-left: em(10);
+      // margin-left: em(10);
       margin-bottom: em(10);
+      width: 100%;
     }
   }
   @include mq($from: screen-sm) {
