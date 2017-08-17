@@ -1,7 +1,9 @@
 $padding-selectize: em(20);
 .selectize-control {
-    input {
-        display: none;
+    .selectize-input {
+        >input {
+            display: none !important;
+        }
     }
     &.single .selectize-input {
         background: $color-white;
