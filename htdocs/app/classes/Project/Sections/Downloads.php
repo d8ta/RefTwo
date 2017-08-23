@@ -17,7 +17,7 @@ class DOwnloads extends \A365\Wordpress\Block\AcfBlock {
 		return [
 			FieldHelper::createText('headline', 'Titel')->setRequired(),
 			FieldHelper::createText('subline', 'Untertitel')->setRequired(),
-			FieldHelper::createRepeater('downloads', 'Download', ["min" => 1, "max" => 3])
+			FieldHelper::createRepeater('downloads', 'Download', ["min" => 1, "max" => 99])
 				->addSubfields([
 					FieldHelper::createText('title', 'Titel')->setRequired(), 
 					FieldHelper::createText('info', 'Info')->setRequired(),
